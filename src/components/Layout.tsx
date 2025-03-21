@@ -23,7 +23,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <Navigation />
       </div>
       
-      <main className="flex-grow pt-20 z-10 relative">
+      <main className="flex-grow z-10 relative">
         {children}
       </main>
       
