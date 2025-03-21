@@ -121,6 +121,22 @@
     animation: blur-in 1s ease-out forwards;
   }
   
+  /* Fade-in animation for sections */
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+  
   /* Float animation for scroll indicator */
   @keyframes float {
     0%, 100% {

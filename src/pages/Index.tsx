@@ -17,12 +17,13 @@ const Index: React.FC = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-blur-in');
+            entry.target.classList.remove('opacity-0');
             // Once the animation is triggered, unobserve the element
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: "0px 0px -100px 0px" }
     );
     
     if (projectsRef.current) {
@@ -40,7 +41,7 @@ const Index: React.FC = () => {
     <Layout>
       <HeroSection />
       
-      <div id="featured-projects" className="py-24 relative" ref={projectsRef}>
+      <div id="featured-projects" className="py-24 relative opacity-0" ref={projectsRef}>
         <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/50 to-black/0 opacity-50" />
         
         <div className="container-custom relative z-10">

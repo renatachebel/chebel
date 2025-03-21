@@ -11,21 +11,30 @@ const AboutSection: React.FC = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Add the animation class and don't remove it when scrolling away
-            entry.target.classList.add('animate-fade-in');
-            // Once the element is animated in, we don't need to observe it anymore
+            // Find all elements with animate-on-scroll class within this entry
+            const animatedElements = entry.target.querySelectorAll('.animate-on-scroll');
+            animatedElements.forEach(el => {
+              el.classList.add('animate-fade-in');
+              el.classList.remove('opacity-0');
+            });
+            
+            // Once the animation is triggered for this section, unobserve it
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: "0px 0px -100px 0px" }
     );
     
-    const elementsToAnimate = sectionRef.current?.querySelectorAll('.animate-on-scroll');
-    elementsToAnimate?.forEach((el) => observer.observe(el));
+    // Observe the section container itself
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
     
     return () => {
-      elementsToAnimate?.forEach((el) => observer.unobserve(el));
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
     };
   }, []);
   
@@ -51,7 +60,7 @@ const AboutSection: React.FC = () => {
                 My work examines the relationship between technology, perception, and human experience, creating sensory environments that challenge conventional boundaries.
               </p>
               
-              <p className="font-body text-white/80 mb-8">
+              <p className="font-body text-white/80 mb-6">
                 With a background in both visual arts and computer science, I blend technical expertise with artistic vision to create works that are both conceptually rich and visually captivating.
               </p>
               
