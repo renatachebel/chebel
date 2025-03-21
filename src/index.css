@@ -104,6 +104,36 @@
   .backface-hidden {
     backface-visibility: hidden;
   }
+  
+  /* Adding blur-in animation for sections */
+  @keyframes blur-in {
+    0% {
+      opacity: 0;
+      filter: blur(5px);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+  
+  .animate-blur-in {
+    animation: blur-in 1s ease-out forwards;
+  }
+  
+  /* Float animation for scroll indicator */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) translateX(-50%);
+    }
+    50% {
+      transform: translateY(-10px) translateX(-50%);
+    }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
 }
 
 .page-transition-enter {

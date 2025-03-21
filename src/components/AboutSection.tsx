@@ -11,7 +11,10 @@ const AboutSection: React.FC = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            // Add the animation class and don't remove it when scrolling away
             entry.target.classList.add('animate-fade-in');
+            // Once the element is animated in, we don't need to observe it anymore
+            observer.unobserve(entry.target);
           }
         });
       },

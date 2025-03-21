@@ -17,6 +17,8 @@ const Index: React.FC = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-blur-in');
+            // Once the animation is triggered, unobserve the element
+            observer.unobserve(entry.target);
           }
         });
       },
