@@ -80,41 +80,41 @@ const Navigation: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div 
-        className={`fixed inset-0 z-50 glass-card transform transition-transform duration-500 ease-out-expo ${
-          isOpen ? 'translate-y-0' : '-translate-y-full'
-        }`}
-      >
-        <div className="container-custom h-full flex flex-col">
-          <div className="flex justify-between items-center py-6">
-            <div className="font-display text-xl tracking-widest">CHEBEL</div>
-            <button 
-              className="p-1 rounded-md text-white focus:outline-none"
-              onClick={toggleMenu}
-              aria-label="Close Menu"
-            >
-              <X size={24} />
-            </button>
-          </div>
-          <div className="flex flex-col space-y-8 items-center justify-center flex-grow pb-20">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`font-display text-2xl tracking-wider transition-all duration-300 ${
-                  isActive(link.path)
-                    ? 'text-white'
-                    : 'text-white/70 hover:text-white'
-                }`}
-                onClick={closeMenu}
+      {/* Mobile Menu - Ensure it has a high z-index but lower than other critical elements */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 z-40 glass-card transform transition-transform duration-500 ease-out-expo"
+        >
+          <div className="container-custom h-full flex flex-col">
+            <div className="flex justify-between items-center py-6">
+              <div className="font-display text-xl tracking-widest">CHEBEL</div>
+              <button 
+                className="p-1 rounded-md text-white focus:outline-none"
+                onClick={toggleMenu}
+                aria-label="Close Menu"
               >
-                {link.label}
-              </Link>
-            ))}
+                <X size={24} />
+              </button>
+            </div>
+            <div className="flex flex-col space-y-8 items-center justify-center flex-grow pb-20">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`font-display text-2xl tracking-wider transition-all duration-300 ${
+                    isActive(link.path)
+                      ? 'text-white'
+                      : 'text-white/70 hover:text-white'
+                  }`}
+                  onClick={closeMenu}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };
