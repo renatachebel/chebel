@@ -137,8 +137,12 @@ const HeroSection: React.FC = () => {
             duration: 1000,
             watchDrag: false,
           }}
-          selectedIndex={activeIndex}
-          setSelectedIndex={setActiveIndex}
+          setApi={(api) => {
+            // Use this function to control the carousel from outside if needed
+            if (api && activeIndex !== undefined) {
+              api.scrollTo(activeIndex);
+            }
+          }}
         >
           <CarouselContent className="h-full">
             {heroImages.map((image, index) => (

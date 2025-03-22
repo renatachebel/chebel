@@ -89,16 +89,6 @@ const AboutSection: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
               </div>
-              
-              <div 
-                className="absolute bottom-1/3 left-0 transform -translate-x-1/4 rotate-12 w-2/3 h-2/3 rounded-lg overflow-hidden shadow-xl z-10"
-              >
-                <img 
-                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
-                  alt="Chebel creative process" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
             </div>
           </div>
         </div>
