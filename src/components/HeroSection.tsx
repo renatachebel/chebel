@@ -65,15 +65,27 @@ const HeroSection: React.FC = () => {
   // Get a random starting image index
   const startIndex = useRef<number>(Math.floor(Math.random() * heroImages.length));
   const [activeIndex, setActiveIndex] = React.useState(startIndex.current);
+  const [currentImage, setCurrentImage] = React.useState(heroImages[startIndex.current]);
+  const [nextImage, setNextImage] = React.useState<typeof currentImage | null>(null);
+  const [isTransitioning, setIsTransitioning] = React.useState(false);
   
   useEffect(() => {
     // Auto-rotate images every 8 seconds
     const interval = setInterval(() => {
-      setActiveIndex((current) => (current + 1) % heroImages.length);
+      const nextIndex = (activeIndex + 1) % heroImages.length;
+      setNextImage(heroImages[nextIndex]);
+      setIsTransitioning(true);
+      
+      // After fade-in animation completes, update the current image
+      setTimeout(() => {
+        setActiveIndex(nextIndex);
+        setCurrentImage(heroImages[nextIndex]);
+        setIsTransitioning(false);
+      }, 1000); // 1 second transition time
     }, 8000);
     
     return () => clearInterval(interval);
-  }, []);
+  }, [activeIndex]);
   
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -128,38 +140,31 @@ const HeroSection: React.FC = () => {
         }}
       />
       
-      {/* Hero Image Carousel */}
+      {/* Hero Image with Fade Transition */}
       <div className="w-full h-screen absolute inset-0 z-0">
-        <Carousel 
-          className="w-full h-full" 
-          opts={{
-            loop: true,
-            duration: 1000,
-            watchDrag: false,
-          }}
-          setApi={(api) => {
-            // Use this function to control the carousel from outside if needed
-            if (api && activeIndex !== undefined) {
-              api.scrollTo(activeIndex);
-            }
-          }}
-        >
-          <CarouselContent className="h-full">
-            {heroImages.map((image, index) => (
-              <CarouselItem key={index} className="h-full">
-                <div className="h-full w-full relative">
-                  <img 
-                    src={image.url} 
-                    alt={image.alt} 
-                    className="w-full h-full object-cover opacity-70"
-                  />
-                  {/* Image overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70"></div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+        {/* Current Image */}
+        <div className="absolute inset-0 transition-opacity duration-1000">
+          <img 
+            src={currentImage.url} 
+            alt={currentImage.alt} 
+            className="w-full h-full object-cover opacity-70"
+          />
+          {/* Image overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70"></div>
+        </div>
+        
+        {/* Next Image (for fade transition) */}
+        {isTransitioning && nextImage && (
+          <div className="absolute inset-0 transition-opacity duration-1000 opacity-0 animate-fade-in">
+            <img 
+              src={nextImage.url} 
+              alt={nextImage.alt} 
+              className="w-full h-full object-cover opacity-70"
+            />
+            {/* Image overlay gradient */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70"></div>
+          </div>
+        )}
       </div>
       
       {/* Hero content */}
