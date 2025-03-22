@@ -43,7 +43,7 @@ const AboutSection: React.FC = () => {
       <div className="absolute top-0 right-0 w-1/3 h-2/3 bg-gradient-to-bl from-blue-600/5 via-purple-600/5 to-transparent rounded-full blur-3xl" />
       
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <div>
             <div className="overflow-hidden">
               <h2 className="font-display text-3xl md:text-4xl tracking-wider mb-8 animate-on-scroll opacity-0">
@@ -77,8 +77,8 @@ const AboutSection: React.FC = () => {
             </div>
           </div>
           
-          <div className="animate-on-scroll opacity-0" style={{ transitionDelay: "200ms" }}>
-            <div className="relative perspective">
+          <div className="animate-on-scroll opacity-0 mt-8 md:mt-20" style={{ transitionDelay: "200ms" }}>
+            <div className="relative perspective max-w-md mx-auto md:mx-0">
               <div 
                 className="relative rounded-lg overflow-hidden transform rotate-2 hover:rotate-0 transition-transform duration-700 ease-out-expo shadow-xl"
               >
@@ -91,7 +91,7 @@ const AboutSection: React.FC = () => {
               </div>
               
               <div 
-                className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/4 rotate-12 w-2/3 h-2/3 rounded-lg overflow-hidden shadow-xl z-10"
+                className="absolute bottom-1/3 left-0 transform -translate-x-1/4 rotate-12 w-2/3 h-2/3 rounded-lg overflow-hidden shadow-xl z-10"
               >
                 <img 
                   src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
