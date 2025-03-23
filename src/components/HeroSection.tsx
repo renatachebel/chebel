@@ -3,34 +3,34 @@ import React, { useEffect, useRef } from 'react';
 import { ArrowDownIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Use the newly uploaded images
+// Use the correct image paths (without /public prefix)
 const heroImages = [
   {
-    url: "/public/lovable-uploads/f80972c5-c4a4-496b-8171-e2730dd1b15b.png",
+    url: "/lovable-uploads/f80972c5-c4a4-496b-8171-e2730dd1b15b.png",
     alt: "Person with book"
   },
   {
-    url: "/public/lovable-uploads/0fac703d-544a-4c73-89b3-c17395277326.png",
+    url: "/lovable-uploads/0fac703d-544a-4c73-89b3-c17395277326.png",
     alt: "Hands reaching towards the moon"
   },
   {
-    url: "/public/lovable-uploads/9f887525-f0f5-4f1e-aaa2-cc0136937f34.png",
+    url: "/lovable-uploads/9f887525-f0f5-4f1e-aaa2-cc0136937f34.png",
     alt: "Hands holding shell"
   },
   {
-    url: "/public/lovable-uploads/0d8d6b1a-36c3-465c-9c91-54e5a6ed1d32.png",
+    url: "/lovable-uploads/0d8d6b1a-36c3-465c-9c91-54e5a6ed1d32.png",
     alt: "Person with mirror"
   },
   {
-    url: "/public/lovable-uploads/db4eb682-0549-4794-9705-38f15b4324ec.png",
+    url: "/lovable-uploads/db4eb682-0549-4794-9705-38f15b4324ec.png",
     alt: "Portrait of two people"
   },
   {
-    url: "/public/lovable-uploads/74e50d6a-6c0b-44a1-a00c-c08924c76a11.png",
+    url: "/lovable-uploads/74e50d6a-6c0b-44a1-a00c-c08924c76a11.png",
     alt: "Person with yellow fringe necklace"
   },
   {
-    url: "/public/lovable-uploads/daa43558-4d77-43f4-9f6b-cfde79a2838b.png",
+    url: "/lovable-uploads/daa43558-4d77-43f4-9f6b-cfde79a2838b.png",
     alt: "Person with metallic material"
   }
 ];
@@ -45,7 +45,7 @@ const HeroSection: React.FC = () => {
   const [isTransitioning, setIsTransitioning] = React.useState(false);
   
   useEffect(() => {
-    // Auto-rotate images every 6 seconds (changed from 8)
+    // Auto-rotate images every 6 seconds
     const interval = setInterval(() => {
       const nextIndex = (activeIndex + 1) % heroImages.length;
       setNextImage(heroImages[nextIndex]);
@@ -57,7 +57,7 @@ const HeroSection: React.FC = () => {
         setCurrentImage(heroImages[nextIndex]);
         setIsTransitioning(false);
       }, 1000); // 1 second transition time
-    }, 6000); // Changed from 8000 to 6000 milliseconds
+    }, 6000); // 6 seconds display time per image
     
     return () => clearInterval(interval);
   }, [activeIndex]);

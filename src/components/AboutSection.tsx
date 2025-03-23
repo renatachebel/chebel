@@ -105,8 +105,8 @@ const AboutSection: React.FC = () => {
                 className="relative rounded-lg overflow-hidden transform rotate-2 hover:rotate-0 transition-transform duration-700 ease-out-expo shadow-xl"
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1072&q=80" 
-                  alt="Chebel" 
+                  src="/lovable-uploads/6e9f6cab-d469-4093-b39b-ec290d5e5006.png" 
+                  alt="Chebel performing VJ set" 
                   className="w-full h-auto"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
