@@ -40,21 +40,21 @@ const HeroSection: React.FC = () => {
   // Get a random starting image index
   const startIndex = useRef<number>(Math.floor(Math.random() * heroImages.length));
   const [activeIndex, setActiveIndex] = React.useState(startIndex.current);
-  const [nextIndex, setNextIndex] = React.useState<number | null>(null);
+  const [prevIndex, setPrevIndex] = React.useState<number | null>(null);
   const [isTransitioning, setIsTransitioning] = React.useState(false);
   
   useEffect(() => {
     // Auto-rotate images every 6 seconds
     const interval = setInterval(() => {
       const next = (activeIndex + 1) % heroImages.length;
-      setNextIndex(next);
+      setPrevIndex(activeIndex);
+      setActiveIndex(next);
       setIsTransitioning(true);
       
-      // After fade-in animation completes, update the current image
+      // After fade-in animation completes, reset transition state
       setTimeout(() => {
-        setActiveIndex(next);
         setIsTransitioning(false);
-        setNextIndex(null);
+        setPrevIndex(null);
       }, 1000); // 1 second transition time
     }, 6000); // 6 seconds display time per image
     
@@ -116,8 +116,10 @@ const HeroSection: React.FC = () => {
       
       {/* Hero Image with Fade Transition */}
       <div className="w-full h-screen absolute inset-0 z-0">
-        {/* Current Image */}
-        <div className="absolute inset-0">
+        {/* Current active image */}
+        <div 
+          className={`absolute inset-0 transition-opacity duration-1000 ${isTransitioning ? 'opacity-100' : 'opacity-100'}`}
+        >
           <img 
             src={heroImages[activeIndex].url} 
             alt={heroImages[activeIndex].alt} 
@@ -127,15 +129,15 @@ const HeroSection: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70"></div>
         </div>
         
-        {/* Next Image (for fade transition) */}
-        {isTransitioning && nextIndex !== null && (
+        {/* Previous image that fades out */}
+        {isTransitioning && prevIndex !== null && (
           <div 
-            className="absolute inset-0 transition-opacity duration-1000" 
-            style={{ opacity: isTransitioning ? 1 : 0 }}
+            className="absolute inset-0 transition-opacity duration-1000 opacity-0"
+            style={{ opacity: isTransitioning ? 0 : 1 }}
           >
             <img 
-              src={heroImages[nextIndex].url} 
-              alt={heroImages[nextIndex].alt} 
+              src={heroImages[prevIndex].url} 
+              alt={heroImages[prevIndex].alt} 
               className="w-full h-full object-cover opacity-70"
             />
             {/* Image overlay gradient */}
