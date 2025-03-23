@@ -2,61 +2,36 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowDownIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
 
-// Expanded collection of images for the carousel
+// Use the newly uploaded images
 const heroImages = [
   {
-    url: "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
-    alt: "Multimedia art installation"
+    url: "/public/lovable-uploads/f80972c5-c4a4-496b-8171-e2730dd1b15b.png",
+    alt: "Person with book"
   },
   {
-    url: "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3566&q=80",
-    alt: "Visual performance"
+    url: "/public/lovable-uploads/0fac703d-544a-4c73-89b3-c17395277326.png",
+    alt: "Hands reaching towards the moon"
   },
   {
-    url: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
-    alt: "Audio visual setup"
+    url: "/public/lovable-uploads/9f887525-f0f5-4f1e-aaa2-cc0136937f34.png",
+    alt: "Hands holding shell"
   },
   {
-    url: "https://images.unsplash.com/photo-1557672172-298e090bd0f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
-    alt: "Colorful light art"
+    url: "/public/lovable-uploads/0d8d6b1a-36c3-465c-9c91-54e5a6ed1d32.png",
+    alt: "Person with mirror"
   },
   {
-    url: "https://images.unsplash.com/photo-1550184658-ff6132a71714?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
-    alt: "Light painting performance"
+    url: "/public/lovable-uploads/db4eb682-0549-4794-9705-38f15b4324ec.png",
+    alt: "Portrait of two people"
   },
   {
-    url: "https://images.unsplash.com/photo-1547119957-637f8679db1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
-    alt: "Digital art visualization"
+    url: "/public/lovable-uploads/74e50d6a-6c0b-44a1-a00c-c08924c76a11.png",
+    alt: "Person with yellow fringe necklace"
   },
   {
-    url: "https://images.unsplash.com/photo-1573167243872-43c6433b9d40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
-    alt: "Projected light installation"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1598387993441-a364f854c3e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80",
-    alt: "Laser light show"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2936&q=80",
-    alt: "Museum video installation"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
-    alt: "Neon art display"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1515634928627-2a4e0dae3ddf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
-    alt: "Immersive art environment"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1576224731898-374b3b3cf0a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80",
-    alt: "Abstract projection mapping"
+    url: "/public/lovable-uploads/daa43558-4d77-43f4-9f6b-cfde79a2838b.png",
+    alt: "Person with metallic material"
   }
 ];
 
@@ -70,7 +45,7 @@ const HeroSection: React.FC = () => {
   const [isTransitioning, setIsTransitioning] = React.useState(false);
   
   useEffect(() => {
-    // Auto-rotate images every 8 seconds
+    // Auto-rotate images every 6 seconds (changed from 8)
     const interval = setInterval(() => {
       const nextIndex = (activeIndex + 1) % heroImages.length;
       setNextImage(heroImages[nextIndex]);
@@ -82,7 +57,7 @@ const HeroSection: React.FC = () => {
         setCurrentImage(heroImages[nextIndex]);
         setIsTransitioning(false);
       }, 1000); // 1 second transition time
-    }, 8000);
+    }, 6000); // Changed from 8000 to 6000 milliseconds
     
     return () => clearInterval(interval);
   }, [activeIndex]);

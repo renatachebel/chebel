@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Instagram } from 'lucide-react';
 
 const AboutSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -63,6 +63,28 @@ const AboutSection: React.FC = () => {
               <p className="font-body text-white/80 mb-6">
                 With a background in both visual arts and computer science, I blend technical expertise with artistic vision to create works that are both conceptually rich and visually captivating.
               </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 mb-8">
+                <a 
+                  href="https://instagram.com/infinitachebel" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center font-body text-sm tracking-wider group hover:text-white/90"
+                >
+                  <Instagram size={18} className="mr-2" />
+                  @infinitachebel
+                </a>
+                
+                <a 
+                  href="https://instagram.com/iluminachebel" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center font-body text-sm tracking-wider group hover:text-white/90"
+                >
+                  <Instagram size={18} className="mr-2" />
+                  @iluminachebel
+                </a>
+              </div>
               
               <Link 
                 to="/about" 
