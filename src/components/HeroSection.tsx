@@ -40,22 +40,21 @@ const HeroSection: React.FC = () => {
   // Get a random starting image index
   const startIndex = useRef<number>(Math.floor(Math.random() * heroImages.length));
   const [activeIndex, setActiveIndex] = React.useState(startIndex.current);
-  const [currentImage, setCurrentImage] = React.useState(heroImages[startIndex.current]);
-  const [nextImage, setNextImage] = React.useState<typeof currentImage | null>(null);
+  const [nextIndex, setNextIndex] = React.useState<number | null>(null);
   const [isTransitioning, setIsTransitioning] = React.useState(false);
   
   useEffect(() => {
     // Auto-rotate images every 6 seconds
     const interval = setInterval(() => {
-      const nextIndex = (activeIndex + 1) % heroImages.length;
-      setNextImage(heroImages[nextIndex]);
+      const next = (activeIndex + 1) % heroImages.length;
+      setNextIndex(next);
       setIsTransitioning(true);
       
       // After fade-in animation completes, update the current image
       setTimeout(() => {
-        setActiveIndex(nextIndex);
-        setCurrentImage(heroImages[nextIndex]);
+        setActiveIndex(next);
         setIsTransitioning(false);
+        setNextIndex(null);
       }, 1000); // 1 second transition time
     }, 6000); // 6 seconds display time per image
     
@@ -118,10 +117,10 @@ const HeroSection: React.FC = () => {
       {/* Hero Image with Fade Transition */}
       <div className="w-full h-screen absolute inset-0 z-0">
         {/* Current Image */}
-        <div className="absolute inset-0 transition-opacity duration-1000">
+        <div className="absolute inset-0">
           <img 
-            src={currentImage.url} 
-            alt={currentImage.alt} 
+            src={heroImages[activeIndex].url} 
+            alt={heroImages[activeIndex].alt} 
             className="w-full h-full object-cover opacity-70"
           />
           {/* Image overlay gradient */}
@@ -129,11 +128,14 @@ const HeroSection: React.FC = () => {
         </div>
         
         {/* Next Image (for fade transition) */}
-        {isTransitioning && nextImage && (
-          <div className="absolute inset-0 transition-opacity duration-1000 opacity-0 animate-fade-in">
+        {isTransitioning && nextIndex !== null && (
+          <div 
+            className="absolute inset-0 transition-opacity duration-1000" 
+            style={{ opacity: isTransitioning ? 1 : 0 }}
+          >
             <img 
-              src={nextImage.url} 
-              alt={nextImage.alt} 
+              src={heroImages[nextIndex].url} 
+              alt={heroImages[nextIndex].alt} 
               className="w-full h-full object-cover opacity-70"
             />
             {/* Image overlay gradient */}
@@ -153,7 +155,7 @@ const HeroSection: React.FC = () => {
             
             <div className="overflow-hidden mb-8 mt-4">
               <p className="font-body text-lg md:text-xl text-white/80 max-w-2xl animate-slide-up parallax" data-speed="0.3">
-                Photography • Video • Immersive Installations • VJ Performance
+                Photography - Video - Installations - Generative Art - Video Mapping - VJ
               </p>
             </div>
             
