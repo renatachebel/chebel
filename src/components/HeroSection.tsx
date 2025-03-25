@@ -51,10 +51,9 @@ const HeroSection: React.FC = () => {
       setActiveIndex(next);
       setIsTransitioning(true);
       
-      // After fade-in animation completes, reset transition state
+      // After transition completes, reset the transition state
       setTimeout(() => {
         setIsTransitioning(false);
-        setPrevIndex(null);
       }, 1000); // 1 second transition time
     }, 6000); // 6 seconds display time per image
     
@@ -114,32 +113,41 @@ const HeroSection: React.FC = () => {
         }}
       />
       
-      {/* Hero Image with Fade Transition */}
+      {/* Hero Images with Crossfade Transition */}
       <div className="w-full h-screen absolute inset-0 z-0">
-        {/* Current active image */}
+        {/* Current active image with zoom effect */}
         <div 
-          className={`absolute inset-0 transition-opacity duration-1000 ${isTransitioning ? 'opacity-100' : 'opacity-100'}`}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
         >
-          <img 
-            src={heroImages[activeIndex].url} 
-            alt={heroImages[activeIndex].alt} 
-            className="w-full h-full object-cover opacity-70"
-          />
+          <div className="w-full h-full overflow-hidden">
+            <img 
+              src={heroImages[activeIndex].url} 
+              alt={heroImages[activeIndex].alt} 
+              className="w-full h-full object-cover opacity-70 transition-transform duration-6000 transform scale-110"
+              style={{ 
+                animation: 'slow-zoom 6s ease-in-out infinite alternate',
+              }}
+            />
+          </div>
           {/* Image overlay gradient */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70"></div>
         </div>
         
-        {/* Previous image that fades out */}
-        {isTransitioning && prevIndex !== null && (
+        {/* Previous image that crossfades */}
+        {prevIndex !== null && (
           <div 
-            className="absolute inset-0 transition-opacity duration-1000 opacity-0"
-            style={{ opacity: isTransitioning ? 0 : 1 }}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${isTransitioning ? 'opacity-100' : 'opacity-0'}`}
           >
-            <img 
-              src={heroImages[prevIndex].url} 
-              alt={heroImages[prevIndex].alt} 
-              className="w-full h-full object-cover opacity-70"
-            />
+            <div className="w-full h-full overflow-hidden">
+              <img 
+                src={heroImages[prevIndex].url} 
+                alt={heroImages[prevIndex].alt} 
+                className="w-full h-full object-cover opacity-70 transition-transform duration-6000 transform scale-110"
+                style={{ 
+                  animation: 'slow-zoom 6s ease-in-out infinite alternate',
+                }}
+              />
+            </div>
             {/* Image overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70"></div>
           </div>
