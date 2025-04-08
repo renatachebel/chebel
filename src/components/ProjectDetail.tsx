@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Project } from '../data/projects';
+import { AspectRatio } from './ui/aspect-ratio';
 
 interface ProjectDetailProps {
   project: Project;
@@ -45,7 +46,21 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
   };
   
   const renderMedia = () => {
-    if (project.images && project.images.length > 0) {
+    if (project.youtubeId) {
+      return (
+        <div className="relative overflow-hidden rounded-lg">
+          <AspectRatio ratio={16/9}>
+            <iframe
+              src={`https://www.youtube.com/embed/${project.youtubeId}`}
+              title={project.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full border-0"
+            ></iframe>
+          </AspectRatio>
+        </div>
+      );
+    } else if (project.images && project.images.length > 0) {
       return (
         <div className="relative overflow-hidden rounded-lg">
           {isLoading && (

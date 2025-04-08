@@ -1,4 +1,3 @@
-
 export interface Project {
   id: number;
   title: string;
@@ -13,6 +12,7 @@ export interface Project {
   location?: string;
   isFeatured?: boolean;
   details?: string;
+  youtubeId?: string;
 }
 
 // In a real application, these would be real images and videos
@@ -51,19 +51,16 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Resonant Space",
-    slug: "resonant-space",
+    title: "Temple of Reflections",
+    slug: "temple-of-reflections",
     category: "installation",
-    thumbnail: "https://images.unsplash.com/photo-1547045662-e5a75c38c170?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1547045662-e5a75c38c170?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      "https://images.unsplash.com/photo-1568438350562-2cae6d919438?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    ],
-    description: "An interactive sound installation that responds to visitor movement and presence.",
-    date: "2021",
-    location: "Contemporary Art Museum",
+    thumbnail: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    youtubeId: "cLByxbJQGBY",
+    description: "An immersive installation created in Taiwan in collaboration with Ygor Marotta.",
+    date: "2022",
+    location: "Taiwan",
     isFeatured: true,
-    details: "Resonant Space is an immersive installation that transforms human movement into sound and light. Using motion sensors and custom software, the installation creates a unique audiovisual environment that responds directly to visitors' movements. As participants navigate the space, their actions trigger subtle changes in ambient sound and lighting, creating a dialogue between human presence and environmental response. The installation explores themes of connection, embodiment, and the invisible exchanges that occur between people and their surroundings."
+    details: "Temple of Reflections is an immersive installation that combines projection mapping, light, and sound to create a meditative and transformative space. Created in collaboration with Ygor Marotta in Taiwan, this project explores the themes of reflection, both literal and metaphorical. Visitors are invited to contemplate their relationship with themselves and their surroundings through an experience that merges traditional cultural elements with contemporary digital art techniques."
   },
   {
     id: 4,
