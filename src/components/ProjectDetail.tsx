@@ -105,6 +105,30 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
     }
   };
   
+  const renderImagesGrid = () => {
+    // Only show images grid if there's a YouTube video and also images
+    if (project.youtubeId && project.images && project.images.length > 0) {
+      return (
+        <div className="mt-12">
+          <h3 className="font-display text-xl tracking-wider mb-6">Installation Views</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {project.images.map((image, index) => (
+              <div key={index} className="overflow-hidden rounded-lg">
+                <img 
+                  src={image} 
+                  alt={`${project.title} view ${index + 1}`} 
+                  className="w-full h-auto transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+    
+    return null;
+  };
+  
   return (
     <div className="animate-fade-in">
       <div className="mb-10">
@@ -119,7 +143,8 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div className="md:col-span-2">
           {renderMedia()}
-          {renderThumbnails()}
+          {!project.youtubeId && renderThumbnails()}
+          {renderImagesGrid()}
         </div>
         
         <div className="glass-card p-8 self-start">

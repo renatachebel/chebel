@@ -1,3 +1,4 @@
+
 export interface Project {
   id: number;
   title: string;
@@ -54,7 +55,16 @@ export const projects: Project[] = [
     title: "Temple of Reflections",
     slug: "temple-of-reflections",
     category: "installation",
-    thumbnail: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    thumbnail: "public/lovable-uploads/9c4727bb-a9f6-4b6c-acb6-a4929a4d35ad.png",
+    images: [
+      "public/lovable-uploads/9c4727bb-a9f6-4b6c-acb6-a4929a4d35ad.png",
+      "public/lovable-uploads/5a223aa9-973a-4b6d-a184-b9ea9abd258c.png",
+      "public/lovable-uploads/38b192ad-272c-4956-83c6-c9fa8f64592c.png",
+      "public/lovable-uploads/c7e6acc7-c0e5-41f9-8825-7cdc3a0f5ec1.png",
+      "public/lovable-uploads/fa21f2f7-736f-4054-8476-2fee184be0f2.png",
+      "public/lovable-uploads/45032f19-4e58-4712-ac6c-7ada0d23ec61.png",
+      "public/lovable-uploads/b4878044-cd1b-4778-8fb5-2f695f4057c2.png"
+    ],
     youtubeId: "cLByxbJQGBY",
     description: "An immersive installation created in Taiwan in collaboration with Ygor Marotta.",
     date: "2024",
