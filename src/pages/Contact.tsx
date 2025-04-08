@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import Layout from '../components/Layout';
+import { toast } from "sonner";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -22,12 +23,16 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
+    // In a real implementation, you would send this to your email
+    // Here we're simulating sending the form data
+    console.log('Form submitted to chebel@gmail.com:', formData);
+    
     // Simulate form submission
     setTimeout(() => {
-      console.log('Form submitted:', formData);
       setFormData({ name: '', email: '', subject: '', message: '' });
       setIsSubmitting(false);
       setSubmitSuccess(true);
+      toast.success("Message sent successfully! Chebel will get back to you soon.");
       
       setTimeout(() => {
         setSubmitSuccess(false);
@@ -141,7 +146,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-display text-lg mb-1">Email</h3>
-                    <p className="font-body text-white/70">contact@chebel.com</p>
+                    <p className="font-body text-white/70">chebel@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -153,23 +158,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-display text-lg mb-1">Phone</h3>
-                    <p className="font-body text-white/70">+1 (555) 123-4567</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="glass-card p-6">
-                <div className="flex items-start">
-                  <div className="bg-white/10 p-3 rounded-md mr-4">
-                    <MapPin size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-lg mb-1">Studio</h3>
-                    <p className="font-body text-white/70">
-                      123 Art District<br />
-                      New York, NY 10001<br />
-                      United States
-                    </p>
+                    <p className="font-body text-white/70">+55(11)98556-4289</p>
                   </div>
                 </div>
               </div>
