@@ -57,10 +57,10 @@ export const projects: Project[] = [
     thumbnail: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     youtubeId: "cLByxbJQGBY",
     description: "An immersive installation created in Taiwan in collaboration with Ygor Marotta.",
-    date: "2022",
+    date: "2024",
     location: "Taiwan",
     isFeatured: true,
-    details: "Temple of Reflections is an immersive installation that combines projection mapping, light, and sound to create a meditative and transformative space. Created in collaboration with Ygor Marotta in Taiwan, this project explores the themes of reflection, both literal and metaphorical. Visitors are invited to contemplate their relationship with themselves and their surroundings through an experience that merges traditional cultural elements with contemporary digital art techniques."
+    details: "Inspired by Taiwanese diverse religious practices and philosophies, Temple of Reflections is an AI powered sanctuary for inner reflection, where you can chat to an entity versed on Buddhism, Taoism, Confucianism, and local folk beliefs.\n\nVisitors can also see their image mirrored on the front wall as either the goddess of mercy Guanyin, the philosopher Confucius, or Buddha.\n\nEvery interaction with the entity generates new images on the sidewalls inspired by the conversation. When visitors say good bye the entity generates a short poem summarizing the theme of the interaction.\n\nCreated by the Brazilian artists Renata Chebel and Ygor Marotta. The artists researched local temples and the vibrant Taiwanese imagery, then fine tuned an AI model with their own work to create a unique style for generating images.\n\nThe generative installation was first presented at Taiwan Technology and Culture Expo 2024 and can be adapted to a diverse cultural backgrounds.\n\nTouchDesigner collaborator: Sarah Ahab\nTechnical support: @dotsimulate, Revlis Huang, Vincent Naples\nLoRA trainer: Eden.art\nThanks: Dimension Plus, Pier-2 Art in Residency"
   },
   {
     id: 4,
