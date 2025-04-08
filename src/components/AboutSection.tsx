@@ -53,15 +53,15 @@ const AboutSection: React.FC = () => {
             
             <div className="animate-on-scroll opacity-0" style={{ transitionDelay: "100ms" }}>
               <p className="font-body text-white/80 mb-6">
-                As a multimedia artist, I explore the intersection of digital and physical realms through photography, video, immersive installations, and live performances.
+                A Brazilian multimedia artist whose work explores alterity, nature, the sacred, and the feminine. With a background in journalism, she channels storytelling through generative art, video, photography, and projection mapping.
               </p>
               
               <p className="font-body text-white/80 mb-6">
-                My work examines the relationship between technology, perception, and human experience, creating sensory environments that challenge conventional boundaries.
+                Chebel has a natural ability to blend diverse traditions, philosophies, and artistic mediums into cohesive, immersive experiences. Her work weaves together ancient wisdom and futuristic technology, bridging seemingly opposing worlds.
               </p>
               
               <p className="font-body text-white/80 mb-6">
-                With a background in both visual arts and computer science, I blend technical expertise with artistic vision to create works that are both conceptually rich and visually captivating.
+                She consistently explores themes of spirituality, ecology, the feminine and alterity, creating projects that are both deeply personal and universally resonant. This blend of art and storytelling highlights her desire to connect with others on profound levels, creating spaces for reflection, growth, and transformation—for both herself and those who experience her art.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 mb-8">
