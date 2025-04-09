@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 import HeroSection from '../components/HeroSection';
-import AboutSection from '../components/AboutSection';
 import ProjectCard from '../components/ProjectCard';
 import { getFeaturedProjects } from '../data/projects';
 
@@ -66,8 +65,6 @@ const Index: React.FC = () => {
           </div>
         </div>
       </div>
-      
-      <AboutSection />
       
       <div className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 to-blue-900/10" />

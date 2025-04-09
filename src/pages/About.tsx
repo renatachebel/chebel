@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Layout from '../components/Layout';
+import { Instagram, ArrowRight } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -16,9 +17,39 @@ const About: React.FC = () => {
           <div className="md:col-span-2 order-2 md:order-1">
             <div className="space-y-6 animate-fade-in" style={{ animationDelay: "100ms" }}>
               <p className="font-body text-lg">
-                I am a multimedia artist working at the intersection of photography, video, installation art, and live performance. My practice explores the relationship between technology, perception, and human experience.
+                A Brazilian multimedia artist whose work explores alterity, nature, the sacred, and the feminine. With a background in journalism, she channels storytelling through generative art, video, photography, and projection mapping.
               </p>
               
+              <p className="font-body">
+                Chebel has a natural ability to blend diverse traditions, philosophies, and artistic mediums into cohesive, immersive experiences. Her work weaves together ancient wisdom and futuristic technology, bridging seemingly opposing worlds.
+              </p>
+              
+              <p className="font-body">
+                She consistently explores themes of spirituality, ecology, the feminine and alterity, creating projects that are both deeply personal and universally resonant. This blend of art and storytelling highlights her desire to connect with others on profound levels, creating spaces for reflection, growth, and transformation—for both herself and those who experience her art.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 mb-8">
+                <a 
+                  href="https://instagram.com/infinitachebel" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center font-body text-sm tracking-wider group hover:text-white/90"
+                >
+                  <Instagram size={18} className="mr-2" />
+                  @infinitachebel
+                </a>
+                
+                <a 
+                  href="https://instagram.com/iluminachebel" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center font-body text-sm tracking-wider group hover:text-white/90"
+                >
+                  <Instagram size={18} className="mr-2" />
+                  @iluminachebel
+                </a>
+              </div>
+
               <p className="font-body">
                 With a background in both visual arts and computer science, I blend technical expertise with artistic vision to create works that are both conceptually rich and visually captivating. My approach is characterized by a meticulous attention to detail and a commitment to pushing the boundaries of what's possible within my chosen mediums.
               </p>
@@ -67,8 +98,8 @@ const About: React.FC = () => {
             </div>
           </div>
           
-          <div className="order-1 md:order-2 animate-fade-in">
-            <div className="sticky top-24">
+          <div className="order-1 md:order-2">
+            <div className="sticky top-24 space-y-8">
               <div className="relative perspective">
                 <div className="relative rounded-lg overflow-hidden transform hover:rotate-0 transition-transform duration-700 ease-out-expo shadow-xl">
                   <img 
@@ -82,6 +113,17 @@ const About: React.FC = () => {
                 <div className="absolute bottom-8 left-8 right-8">
                   <h3 className="font-display text-xl mb-2">Chebel</h3>
                   <p className="font-body text-white/70">Multimedia Artist</p>
+                </div>
+              </div>
+              
+              <div className="relative perspective mt-8">
+                <div className="relative rounded-lg overflow-hidden transform rotate-2 hover:rotate-0 transition-transform duration-700 ease-out-expo shadow-xl">
+                  <img 
+                    src="/lovable-uploads/6e9f6cab-d469-4093-b39b-ec290d5e5006.png" 
+                    alt="Chebel performing VJ set" 
+                    className="w-full h-auto"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                 </div>
               </div>
               
