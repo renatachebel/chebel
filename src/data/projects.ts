@@ -38,17 +38,29 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Ephemeral Dreams",
-    slug: "ephemeral-dreams",
-    category: "video",
-    thumbnail: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80",
-    videos: [
-      "https://example.com/videos/ephemeral-dreams.mp4"
+    title: "Rainbow Road",
+    slug: "rainbow-road",
+    category: "performance",
+    thumbnail: "/lovable-uploads/5f4d5626-adf0-4db0-80d6-a30e587d29c0.png",
+    images: [
+      "/lovable-uploads/5f4d5626-adf0-4db0-80d6-a30e587d29c0.png",
+      "/lovable-uploads/dae137c3-671c-4b91-9bd8-da923b88eebd.png",
+      "/lovable-uploads/d2645021-9b0a-4732-a173-52b213195fbb.png",
+      "/lovable-uploads/45e8ba83-cbc1-47c7-80cb-4bbeb372eb63.png",
+      "/lovable-uploads/73cab20e-4fb3-4b9f-86b5-756f03e640c4.png",
+      "/lovable-uploads/817d7035-40d6-46a8-8ac6-516fd443d2c2.png",
+      "/lovable-uploads/fecd718a-8f69-43c0-bdb1-66158697964c.png",
+      "/lovable-uploads/3c188ff7-53c3-4c3c-b1fc-554c1d51c551.png",
+      "/lovable-uploads/1f3cb08b-2975-460e-a165-9e924e6d5d14.png",
+      "/lovable-uploads/473dc4c6-ed94-499c-b17d-81f826039d18.png",
+      "/lovable-uploads/a30a9a0d-63fa-4e48-a789-93f7070b2c84.png",
+      "/lovable-uploads/fca3b99a-9c6b-47ef-8b1f-81fe91824be7.png"
     ],
-    description: "A short experimental film examining the nature of dreams and memory.",
-    date: "2022",
+    description: "An innovative performance project blending urban exploration with digital art through a mobile projection setup.",
+    date: "2023",
+    location: "Various Urban Locations",
     isFeatured: true,
-    details: "Ephemeral Dreams is an experimental short film that explores the fragmented and elusive nature of our dreams and memories. Using layered visuals, abstract narratives, and an immersive soundscape, the film invites viewers to experience the disorienting yet beautiful space between consciousness and subconsciousness. The project was shot over three months using a combination of digital and analog techniques to create its distinctive visual texture."
+    details: "Rainbow Road is an innovative performance project by the creative duo Chebel and Microdosys, blending urban exploration with digital art through a mobile setup. Using a modified golf cart equipped with a projector, computer, and speakers, they navigate cityscapes, transforming ordinary surfaces into ephemeral canvases of AI-generated animations. This spontaneous, site-specific approach allows them to engage with the architectural and cultural textures of urban spaces, creating vivid, luminous interventions that challenge conventional notions of street art and digital media. Rainbow Road is a celebration of color, movement, and the transformative power of technology in reimagining public spaces, offering a fresh perspective on the intersections of art, architecture, and community engagement."
   },
   {
     id: 3,

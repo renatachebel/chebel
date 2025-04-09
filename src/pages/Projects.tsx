@@ -15,6 +15,7 @@ const Projects: React.FC = () => {
     { id: 'video', label: 'Video' },
     { id: 'installation', label: 'Installation' },
     { id: 'performance', label: 'Performance' },
+    { id: 'generative-art', label: 'Generative Art' },
   ];
   
   useEffect(() => {
