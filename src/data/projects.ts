@@ -41,9 +41,9 @@ export const projects: Project[] = [
     title: "Rainbow Road",
     slug: "rainbow-road",
     category: "performance",
-    thumbnail: "/lovable-uploads/5f4d5626-adf0-4db0-80d6-a30e587d29c0.png",
+    thumbnail: "/lovable-uploads/305ec59d-58f9-4451-82a5-fd623c57608b.png",
     images: [
-      "/lovable-uploads/5f4d5626-adf0-4db0-80d6-a30e587d29c0.png",
+      "/lovable-uploads/305ec59d-58f9-4451-82a5-fd623c57608b.png",
       "/lovable-uploads/dae137c3-671c-4b91-9bd8-da923b88eebd.png",
       "/lovable-uploads/d2645021-9b0a-4732-a173-52b213195fbb.png",
       "/lovable-uploads/45e8ba83-cbc1-47c7-80cb-4bbeb372eb63.png",
