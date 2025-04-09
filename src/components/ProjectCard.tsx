@@ -26,6 +26,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         return 'bg-teal-500/20 text-teal-200';
       case 'performance':
         return 'bg-orange-500/20 text-orange-200';
+      case 'generative-art':
+        return 'bg-pink-500/20 text-pink-200';
       default:
         return 'bg-white/10 text-white';
     }
@@ -80,7 +82,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         
           <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-out-expo">
             <span className={`inline-block px-3 py-1 rounded-full text-xs font-body tracking-wider mb-3 ${getCategoryStyle(project.category)}`}>
-              {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
+              {project.category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
             </span>
             <h3 className="font-display text-xl tracking-wider mb-2">{project.title}</h3>
             <p className="font-body text-sm text-white/80">{project.description}</p>

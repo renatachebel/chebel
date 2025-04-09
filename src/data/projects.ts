@@ -3,7 +3,7 @@ export interface Project {
   id: number;
   title: string;
   slug: string;
-  category: 'photography' | 'video' | 'installation' | 'performance';
+  category: 'photography' | 'video' | 'installation' | 'performance' | 'generative-art';
   thumbnail: string;
   images?: string[];
   videos?: string[];
@@ -20,21 +20,21 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Urban Perspectives",
-    slug: "urban-perspectives",
-    category: "photography",
-    thumbnail: "https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    title: "Sintography",
+    slug: "sintography",
+    category: "generative-art",
+    thumbnail: "/lovable-uploads/b7f0775c-9f85-42e9-b7b5-a631b5cad119.png",
     images: [
-      "https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      "/lovable-uploads/b7f0775c-9f85-42e9-b7b5-a631b5cad119.png",
+      "/lovable-uploads/8b9b86ac-cba5-4279-8fce-361f31e16d0b.png",
+      "/lovable-uploads/6fdd2875-dad7-46dd-a4a6-070565d55017.png",
+      "/lovable-uploads/c11672a4-bd32-462e-b2c6-d8d172d6661f.png"
     ],
-    description: "A photographic exploration of urban landscapes and their interaction with light and shadow.",
-    client: "Personal Project",
+    description: "A series of abstract generative artworks exploring movement and emotion through digital and traditional techniques.",
     date: "2023",
-    location: "Various Cities",
+    location: "Digital Exhibition",
     isFeatured: true,
-    details: "This series explores the relationship between artificial structures and natural light. Through a minimalist lens, I capture the geometric patterns and stark contrasts found in urban environments at different times of day. Each image is a meditation on how architecture shapes our perception of space and how light transforms these rigid structures into dynamic canvases."
+    details: "Sintography is an ongoing exploration of the intersection between traditional figurative art and computational processes. Each piece begins as a digital sketch that undergoes multiple transformations through custom algorithms, creating unique compositions that retain the essence of human movement while embracing digital abstraction. The vibrant color palette and flowing lines create a sense of motion and emotional resonance that challenges the boundaries between digital and physical art forms."
   },
   {
     id: 2,
