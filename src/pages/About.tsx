@@ -49,22 +49,6 @@ const About: React.FC = () => {
                   @iluminachebel
                 </a>
               </div>
-
-              <p className="font-body">
-                With a background in both visual arts and computer science, I blend technical expertise with artistic vision to create works that are both conceptually rich and visually captivating. My approach is characterized by a meticulous attention to detail and a commitment to pushing the boundaries of what's possible within my chosen mediums.
-              </p>
-              
-              <p className="font-body">
-                My photography examines the interplay between light, space, and form, often focusing on urban landscapes, architectural elements, and intimate portraits that reveal hidden narratives. In my video work, I experiment with temporal structures and visual storytelling to create immersive experiences that challenge conventional perceptions of time and space.
-              </p>
-              
-              <p className="font-body">
-                My installations merge physical and digital elements to create responsive environments that invite participants to become active agents in the work. Through sensors, projection mapping, and custom software, these pieces transform spaces into dynamic, interactive experiences that evolve with audience engagement.
-              </p>
-              
-              <p className="font-body">
-                As a VJ performer, I create real-time visual compositions that respond to and enhance musical experiences, using a combination of pre-rendered content and generative visuals that evolve in response to sound frequencies and audience energy.
-              </p>
             </div>
             
             <div className="mt-12 space-y-6 animate-fade-in" style={{ animationDelay: "200ms" }}>
@@ -72,26 +56,32 @@ const About: React.FC = () => {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div className="glass-card p-6">
-                  <h3 className="font-display text-lg mb-2">MFA in New Media</h3>
-                  <p className="font-body text-white/70 mb-1">University of Digital Arts</p>
-                  <p className="font-body text-sm text-white/50">2018 - 2020</p>
+                  <h3 className="font-display text-lg mb-2">BA in Journalism</h3>
+                  <p className="font-body text-white/70 mb-1">University of São Paulo - Brazil</p>
+                  <p className="font-body text-sm text-white/50">2003 - 2008</p>
                 </div>
                 
                 <div className="glass-card p-6">
-                  <h3 className="font-display text-lg mb-2">BA in Visual Communications</h3>
-                  <p className="font-body text-white/70 mb-1">Arts Institute</p>
-                  <p className="font-body text-sm text-white/50">2014 - 2018</p>
+                  <h3 className="font-display text-lg mb-2">Digital Photography</h3>
+                  <p className="font-body text-white/70 mb-1">Central Saint Martins</p>
+                  <p className="font-body text-sm text-white/50">2008</p>
                 </div>
                 
                 <div className="glass-card p-6">
-                  <h3 className="font-display text-lg mb-2">Certificate in Creative Coding</h3>
-                  <p className="font-body text-white/70 mb-1">Tech & Art Workshop</p>
-                  <p className="font-body text-sm text-white/50">2019</p>
+                  <h3 className="font-display text-lg mb-2">Fine Art Digital Printing</h3>
+                  <p className="font-body text-white/70 mb-1">ICP - NYC</p>
+                  <p className="font-body text-sm text-white/50">2015</p>
                 </div>
                 
                 <div className="glass-card p-6">
-                  <h3 className="font-display text-lg mb-2">Photography Masterclass</h3>
-                  <p className="font-body text-white/70 mb-1">Visual Arts Academy</p>
+                  <h3 className="font-display text-lg mb-2">Production Design</h3>
+                  <p className="font-body text-white/70 mb-1">School of Visual Arts - NYC</p>
+                  <p className="font-body text-sm text-white/50">2013</p>
+                </div>
+                
+                <div className="glass-card p-6">
+                  <h3 className="font-display text-lg mb-2">Spatial Poetry</h3>
+                  <p className="font-body text-white/70 mb-1">Bauhaus-Universität Weimar</p>
                   <p className="font-body text-sm text-white/50">2017</p>
                 </div>
               </div>
@@ -103,7 +93,7 @@ const About: React.FC = () => {
               <div className="relative perspective">
                 <div className="relative rounded-lg overflow-hidden transform hover:rotate-0 transition-transform duration-700 ease-out-expo shadow-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1530785602389-07594beb8b73?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" 
+                    src="/lovable-uploads/3c95e198-3ec7-4fc8-a131-4fc720de16a3.png" 
                     alt="Chebel Portrait" 
                     className="w-full h-auto"
                   />
@@ -130,19 +120,11 @@ const About: React.FC = () => {
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <div>
                   <h4 className="font-body text-sm text-white/60 mb-1">Based in</h4>
-                  <p className="font-body">New York, USA</p>
+                  <p className="font-body">Brazil</p>
                 </div>
                 <div>
                   <h4 className="font-body text-sm text-white/60 mb-1">Experience</h4>
-                  <p className="font-body">7+ Years</p>
-                </div>
-                <div>
-                  <h4 className="font-body text-sm text-white/60 mb-1">Exhibitions</h4>
-                  <p className="font-body">15+ Shows</p>
-                </div>
-                <div>
-                  <h4 className="font-body text-sm text-white/60 mb-1">Collaborations</h4>
-                  <p className="font-body">20+ Projects</p>
+                  <p className="font-body">15+ Years</p>
                 </div>
               </div>
             </div>
