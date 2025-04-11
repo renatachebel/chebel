@@ -130,24 +130,6 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-        
-        <div className="max-w-4xl mx-auto mt-24 animate-fade-in" style={{ animationDelay: "300ms" }}>
-          <h2 className="font-display text-2xl tracking-wider mb-8">MY APPROACH & PHILOSOPHY</h2>
-          
-          <div className="space-y-6">
-            <p className="font-body">
-              I believe that art should create meaningful connections—between ideas, between mediums, and most importantly, between people. My work aims to create spaces where viewers can encounter new perspectives and experiences that resonate on both intellectual and emotional levels.
-            </p>
-            
-            <p className="font-body">
-              Technology is central to my practice, but always in service of human experience rather than as an end in itself. I'm interested in how digital tools can be used to create work that feels organic, intuitive, and deeply connected to our lived experiences.
-            </p>
-            
-            <p className="font-body">
-              My creative process typically begins with extensive research and experimentation, followed by iterative development that allows concepts to evolve organically. I value collaboration and often work with other artists, musicians, programmers, and engineers to realize complex projects that exceed the limitations of individual disciplines.
-            </p>
-          </div>
-        </div>
       </div>
     </Layout>
   );

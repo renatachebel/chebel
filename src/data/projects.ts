@@ -85,6 +85,32 @@ export const projects: Project[] = [
     details: "Inspired by Taiwanese diverse religious practices and philosophies, Temple of Reflections is an AI powered sanctuary for inner reflection, where you can chat to an entity versed on Buddhism, Taoism, Confucianism, and local folk beliefs.\n\nVisitors can also see their image mirrored on the front wall as either the goddess of mercy Guanyin, the philosopher Confucius, or Buddha.\n\nEvery interaction with the entity generates new images on the sidewalls inspired by the conversation. When visitors say good bye the entity generates a short poem summarizing the theme of the interaction.\n\nCreated by the Brazilian artists Renata Chebel and Ygor Marotta. The artists researched local temples and the vibrant Taiwanese imagery, then fine tuned an AI model with their own work to create a unique style for generating images.\n\nThe generative installation was first presented at Taiwan Technology and Culture Expo 2024 and can be adapted to a diverse cultural backgrounds.\n\nTouchDesigner collaborator: Sarah Ahab\nTechnical support: @dotsimulate, Revlis Huang, Vincent Naples\nLoRA trainer: Eden.art\nThanks: Dimension Plus, Pier-2 Art in Residency"
   },
   {
+    id: 7,
+    title: "Tea in Alishan",
+    slug: "tea-in-alishan",
+    category: "photography",
+    thumbnail: "/lovable-uploads/207db551-3ac5-4b6d-abad-1b9b2871efeb.png",
+    images: [
+      "/lovable-uploads/8ca0764c-f22e-4bac-8c82-c863efceb0fe.png",
+      "/lovable-uploads/0cad1113-ae7c-4a02-9531-99eb4572854b.png",
+      "/lovable-uploads/207db551-3ac5-4b6d-abad-1b9b2871efeb.png",
+      "/lovable-uploads/3105e6a8-6ceb-470b-8361-e8fcc22842d2.png",
+      "/lovable-uploads/6610a44c-0bf0-4095-a930-3d55b96b6a0c.png",
+      "/lovable-uploads/e9fd3534-70fe-4f69-a753-a71fb0ad6a55.png",
+      "/lovable-uploads/1b6b1596-2b7c-4bfb-b8b8-c57772906546.png",
+      "/lovable-uploads/173c7b65-efc0-427e-b3cf-b897967e3234.png",
+      "/lovable-uploads/667e80bf-3e7a-4f84-abfb-5f774b6a5bde.png",
+      "/lovable-uploads/5a560595-8fc4-46a1-9321-5b992ec467ab.png",
+      "/lovable-uploads/fe0ee64c-dd7c-47d4-bf1a-c26de46a4bd9.png",
+      "/lovable-uploads/b497512a-615d-4fd7-998b-4a700e1135ff.png"
+    ],
+    description: "A photographic series documenting tea harvesters at work in the misty mountains of Alishan, Taiwan.",
+    date: "2022",
+    location: "Alishan, Taiwan",
+    isFeatured: true,
+    details: "Tea in Alishan is a photographic documentation of the traditional tea cultivation in Taiwan's famous Alishan mountain region. The series captures both the breathtaking landscape of the mountain tea gardens and the meticulous labor of the tea harvesters as they work among the shrubs. \n\nAlishan is renowned for producing some of Taiwan's finest high mountain oolong teas, grown at elevations above 1,000 meters where cloud cover and cooler temperatures create ideal growing conditions. The photographs reveal the harmonious relationship between the tea farmers and their environment, highlighting the manual harvesting process that has been preserved for generations.\n\nThe series contrasts the ethereal beauty of the misty mountain landscapes with intimate portraits of the harvesters, their faces often shaded by traditional wide-brimmed hats as they carefully pick only the most tender leaves. These images tell a story of cultural heritage, sustainable agriculture, and the human connection to the land that produces one of Taiwan's most celebrated exports."
+  },
+  {
     id: 4,
     title: "Chromatic Pulse",
     slug: "chromatic-pulse",
