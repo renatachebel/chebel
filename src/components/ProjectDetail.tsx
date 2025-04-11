@@ -1,7 +1,10 @@
+
 import React, { useState, useEffect } from 'react';
 import { Project } from '../data/projects';
 import { AspectRatio } from './ui/aspect-ratio';
 import { ScrollArea } from './ui/scroll-area';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Button } from './ui/button';
 
 interface ProjectDetailProps {
   project: Project;
@@ -19,6 +22,24 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
   
   const handleImageLoad = () => {
     setIsLoading(false);
+  };
+
+  const navigateToPrevImage = () => {
+    if (project.images && project.images.length > 0) {
+      setSelectedImageIndex((prevIndex) => 
+        prevIndex === 0 ? project.images!.length - 1 : prevIndex - 1
+      );
+      setIsLoading(true);
+    }
+  };
+
+  const navigateToNextImage = () => {
+    if (project.images && project.images.length > 0) {
+      setSelectedImageIndex((prevIndex) => 
+        prevIndex === project.images!.length - 1 ? 0 : prevIndex + 1
+      );
+      setIsLoading(true);
+    }
   };
   
   const renderThumbnails = () => {
@@ -70,6 +91,32 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
               <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" />
             </div>
           )}
+          
+          {/* Navigation arrows */}
+          {project.images.length > 1 && (
+            <>
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 hover:bg-black/50 border-0 z-10"
+                onClick={navigateToPrevImage}
+              >
+                <ChevronLeft className="h-6 w-6" />
+                <span className="sr-only">Previous image</span>
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 hover:bg-black/50 border-0 z-10"
+                onClick={navigateToNextImage}
+              >
+                <ChevronRight className="h-6 w-6" />
+                <span className="sr-only">Next image</span>
+              </Button>
+            </>
+          )}
+          
           <img 
             src={project.images[selectedImageIndex]} 
             alt={project.title} 
