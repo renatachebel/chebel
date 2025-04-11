@@ -1,7 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import { Project } from '../data/projects';
 import { AspectRatio } from './ui/aspect-ratio';
+import { ScrollArea } from './ui/scroll-area';
 
 interface ProjectDetailProps {
   project: Project;
@@ -25,23 +25,25 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
     if (!project.images || project.images.length <= 1) return null;
     
     return (
-      <div className="flex overflow-x-auto space-x-4 scrollbar-hidden py-4 mt-8">
-        {project.images.map((image, index) => (
-          <button
-            key={index}
-            onClick={() => setSelectedImageIndex(index)}
-            className={`relative flex-shrink-0 w-20 h-20 overflow-hidden rounded-md transition-all duration-300 ${
-              index === selectedImageIndex ? 'ring-2 ring-white/80' : 'opacity-50 hover:opacity-80'
-            }`}
-          >
-            <img 
-              src={image} 
-              alt={`${project.title} thumbnail ${index + 1}`} 
-              className="w-full h-full object-cover"
-            />
-          </button>
-        ))}
-      </div>
+      <ScrollArea className="h-full max-h-40 mt-6">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3">
+          {project.images.map((image, index) => (
+            <button
+              key={index}
+              onClick={() => setSelectedImageIndex(index)}
+              className={`relative flex-shrink-0 w-20 h-20 overflow-hidden rounded-md transition-all duration-300 ${
+                index === selectedImageIndex ? 'ring-2 ring-white/80' : 'opacity-50 hover:opacity-80'
+              }`}
+            >
+              <img 
+                src={image} 
+                alt={`${project.title} thumbnail ${index + 1}`} 
+                className="w-full h-full object-cover"
+              />
+            </button>
+          ))}
+        </div>
+      </ScrollArea>
     );
   };
   
