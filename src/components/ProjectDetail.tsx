@@ -5,6 +5,8 @@ import { AspectRatio } from './ui/aspect-ratio';
 import { ScrollArea } from './ui/scroll-area';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
+import { Dialog, DialogContent, DialogClose } from './ui/dialog';
+import { X } from 'lucide-react';
 
 interface ProjectDetailProps {
   project: Project;
@@ -13,11 +15,14 @@ interface ProjectDetailProps {
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [galleryOpen, setGalleryOpen] = useState(false);
+  const [galleryIndex, setGalleryIndex] = useState(0);
   
   useEffect(() => {
     // Reset state when project changes
     setSelectedImageIndex(0);
     setIsLoading(true);
+    setGalleryOpen(false);
   }, [project.id]);
   
   const handleImageLoad = () => {
@@ -39,6 +44,27 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
         prevIndex === project.images!.length - 1 ? 0 : prevIndex + 1
       );
       setIsLoading(true);
+    }
+  };
+  
+  const openGallery = (index: number) => {
+    setGalleryIndex(index);
+    setGalleryOpen(true);
+  };
+
+  const navigatePrevGallery = () => {
+    if (project.images && project.images.length > 0) {
+      setGalleryIndex((prevIndex) => 
+        prevIndex === 0 ? project.images!.length - 1 : prevIndex - 1
+      );
+    }
+  };
+
+  const navigateNextGallery = () => {
+    if (project.images && project.images.length > 0) {
+      setGalleryIndex((prevIndex) => 
+        prevIndex === project.images!.length - 1 ? 0 : prevIndex + 1
+      );
     }
   };
   
@@ -162,7 +188,11 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
           <h3 className="font-display text-xl tracking-wider mb-6">Installation Views</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {project.images.map((image, index) => (
-              <div key={index} className="overflow-hidden rounded-lg">
+              <div 
+                key={index} 
+                className="overflow-hidden rounded-lg cursor-pointer"
+                onClick={() => openGallery(index)}
+              >
                 <img 
                   src={image} 
                   alt={`${project.title} view ${index + 1}`} 
@@ -228,6 +258,74 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
           </div>
         </div>
       </div>
+
+      {/* Full-size image gallery dialog */}
+      <Dialog open={galleryOpen} onOpenChange={setGalleryOpen}>
+        <DialogContent className="max-w-6xl p-0 bg-black/90 border-none">
+          <DialogClose className="absolute right-4 top-4 z-10 rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
+            <X className="h-5 w-5" />
+            <span className="sr-only">Close</span>
+          </DialogClose>
+          
+          <div className="relative flex items-center justify-center w-full h-full min-h-[50vh] max-h-[80vh]">
+            {project.images && (
+              <img 
+                src={project.images[galleryIndex]} 
+                alt={`${project.title} view ${galleryIndex + 1}`} 
+                className="max-h-full max-w-full object-contain"
+              />
+            )}
+            
+            {project.images && project.images.length > 1 && (
+              <>
+                <Button 
+                  variant="outline" 
+                  size="icon" 
+                  className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 hover:bg-black/50 border-0 z-10"
+                  onClick={navigatePrevGallery}
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                  <span className="sr-only">Previous image</span>
+                </Button>
+                
+                <Button 
+                  variant="outline" 
+                  size="icon" 
+                  className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 hover:bg-black/50 border-0 z-10"
+                  onClick={navigateNextGallery}
+                >
+                  <ChevronRight className="h-6 w-6" />
+                  <span className="sr-only">Next image</span>
+                </Button>
+              </>
+            )}
+          </div>
+          
+          {project.images && project.images.length > 1 && (
+            <div className="p-4 bg-black/80">
+              <ScrollArea className="h-24">
+                <div className="flex gap-2 pb-2">
+                  {project.images.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setGalleryIndex(index)}
+                      className={`relative flex-shrink-0 w-20 h-20 overflow-hidden rounded-md transition-all duration-300 ${
+                        index === galleryIndex ? 'ring-2 ring-white/80' : 'opacity-50 hover:opacity-80'
+                      }`}
+                    >
+                      <img 
+                        src={image} 
+                        alt={`${project.title} thumbnail ${index + 1}`} 
+                        className="w-full h-full object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              </ScrollArea>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
