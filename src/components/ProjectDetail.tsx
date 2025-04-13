@@ -17,6 +17,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [galleryIndex, setGalleryIndex] = useState(0);
+  const [imageOrientation, setImageOrientation] = useState<'landscape' | 'portrait'>('landscape');
   
   useEffect(() => {
     // Reset state when project changes
@@ -25,7 +26,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
     setGalleryOpen(false);
   }, [project.id]);
   
-  const handleImageLoad = () => {
+  const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    // Determine image orientation
+    setImageOrientation(img.naturalWidth >= img.naturalHeight ? 'landscape' : 'portrait');
     setIsLoading(false);
   };
 
@@ -143,13 +147,19 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
             </>
           )}
           
-          <img 
-            src={project.images[selectedImageIndex]} 
-            alt={project.title} 
-            className="w-full h-auto transition-opacity duration-500"
-            style={{ opacity: isLoading ? 0.5 : 1 }}
-            onLoad={handleImageLoad}
-          />
+          <div className={`flex justify-center ${imageOrientation === 'portrait' ? 'max-h-[70vh]' : ''}`}>
+            <img 
+              src={project.images[selectedImageIndex]} 
+              alt={project.title} 
+              className={`transition-opacity duration-500 ${
+                imageOrientation === 'portrait' 
+                  ? 'max-h-[70vh] object-contain w-auto' 
+                  : 'w-full h-auto'
+              }`}
+              style={{ opacity: isLoading ? 0.5 : 1 }}
+              onLoad={handleImageLoad}
+            />
+          </div>
         </div>
       );
     } else if (project.videos && project.videos.length > 0) {
