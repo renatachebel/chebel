@@ -152,13 +152,13 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
             </>
           )}
           
-          <div className={`flex justify-center ${imageOrientation === 'portrait' ? 'max-h-[70vh]' : ''}`}>
+          <div className="flex justify-center">
             <img 
               src={project.images[selectedImageIndex]} 
               alt={project.title} 
               className={`transition-opacity duration-500 ${
                 imageOrientation === 'portrait' 
-                  ? 'max-h-[70vh] object-contain w-auto' 
+                  ? 'max-h-[80vh] h-auto w-auto object-contain' 
                   : 'w-full h-auto'
               }`}
               style={{ opacity: isLoading ? 0.5 : 1 }}
@@ -251,7 +251,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <h4 className="font-body text-sm text-white/60 mb-1">Category</h4>
-                <p className="font-body">{project.category.charAt(0).toUpperCase() + project.category.slice(1)}</p>
+                <p className="font-body">{project.category.charAt(0).toUpperCase() + project.category.slice(1).replace('-', ' ')}</p>
               </div>
               <div>
                 <h4 className="font-body text-sm text-white/60 mb-1">Date</h4>
