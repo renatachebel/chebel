@@ -33,6 +33,11 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
     setIsLoading(false);
   };
 
+  // Separate handler for video load events
+  const handleVideoLoad = () => {
+    setIsLoading(false);
+  };
+
   const navigateToPrevImage = () => {
     if (project.images && project.images.length > 0) {
       setSelectedImageIndex((prevIndex) => 
@@ -170,7 +175,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
             controls
             poster={project.thumbnail}
             className="w-full h-full object-cover"
-            onLoadedData={handleImageLoad}
+            onLoadedData={handleVideoLoad}
           >
             Your browser does not support the video tag.
           </video>
