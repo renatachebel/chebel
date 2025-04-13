@@ -32,6 +32,18 @@ const heroImages = [
   {
     url: "/lovable-uploads/daa43558-4d77-43f4-9f6b-cfde79a2838b.png",
     alt: "Person with metallic material"
+  },
+  {
+    url: "/lovable-uploads/cf1a415c-91e0-48ce-974f-3d7ea4927c04.png",
+    alt: "Abstract painting with figures in pink"
+  },
+  {
+    url: "/lovable-uploads/80ca1e62-e493-4ac9-a979-7b090036f8f9.png",
+    alt: "Colorful projection mapping on building"
+  },
+  {
+    url: "/lovable-uploads/b66d3c6d-37db-4fb7-8c67-34bc6ae295ba.png",
+    alt: "Tea plantation with workers harvesting"
   }
 ];
 
@@ -40,21 +52,12 @@ const HeroSection: React.FC = () => {
   // Get a random starting image index
   const startIndex = useRef<number>(Math.floor(Math.random() * heroImages.length));
   const [activeIndex, setActiveIndex] = React.useState(startIndex.current);
-  const [prevIndex, setPrevIndex] = React.useState<number | null>(null);
-  const [isTransitioning, setIsTransitioning] = React.useState(false);
   
   useEffect(() => {
     // Auto-rotate images every 6 seconds
     const interval = setInterval(() => {
       const next = (activeIndex + 1) % heroImages.length;
-      setPrevIndex(activeIndex);
       setActiveIndex(next);
-      setIsTransitioning(true);
-      
-      // After transition completes, reset the transition state
-      setTimeout(() => {
-        setIsTransitioning(false);
-      }, 1000); // 1 second transition time
     }, 6000); // 6 seconds display time per image
     
     return () => clearInterval(interval);
@@ -113,45 +116,20 @@ const HeroSection: React.FC = () => {
         }}
       />
       
-      {/* Hero Images with Crossfade Transition */}
+      {/* Hero Image - Simplified with no fade effect */}
       <div className="w-full h-screen absolute inset-0 z-0">
-        {/* Container for both images to maintain consistent sizing */}
         <div className="absolute inset-0 overflow-hidden">
-          {/* Previous image */}
-          {prevIndex !== null && (
-            <div 
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${isTransitioning ? 'opacity-100' : 'opacity-0'}`}
-            >
-              <img 
-                src={heroImages[prevIndex].url} 
-                alt={heroImages[prevIndex].alt} 
-                className="w-full h-full object-cover opacity-70"
-                style={{ 
-                  transform: 'scale(1.05)',
-                  transition: 'transform 6s ease-in-out'
-                }}
-              />
-              {/* Image overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70"></div>
-            </div>
-          )}
-          
-          {/* Current active image */}
-          <div 
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
-          >
-            <img 
-              src={heroImages[activeIndex].url} 
-              alt={heroImages[activeIndex].alt}
-              className="w-full h-full object-cover opacity-70"
-              style={{ 
-                transform: 'scale(1.05)',
-                transition: 'transform 6s ease-in-out'
-              }}
-            />
-            {/* Image overlay gradient */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70"></div>
-          </div>
+          <img 
+            src={heroImages[activeIndex].url} 
+            alt={heroImages[activeIndex].alt}
+            className="w-full h-full object-cover opacity-70"
+            style={{ 
+              transform: 'scale(1.05)',
+              transition: 'transform 6s ease-in-out'
+            }}
+          />
+          {/* Image overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70"></div>
         </div>
       </div>
       
