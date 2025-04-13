@@ -121,17 +121,29 @@ export const projects: Project[] = [
     details: "Bodies of Water is a photographic series celebrating the sacred connection between women and water at the meeting point of river and ocean in Serra Grande, Bahia, Brazil. The project explores the metaphor of the ocean as the womb of life: if Earth is our mother, the ocean is our grandmother.\n\nThis intimate series captures women in moments of communion with water, embracing its transformative and healing properties. The images evoke ancient rituals and the innate bond between the female body and water's fluid, life-giving nature. Shot at the transitional space where freshwater meets saltwater, the photographs symbolize the cyclical nature of existence and fertility.\n\nThe project documents both individual moments of contemplation and collective ceremonies, highlighting the supportive community formed by these women. With careful attention to light, shadow, and the reflective qualities of water, the photographs create a dreamlike atmosphere that speaks to the spiritual dimensions of this connection.\n\nBodies of Water invites viewers to contemplate our origins and the deep, ancestral connections we share with Earth's waters, reminding us of water's role as the primordial source from which all life emerges."
   },
   {
-    id: 6,
-    title: "Digital Erosion",
-    slug: "digital-erosion",
-    category: "video",
-    thumbnail: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    videos: [
-      "https://example.com/videos/digital-erosion.mp4"
+    id: 5,
+    title: "China Oddities",
+    slug: "china-oddities",
+    category: "photography",
+    thumbnail: "/lovable-uploads/4e6a9ac5-7e67-473e-91ea-3c55a184f9ce.png",
+    images: [
+      "/lovable-uploads/4e6a9ac5-7e67-473e-91ea-3c55a184f9ce.png",
+      "/lovable-uploads/89c07318-45e4-45b3-88a6-6b11ba3a5a19.png",
+      "/lovable-uploads/d988d105-1a4f-4db3-a98e-1ea98ce80772.png",
+      "/lovable-uploads/5e30d7f7-1f4b-42ae-b2e8-dba48dae497d.png",
+      "/lovable-uploads/1969cdaf-32b4-4250-b9d2-79899ba1dd30.png",
+      "/lovable-uploads/d6158253-4e99-4086-afb5-360cea161d9d.png",
+      "/lovable-uploads/7205d517-277d-4f7e-937d-8033ecaec3e2.png",
+      "/lovable-uploads/4406dddd-ef17-45fd-97b7-6632d4bf307c.png",
+      "/lovable-uploads/dd43ff7b-e75d-4497-aab5-c566558b34ca.png",
+      "/lovable-uploads/dd7c65a0-5adf-4c77-a6a5-5a89ca33298e.png",
+      "/lovable-uploads/a8313227-9228-44a6-a000-23f7feed13bc.png"
     ],
-    description: "A video art piece exploring data corruption as a metaphor for memory loss.",
-    date: "2021",
-    details: "Digital Erosion is a video art project that uses intentional data corruption and glitch aesthetics to explore how digital and human memory systems degrade over time. By manipulating digital video files and introducing controlled errors into the code, the piece creates visual representations of memory fragmentation and loss. The work draws parallels between digital data corruption and the neurological processes of forgetting, questioning the reliability of both technological and biological storage systems."
+    description: "Film photographs taken during the Spring 2024 China tour of Mola Oddity, an indie Chinese band.",
+    date: "2024",
+    location: "Various cities, China",
+    isFeatured: true,
+    details: "China Oddities is a black and white film photography series documenting the Spring 2024 tour of Mola Oddity, an innovative indie Chinese band. Captured while working as a projection artist for the band's performances, these intimate backstage and performance photographs reveal the creative energy and personal moments of the tour.\n\nInvited by VJ Suave, who created the visuals for the shows, I had unique access to document both the public performances and private moments of the artists. The series captures the distinctive aesthetic of China's underground music scene through grainy black and white film, emphasizing the raw emotion and authentic experiences of touring life.\n\nFrom backstage preparations and birthday celebrations to quiet moments between shows and the intensity of performances, these images provide a multi-faceted portrait of the band and their creative process. The distinctive hairstyles, makeup, and fashion choices reflect the band's unique artistic identity, while the candid interactions reveal the personal bonds formed during the intense experience of touring.\n\nChina Oddities serves as both an artistic documentation and a personal memento of this cultural exchange, showcasing the universal language of music and visual art across cultural boundaries."
   },
   {
     id: 1,

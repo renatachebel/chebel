@@ -1,10 +1,17 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ArrowDownIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Use the correct image paths (without /public prefix)
 const heroImages = [
+  {
+    url: "/lovable-uploads/4e6a9ac5-7e67-473e-91ea-3c55a184f9ce.png",
+    alt: "Woman with braided hair and fashion styling"
+  },
+  {
+    url: "/lovable-uploads/9759659d-efbc-4345-af64-ef99c7a4e79b.png",
+    alt: "Woman in water, Bodies of Water project"
+  },
   {
     url: "/lovable-uploads/f80972c5-c4a4-496b-8171-e2730dd1b15b.png",
     alt: "Person with book"
