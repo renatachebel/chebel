@@ -40,6 +40,10 @@ const heroImages = [
   {
     url: "/lovable-uploads/b66d3c6d-37db-4fb7-8c67-34bc6ae295ba.png",
     alt: "Tea plantation with workers harvesting"
+  },
+  {
+    url: "/lovable-uploads/3e9d3bdc-ef6c-4f9b-a068-e346f6d4c060.png",
+    alt: "Lemniscata generative artwork"
   }
 ];
 
