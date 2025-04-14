@@ -5,7 +5,6 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Layout from '../components/Layout';
 import ProjectDetail from '../components/ProjectDetail';
 import { getProjectBySlug, projects, Project } from '../data/projects';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
 
 const ProjectView: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();

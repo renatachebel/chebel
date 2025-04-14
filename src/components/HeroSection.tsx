@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { ArrowDownIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -7,10 +8,6 @@ const heroImages = [
   {
     url: "/lovable-uploads/4e6a9ac5-7e67-473e-91ea-3c55a184f9ce.png",
     alt: "Woman with braided hair and fashion styling"
-  },
-  {
-    url: "/lovable-uploads/9759659d-efbc-4345-af64-ef99c7a4e79b.png",
-    alt: "Woman in water, Bodies of Water project"
   },
   {
     url: "/lovable-uploads/f80972c5-c4a4-496b-8171-e2730dd1b15b.png",
@@ -31,10 +28,6 @@ const heroImages = [
   {
     url: "/lovable-uploads/db4eb682-0549-4794-9705-38f15b4324ec.png",
     alt: "Portrait of two people"
-  },
-  {
-    url: "/lovable-uploads/74e50d6a-6c0b-44a1-a00c-c08924c76a11.png",
-    alt: "Person with yellow fringe necklace"
   },
   {
     url: "/lovable-uploads/daa43558-4d77-43f4-9f6b-cfde79a2838b.png",
