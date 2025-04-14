@@ -17,15 +17,15 @@ const About: React.FC = () => {
           <div className="md:col-span-2 order-2 md:order-1">
             <div className="space-y-6 animate-fade-in" style={{ animationDelay: "100ms" }}>
               <p className="font-body text-lg">
-                A Brazilian multimedia artist whose work explores alterity, nature, the sacred, and the feminine. With a background in journalism, she channels storytelling through generative art, video, photography, and projection mapping.
+                I am Renata Chebel, a Brazilian multimedia artist working at the intersection of nature, technology, and spirituality. My practice combines generative art, video, photography, projection mapping, and physical installations to explore themes of the sacred, the feminine, memory, ancestry and our evolving relationship with the environment. With a background in journalism, storytelling remains at the heart of everything I create.
               </p>
               
               <p className="font-body">
-                Chebel has a natural ability to blend diverse traditions, philosophies, and artistic mediums into cohesive, immersive experiences. Her work weaves together ancient wisdom and futuristic technology, bridging seemingly opposing worlds.
+                My experimental and ever-evolving artistic practice also includes performance, soundscapes, and embroidery, often blurring the boundaries between the digital and the handmade, the ancestral and the futuristic. 
               </p>
               
               <p className="font-body">
-                She consistently explores themes of spirituality, ecology, the feminine and alterity, creating projects that are both deeply personal and universally resonant. This blend of art and storytelling highlights her desire to connect with others on profound levels, creating spaces for reflection, growth, and transformation—for both herself and those who experience her art.
+                My work has been presented at international festivals and art events such as the Bombay Beach Biennale (USA), the Taiwan Technology and Culture Expo, MAPP (Canada) and Amazonia Mapping (Brazil). I'm especially drawn to collaborative and site-specific projects that blend ancient wisdom with emerging technologies.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 mb-8">

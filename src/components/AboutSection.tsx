@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Instagram } from 'lucide-react';
@@ -53,15 +52,15 @@ const AboutSection: React.FC = () => {
             
             <div className="animate-on-scroll opacity-0" style={{ transitionDelay: "100ms" }}>
               <p className="font-body text-white/80 mb-6">
-                I'm Renata Chebel, a Brazilian multimedia artist working at the intersection of nature, technology, and spirituality. My practice combines generative art, video, photography, projection mapping, and physical installations to explore themes of the sacred, the feminine, and our evolving relationship with the environment. With a background in journalism, storytelling remains at the heart of everything I create.
+                I am Renata Chebel, a Brazilian multimedia artist working at the intersection of nature, technology, and spirituality. My practice combines generative art, video, photography, projection mapping, and physical installations to explore themes of the sacred, the feminine, memory, ancestry and our evolving relationship with the environment. With a background in journalism, storytelling remains at the heart of everything I create.
               </p>
               
               <p className="font-body text-white/80 mb-6">
-                My experimental and ever-evolving artistic practice also includes performance, soundscapes, and embroidery, often blurring the boundaries between the digital and the handmade, the ancestral and the futuristic. I co-create Rainbow Road with my partner, Microdosys—a mobile projection performance that transforms public spaces using a golf cart equipped with a projector, computer, and speakers, casting colorful AI-generated animations onto the urban landscape.
+                My experimental and ever-evolving artistic practice also includes performance, soundscapes, and embroidery, often blurring the boundaries between the digital and the handmade, the ancestral and the futuristic. 
               </p>
               
               <p className="font-body text-white/80 mb-6">
-                My work has been presented at international festivals and art events such as the Bombay Beach Biennale (USA), the Taiwan Technology and Culture Expo, and the Aesthetica Film Festival (UK). I'm especially drawn to collaborative and site-specific projects that blend ancient wisdom with emerging technologies—often incorporating AI, mythologies, and ecological consciousness.
+                My work has been presented at international festivals and art events such as the Bombay Beach Biennale (USA), the Taiwan Technology and Culture Expo, MAPP (Canada) and Amazonia Mapping (Brazil). I'm especially drawn to collaborative and site-specific projects that blend ancient wisdom with emerging technologies.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 mb-8">
