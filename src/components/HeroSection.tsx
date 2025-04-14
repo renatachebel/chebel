@@ -22,10 +22,6 @@ const heroImages = [
     alt: "Hands holding shell"
   },
   {
-    url: "/lovable-uploads/0d8d6b1a-36c3-465c-9c91-54e5a6ed1d32.png",
-    alt: "Person with mirror"
-  },
-  {
     url: "/lovable-uploads/db4eb682-0549-4794-9705-38f15b4324ec.png",
     alt: "Portrait of two people"
   },
