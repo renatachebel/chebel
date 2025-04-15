@@ -152,13 +152,28 @@ export const projects: Project[] = [
     details: "Bodies of Water is a photographic series celebrating the sacred connection between women and water at the meeting point of river and ocean in Serra Grande, Bahia, Brazil. The project explores the metaphor of the ocean as the womb of life: if Earth is our mother, the ocean is our grandmother.\n\nThis intimate series captures women in moments of communion with water, embracing its transformative and healing properties. The images evoke ancient rituals and the innate bond between the female body and water's fluid, life-giving nature. Shot at the transitional space where freshwater meets saltwater, the photographs symbolize the cyclical nature of existence and fertility.\n\nThe project documents both individual moments of contemplation and collective ceremonies, highlighting the supportive community formed by these women. With careful attention to light, shadow, and the reflective qualities of water, the photographs create a dreamlike atmosphere that speaks to the spiritual dimensions of this connection.\n\nBodies of Water invites viewers to contemplate our origins and the deep, ancestral connections we share with Earth's waters, reminding us of water's role as the primordial source from which all life emerges."
   },
   {
+    id: 6,
+    title: "Lotus Bloom",
+    slug: "lotus-bloom",
+    category: "video",
+    thumbnail: "/lovable-uploads/48318c35-23f6-4133-8c4a-69ba3191de23.png",
+    images: [
+      "/lovable-uploads/48318c35-23f6-4133-8c4a-69ba3191de23.png"
+    ],
+    youtubeId: "z8mfcIqVBWk",
+    description: "A visual meditation on feminine beauty, strength, and the sacred power of stillness.",
+    date: "2024",
+    location: "Studio Production",
+    isFeatured: true,
+    details: "Lotus Bloom is a piece of visual poetry, a gentle ode to the feminine soul. Through the timeless symbol of the lotus flower—rising unstained from the mud—the film evokes the purity, strength, and mystery rooted in a woman's heart. It speaks of beauty that is not for display, but for belonging. A dream of harmony that women carry within, in contrast to a world shaped by conflict and conquest. In its stillness and grace, Lotus Bloom becomes a meditation on softness as power, on the sacred force of life that flows quietly, yet transforms everything."
+  },
+  {
     id: 8,
     title: "Lemniscata",
     slug: "lemniscata",
     category: "installation",
     thumbnail: "/lovable-uploads/ee3078d7-5b4f-4d6c-9d8e-7ebe0dc70280.png",
     images: [
-      "/lovable-uploads/493ed4cc-3c3c-4c15-bae9-f6ec6f135d51.png",
       "/lovable-uploads/785c8727-fbbd-4916-8ab9-9d5c40c325c8.png",
       "/lovable-uploads/dce72565-3d5d-4da9-9e33-3b9085c6985e.png",
       "/lovable-uploads/ef0452fd-90a3-4271-9751-274291ac26af.png",

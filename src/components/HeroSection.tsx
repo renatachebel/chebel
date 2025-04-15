@@ -10,6 +10,10 @@ const heroImages = [
     alt: "Woman with braided hair and fashion styling"
   },
   {
+    url: "/lovable-uploads/48318c35-23f6-4133-8c4a-69ba3191de23.png",
+    alt: "Woman with lotus flowers in water"
+  },
+  {
     url: "/lovable-uploads/f80972c5-c4a4-496b-8171-e2730dd1b15b.png",
     alt: "Person with book"
   },

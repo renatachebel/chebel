@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -28,7 +27,6 @@ const Navigation: React.FC = () => {
     { path: '/', label: 'HOME' },
     { path: '/projects', label: 'PROJECTS' },
     { path: '/about', label: 'ABOUT' },
-    { path: '/contact', label: 'CONTACT' },
   ];
 
   const isActive = (path: string) => {
