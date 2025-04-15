@@ -1,9 +1,7 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ArrowDownIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Use the correct image paths (without /public prefix)
 const heroImages = [
   {
     url: "/lovable-uploads/4e6a9ac5-7e67-473e-91ea-3c55a184f9ce.png",
@@ -46,23 +44,21 @@ const heroImages = [
     alt: "Woman embroidering fabric with red thread"
   },
   {
-    url: "/lovable-uploads/3e9d3bdc-ef6c-4f9b-a068-e346f6d4c060.png",
-    alt: "Lemniscata generative artwork"
+    url: "/lovable-uploads/adc801b2-ec43-43f3-923d-51ffd89f78dc.png",
+    alt: "Woman with artistic makeup and green outfit"
   }
 ];
 
 const HeroSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  // Get a random starting image index
   const startIndex = useRef<number>(Math.floor(Math.random() * heroImages.length));
   const [activeIndex, setActiveIndex] = React.useState(startIndex.current);
   
   useEffect(() => {
-    // Auto-rotate images every 6 seconds
     const interval = setInterval(() => {
       const next = (activeIndex + 1) % heroImages.length;
       setActiveIndex(next);
-    }, 6000); // 6 seconds display time per image
+    }, 6000);
     
     return () => clearInterval(interval);
   }, [activeIndex]);
@@ -105,7 +101,6 @@ const HeroSection: React.FC = () => {
   
   return (
     <section className="relative min-h-screen flex flex-col items-center overflow-hidden" ref={containerRef}>
-      {/* Background gradient overlays */}
       <div 
         className="absolute top-0 right-0 w-full h-full opacity-30 bg-gradient-to-b from-violet-900/20 via-transparent to-transparent"
         style={{ 
@@ -120,7 +115,6 @@ const HeroSection: React.FC = () => {
         }}
       />
       
-      {/* Hero Image - Simplified with no fade effect */}
       <div className="w-full h-screen absolute inset-0 z-0">
         <div className="absolute inset-0 overflow-hidden">
           <img 
@@ -132,16 +126,13 @@ const HeroSection: React.FC = () => {
               transition: 'transform 6s ease-in-out'
             }}
           />
-          {/* Image overlay gradient */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70"></div>
         </div>
       </div>
       
-      {/* Hero content */}
       <div className="container-custom relative z-10 flex flex-col justify-center items-start h-full pt-20">
         <div className="perspective max-w-2xl mt-10">
           <div className="preserve-3d backface-hidden">
-            {/* Smaller title positioned closer to the top */}
             <h1 className="font-display text-xl md:text-2xl lg:text-3xl tracking-wider leading-none mb-4 md:mb-6 animate-fade-in text-gradient parallax" data-speed="0.5">
               MULTIMEDIA ARTIST
             </h1>

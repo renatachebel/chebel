@@ -1,4 +1,3 @@
-
 export interface Project {
   id: number;
   title: string;
@@ -70,9 +69,9 @@ export const projects: Project[] = [
     title: "China Oddities",
     slug: "china-oddities",
     category: "photography",
-    thumbnail: "/lovable-uploads/4e6a9ac5-7e67-473e-91ea-3c55a184f9ce.png",
+    thumbnail: "/lovable-uploads/adc801b2-ec43-43f3-923d-51ffd89f78dc.png",
     images: [
-      "/lovable-uploads/4e6a9ac5-7e67-473e-91ea-3c55a184f9ce.png",
+      "/lovable-uploads/adc801b2-ec43-43f3-923d-51ffd89f78dc.png",
       "/lovable-uploads/89c07318-45e4-45b3-88a6-6b11ba3a5a19.png",
       "/lovable-uploads/d988d105-1a4f-4db3-a98e-1ea98ce80772.png",
       "/lovable-uploads/5e30d7f7-1f4b-42ae-b2e8-dba48dae497d.png",
@@ -174,12 +173,12 @@ export const projects: Project[] = [
     category: "installation",
     thumbnail: "/lovable-uploads/ee3078d7-5b4f-4d6c-9d8e-7ebe0dc70280.png",
     images: [
+      "/lovable-uploads/ee3078d7-5b4f-4d6c-9d8e-7ebe0dc70280.png",
       "/lovable-uploads/785c8727-fbbd-4916-8ab9-9d5c40c325c8.png",
       "/lovable-uploads/dce72565-3d5d-4da9-9e33-3b9085c6985e.png",
       "/lovable-uploads/ef0452fd-90a3-4271-9751-274291ac26af.png",
       "/lovable-uploads/cb52741f-f00d-403e-9aa3-5cc05fc7374f.png",
-      "/lovable-uploads/710254b9-0729-4632-a65f-41c4ab012d71.png",
-      "/lovable-uploads/ee3078d7-5b4f-4d6c-9d8e-7ebe0dc70280.png"
+      "/lovable-uploads/710254b9-0729-4632-a65f-41c4ab012d71.png"
     ],
     description: "A generative art project that explores emotion, memory, and the feminine through the intersection of photography and AI.",
     date: "2024",
