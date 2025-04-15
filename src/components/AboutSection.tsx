@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Instagram } from 'lucide-react';
+import { ArrowRight, Instagram, Mail, Phone } from 'lucide-react';
 
 const AboutSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -110,6 +110,17 @@ const AboutSection: React.FC = () => {
                   className="w-full h-auto"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+              </div>
+            </div>
+            
+            <div className="glass-card p-6 mt-8">
+              <div className="flex items-center mb-4">
+                <Mail size={18} className="mr-3 text-white/70" />
+                <span className="font-body">chebel@gmail.com</span>
+              </div>
+              <div className="flex items-center">
+                <Phone size={18} className="mr-3 text-white/70" />
+                <span className="font-body">+55(11)98556-4289</span>
               </div>
             </div>
           </div>

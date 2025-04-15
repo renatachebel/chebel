@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Layout from '../components/Layout';
-import { Instagram, ArrowRight } from 'lucide-react';
+import { Instagram, Mail, Phone } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -114,6 +114,28 @@ const About: React.FC = () => {
                     className="w-full h-auto"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                </div>
+              </div>
+              
+              <div className="glass-card p-6 mt-8">
+                <div className="flex items-start mb-4">
+                  <div className="bg-white/10 p-3 rounded-md mr-4">
+                    <Mail size={20} />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-lg mb-1">Email</h3>
+                    <p className="font-body text-white/70">chebel@gmail.com</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-white/10 p-3 rounded-md mr-4">
+                    <Phone size={20} />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-lg mb-1">Phone</h3>
+                    <p className="font-body text-white/70">+55(11)98556-4289</p>
+                  </div>
                 </div>
               </div>
               

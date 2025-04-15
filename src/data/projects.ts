@@ -101,9 +101,9 @@ export const projects: Project[] = [
     title: "Tea in Alishan",
     slug: "tea-in-alishan",
     category: "photography",
-    thumbnail: "/lovable-uploads/3105e6a8-6ceb-470b-8361-e8fcc22842d2.png",
+    thumbnail: "/lovable-uploads/b66d3c6d-37db-4fb7-8c67-34bc6ae295ba.png",
     images: [
-      "/lovable-uploads/6610a44c-0bf0-4095-a930-3d55b96b6a0c.png",
+      "/lovable-uploads/b66d3c6d-37db-4fb7-8c67-34bc6ae295ba.png",
       "/lovable-uploads/e9fd3534-70fe-4f69-a753-a71fb0ad6a55.png",
       "/lovable-uploads/8ca0764c-f22e-4bac-8c82-c863efceb0fe.png",
       "/lovable-uploads/0cad1113-ae7c-4a02-9531-99eb4572854b.png",
@@ -151,28 +151,6 @@ export const projects: Project[] = [
     details: "Bodies of Water is a photographic series celebrating the sacred connection between women and water at the meeting point of river and ocean in Serra Grande, Bahia, Brazil. The project explores the metaphor of the ocean as the womb of life: if Earth is our mother, the ocean is our grandmother.\n\nThis intimate series captures women in moments of communion with water, embracing its transformative and healing properties. The images evoke ancient rituals and the innate bond between the female body and water's fluid, life-giving nature. Shot at the transitional space where freshwater meets saltwater, the photographs symbolize the cyclical nature of existence and fertility.\n\nThe project documents both individual moments of contemplation and collective ceremonies, highlighting the supportive community formed by these women. With careful attention to light, shadow, and the reflective qualities of water, the photographs create a dreamlike atmosphere that speaks to the spiritual dimensions of this connection.\n\nBodies of Water invites viewers to contemplate our origins and the deep, ancestral connections we share with Earth's waters, reminding us of water's role as the primordial source from which all life emerges."
   },
   {
-    id: 8,
-    title: "Lemniscata",
-    slug: "lemniscata",
-    category: "installation",
-    thumbnail: "/lovable-uploads/3e9d3bdc-ef6c-4f9b-a068-e346f6d4c060.png",
-    images: [
-      "/lovable-uploads/3e9d3bdc-ef6c-4f9b-a068-e346f6d4c060.png",
-      "/lovable-uploads/6ae6ddc3-2aec-4919-82c3-a46946030e2b.png",
-      "/lovable-uploads/493ed4cc-3c3c-4c15-bae9-f6ec6f135d51.png",
-      "/lovable-uploads/785c8727-fbbd-4916-8ab9-9d5c40c325c8.png",
-      "/lovable-uploads/dce72565-3d5d-4da9-9e33-3b9085c6985e.png",
-      "/lovable-uploads/ef0452fd-90a3-4271-9751-274291ac26af.png",
-      "/lovable-uploads/cb52741f-f00d-403e-9aa3-5cc05fc7374f.png",
-      "/lovable-uploads/710254b9-0729-4632-a65f-41c4ab012d71.png"
-    ],
-    description: "A generative art project that explores emotion, memory, and the feminine through the intersection of photography and AI.",
-    date: "2024",
-    location: "Bombay Beach Biennale, USA",
-    isFeatured: true,
-    details: "Lemniscata (from Latin \"decorated with ribbons\", also the mathematic symbol for infinite) is a generative art project that explores emotion, memory, and the feminine through the intersection of photography and AI. I trained a LoRA model on the abstract expressionist works of overlooked women painters—such as Lee Krasner, Elaine de Kooning, and Helen Frankenthaler—and applied it to photographs of women engaged in dance therapy (Danzamedicina, by Morena Cardoso). The result is a series of \"sintographs\": images that blend photographic presence with painterly, emotional abstraction.\n\nPrinted on fabric and embroidered by hand, these pieces reconnect the digital with the tactile. The project was presented at the Poetry House during the Bombay Beach Biennale 2024, where it featured a live embroidery performance as part of the installation."
-  },
-  {
     id: 1,
     title: "Sintography",
     slug: "sintography",
@@ -189,6 +167,27 @@ export const projects: Project[] = [
     location: "Digital Exhibition",
     isFeatured: true,
     details: "Sintography is an ongoing exploration of the intersection between traditional figurative art and computational processes. Each piece begins as a digital sketch that undergoes multiple transformations through custom algorithms, creating unique compositions that retain the essence of human movement while embracing digital abstraction. The vibrant color palette and flowing lines create a sense of motion and emotional resonance that challenges the boundaries between digital and physical art forms."
+  },
+  {
+    id: 8,
+    title: "Lemniscata",
+    slug: "lemniscata",
+    category: "installation",
+    thumbnail: "/lovable-uploads/6ae6ddc3-2aec-4919-82c3-a46946030e2b.png",
+    images: [
+      "/lovable-uploads/6ae6ddc3-2aec-4919-82c3-a46946030e2b.png",
+      "/lovable-uploads/493ed4cc-3c3c-4c15-bae9-f6ec6f135d51.png",
+      "/lovable-uploads/785c8727-fbbd-4916-8ab9-9d5c40c325c8.png",
+      "/lovable-uploads/dce72565-3d5d-4da9-9e33-3b9085c6985e.png",
+      "/lovable-uploads/ef0452fd-90a3-4271-9751-274291ac26af.png",
+      "/lovable-uploads/cb52741f-f00d-403e-9aa3-5cc05fc7374f.png",
+      "/lovable-uploads/710254b9-0729-4632-a65f-41c4ab012d71.png"
+    ],
+    description: "A generative art project that explores emotion, memory, and the feminine through the intersection of photography and AI.",
+    date: "2024",
+    location: "Bombay Beach Biennale, USA",
+    isFeatured: true,
+    details: "Lemniscata (from Latin \"decorated with ribbons\", also the mathematic symbol for infinite) is a generative art project that explores emotion, memory, and the feminine through the intersection of photography and AI. I trained a LoRA model on the abstract expressionist works of overlooked women painters—such as Lee Krasner, Elaine de Kooning, and Helen Frankenthaler—and applied it to photographs of women engaged in dance therapy (Danzamedicina, by Morena Cardoso). The result is a series of \"sintographs\": images that blend photographic presence with painterly, emotional abstraction.\n\nPrinted on fabric and embroidered by hand, these pieces reconnect the digital with the tactile. The project was presented at the Poetry House during the Bombay Beach Biennale 2024, where it featured a live embroidery performance as part of the installation."
   }
 ];
 

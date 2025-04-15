@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ArrowDownIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -34,12 +33,12 @@ const heroImages = [
     alt: "Abstract painting with figures in pink"
   },
   {
-    url: "/lovable-uploads/80ca1e62-e493-4ac9-a979-7b090036f8f9.png",
-    alt: "Colorful projection mapping on building"
-  },
-  {
     url: "/lovable-uploads/b66d3c6d-37db-4fb7-8c67-34bc6ae295ba.png",
     alt: "Tea plantation with workers harvesting"
+  },
+  {
+    url: "/lovable-uploads/6ae6ddc3-2aec-4919-82c3-a46946030e2b.png",
+    alt: "Lemniscata generative artwork"
   },
   {
     url: "/lovable-uploads/3e9d3bdc-ef6c-4f9b-a068-e346f6d4c060.png",
