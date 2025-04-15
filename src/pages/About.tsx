@@ -117,6 +117,17 @@ const About: React.FC = () => {
                 </div>
               </div>
               
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-body text-sm text-white/60 mb-1">Based in</h4>
+                  <p className="font-body">Brazil</p>
+                </div>
+                <div>
+                  <h4 className="font-body text-sm text-white/60 mb-1">Experience</h4>
+                  <p className="font-body">15+ Years</p>
+                </div>
+              </div>
+              
               <div className="glass-card p-6 mt-8">
                 <div className="flex items-start mb-4">
                   <div className="bg-white/10 p-3 rounded-md mr-4">
@@ -136,17 +147,6 @@ const About: React.FC = () => {
                     <h3 className="font-display text-lg mb-1">Phone</h3>
                     <p className="font-body text-white/70">+55(11)98556-4289</p>
                   </div>
-                </div>
-              </div>
-              
-              <div className="mt-8 grid grid-cols-2 gap-4">
-                <div>
-                  <h4 className="font-body text-sm text-white/60 mb-1">Based in</h4>
-                  <p className="font-body">Brazil</p>
-                </div>
-                <div>
-                  <h4 className="font-body text-sm text-white/60 mb-1">Experience</h4>
-                  <p className="font-body">15+ Years</p>
                 </div>
               </div>
             </div>

@@ -113,6 +113,17 @@ const AboutSection: React.FC = () => {
               </div>
             </div>
             
+            <div className="mt-8 grid grid-cols-2 gap-4">
+              <div>
+                <h4 className="font-body text-sm text-white/60 mb-1">Based in</h4>
+                <p className="font-body">Brazil</p>
+              </div>
+              <div>
+                <h4 className="font-body text-sm text-white/60 mb-1">Experience</h4>
+                <p className="font-body">15+ Years</p>
+              </div>
+            </div>
+            
             <div className="glass-card p-6 mt-8">
               <div className="flex items-center mb-4">
                 <Mail size={18} className="mr-3 text-white/70" />

@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { ArrowDownIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -37,8 +38,8 @@ const heroImages = [
     alt: "Tea plantation with workers harvesting"
   },
   {
-    url: "/lovable-uploads/6ae6ddc3-2aec-4919-82c3-a46946030e2b.png",
-    alt: "Lemniscata generative artwork"
+    url: "/lovable-uploads/ee3078d7-5b4f-4d6c-9d8e-7ebe0dc70280.png",
+    alt: "Woman embroidering fabric with red thread"
   },
   {
     url: "/lovable-uploads/3e9d3bdc-ef6c-4f9b-a068-e346f6d4c060.png",

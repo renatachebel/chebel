@@ -79,14 +79,6 @@ const Index: React.FC = () => {
               I'm always open to collaborations and new projects. 
               Reach out to discuss how we can bring your vision to life.
             </p>
-            
-            <Link 
-              to="/contact" 
-              className="inline-block glass-card py-4 px-8 text-sm font-body tracking-wider animate-fade-in transition-all duration-500 hover:scale-105 hover:bg-white/10"
-              style={{ animationDelay: "200ms" }}
-            >
-              GET IN TOUCH
-            </Link>
           </div>
         </div>
       </div>
