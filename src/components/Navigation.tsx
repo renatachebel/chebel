@@ -1,119 +1,176 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { AlignRight, X } from 'lucide-react';
+import { Button } from './ui/button';
+import { useMobile } from '@/hooks/use-mobile';
 
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const isMobile = useMobile();
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+  
+  // Close mobile menu when route changes
   useEffect(() => {
-    closeMenu();
+    setIsMenuOpen(false);
   }, [location.pathname]);
-
-  const navLinks = [
-    { path: '/', label: 'HOME' },
-    { path: '/projects', label: 'PROJECTS' },
-    { path: '/about', label: 'ABOUT' },
-  ];
-
-  const isActive = (path: string) => {
-    if (path === '/' && location.pathname === '/') return true;
-    if (path !== '/' && location.pathname.startsWith(path)) return true;
-    return false;
-  };
-
+  
+  const isActive = (path: string) => location.pathname === path;
+  
   return (
-    <nav 
-      className={`transition-all duration-300 ${
-        scrolled ? 'py-3 glass-card shadow-lg' : 'py-6 bg-transparent'
+    <header 
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        scrolled ? 'bg-black/80 backdrop-blur-md py-4' : 'bg-transparent py-6'
       }`}
     >
-      <div className="container-custom">
-        <div className="flex justify-between items-center">
-          <Link 
-            to="/" 
-            className="font-display text-xl tracking-widest transition-all duration-300 hover:opacity-80"
-          >
-            CHEBEL
+      <div className="container-custom flex justify-between items-center">
+        <div>
+          <Link to="/" className="font-display text-xl tracking-wider">
+            RENATA CHEBEL
           </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-10">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`font-body text-sm tracking-wider transition-all duration-300 ${
-                  isActive(link.path)
-                    ? 'text-white hover-link after:w-full'
-                    : 'text-white/70 hover-link hover:text-white'
+        </div>
+        
+        {/* Desktop Navigation */}
+        <nav className="hidden md:block">
+          <ul className="flex gap-8">
+            <li>
+              <Link 
+                to="/" 
+                className={`font-body text-sm transition-colors ${
+                  isActive('/') ? 'text-white' : 'text-white/60 hover:text-white'
                 }`}
               >
-                {link.label}
+                HOME
               </Link>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden p-1 rounded-md text-white focus:outline-none"
-            onClick={toggleMenu}
-            aria-label="Toggle Menu"
+            </li>
+            <li>
+              <Link 
+                to="/projects" 
+                className={`font-body text-sm transition-colors ${
+                  isActive('/projects') || location.pathname.includes('/projects/') 
+                    ? 'text-white' 
+                    : 'text-white/60 hover:text-white'
+                }`}
+              >
+                PROJECTS
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/photodiary" 
+                className={`font-body text-sm transition-colors ${
+                  isActive('/photodiary') ? 'text-white' : 'text-white/60 hover:text-white'
+                }`}
+              >
+                PHOTO DIARY
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/about" 
+                className={`font-body text-sm transition-colors ${
+                  isActive('/about') ? 'text-white' : 'text-white/60 hover:text-white'
+                }`}
+              >
+                ABOUT
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsMenuOpen(true)}
+            className="text-white"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            <AlignRight />
+            <span className="sr-only">Open menu</span>
+          </Button>
         </div>
       </div>
-
-      {/* Mobile Menu - Ensure it has a high z-index but lower than other critical elements */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 z-40 glass-card transform transition-transform duration-500 ease-out-expo"
-        >
-          <div className="container-custom h-full flex flex-col">
-            <div className="flex justify-between items-center py-6">
-              <div className="font-display text-xl tracking-widest">CHEBEL</div>
-              <button 
-                className="p-1 rounded-md text-white focus:outline-none"
-                onClick={toggleMenu}
-                aria-label="Close Menu"
-              >
-                <X size={24} />
-              </button>
+      
+      {/* Mobile Menu */}
+      {isMobile && isMenuOpen && (
+        <div className="fixed inset-0 bg-black z-50 overflow-y-auto">
+          <div className="container-custom py-6 flex justify-between items-center">
+            <div>
+              <Link to="/" className="font-display text-xl tracking-wider">
+                RENATA CHEBEL
+              </Link>
             </div>
-            <div className="flex flex-col space-y-8 items-center justify-center flex-grow pb-20">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`font-display text-2xl tracking-wider transition-all duration-300 ${
-                    isActive(link.path)
-                      ? 'text-white'
-                      : 'text-white/70 hover:text-white'
-                  }`}
-                  onClick={closeMenu}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-white"
+            >
+              <X />
+              <span className="sr-only">Close menu</span>
+            </Button>
           </div>
+          
+          <nav className="container-custom py-16">
+            <ul className="flex flex-col gap-8">
+              <li>
+                <Link 
+                  to="/" 
+                  className={`font-body text-2xl transition-colors ${
+                    isActive('/') ? 'text-white' : 'text-white/60'
+                  }`}
+                >
+                  HOME
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/projects" 
+                  className={`font-body text-2xl transition-colors ${
+                    isActive('/projects') || location.pathname.includes('/projects/') 
+                      ? 'text-white' 
+                      : 'text-white/60'
+                  }`}
+                >
+                  PROJECTS
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/photodiary" 
+                  className={`font-body text-2xl transition-colors ${
+                    isActive('/photodiary') ? 'text-white' : 'text-white/60'
+                  }`}
+                >
+                  PHOTO DIARY
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/about" 
+                  className={`font-body text-2xl transition-colors ${
+                    isActive('/about') ? 'text-white' : 'text-white/60'
+                  }`}
+                >
+                  ABOUT
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
       )}
-    </nav>
+    </header>
   );
 };
 

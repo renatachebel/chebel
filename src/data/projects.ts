@@ -1,3 +1,4 @@
+
 export interface Project {
   id: number;
   title: string;
@@ -167,7 +168,7 @@ export const projects: Project[] = [
       "/lovable-uploads/752e5aaf-0bd2-40be-8b96-a197460a7035.png"
     ],
     description: "A photographic series honoring women where the river meets the ocean in Serra Grande, Bahia, Brazil.",
-    date: "2023",
+    date: "2021",
     location: "Serra Grande, Bahia, Brazil",
     isFeatured: true,
     details: "Bodies of Water is a photographic series celebrating the sacred connection between women and water at the meeting point of river and ocean in Serra Grande, Bahia, Brazil. The project explores the metaphor of the ocean as the womb of life: if Earth is our mother, the ocean is our grandmother.\n\nThis intimate series captures women in moments of communion with water, embracing its transformative and healing properties. The images evoke ancient rituals and the innate bond between the female body and water's fluid, life-giving nature. Shot at the transitional space where freshwater meets saltwater, the photographs symbolize the cyclical nature of existence and fertility.\n\nThe project documents both individual moments of contemplation and collective ceremonies, highlighting the supportive community formed by these women. With careful attention to light, shadow, and the reflective qualities of water, the photographs create a dreamlike atmosphere that speaks to the spiritual dimensions of this connection.\n\nBodies of Water invites viewers to contemplate our origins and the deep, ancestral connections we share with Earth's waters, reminding us of water's role as the primordial source from which all life emerges."
@@ -183,7 +184,7 @@ export const projects: Project[] = [
     ],
     youtubeId: "z8mfcIqVBWk",
     description: "A visual meditation on feminine beauty, strength, and the sacred power of stillness.",
-    date: "2024",
+    date: "2025",
     location: "Studio Production",
     isFeatured: true,
     details: "Lotus Bloom is a piece of visual poetry, a gentle ode to the feminine soul. Through the timeless symbol of the lotus flower—rising unstained from the mud—the film evokes the purity, strength, and mystery rooted in a woman's heart. It speaks of beauty that is not for display, but for belonging. A dream of harmony that women carry within, in contrast to a world shaped by conflict and conquest. In its stillness and grace, Lotus Bloom becomes a meditation on softness as power, on the sacred force of life that flows quietly, yet transforms everything."
@@ -213,15 +214,23 @@ export const projects: Project[] = [
     title: "Sintography",
     slug: "sintography",
     category: "generative-art",
-    thumbnail: "/lovable-uploads/b7f0775c-9f85-42e9-b7b5-a631b5cad119.png",
+    thumbnail: "/lovable-uploads/0d514d00-6cc5-4403-820a-60ee038c4ef6.png",
     images: [
       "/lovable-uploads/b7f0775c-9f85-42e9-b7b5-a631b5cad119.png",
       "/lovable-uploads/8b9b86ac-cba5-4279-8fce-361f31e16d0b.png",
       "/lovable-uploads/6fdd2875-dad7-46dd-a4a6-070565d55017.png",
-      "/lovable-uploads/c11672a4-bd32-462e-b2c6-d8d172d6661f.png"
+      "/lovable-uploads/c11672a4-bd32-462e-b2c6-d8d172d6661f.png",
+      "/lovable-uploads/85351de7-55f2-4b46-800c-01888c2a1242.png",
+      "/lovable-uploads/3d120b50-16e0-46e3-87cb-ce5bc2ec4d4c.png",
+      "/lovable-uploads/377745d7-69ae-49f0-96b0-9e0c1938a403.png",
+      "/lovable-uploads/f3ffdac0-d76e-4a87-8cd9-51d4de170d1c.png",
+      "/lovable-uploads/1869a8ba-835a-4f87-a64d-02867e1f432d.png",
+      "/lovable-uploads/005fca68-5ae5-4420-bdc5-536056f486f9.png",
+      "/lovable-uploads/cd22f4a6-67d0-4dbc-9994-fab55d6e6716.png",
+      "/lovable-uploads/0d514d00-6cc5-4403-820a-60ee038c4ef6.png"
     ],
     description: "A series of abstract generative artworks exploring movement and emotion through digital and traditional techniques.",
-    date: "2023",
+    date: "2024",
     location: "Digital Exhibition",
     isFeatured: true,
     details: "Sintography is an ongoing exploration of the intersection between traditional figurative art and computational processes. Each piece begins as a digital sketch that undergoes multiple transformations through custom algorithms, creating unique compositions that retain the essence of human movement while embracing digital abstraction. The vibrant color palette and flowing lines create a sense of motion and emotional resonance that challenges the boundaries between digital and physical art forms."

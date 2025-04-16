@@ -86,7 +86,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
             <button
               key={index}
               onClick={() => setSelectedImageIndex(index)}
-              className={`relative flex-shrink-0 w-full h-32 overflow-hidden rounded-md transition-all duration-300 ${
+              className={`relative flex-shrink-0 w-full h-32 md:h-40 overflow-hidden rounded-md transition-all duration-300 ${
                 index === selectedImageIndex ? 'ring-2 ring-white/80' : 'opacity-50 hover:opacity-80'
               }`}
             >
@@ -297,9 +297,9 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
       <Dialog open={galleryOpen} onOpenChange={setGalleryOpen}>
         <DialogContent className="max-w-6xl p-0 bg-black/90 border-none">
           <div className="absolute right-4 top-4 z-10 flex gap-2">
-            <Link to="/projects" className="rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
+            <Link to="/" className="rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
               <Home className="h-5 w-5" />
-              <span className="sr-only">Back to projects</span>
+              <span className="sr-only">Back to home</span>
             </Link>
             <DialogClose className="rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
               <X className="h-5 w-5" />
