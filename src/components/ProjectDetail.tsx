@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import { Project } from '../data/projects';
 import { AspectRatio } from './ui/aspect-ratio';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, Home } from 'lucide-react';
 import { Button } from './ui/button';
 import { Dialog, DialogContent, DialogClose } from './ui/dialog';
-import { X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface ProjectDetailProps {
   project: Project;
@@ -86,7 +86,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
             <button
               key={index}
               onClick={() => setSelectedImageIndex(index)}
-              className={`relative flex-shrink-0 w-full h-24 overflow-hidden rounded-md transition-all duration-300 ${
+              className={`relative flex-shrink-0 w-full h-32 overflow-hidden rounded-md transition-all duration-300 ${
                 index === selectedImageIndex ? 'ring-2 ring-white/80' : 'opacity-50 hover:opacity-80'
               }`}
             >
@@ -99,17 +99,15 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
           ))}
         </div>
         
-        {project.images.length > 5 && (
-          <div className="mt-4 text-center">
-            <Button 
-              variant="outline" 
-              onClick={() => setGalleryOpen(true)}
-              className="text-sm font-body tracking-wider border-white/30 hover:border-white hover:bg-white/5"
-            >
-              Gallery View
-            </Button>
-          </div>
-        )}
+        <div className="mt-4 text-center">
+          <Button 
+            variant="outline" 
+            onClick={() => setGalleryOpen(true)}
+            className="text-sm font-body tracking-wider border-white/30 hover:border-white hover:bg-white/5"
+          >
+            Gallery View
+          </Button>
+        </div>
       </div>
     );
   };
@@ -298,10 +296,16 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
       {/* Full-size image gallery dialog */}
       <Dialog open={galleryOpen} onOpenChange={setGalleryOpen}>
         <DialogContent className="max-w-6xl p-0 bg-black/90 border-none">
-          <DialogClose className="absolute right-4 top-4 z-10 rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
-            <X className="h-5 w-5" />
-            <span className="sr-only">Close</span>
-          </DialogClose>
+          <div className="absolute right-4 top-4 z-10 flex gap-2">
+            <Link to="/projects" className="rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
+              <Home className="h-5 w-5" />
+              <span className="sr-only">Back to projects</span>
+            </Link>
+            <DialogClose className="rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
+              <X className="h-5 w-5" />
+              <span className="sr-only">Close</span>
+            </DialogClose>
+          </div>
           
           <div className="relative flex items-center justify-center w-full h-full min-h-[50vh] max-h-[80vh]">
             {project.images && (
@@ -339,7 +343,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
           
           {project.images && project.images.length > 1 && (
             <div className="p-4 bg-black/80">
-              <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-2 max-h-[200px] overflow-y-auto">
+              <div className="grid grid-cols-3 md:grid-cols-5 gap-2">
                 {project.images.map((image, index) => (
                   <button
                     key={index}

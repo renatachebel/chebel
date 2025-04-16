@@ -78,24 +78,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             alt={project.title}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out-expo group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-100 transition-opacity duration-500" />
         
-          <div className="absolute inset-0 p-6 flex flex-col justify-end md:opacity-0 md:group-hover:opacity-100 md:transform md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 ease-out-expo">
+          <div className="absolute inset-0 p-6 flex flex-col justify-end transition-all duration-500 ease-out-expo">
             <span className={`inline-block px-3 py-1 rounded-full text-xs font-body tracking-wider mb-3 ${getCategoryStyle(project.category)}`}>
               {project.category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
             </span>
             <h3 className="font-display text-xl tracking-wider mb-2">{project.title}</h3>
-            <p className="font-body text-sm text-white/80 hidden md:block">{project.description}</p>
+            <p className="font-body text-sm text-white/80 hidden md:block md:opacity-0 md:group-hover:opacity-100 md:transform md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 ease-out-expo">{project.description}</p>
           </div>
         </div>
-      </div>
-      
-      {/* Mobile-only title display */}
-      <div className="block md:hidden mt-3 mb-6">
-        <h3 className="font-display text-lg tracking-wider">{project.title}</h3>
-        <span className={`inline-block px-2 py-0.5 rounded-full text-xs font-body tracking-wider mt-1 ${getCategoryStyle(project.category)}`}>
-          {project.category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
-        </span>
       </div>
     </Link>
   );
