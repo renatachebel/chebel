@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { Project } from '../data/projects';
 import { AspectRatio } from './ui/aspect-ratio';
-import { ScrollArea } from './ui/scroll-area';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { Dialog, DialogContent, DialogClose } from './ui/dialog';
@@ -81,13 +80,13 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
     if (!project.images || project.images.length <= 1) return null;
     
     return (
-      <ScrollArea className="h-full max-h-40 mt-6">
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3">
+      <div className="mt-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {project.images.map((image, index) => (
             <button
               key={index}
               onClick={() => setSelectedImageIndex(index)}
-              className={`relative flex-shrink-0 w-20 h-20 overflow-hidden rounded-md transition-all duration-300 ${
+              className={`relative flex-shrink-0 w-full h-24 overflow-hidden rounded-md transition-all duration-300 ${
                 index === selectedImageIndex ? 'ring-2 ring-white/80' : 'opacity-50 hover:opacity-80'
               }`}
             >
@@ -99,7 +98,19 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
             </button>
           ))}
         </div>
-      </ScrollArea>
+        
+        {project.images.length > 5 && (
+          <div className="mt-4 text-center">
+            <Button 
+              variant="outline" 
+              onClick={() => setGalleryOpen(true)}
+              className="text-sm font-body tracking-wider border-white/30 hover:border-white hover:bg-white/5"
+            >
+              Gallery View
+            </Button>
+          </div>
+        )}
+      </div>
     );
   };
   
@@ -216,6 +227,16 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
               </div>
             ))}
           </div>
+          
+          <div className="mt-4 text-center">
+            <Button 
+              variant="outline" 
+              onClick={() => setGalleryOpen(true)}
+              className="text-sm font-body tracking-wider border-white/30 hover:border-white hover:bg-white/5"
+            >
+              Gallery View
+            </Button>
+          </div>
         </div>
       );
     }
@@ -318,25 +339,23 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
           
           {project.images && project.images.length > 1 && (
             <div className="p-4 bg-black/80">
-              <ScrollArea className="h-24">
-                <div className="flex gap-2 pb-2">
-                  {project.images.map((image, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setGalleryIndex(index)}
-                      className={`relative flex-shrink-0 w-20 h-20 overflow-hidden rounded-md transition-all duration-300 ${
-                        index === galleryIndex ? 'ring-2 ring-white/80' : 'opacity-50 hover:opacity-80'
-                      }`}
-                    >
-                      <img 
-                        src={image} 
-                        alt={`${project.title} thumbnail ${index + 1}`} 
-                        className="w-full h-full object-cover"
-                      />
-                    </button>
-                  ))}
-                </div>
-              </ScrollArea>
+              <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-2 max-h-[200px] overflow-y-auto">
+                {project.images.map((image, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setGalleryIndex(index)}
+                    className={`relative flex-shrink-0 w-full h-20 overflow-hidden rounded-md transition-all duration-300 ${
+                      index === galleryIndex ? 'ring-2 ring-white/80' : 'opacity-50 hover:opacity-80'
+                    }`}
+                  >
+                    <img 
+                      src={image} 
+                      alt={`${project.title} thumbnail ${index + 1}`} 
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
             </div>
           )}
         </DialogContent>
