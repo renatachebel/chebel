@@ -1,15 +1,14 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AlignRight, X } from 'lucide-react';
 import { Button } from './ui/button';
-import { useMobile } from '@/hooks/use-mobile';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Navigation: React.FC = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const isMobile = useMobile();
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +19,6 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  // Close mobile menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location.pathname]);
@@ -40,7 +38,6 @@ const Navigation: React.FC = () => {
           </Link>
         </div>
         
-        {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex gap-8">
             <li>
@@ -88,7 +85,6 @@ const Navigation: React.FC = () => {
           </ul>
         </nav>
         
-        {/* Mobile Menu Button */}
         <div className="md:hidden">
           <Button
             variant="ghost"
@@ -102,7 +98,6 @@ const Navigation: React.FC = () => {
         </div>
       </div>
       
-      {/* Mobile Menu */}
       {isMobile && isMenuOpen && (
         <div className="fixed inset-0 bg-black z-50 overflow-y-auto">
           <div className="container-custom py-6 flex justify-between items-center">
