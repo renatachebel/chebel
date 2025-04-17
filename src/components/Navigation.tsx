@@ -70,7 +70,7 @@ const Navigation: React.FC = () => {
                   isActive('/photodiary') ? 'text-white' : 'text-white/60 hover:text-white'
                 }`}
               >
-                PHOTO DIARY
+                SKETCHBOOK
               </Link>
             </li>
             <li>
@@ -149,7 +149,7 @@ const Navigation: React.FC = () => {
                     isActive('/photodiary') ? 'text-white' : 'text-white/60'
                   }`}
                 >
-                  PHOTO DIARY
+                  SKETCHBOOK
                 </Link>
               </li>
               <li>
