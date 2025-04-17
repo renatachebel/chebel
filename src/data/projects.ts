@@ -108,7 +108,10 @@ export const projects: Project[] = [
       "/lovable-uploads/fecd718a-8f69-43c0-bdb1-66158697964c.png",
       "/lovable-uploads/3c188ff7-53c3-4c3c-b1fc-554c1d51c551.png",
       "/lovable-uploads/473dc4c6-ed94-499c-b17d-81f826039d18.png",
-      "/lovable-uploads/fca3b99a-9c6b-47ef-8b1f-81fe91824be7.png"
+      "/lovable-uploads/fca3b99a-9c6b-47ef-8b1f-81fe91824be7.png",
+      "/lovable-uploads/c6efbecd-295f-4060-9102-5da0cb070820.png",
+      "/lovable-uploads/b98b3cb5-2871-4738-afad-318075d504fa.png",
+      "/lovable-uploads/4781f6d5-957d-41a5-9713-c675c49476c1.png"
     ],
     description: "An innovative performance project blending urban exploration with digital art through a mobile projection setup.",
     date: "2023",
