@@ -10,6 +10,7 @@ import Projects from "./pages/Projects";
 import ProjectView from "./pages/ProjectView";
 import About from "./pages/About";
 import PhotoDiary from "./pages/PhotoDiary";
+import Sketchbook from "./pages/Sketchbook";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/projects/:slug" element={<ProjectView />} />
           <Route path="/about" element={<About />} />
           <Route path="/photodiary" element={<PhotoDiary />} />
+          <Route path="/sketchbook" element={<Sketchbook />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

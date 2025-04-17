@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AlignRight, X } from 'lucide-react';
@@ -70,6 +71,16 @@ const Navigation: React.FC = () => {
                 }`}
               >
                 PHOTO DIARY
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/sketchbook" 
+                className={`font-body text-sm transition-colors ${
+                  isActive('/sketchbook') ? 'text-white' : 'text-white/60 hover:text-white'
+                }`}
+              >
+                SKETCHBOOK
               </Link>
             </li>
             <li>
@@ -149,6 +160,16 @@ const Navigation: React.FC = () => {
                   }`}
                 >
                   PHOTO DIARY
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/sketchbook" 
+                  className={`font-body text-2xl transition-colors ${
+                    isActive('/sketchbook') ? 'text-white' : 'text-white/60'
+                  }`}
+                >
+                  SKETCHBOOK
                 </Link>
               </li>
               <li>
