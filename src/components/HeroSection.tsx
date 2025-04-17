@@ -3,10 +3,7 @@ import { ArrowDownIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const heroImages = [
-  {
-    url: "/lovable-uploads/4e6a9ac5-7e67-473e-91ea-3c55a184f9ce.png",
-    alt: "Woman with braided hair and fashion styling"
-  },
+
   {
     url: "/lovable-uploads/48318c35-23f6-4133-8c4a-69ba3191de23.png",
     alt: "Woman with lotus flowers in water"

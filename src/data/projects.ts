@@ -18,33 +18,25 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 1,
-    title: "Sintography",
-    slug: "sintography",
-    category: "generative-art",
-    thumbnail: "/lovable-uploads/c2025c25-8326-448b-8d05-4c1ae85f98c0.png",
+    id: 3,
+    title: "Temple of Reflections",
+    slug: "temple-of-reflections",
+    category: "installation",
+    thumbnail: "/lovable-uploads/71805de8-4376-4aee-ae83-492aa3ec5f8b.png",
     images: [
-      "/lovable-uploads/b7f0775c-9f85-42e9-b7b5-a631b5cad119.png",
-      "/lovable-uploads/8b9b86ac-cba5-4279-8fce-361f31e16d0b.png",
-      "/lovable-uploads/6fdd2875-dad7-46dd-a4a6-070565d55017.png",
-      "/lovable-uploads/c11672a4-bd32-462e-b2c6-d8d172d6661f.png",
-      "/lovable-uploads/85351de7-55f2-4b46-800c-01888c2a1242.png",
-      "/lovable-uploads/3d120b50-16e0-46e3-87cb-ce5bc2ec4d4c.png",
-      "/lovable-uploads/377745d7-69ae-49f0-96b0-9e0c1938a403.png",
-      "/lovable-uploads/f3ffdac0-d76e-4a87-8cd9-51d4de170d1c.png",
-      "/lovable-uploads/1869a8ba-835a-4f87-a64d-02867e1f432d.png",
-      "/lovable-uploads/005fca68-5ae5-4420-bdc5-536056f486f9.png",
-      "/lovable-uploads/cd22f4a6-67d0-4dbc-9994-fab55d6e6716.png",
-      "/lovable-uploads/0d514d00-6cc5-4403-820a-60ee038c4ef6.png",
-      "/lovable-uploads/671f4553-32b4-499c-9437-344d9fa89c5c.png",
-      "/lovable-uploads/7c01c807-50eb-4d7b-898a-2303f50dbfec.png",
-      "/lovable-uploads/c2025c25-8326-448b-8d05-4c1ae85f98c0.png"
+      "/lovable-uploads/5a223aa9-973a-4b6d-a184-b9ea9abd258c.png",
+      "/lovable-uploads/38b192ad-272c-4956-83c6-c9fa8f64592c.png",
+      "/lovable-uploads/71805de8-4376-4aee-ae83-492aa3ec5f8b.png",
+      "/lovable-uploads/c7e6acc7-c0e5-41f9-8825-7cdc3a0f5ec1.png",
+      "/lovable-uploads/fa21f2f7-736f-4054-8476-2fee184be0f2.png",
+      "/lovable-uploads/45032f19-4e58-4712-ac6c-7ada0d23ec61.png"
     ],
-    description: "A series of abstract generative artworks exploring movement and emotion through digital and traditional techniques.",
+    youtubeId: "cLByxbJQGBY",
+    description: "An immersive installation created in Taiwan in collaboration with Ygor Marotta.",
     date: "2024",
-    location: "Digital Exhibition",
+    location: "Taiwan",
     isFeatured: true,
-    details: "\"Sintography\" is a word I coined by blending \"synthesis,\" \"photography,\" and the Portuguese word \"sinto\" — I feel. It is both a technique and a philosophy: to create images that emerge not from what is seen, but from what is felt. This project explores how memory, movement, and emotion can be transmuted into a new visual language.\n\nThe process began by training a LoRA model on the works of women from the Abstract Expressionist movement — artists like Lee Krasner, Elaine de Kooning, and Helen Frankenthaler, whose contributions were often overshadowed by their male counterparts. I then applied this aesthetic memory to my own photographic records of women in Danzamedicina, a method of dance therapy by Morena Cardoso that embraces emotional release through the body, defying the patriarchal colonialist conditioning of women.\n\nThe AI becomes a collaborator, filtering lived experience through the echoes of painterly gestures. The result is a series of images that feel like memories: visceral, intimate, and unresolved. Bodies melt into brushstrokes. Faces become sensations. It is not a documentation — it is a transmutation.\n\nThe work was first exhibited at the Poetry House during the 2024 Bombay Beach Biennale, as large-format prints on fabric, hand-embroidered with intuitive gestures. During the opening, I performed a live tea ceremony and red-thread ritual, weaving presence into image, honoring the lineage of forgotten feminine expression, and inviting viewers to feel rather than interpret, a work I've called \"Lemniscata\"."
+    details: "Inspired by Taiwanese diverse religious practices and philosophies, Temple of Reflections is an AI powered sanctuary for inner reflection, where you can chat to an entity versed on Buddhism, Taoism, Confucianism, and local folk beliefs.\n\nVisitors can also see their image mirrored on the front wall as either the goddess of mercy Guanyin, the philosopher Confucius, or Buddha.\n\nEvery interaction with the entity generates new images on the sidewalls inspired by the conversation. When visitors say good bye the entity generates a short poem summarizing the theme of the interaction.\n\nCreated by the Brazilian artists Renata Chebel and Ygor Marotta. The artists researched local temples and the vibrant Taiwanese imagery, then fine tuned an AI model with their own work to create a unique style for generating images.\n\nThe generative installation was first presented at Taiwan Technology and Culture Expo 2024 and can be adapted to a diverse cultural backgrounds.\n\nTouchDesigner collaborator: Sarah Ahab\nTechnical support: @dotsimulate, Revlis Huang, Vincent Naples\nLoRA trainer: Eden.art\nThanks: Dimension Plus, Pier-2 Art in Residency"
   },
   {
     id: 9,
@@ -69,34 +61,42 @@ export const projects: Project[] = [
     details: "Nature of Movement is a meditative exploration of impermanence and the ever-changing forms found in nature. This animation project was created in 2024 with the assistance of artificial intelligence, blending traditional artistic direction with innovative AI-generated imagery.\n\nThe piece flows through a series of natural transformations - from vibrant flowers to erupting volcanoes, birds in flight to luminous jellyfish - creating a visual poem about the cyclical nature of existence. The vivid color palette and fluid transitions between scenes evoke both the fragility and resilience of natural systems.\n\nThis work stands at the intersection of traditional animation and emerging technologies, questioning how we perceive and relate to nature in an increasingly digital world. Through abstracted natural forms and dreamlike sequences, Nature of Movement invites viewers to contemplate their own relationship with the natural world and the constant state of change that defines all living things."
   },
   {
-    id: 3,
-    title: "Temple of Reflections",
-    slug: "temple-of-reflections",
-    category: "installation",
-    thumbnail: "/lovable-uploads/71805de8-4376-4aee-ae83-492aa3ec5f8b.png",
+    id: 1,
+    title: "Sintography",
+    slug: "sintography",
+    category: "generative-art",
+    thumbnail: "/lovable-uploads/c2025c25-8326-448b-8d05-4c1ae85f98c0.png",
     images: [
-      "/lovable-uploads/5a223aa9-973a-4b6d-a184-b9ea9abd258c.png",
-      "/lovable-uploads/38b192ad-272c-4956-83c6-c9fa8f64592c.png",
-      "/lovable-uploads/71805de8-4376-4aee-ae83-492aa3ec5f8b.png",
-      "/lovable-uploads/c7e6acc7-c0e5-41f9-8825-7cdc3a0f5ec1.png",
-      "/lovable-uploads/fa21f2f7-736f-4054-8476-2fee184be0f2.png",
-      "/lovable-uploads/45032f19-4e58-4712-ac6c-7ada0d23ec61.png",
-      "/lovable-uploads/b4878044-cd1b-4778-8fb5-2f695f4057c2.png"
+      "/lovable-uploads/b7f0775c-9f85-42e9-b7b5-a631b5cad119.png",
+      "/lovable-uploads/8b9b86ac-cba5-4279-8fce-361f31e16d0b.png",
+      "/lovable-uploads/6fdd2875-dad7-46dd-a4a6-070565d55017.png",
+      "/lovable-uploads/c11672a4-bd32-462e-b2c6-d8d172d6661f.png",
+      "/lovable-uploads/85351de7-55f2-4b46-800c-01888c2a1242.png",
+      "/lovable-uploads/3d120b50-16e0-46e3-87cb-ce5bc2ec4d4c.png",
+      "/lovable-uploads/377745d7-69ae-49f0-96b0-9e0c1938a403.png",
+      "/lovable-uploads/f3ffdac0-d76e-4a87-8cd9-51d4de170d1c.png",
+      "/lovable-uploads/1869a8ba-835a-4f87-a64d-02867e1f432d.png",
+      "/lovable-uploads/005fca68-5ae5-4420-bdc5-536056f486f9.png",
+      "/lovable-uploads/cd22f4a6-67d0-4dbc-9994-fab55d6e6716.png",
+      "/lovable-uploads/0d514d00-6cc5-4403-820a-60ee038c4ef6.png",
+      "/lovable-uploads/671f4553-32b4-499c-9437-344d9fa89c5c.png",
+      "/lovable-uploads/7c01c807-50eb-4d7b-898a-2303f50dbfec.png",
+      "/lovable-uploads/c2025c25-8326-448b-8d05-4c1ae85f98c0.png"
     ],
-    youtubeId: "cLByxbJQGBY",
-    description: "An immersive installation created in Taiwan in collaboration with Ygor Marotta.",
+    description: "Synthesizing emotion, photography and forgotten gestures into visual memory.",
     date: "2024",
-    location: "Taiwan",
+    location: "Digital Exhibition",
     isFeatured: true,
-    details: "Inspired by Taiwanese diverse religious practices and philosophies, Temple of Reflections is an AI powered sanctuary for inner reflection, where you can chat to an entity versed on Buddhism, Taoism, Confucianism, and local folk beliefs.\n\nVisitors can also see their image mirrored on the front wall as either the goddess of mercy Guanyin, the philosopher Confucius, or Buddha.\n\nEvery interaction with the entity generates new images on the sidewalls inspired by the conversation. When visitors say good bye the entity generates a short poem summarizing the theme of the interaction.\n\nCreated by the Brazilian artists Renata Chebel and Ygor Marotta. The artists researched local temples and the vibrant Taiwanese imagery, then fine tuned an AI model with their own work to create a unique style for generating images.\n\nThe generative installation was first presented at Taiwan Technology and Culture Expo 2024 and can be adapted to a diverse cultural backgrounds.\n\nTouchDesigner collaborator: Sarah Ahab\nTechnical support: @dotsimulate, Revlis Huang, Vincent Naples\nLoRA trainer: Eden.art\nThanks: Dimension Plus, Pier-2 Art in Residency"
+    details: "\"Sintography\" is a word I coined by blending \"synthesis,\" \"photography,\" and the Portuguese word \"sinto\" — I feel. It is both a technique and a philosophy: to create images that emerge not from what is seen, but from what is felt. This project explores how memory, movement, and emotion can be transmuted into a new visual language.\n\nThe process began by training a LoRA model on the works of women from the Abstract Expressionist movement — artists like Lee Krasner, Elaine de Kooning, and Helen Frankenthaler, whose contributions were often overshadowed by their male counterparts. I then applied this aesthetic memory to my own photographic records of women in Danzamedicina, a method of dance therapy by Morena Cardoso that embraces emotional release through body movement, defying the patriarchal colonialist conditioning of women.\n\nThe AI becomes a collaborator, filtering lived experience through the echoes of painterly gestures. The result is a series of images that feel like memories: visceral, intimate, infinite. Bodies melt into brushstrokes. Faces become sensations. It is not a documentation — it is a transmutation. Each photograph can be translated an infinite number of times into new images.\n\nThe work was first exhibited at the Poetry House during the 2024 Bombay Beach Biennale, as large-format prints on fabric, hand-embroidered with intuitive gestures. During the opening, I performed a live tea ceremony and red-thread ritual, weaving presence into image, honoring the lineage of forgotten feminine expression, and inviting viewers to feel rather than interpret, a work I've called \"Lemniscata\"."
   },
   {
     id: 2,
     title: "Rainbow Road",
     slug: "rainbow-road",
     category: "performance",
-    thumbnail: "/lovable-uploads/473dc4c6-ed94-499c-b17d-81f826039d18.png",
+    thumbnail: "/lovable-uploads/4781f6d5-957d-41a5-9713-c675c49476c1.png",
     images: [
+      "/lovable-uploads/4781f6d5-957d-41a5-9713-c675c49476c1.png",
       "/lovable-uploads/1f3cb08b-2975-460e-a165-9e924e6d5d14.png",
       "/lovable-uploads/a30a9a0d-63fa-4e48-a789-93f7070b2c84.png",
       "/lovable-uploads/305ec59d-58f9-4451-82a5-fd623c57608b.png",
@@ -111,7 +111,7 @@ export const projects: Project[] = [
       "/lovable-uploads/fca3b99a-9c6b-47ef-8b1f-81fe91824be7.png",
       "/lovable-uploads/c6efbecd-295f-4060-9102-5da0cb070820.png",
       "/lovable-uploads/b98b3cb5-2871-4738-afad-318075d504fa.png",
-      "/lovable-uploads/4781f6d5-957d-41a5-9713-c675c49476c1.png"
+      
     ],
     description: "An innovative performance project blending urban exploration with digital art through a mobile projection setup.",
     date: "2023",
@@ -126,7 +126,6 @@ export const projects: Project[] = [
     category: "photography",
     thumbnail: "/lovable-uploads/adc801b2-ec43-43f3-923d-51ffd89f78dc.png",
     images: [
-      "/lovable-uploads/adc801b2-ec43-43f3-923d-51ffd89f78dc.png",
       "/lovable-uploads/89c07318-45e4-45b3-88a6-6b11ba3a5a19.png",
       "/lovable-uploads/d988d105-1a4f-4db3-a98e-1ea98ce80772.png",
       "/lovable-uploads/5e30d7f7-1f4b-42ae-b2e8-dba48dae497d.png",
@@ -145,7 +144,7 @@ export const projects: Project[] = [
       "/lovable-uploads/b5b20264-b522-45dc-ac05-cce919543d69.png",
       "/lovable-uploads/dbdbfbd4-93da-487a-974f-4ac6df752c82.png"
     ],
-    description: "Film photographs taken during the Spring 2024 China tour of Mola Oddity, an indie Chinese band.",
+    description: "Candid film photos of touring China with an indie band, Mola Oddity",
     date: "2024",
     location: "Various cities, China",
     isFeatured: true,
@@ -187,7 +186,6 @@ export const projects: Project[] = [
       "/lovable-uploads/1e079f5c-77f7-4c43-8042-7dd01e4148fb.png",
       "/lovable-uploads/8a7680d1-2fc0-456f-b955-33767441ebf3.png",
       "/lovable-uploads/75f24e59-17c0-4385-82d0-b98249c74d91.png",
-      "/lovable-uploads/a49feb8e-b03b-4dc7-b716-6c15a8079820.png",
       "/lovable-uploads/6d6c8b74-aacb-49d3-862c-35cc26fac98d.png",
       "/lovable-uploads/3ae22ddd-6f02-4e21-80ef-d8119a0b4dfa.png",
       "/lovable-uploads/fb933b00-dd92-4f27-bd72-f197fd1755fe.png",
@@ -196,7 +194,6 @@ export const projects: Project[] = [
       "/lovable-uploads/1bed1a9b-1164-48a9-9a40-77d6cfd06fc5.png",
       "/lovable-uploads/012f6e0c-87c7-4ed1-87c8-d16e7994149b.png",
       "/lovable-uploads/5690c88e-7689-4d2e-8c13-0aa99e762d1d.png",
-      "/lovable-uploads/2f3ddaaa-4c01-49af-a829-c3ebbcafee12.png",
       "/lovable-uploads/752e5aaf-0bd2-40be-8b96-a197460a7035.png"
     ],
     description: "A photographic series honoring women where the river meets the ocean in Serra Grande, Bahia, Brazil.",
@@ -225,7 +222,7 @@ export const projects: Project[] = [
     id: 8,
     title: "Lemniscata",
     slug: "lemniscata",
-    category: "installation",
+    category: "installation", "performance"
     thumbnail: "/lovable-uploads/ee3078d7-5b4f-4d6c-9d8e-7ebe0dc70280.png",
     images: [
       "/lovable-uploads/ee3078d7-5b4f-4d6c-9d8e-7ebe0dc70280.png",
