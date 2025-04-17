@@ -1,3 +1,4 @@
+
 export interface Project {
   id: number;
   title: string;
@@ -21,7 +22,7 @@ export const projects: Project[] = [
     title: "Sintography",
     slug: "sintography",
     category: "generative-art",
-    thumbnail: "/lovable-uploads/0d514d00-6cc5-4403-820a-60ee038c4ef6.png",
+    thumbnail: "/lovable-uploads/c2025c25-8326-448b-8d05-4c1ae85f98c0.png",
     images: [
       "/lovable-uploads/b7f0775c-9f85-42e9-b7b5-a631b5cad119.png",
       "/lovable-uploads/8b9b86ac-cba5-4279-8fce-361f31e16d0b.png",
@@ -34,7 +35,10 @@ export const projects: Project[] = [
       "/lovable-uploads/1869a8ba-835a-4f87-a64d-02867e1f432d.png",
       "/lovable-uploads/005fca68-5ae5-4420-bdc5-536056f486f9.png",
       "/lovable-uploads/cd22f4a6-67d0-4dbc-9994-fab55d6e6716.png",
-      "/lovable-uploads/0d514d00-6cc5-4403-820a-60ee038c4ef6.png"
+      "/lovable-uploads/0d514d00-6cc5-4403-820a-60ee038c4ef6.png",
+      "/lovable-uploads/671f4553-32b4-499c-9437-344d9fa89c5c.png",
+      "/lovable-uploads/7c01c807-50eb-4d7b-898a-2303f50dbfec.png",
+      "/lovable-uploads/c2025c25-8326-448b-8d05-4c1ae85f98c0.png"
     ],
     description: "A series of abstract generative artworks exploring movement and emotion through digital and traditional techniques.",
     date: "2024",

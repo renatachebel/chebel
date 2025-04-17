@@ -75,16 +75,6 @@ const Navigation: React.FC = () => {
             </li>
             <li>
               <Link 
-                to="/sketchbook" 
-                className={`font-body text-sm transition-colors ${
-                  isActive('/sketchbook') ? 'text-white' : 'text-white/60 hover:text-white'
-                }`}
-              >
-                SKETCHBOOK
-              </Link>
-            </li>
-            <li>
-              <Link 
                 to="/about" 
                 className={`font-body text-sm transition-colors ${
                   isActive('/about') ? 'text-white' : 'text-white/60 hover:text-white'
@@ -160,16 +150,6 @@ const Navigation: React.FC = () => {
                   }`}
                 >
                   PHOTO DIARY
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/sketchbook" 
-                  className={`font-body text-2xl transition-colors ${
-                    isActive('/sketchbook') ? 'text-white' : 'text-white/60'
-                  }`}
-                >
-                  SKETCHBOOK
                 </Link>
               </li>
               <li>
