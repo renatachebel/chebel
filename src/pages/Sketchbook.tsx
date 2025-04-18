@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Layout from '../components/Layout';
-import { ArrowLeft, Home } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Sketchbook: React.FC = () => {
@@ -10,13 +10,13 @@ const Sketchbook: React.FC = () => {
       <div className="pt-12 pb-24">
         <div className="container-custom">
           <div className="mb-12">
-            <a 
-              href="/" 
+            <Link 
+              to="/" 
               className="inline-flex items-center font-body text-sm text-white/70 hover:text-white transition-colors duration-300"
             >
               <ArrowLeft size={16} className="mr-2" />
               Back to Home
-            </a>
+            </Link>
           </div>
           
           <div className="mb-16 max-w-4xl">
@@ -36,12 +36,7 @@ const Sketchbook: React.FC = () => {
             </div>
           </div>
           
-          <div className="mt-16 text-center">
-            <Link to="/" className="inline-flex items-center font-body text-sm text-white/70 hover:text-white transition-colors duration-300">
-              <Home size={18} className="mr-2" />
-              Back to Home
-            </Link>
-          </div>
+          {/* Removed the duplicate Back to Home button here */}
         </div>
       </div>
     </Layout>

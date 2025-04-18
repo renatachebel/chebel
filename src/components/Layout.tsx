@@ -28,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </main>
       
-      {location.pathname !== '/' && (
+      {location.pathname !== '/' && location.pathname !== '/sketchbook' && (
         <div className="container-custom mt-12 mb-12 text-center">
           <Link to="/" className="inline-flex items-center font-body text-sm text-white/70 hover:text-white transition-colors duration-300">
             <Home size={18} className="mr-2" />

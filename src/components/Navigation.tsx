@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AlignRight, X } from 'lucide-react';
 import { Button } from './ui/button';
@@ -10,6 +10,7 @@ const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const isMobile = useIsMobile();
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
   
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +27,6 @@ const Navigation: React.FC = () => {
   
   const isActive = (path: string) => location.pathname === path;
   
-  // Ensure menu button is always visible
   const handleMenuToggle = () => {
     console.log("Menu toggle clicked, current state:", isMenuOpen);
     setIsMenuOpen(!isMenuOpen);
@@ -82,6 +82,7 @@ const Navigation: React.FC = () => {
         
         <div className="md:hidden">
           <Button
+            ref={menuButtonRef}
             variant="ghost"
             size="icon"
             onClick={handleMenuToggle}
@@ -98,6 +99,7 @@ const Navigation: React.FC = () => {
           className={`fixed inset-0 bg-black z-40 overflow-y-auto transition-opacity duration-300 ${
             isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
+          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
         >
           <div className="container-custom py-6 flex justify-between items-center">
             <div>
