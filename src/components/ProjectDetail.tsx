@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Project } from '../data/types';
 import { AspectRatio } from './ui/aspect-ratio';
@@ -19,7 +18,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
   const [imageOrientation, setImageOrientation] = useState<'landscape' | 'portrait'>('landscape');
   
   useEffect(() => {
-    // Reset state when project changes
     setSelectedImageIndex(0);
     setIsLoading(true);
     setGalleryOpen(false);
@@ -27,12 +25,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
   
   const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
     const img = e.currentTarget;
-    // Determine image orientation
     setImageOrientation(img.naturalWidth >= img.naturalHeight ? 'landscape' : 'portrait');
     setIsLoading(false);
   };
 
-  // Separate handler for video load events
   const handleVideoLoad = () => {
     setIsLoading(false);
   };
@@ -76,12 +72,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
     }
   };
   
-  // Format a category for display
   const formatCategory = (category: string) => {
     return category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
   };
   
-  // Format all categories for display
   const formattedCategories = project.category.map(formatCategory).join(', ');
   
   const renderThumbnails = () => {
@@ -121,7 +115,25 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
   };
   
   const renderMedia = () => {
-    if (project.youtubeId) {
+    if (project.youtubeIds && project.youtubeIds.length > 0) {
+      return (
+        <div className="space-y-8">
+          {project.youtubeIds.map((youtubeId, index) => (
+            <div key={index} className="relative overflow-hidden rounded-lg">
+              <AspectRatio ratio={16/9}>
+                <iframe
+                  src={`https://www.youtube.com/embed/${youtubeId}`}
+                  title={`${project.title} - Video ${index + 1}`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full border-0"
+                ></iframe>
+              </AspectRatio>
+            </div>
+          ))}
+        </div>
+      );
+    } else if (project.youtubeId) {
       return (
         <div className="relative overflow-hidden rounded-lg">
           <AspectRatio ratio={16/9}>
@@ -144,7 +156,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
             </div>
           )}
           
-          {/* Navigation arrows */}
           {project.images.length > 1 && (
             <>
               <Button 
@@ -213,8 +224,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
   };
   
   const renderImagesGrid = () => {
-    // Only show images grid if there's a YouTube video and also images
-    if (project.youtubeId && project.images && project.images.length > 0) {
+    if (project.youtubeIds && project.youtubeIds.length > 0) {
       return (
         <div className="mt-12">
           <h3 className="font-display text-xl tracking-wider mb-6">Installation Views</h3>
@@ -264,7 +274,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div className="md:col-span-2">
           {renderMedia()}
-          {!project.youtubeId && renderThumbnails()}
+          {!project.youtubeIds && renderThumbnails()}
           {renderImagesGrid()}
         </div>
         
@@ -301,7 +311,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
         </div>
       </div>
 
-      {/* Full-size image gallery dialog */}
       <Dialog open={galleryOpen} onOpenChange={setGalleryOpen}>
         <DialogContent className="max-w-6xl p-0 bg-black/90 border-none">
           <div className="absolute right-4 top-4 z-10 flex gap-2">

@@ -14,4 +14,5 @@ export interface Project {
   isFeatured?: boolean;
   details?: string;
   youtubeId?: string;
+  youtubeIds?: string[];
 }

@@ -53,12 +53,12 @@ export const videoProjects: Project[] = [
     title: "Music Videos",
     slug: "music-videos",
     category: ["video"],
-    thumbnail: "/lovable-uploads/846197ea-c128-4545-9df6-77947b19080c.png",
-    videos: [
-      "https://www.youtube.com/watch?v=5n6uJ6aZ8JU",
-      "https://www.youtube.com/watch?v=5tRvMmd6cD0",
-      "https://www.youtube.com/watch?v=QyAYrmLYVfg",
-      "https://www.youtube.com/watch?v=3AcCvHSR7dw"
+    thumbnail: "/lovable-uploads/c9069b1a-a9ab-41d3-ab7b-a8051a81268a.png",
+    youtubeIds: [
+      "5n6uJ6aZ8JU",
+      "5tRvMmd6cD0",
+      "QyAYrmLYVfg",
+      "3AcCvHSR7dw"
     ],
     description: "A collection of music videos directed and produced for various artists.",
     date: "2024",
