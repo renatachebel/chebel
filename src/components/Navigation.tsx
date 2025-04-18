@@ -96,12 +96,12 @@ const Navigation: React.FC = () => {
       
       {isMobile && (
         <div 
-          className={`fixed inset-0 bg-black z-40 overflow-y-auto transition-opacity duration-300 ${
+          className={`fixed inset-0 bg-black z-40 transition-opacity duration-300 ${
             isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
           style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
         >
-          <div className="container-custom py-6 flex justify-between items-center">
+          <div className="fixed top-0 left-0 w-full container-custom py-6 flex justify-between items-center">
             <div>
               <Link to="/" className="font-display text-xl tracking-wider">
                 RENATA CHEBEL
@@ -109,7 +109,7 @@ const Navigation: React.FC = () => {
             </div>
           </div>
           
-          <nav className="container-custom py-16">
+          <nav className="fixed inset-0 pt-24 container-custom">
             <ul className="flex flex-col gap-8">
               <li>
                 <Link 
