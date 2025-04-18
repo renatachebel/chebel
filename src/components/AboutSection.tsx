@@ -53,11 +53,11 @@ const AboutSection: React.FC = () => {
             
             <div className="animate-on-scroll opacity-0" style={{ transitionDelay: "100ms" }}>
               <p className="font-body text-white/80 mb-6">
-                I am Renata Chebel, a Brazilian multimedia artist working at the intersection of nature, technology, and spirituality. My practice combines generative art, video, photography, projection mapping, and physical installations to explore themes of the sacred, the feminine, memory, ancestry and our evolving relationship with the environment. With a background in journalism, storytelling remains at the heart of everything I create.
+                I am Renata Chebel, a Brazilian multimedia artist working at the intersection of nature, technology, and spirituality. My practice combines generative art, video, photography, projection mapping and physical installations to explore themes of the sacred, the feminine, memory, ancestry and our relationship with the environment. With a background in journalism, storytelling remains at the heart of everything I create.
               </p>
               
               <p className="font-body text-white/80 mb-6">
-                My experimental and ever-evolving artistic practice also includes performance, soundscapes, and embroidery, often blurring the boundaries between the digital and the handmade, the ancestral and the futuristic. 
+                My experimental and ever-evolving artistic practice also includes performance, soundscapes and embroidery, often blurring the boundaries between the digital and the handmade, the ancestral and the futuristic. 
               </p>
               
               <p className="font-body text-white/80 mb-6">
