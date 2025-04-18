@@ -1,9 +1,8 @@
-
 export interface Project {
   id: number;
   title: string;
   slug: string;
-  category: 'photography' | 'video' | 'installation' | 'performance' | 'generative-art';
+  category: ('photography' | 'video' | 'installation' | 'performance' | 'generative-art')[];
   thumbnail: string;
   images?: string[];
   videos?: string[];
@@ -21,7 +20,7 @@ export const projects: Project[] = [
     id: 3,
     title: "Temple of Reflections",
     slug: "temple-of-reflections",
-    category: "installation",
+    category: ["installation"],
     thumbnail: "/lovable-uploads/71805de8-4376-4aee-ae83-492aa3ec5f8b.png",
     images: [
       "/lovable-uploads/5a223aa9-973a-4b6d-a184-b9ea9abd258c.png",
@@ -42,7 +41,7 @@ export const projects: Project[] = [
     id: 9,
     title: "Nature of Movement",
     slug: "nature-of-movement",
-    category: "video",
+    category: ["video"],
     thumbnail: "/lovable-uploads/dcdb30d0-886d-4f6a-af0b-6d3302d70fbf.png",
     images: [
       "/lovable-uploads/dcdb30d0-886d-4f6a-af0b-6d3302d70fbf.png",
@@ -64,7 +63,7 @@ export const projects: Project[] = [
     id: 1,
     title: "Sintography",
     slug: "sintography",
-    category: "generative-art",
+    category: ["generative-art"],
     thumbnail: "/lovable-uploads/c2025c25-8326-448b-8d05-4c1ae85f98c0.png",
     images: [
       "/lovable-uploads/b7f0775c-9f85-42e9-b7b5-a631b5cad119.png",
@@ -93,7 +92,7 @@ export const projects: Project[] = [
     id: 2,
     title: "Rainbow Road",
     slug: "rainbow-road",
-    category: "performance",
+    category: ["performance"],
     thumbnail: "/lovable-uploads/4781f6d5-957d-41a5-9713-c675c49476c1.png",
     images: [
       "/lovable-uploads/4781f6d5-957d-41a5-9713-c675c49476c1.png",
@@ -123,7 +122,7 @@ export const projects: Project[] = [
     id: 5,
     title: "China Oddities",
     slug: "china-oddities",
-    category: "photography",
+    category: ["photography"],
     thumbnail: "/lovable-uploads/adc801b2-ec43-43f3-923d-51ffd89f78dc.png",
     images: [
       "/lovable-uploads/89c07318-45e4-45b3-88a6-6b11ba3a5a19.png",
@@ -154,7 +153,7 @@ export const projects: Project[] = [
     id: 7,
     title: "Tea in Alishan",
     slug: "tea-in-alishan",
-    category: "photography",
+    category: ["photography"],
     thumbnail: "/lovable-uploads/b66d3c6d-37db-4fb7-8c67-34bc6ae295ba.png",
     images: [
       "/lovable-uploads/b66d3c6d-37db-4fb7-8c67-34bc6ae295ba.png",
@@ -180,7 +179,7 @@ export const projects: Project[] = [
     id: 4,
     title: "Bodies of Water",
     slug: "bodies-of-water",
-    category: "photography",
+    category: ["photography"],
     thumbnail: "/lovable-uploads/1e079f5c-77f7-4c43-8042-7dd01e4148fb.png",
     images: [
       "/lovable-uploads/1e079f5c-77f7-4c43-8042-7dd01e4148fb.png",
@@ -206,7 +205,7 @@ export const projects: Project[] = [
     id: 6,
     title: "Lotus Bloom",
     slug: "lotus-bloom",
-    category: "video",
+    category: ["video"],
     thumbnail: "/lovable-uploads/48318c35-23f6-4133-8c4a-69ba3191de23.png",
     images: [
       "/lovable-uploads/48318c35-23f6-4133-8c4a-69ba3191de23.png"
@@ -222,7 +221,7 @@ export const projects: Project[] = [
     id: 8,
     title: "Lemniscata",
     slug: "lemniscata",
-    category: "installation", "performance"
+    category: ["installation", "performance"],
     thumbnail: "/lovable-uploads/ee3078d7-5b4f-4d6c-9d8e-7ebe0dc70280.png",
     images: [
       "/lovable-uploads/ee3078d7-5b4f-4d6c-9d8e-7ebe0dc70280.png",
@@ -249,5 +248,5 @@ export const getFeaturedProjects = (): Project[] => {
 };
 
 export const getProjectsByCategory = (category: Project['category']): Project[] => {
-  return projects.filter(project => project.category === category);
+  return projects.filter(project => project.category.includes(category));
 };
