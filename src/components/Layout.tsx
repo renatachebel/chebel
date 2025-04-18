@@ -1,7 +1,8 @@
 
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Navigation from './Navigation';
+import { Home } from 'lucide-react';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -27,7 +28,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </main>
       
-      <footer className="glass-card mt-20 py-6 relative z-10">
+      {location.pathname !== '/' && (
+        <div className="container-custom mt-12 mb-12 text-center">
+          <Link to="/" className="inline-flex items-center font-body text-sm text-white/70 hover:text-white transition-colors duration-300">
+            <Home size={18} className="mr-2" />
+            Back to Home
+          </Link>
+        </div>
+      )}
+      
+      <footer className="glass-card mt-10 py-6 relative z-10">
         <div className="container-custom">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">

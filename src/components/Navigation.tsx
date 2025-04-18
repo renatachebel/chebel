@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { AlignRight, X } from 'lucide-react';
+import { AlignRight, X, Home } from 'lucide-react';
 import { Button } from './ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -25,6 +25,12 @@ const Navigation: React.FC = () => {
   }, [location.pathname]);
   
   const isActive = (path: string) => location.pathname === path;
+  
+  // Ensure menu button is always visible
+  const handleMenuToggle = () => {
+    console.log("Menu toggle clicked, current state:", isMenuOpen);
+    setIsMenuOpen(!isMenuOpen);
+  };
   
   return (
     <header 
@@ -65,9 +71,9 @@ const Navigation: React.FC = () => {
             </li>
             <li>
               <Link 
-                to="/photodiary" 
+                to="/sketchbook" 
                 className={`font-body text-sm transition-colors ${
-                  isActive('/photodiary') ? 'text-white' : 'text-white/60 hover:text-white'
+                  isActive('/sketchbook') || isActive('/photodiary') ? 'text-white' : 'text-white/60 hover:text-white'
                 }`}
               >
                 SKETCHBOOK
@@ -90,32 +96,27 @@ const Navigation: React.FC = () => {
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => setIsMenuOpen(true)}
-            className="text-white"
+            onClick={handleMenuToggle}
+            className="text-white relative z-50"
+            aria-label="Toggle menu"
           >
-            <AlignRight />
-            <span className="sr-only">Open menu</span>
+            {isMenuOpen ? <X /> : <AlignRight />}
           </Button>
         </div>
       </div>
       
-      {isMobile && isMenuOpen && (
-        <div className="fixed inset-0 bg-black z-50 overflow-y-auto">
+      {isMobile && (
+        <div 
+          className={`fixed inset-0 bg-black z-40 overflow-y-auto transition-opacity duration-300 ${
+            isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
+        >
           <div className="container-custom py-6 flex justify-between items-center">
             <div>
               <Link to="/" className="font-display text-xl tracking-wider">
                 RENATA CHEBEL
               </Link>
             </div>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-white"
-            >
-              <X />
-              <span className="sr-only">Close menu</span>
-            </Button>
           </div>
           
           <nav className="container-custom py-16">
@@ -144,9 +145,9 @@ const Navigation: React.FC = () => {
               </li>
               <li>
                 <Link 
-                  to="/photodiary" 
+                  to="/sketchbook" 
                   className={`font-body text-2xl transition-colors ${
-                    isActive('/photodiary') ? 'text-white' : 'text-white/60'
+                    isActive('/sketchbook') || isActive('/photodiary') ? 'text-white' : 'text-white/60'
                   }`}
                 >
                   SKETCHBOOK

@@ -1,7 +1,8 @@
 
 import React from 'react';
 import Layout from '../components/Layout';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Sketchbook: React.FC = () => {
   return (
@@ -23,13 +24,23 @@ const Sketchbook: React.FC = () => {
           </div>
           
           <div className="w-full overflow-hidden glass-card rounded-lg">
-            <iframe 
-              src="https://chebel.tumblr.com" 
-              width="100%" 
-              height="1000" 
-              className="border-0 w-full"
-              title="Chebel Tumblr"
-            ></iframe>
+            {/* Replace iframe with a direct link for mobile */}
+            <div className="relative pb-[150%] md:pb-[100%] w-full h-0">
+              <iframe 
+                src="https://chebel.tumblr.com" 
+                className="absolute top-0 left-0 w-full h-full border-0"
+                title="Chebel Tumblr"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          
+          <div className="mt-16 text-center">
+            <Link to="/" className="inline-flex items-center font-body text-sm text-white/70 hover:text-white transition-colors duration-300">
+              <Home size={18} className="mr-2" />
+              Back to Home
+            </Link>
           </div>
         </div>
       </div>
