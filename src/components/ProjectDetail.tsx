@@ -224,7 +224,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
   };
   
   const renderImagesGrid = () => {
-    if (project.youtubeIds && project.youtubeIds.length > 0) {
+    if (project.youtubeIds && project.youtubeIds.length > 0 && project.images && project.images.length > 0) {
       return (
         <div className="mt-12">
           <h3 className="font-display text-xl tracking-wider mb-6">Installation Views</h3>

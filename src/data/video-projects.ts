@@ -54,6 +54,7 @@ export const videoProjects: Project[] = [
     slug: "music-videos",
     category: ["video"],
     thumbnail: "/lovable-uploads/c9069b1a-a9ab-41d3-ab7b-a8051a81268a.png",
+    images: [],
     youtubeIds: [
       "5n6uJ6aZ8JU",
       "5tRvMmd6cD0",
