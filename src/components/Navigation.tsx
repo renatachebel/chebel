@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { AlignRight, X, Home } from 'lucide-react';
+import { AlignRight, X } from 'lucide-react';
 import { Button } from './ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -55,18 +55,6 @@ const Navigation: React.FC = () => {
                 }`}
               >
                 HOME
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/projects" 
-                className={`font-body text-sm transition-colors ${
-                  isActive('/projects') || location.pathname.includes('/projects/') 
-                    ? 'text-white' 
-                    : 'text-white/60 hover:text-white'
-                }`}
-              >
-                PROJECTS
               </Link>
             </li>
             <li>
@@ -129,18 +117,6 @@ const Navigation: React.FC = () => {
                   }`}
                 >
                   HOME
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/projects" 
-                  className={`font-body text-2xl transition-colors ${
-                    isActive('/projects') || location.pathname.includes('/projects/') 
-                      ? 'text-white' 
-                      : 'text-white/60'
-                  }`}
-                >
-                  PROJECTS
                 </Link>
               </li>
               <li>
