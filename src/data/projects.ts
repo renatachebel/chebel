@@ -1,4 +1,3 @@
-
 export interface Project {
   id: number;
   title: string;
@@ -209,7 +208,15 @@ export const projects: Project[] = [
     category: ["video"],
     thumbnail: "/lovable-uploads/48318c35-23f6-4133-8c4a-69ba3191de23.png",
     images: [
-      "/lovable-uploads/48318c35-23f6-4133-8c4a-69ba3191de23.png"
+      "/lovable-uploads/48318c35-23f6-4133-8c4a-69ba3191de23.png",
+      "/lovable-uploads/846197ea-c128-4545-9df6-77947b19080c.png",
+      "/lovable-uploads/53bf42c5-67aa-44df-a8f8-7fda6105553c.png",
+      "/lovable-uploads/c26add69-8f87-48fd-8289-565851fdab4e.png",
+      "/lovable-uploads/d0d5515f-20ac-4d3d-bf27-52625147d335.png",
+      "/lovable-uploads/72690cf3-d0de-4385-8ec5-6ad24193b4e3.png",
+      "/lovable-uploads/f49633a4-3e97-4008-99f5-57d740ca6064.png",
+      "/lovable-uploads/cdece5e8-3369-4ffd-b1f5-c0a494c44c3b.png",
+      "/lovable-uploads/11624026-486b-4a5e-9bfe-9d6dc506f3b7.png"
     ],
     youtubeId: "z8mfcIqVBWk",
     description: "A visual meditation on feminine beauty, strength, and the sacred power of stillness.",
@@ -237,6 +244,24 @@ export const projects: Project[] = [
     location: "Bombay Beach Biennale, USA",
     isFeatured: true,
     details: "Lemniscata (from Latin \"decorated with ribbons\", also the mathematic symbol for infinite) is a generative art project that explores emotion, memory, and the feminine through the intersection of photography and AI. I trained a LoRA model on the abstract expressionist works of overlooked women painters—such as Lee Krasner, Elaine de Kooning, and Helen Frankenthaler—and applied it to photographs of women engaged in dance therapy (Danzamedicina, by Morena Cardoso). The result is a series of \"sintographs\": images that blend photographic presence with painterly, emotional abstraction.\n\nPrinted on fabric and embroidered by hand, these pieces reconnect the digital with the tactile. The project was presented at the Poetry House during the Bombay Beach Biennale 2024, where it featured a live embroidery performance as part of the installation."
+  },
+  {
+    id: 10,
+    title: "Music Videos",
+    slug: "music-videos",
+    category: ["video"],
+    thumbnail: "/lovable-uploads/846197ea-c128-4545-9df6-77947b19080c.png",
+    videos: [
+      "https://www.youtube.com/watch?v=5n6uJ6aZ8JU",
+      "https://www.youtube.com/watch?v=5tRvMmd6cD0",
+      "https://www.youtube.com/watch?v=QyAYrmLYVfg",
+      "https://www.youtube.com/watch?v=3AcCvHSR7dw"
+    ],
+    description: "A collection of music videos directed and produced for various artists.",
+    date: "2024",
+    location: "Various Locations",
+    isFeatured: false,
+    details: "This collection showcases a series of music videos that blend visual storytelling with musical artistry. Each video represents a unique collaboration with different artists, exploring themes through innovative cinematography and creative direction."
   }
 ];
 
