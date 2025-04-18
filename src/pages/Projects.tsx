@@ -25,7 +25,7 @@ const Projects: React.FC = () => {
       if (activeFilter === 'all') {
         setFilteredProjects(projects);
       } else {
-        setFilteredProjects(projects.filter(project => project.category === activeFilter));
+        setFilteredProjects(projects.filter(project => project.category.includes(activeFilter as any)));
       }
       
       setIsAnimating(false);

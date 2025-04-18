@@ -16,7 +16,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   const animationDelay = `${index * 100}ms`;
   
   // Category label styling
-  const getCategoryStyle = (category: Project['category']) => {
+  const getCategoryStyle = (category: string) => {
     switch (category) {
       case 'photography':
         return 'bg-blue-500/20 text-blue-200';
@@ -58,6 +58,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     setIsHovered(false);
   };
   
+  // Get the primary category (first in the array) for display
+  const primaryCategory = project.category[0] || '';
+  
+  // Format the category for display
+  const formatCategory = (category: string) => {
+    return category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  };
+  
   return (
     <Link 
       to={`/projects/${project.slug}`}
@@ -81,8 +89,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-100 transition-opacity duration-500" />
         
           <div className="absolute inset-0 p-6 flex flex-col justify-end transition-all duration-500 ease-out-expo">
-            <span className={`inline-block px-3 py-1 rounded-full text-xs font-body tracking-wider mb-3 ${getCategoryStyle(project.category)}`}>
-              {project.category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+            <span className={`inline-block px-3 py-1 rounded-full text-xs font-body tracking-wider mb-3 ${getCategoryStyle(primaryCategory)}`}>
+              {formatCategory(primaryCategory)}
             </span>
             <h3 className="font-display text-xl tracking-wider mb-2">{project.title}</h3>
             <p className="font-body text-sm text-white/80 hidden md:block md:opacity-0 md:group-hover:opacity-100 md:transform md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 ease-out-expo">{project.description}</p>

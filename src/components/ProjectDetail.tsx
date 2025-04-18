@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Project } from '../data/projects';
 import { AspectRatio } from './ui/aspect-ratio';
@@ -75,6 +74,14 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
       );
     }
   };
+  
+  // Format a category for display
+  const formatCategory = (category: string) => {
+    return category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  };
+  
+  // Format all categories for display
+  const formattedCategories = project.category.map(formatCategory).join(', ');
   
   const renderThumbnails = () => {
     if (!project.images || project.images.length <= 1) return null;
@@ -270,7 +277,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <h4 className="font-body text-sm text-white/60 mb-1">Category</h4>
-                <p className="font-body">{project.category.charAt(0).toUpperCase() + project.category.slice(1).replace('-', ' ')}</p>
+                <p className="font-body">{formattedCategories}</p>
               </div>
               <div>
                 <h4 className="font-body text-sm text-white/60 mb-1">Date</h4>

@@ -1,3 +1,4 @@
+
 export interface Project {
   id: number;
   title: string;
@@ -247,6 +248,6 @@ export const getFeaturedProjects = (): Project[] => {
   return projects.filter(project => project.isFeatured);
 };
 
-export const getProjectsByCategory = (category: Project['category']): Project[] => {
-  return projects.filter(project => project.category.includes(category));
+export const getProjectsByCategory = (category: string): Project[] => {
+  return projects.filter(project => project.category.includes(category as any));
 };
