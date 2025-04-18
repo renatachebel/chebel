@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AlignRight, X } from 'lucide-react';
@@ -99,7 +98,6 @@ const Navigation: React.FC = () => {
           className={`fixed inset-0 bg-black z-40 transition-opacity duration-300 ${
             isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
-          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
         >
           <div className="fixed top-0 left-0 w-full container-custom py-6 flex justify-between items-center">
             <div>
