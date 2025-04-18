@@ -1,5 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
-import { Project } from '../data/projects';
+import { Project } from '../data/types';
 import { AspectRatio } from './ui/aspect-ratio';
 import { ChevronLeft, ChevronRight, X, Home } from 'lucide-react';
 import { Button } from './ui/button';

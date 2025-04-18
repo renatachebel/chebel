@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Project } from '../data/projects';
+import { Project } from '../data/types';
 
 interface ProjectCardProps {
   project: Project;
