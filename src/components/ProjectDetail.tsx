@@ -87,7 +87,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
           {project.images.map((image, index) => (
             <button
               key={index}
-              onClick={() => openGallery(index)}
+              onClick={() => setSelectedImageIndex(index)}
               className={`relative flex-shrink-0 w-full h-32 md:h-40 overflow-hidden rounded-md transition-all duration-300 ${
                 index === selectedImageIndex ? 'ring-2 ring-white/80' : 'opacity-50 hover:opacity-80'
               }`}
@@ -104,7 +104,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
         <div className="mt-4 text-center">
           <Button 
             variant="outline" 
-            onClick={() => openGallery(0)}
+            onClick={() => setGalleryOpen(true)}
             className="text-sm font-body tracking-wider border-white/30 hover:border-white hover:bg-white/5"
           >
             Gallery View
@@ -247,7 +247,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
           <div className="mt-4 text-center">
             <Button 
               variant="outline" 
-              onClick={() => openGallery(0)}
+              onClick={() => setGalleryOpen(true)}
               className="text-sm font-body tracking-wider border-white/30 hover:border-white hover:bg-white/5"
             >
               Gallery View
