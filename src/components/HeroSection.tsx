@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { ArrowDownIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -71,7 +72,7 @@ const HeroSection: React.FC = () => {
     const interval = setInterval(() => {
       const next = (activeIndex + 1) % heroImages.length;
       setActiveIndex(next);
-    }, 6000);
+    }, 2000);
     
     return () => clearInterval(interval);
   }, [activeIndex]);
