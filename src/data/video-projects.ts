@@ -1,3 +1,4 @@
+
 import { Project } from './types';
 
 export const videoProjects: Project[] = [
@@ -76,7 +77,7 @@ export const videoProjects: Project[] = [
     title: "Music Videos",
     slug: "music-videos",
     category: ["video"],
-    thumbnail: "/lovable-uploads/c9069b1a-a9ab-41d3-ab7b-a8051a81268a.png",
+    thumbnail: "/lovable-uploads/70394a61-a8c0-463e-95a6-f85144967fcd.png",
     images: [],
     youtubeIds: [
       "5n6uJ6aZ8JU",
