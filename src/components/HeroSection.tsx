@@ -43,6 +43,22 @@ const heroImages = [
   {
     url: "/lovable-uploads/adc801b2-ec43-43f3-923d-51ffd89f78dc.png",
     alt: "Woman with artistic makeup and green outfit"
+  },
+  {
+    url: "/lovable-uploads/2107e190-2a84-45ce-8da4-ba087dc03f6b.png",
+    alt: "Surreal eye with nature elements and sparks"
+  },
+  {
+    url: "/lovable-uploads/c9cb2569-9552-4d05-b622-0b1e86b2e6f6.png",
+    alt: "Black and white portrait with shell"
+  },
+  {
+    url: "/lovable-uploads/3efe060a-fdb8-4de4-a86e-40c0eb1e385b.png",
+    alt: "Artistic body with plants"
+  },
+  {
+    url: "/lovable-uploads/381be5db-3284-427e-a9e7-5d6438897e6c.png",
+    alt: "Projection mapping on cathedral facade"
   }
 ];
 
