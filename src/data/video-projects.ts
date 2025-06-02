@@ -1,7 +1,24 @@
-
 import { Project } from './types';
 
 export const videoProjects: Project[] = [
+  {
+    id: 13,
+    title: "Alma da Selva - Amazonia Mapping",
+    slug: "alma-da-selva-amazonia-mapping",
+    category: ["video"],
+    thumbnail: "/lovable-uploads/135bd60c-e82f-4d4b-8920-d0a756c4e1e2.png",
+    images: [
+      "/lovable-uploads/135bd60c-e82f-4d4b-8920-d0a756c4e1e2.png",
+      "/lovable-uploads/e8771aac-26e3-4c05-87d2-a38d62e3eaa6.png",
+      "/lovable-uploads/20ea6bee-2a3b-4d84-957a-7266aa4c89a5.png"
+    ],
+    youtubeId: "gwzV6E4aNKA",
+    description: "A journey into the heart of the forest, exploring the ancestral origins and animal spirits of the Amazon through AI-generated visuals.",
+    date: "2023",
+    location: "Amazônia Mapping",
+    isFeatured: true,
+    details: "Alma da Selva (Soul of the Jungle 2023) is a journey into the heart of the forest. From its most ancestral origins to its manifestation through the presence of animals, the jungle appears as a single organism—pulsing, transforming, and revealing itself on the façade of one of the cathedrals of Amazônia Mapping.\n\nWith visuals entirely synthesized through neural networks using the text-to-image technique, Alma da Selva introduces the invisible forces of nature that emerge through sound and the masks of animal spirits. These forces appear to make their presence known—as a warning, calling for respect and protection of the forest.\n\nThe creation is a collaboration between artists microdosys and ilumina chebel for the visuals, and Irû Waves for the soundtrack."
+  },
   {
     id: 11,
     title: "Premio SIM - TV Globo",
