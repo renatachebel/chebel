@@ -35,6 +35,7 @@ export const photographyProjects: Project[] = [
     category: ["photography"],
     thumbnail: "/lovable-uploads/adc801b2-ec43-43f3-923d-51ffd89f78dc.png",
     images: [
+      "/lovable-uploads/c9069b1a-a9ab-41d3-ab7b-a8051a81268a.png",
       "/lovable-uploads/6600ae80-974a-4a12-aa00-87ac40c0fc4b.png",
       "/lovable-uploads/89c07318-45e4-45b3-88a6-6b11ba3a5a19.png",
       "/lovable-uploads/d988d105-1a4f-4db3-a98e-1ea98ce80772.png",
