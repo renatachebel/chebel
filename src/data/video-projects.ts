@@ -43,7 +43,6 @@ export const videoProjects: Project[] = [
     date: "2023",
     location: "São Paulo, Brazil",
     isFeatured: true,
-    youtubeId: "dQw4w9WgXcQ",
     details: "Lotus Bloom is an experimental video project that captures the delicate process of flowers opening through time-lapse photography and macro cinematography. The work explores themes of transformation, impermanence, and the hidden beauty found in natural cycles.\n\nShot over several weeks in controlled studio conditions, each sequence required precise timing and environmental control to capture the perfect moment of blooming. The macro lens reveals intricate details usually invisible to the naked eye, transforming familiar flowers into alien landscapes of color and texture.\n\nThe accompanying soundscape, composed of field recordings and electronic manipulation, creates an immersive environment that amplifies the visual poetry of transformation. The piece invites viewers to slow down and observe the miraculous complexity of natural processes that often go unnoticed in our daily lives.\n\nThis work has been exhibited in several galleries and film festivals, resonating with audiences as a meditation on time, beauty, and the cycles of life and death that govern all living things."
   },
   {
@@ -67,7 +66,6 @@ export const videoProjects: Project[] = [
     date: "2022-2024",
     location: "Various locations",
     isFeatured: true,
-    youtubeIds: ["dQw4w9WgXcQ", "oHg5SJYRHA0", "fC7oUOUEEi4"],
     details: "This collection showcases a diverse range of music video projects spanning multiple genres and artistic approaches. Each video represents a unique collaboration with musicians, exploring different visual languages and storytelling techniques to complement and enhance the musical experience.\n\nThe projects range from intimate performance pieces to elaborate narrative productions, incorporating elements of experimental cinema, documentary-style filming, and innovative post-production techniques. Special attention is given to color grading, visual effects, and editing rhythms that synchronize with the musical compositions.\n\nWorking closely with artists from various musical backgrounds - from indie rock to electronic music to world fusion - each video required a deep understanding of the artist's vision and musical identity. The visual concepts often emerged from extensive conversations about themes, emotions, and messages embedded in the songs.\n\nTechnical approaches varied widely, from single-shot sequences to complex multi-location productions, always prioritizing the marriage between visual and sonic elements. These videos have been featured on various platforms and have contributed to the artists' broader creative narratives and audience engagement."
   },
   {
@@ -88,7 +86,6 @@ export const videoProjects: Project[] = [
     date: "2023",
     location: "Serra da Mantiqueira, Brazil",
     isFeatured: true,
-    youtubeId: "jNQXAC9IVRw",
     details: "Nature of Movement is a documentary that explores the profound connection between human expression and natural environments through the lens of contemporary dance and choreography. Filmed in the breathtaking landscapes of Serra da Mantiqueira in Brazil, the project documents dancers as they respond to and interact with natural elements.\n\nThe film captures spontaneous movements inspired by wind patterns, water flow, rock formations, and the changing light throughout different times of day. Rather than imposing choreography onto the landscape, the dancers allowed themselves to be guided by the natural rhythms and textures of their surroundings.\n\nCinematographically, the project employs a combination of wide landscape shots and intimate close-ups, creating a visual dialogue between the human form and natural geometry. The editing follows the natural pacing of the environment, avoiding rushed cuts and allowing moments of stillness and contemplation.\n\nThe accompanying soundtrack blends field recordings from the locations with minimal musical composition, creating an acoustic environment that supports rather than dominates the visual narrative. This approach emphasizes the inherent musicality of natural spaces and human movement within them.\n\nThe documentary has been screened at several environmental and dance film festivals, serving as both an artistic statement and a meditation on our relationship with the natural world."
   }
 ];
