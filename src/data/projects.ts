@@ -7,14 +7,28 @@ import { performanceProjects } from './performance-projects';
 import { performanceInstallationProjects } from './performance-installation-projects';
 import { generativeArtProjects } from './generative-art-projects';
 
-// Combine all projects
+// Combine all projects in the specified order
 export const projects: Project[] = [
-  ...photographyProjects,
-  ...videoProjects,
-  ...installationProjects,
-  ...performanceProjects,
-  ...performanceInstallationProjects,
-  ...generativeArtProjects
+  // Temple of Reflections (installation)
+  ...installationProjects.filter(p => p.slug === 'temple-of-reflections'),
+  // Lemniscata (performance-installation)
+  ...performanceInstallationProjects.filter(p => p.slug === 'lemniscata'),
+  // Sintography (generative-art)
+  ...generativeArtProjects.filter(p => p.slug === 'sintography'),
+  // Rainbow Road (performance)
+  ...performanceProjects.filter(p => p.slug === 'rainbow-road'),
+  // Lotus Bloom (video)
+  ...videoProjects.filter(p => p.slug === 'lotus-bloom'),
+  // Music Videos (video)
+  ...videoProjects.filter(p => p.slug === 'music-videos'),
+  // Nature of Movement (video)
+  ...videoProjects.filter(p => p.slug === 'nature-of-movement'),
+  // Bodies of Water (photography)
+  ...photographyProjects.filter(p => p.slug === 'bodies-of-water'),
+  // China Oddities (photography)
+  ...photographyProjects.filter(p => p.slug === 'china-oddities'),
+  // Tea in Alishan (photography)
+  ...photographyProjects.filter(p => p.slug === 'tea-in-alishan'),
 ];
 
 // Helper functions
