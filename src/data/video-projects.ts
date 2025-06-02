@@ -1,7 +1,30 @@
-
 import { Project } from './types';
 
 export const videoProjects: Project[] = [
+  {
+    id: 11,
+    title: "Premio SIM - TV Globo",
+    slug: "premio-sim-tv-globo",
+    category: ["video"],
+    thumbnail: "/lovable-uploads/ccfae5d7-6fba-47e7-98cc-7c6e0de82514.png",
+    images: [
+      "/lovable-uploads/ccfae5d7-6fba-47e7-98cc-7c6e0de82514.png",
+      "/lovable-uploads/10d14a41-1470-4faa-8d5e-fabc65cae94c.png",
+      "/lovable-uploads/2ee34d11-ddb6-4cd3-a615-e5a75296e39f.png",
+      "/lovable-uploads/678e8169-79b7-4170-911c-94ade82d9cfa.png",
+      "/lovable-uploads/74ae1fcc-463f-4adb-8d04-0378372c9034.png",
+      "/lovable-uploads/0ee8a45d-7459-4b76-83a4-6bd821b11928.png",
+      "/lovable-uploads/8191abda-932b-438f-a5df-880c8416a07f.png",
+      "/lovable-uploads/673bc75d-0027-4d1f-898f-6caf305d4f1d.png",
+      "/lovable-uploads/f80316da-610c-4a0a-aa46-facea08d2b5d.png"
+    ],
+    youtubeId: "zrIlYORbVEo",
+    description: "AI-generated visuals for indigenous pop singer Kae Guajajara's performance during the Premio SIM à Igualdade Racial 2025, broadcast on TV Globo.",
+    date: "2025",
+    location: "Brazil - TV Globo",
+    isFeatured: true,
+    details: "Created visuals for the indigenous pop singer Kae Guajajara's performance during the Premio SIM à Igualdade Racial 2025, an awards ceremony celebrating racial equality in Brazil. The show was transmitted on TV Globo, Brazil's biggest television channel.\n\nUsing AI tools, I created a series of textures inspired by nature and combined them with traditional indigenous patterns from the Guajajara nation. The visual elements honored Kae Guajajara's cultural heritage while creating a contemporary digital art experience that complemented her musical performance.\n\nThe project showcases the intersection of traditional indigenous art forms with modern AI-generated imagery, creating a unique visual language that celebrates both cultural heritage and technological innovation. The work was designed to enhance the live television broadcast and create an immersive visual experience for viewers across Brazil."
+  },
   {
     id: 9,
     title: "Nature of Movement",
