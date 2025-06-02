@@ -27,6 +27,31 @@ export const videoProjects: Project[] = [
     details: "Created visuals for the indigenous pop singer Kae Guajajara's performance during the Premio SIM à Igualdade Racial 2025, an awards ceremony celebrating racial equality in Brazil. The show was transmitted on TV Globo, Brazil's biggest television channel.\n\nUsing AI tools, I created a series of textures inspired by nature and combined them with traditional indigenous patterns from the Guajajara nation. The visual elements honored Kae Guajajara's cultural heritage while creating a contemporary digital art experience that complemented her musical performance.\n\nThe project showcases the intersection of traditional indigenous art forms with modern AI-generated imagery, creating a unique visual language that celebrates both cultural heritage and technological innovation. The work was designed to enhance the live television broadcast and create an immersive visual experience for viewers across Brazil."
   },
   {
+    id: 12,
+    title: "Devir-Mulher",
+    slug: "devir-mulher",
+    category: ["video"],
+    thumbnail: "/lovable-uploads/b96727b9-827c-4d35-ae39-decc6d0dbb74.png",
+    images: [
+      "/lovable-uploads/bc696970-4031-4af0-8b78-e02276f42f06.png",
+      "/lovable-uploads/4a9f15c8-0420-4a43-8b3b-2e6fe298f525.png",
+      "/lovable-uploads/f9481187-860e-4c19-8de7-497da30576a3.png",
+      "/lovable-uploads/e1808083-5d7c-42dd-8123-8f8fdebd9cce.png",
+      "/lovable-uploads/a899e474-390e-4ebe-9fd4-13d6003fcb59.png",
+      "/lovable-uploads/913b8eb2-2c9e-4b93-a63b-8bfef4716872.png",
+      "/lovable-uploads/1a376ed5-eb04-43ab-b915-f512a47a9448.png",
+      "/lovable-uploads/59bbb507-0147-4e47-82a6-a4e924c20c70.png",
+      "/lovable-uploads/8e2ded56-cc6e-4361-8380-f384f8210aa6.png",
+      "/lovable-uploads/b96727b9-827c-4d35-ae39-decc6d0dbb74.png"
+    ],
+    youtubeId: "r02RDeHWYBQ",
+    description: "A poetic video about being and becoming a woman, a partnership with Morena Cardoso and Danzamedicina.",
+    date: "2020",
+    location: "Cabiria Film Festival 2020",
+    isFeatured: true,
+    details: "Devir-Mulher is a poetic exploration of feminine identity, transformation, and the multifaceted experience of womanhood. Created in partnership with Morena Cardoso and Danzamedicina, this video piece was part of the Cabiria Film Festival 2020.\n\nThe work delves into the intimate and universal aspects of being a woman, capturing moments of vulnerability, strength, connection, and self-discovery. Through a series of carefully composed visual narratives, the piece explores themes of bodily autonomy, sisterhood, sensuality, and the cyclical nature of feminine experience.\n\nThe collaboration brings together different artistic perspectives to create a visual poem that celebrates the complexity and beauty of feminine existence. The imagery flows between moments of solitude and communion, nature and intimacy, creating a meditative space for reflection on what it means to embody and express femininity in contemporary society."
+  },
+  {
     id: 9,
     title: "Nature of Movement",
     slug: "nature-of-movement",
