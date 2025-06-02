@@ -7,10 +7,10 @@ import { performanceProjects } from './performance-projects';
 import { performanceInstallationProjects } from './performance-installation-projects';
 import { generativeArtProjects } from './generative-art-projects';
 
-// Combine all projects
+// Combine all projects - video projects now come before photography
 export const projects: Project[] = [
-  ...photographyProjects,
   ...videoProjects,
+  ...photographyProjects,
   ...installationProjects,
   ...performanceProjects,
   ...performanceInstallationProjects,
