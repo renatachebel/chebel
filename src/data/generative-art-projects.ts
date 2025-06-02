@@ -3,7 +3,7 @@ import { Project } from './types';
 
 export const generativeArtProjects: Project[] = [
   {
-    id: 1,
+    id: 3,
     title: "Sintography",
     slug: "sintography",
     category: ["generative-art"],

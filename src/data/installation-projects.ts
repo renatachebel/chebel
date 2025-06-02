@@ -3,7 +3,7 @@ import { Project } from './types';
 
 export const installationProjects: Project[] = [
   {
-    id: 3,
+    id: 1,
     title: "Temple of Reflections",
     slug: "temple-of-reflections",
     category: ["installation"],

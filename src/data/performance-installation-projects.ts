@@ -3,7 +3,7 @@ import { Project } from './types';
 
 export const performanceInstallationProjects: Project[] = [
   {
-    id: 8,
+    id: 2,
     title: "Lemniscata",
     slug: "lemniscata",
     category: ["installation", "performance"],
