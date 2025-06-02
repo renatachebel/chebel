@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Project } from '../data/types';
 import { AspectRatio } from './ui/aspect-ratio';
@@ -87,9 +88,12 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
           {project.images.map((image, index) => (
             <button
               key={index}
-              onClick={() => setSelectedImageIndex(index)}
-              className={`relative flex-shrink-0 w-full h-32 md:h-40 overflow-hidden rounded-md transition-all duration-300 ${
-                index === selectedImageIndex ? 'ring-2 ring-white/80' : 'opacity-50 hover:opacity-80'
+              onClick={() => {
+                setSelectedImageIndex(index);
+                openGallery(index);
+              }}
+              className={`relative flex-shrink-0 w-full h-32 md:h-40 overflow-hidden rounded-md transition-all duration-300 cursor-pointer hover:opacity-80 ${
+                index === selectedImageIndex ? 'ring-2 ring-white/80' : 'opacity-70'
               }`}
             >
               <img 
@@ -104,7 +108,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
         <div className="mt-4 text-center">
           <Button 
             variant="outline" 
-            onClick={() => setGalleryOpen(true)}
+            onClick={() => openGallery(selectedImageIndex)}
             className="text-sm font-body tracking-wider border-white/30 hover:border-white hover:bg-white/5"
           >
             Gallery View
@@ -180,7 +184,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
             </>
           )}
           
-          <div className="flex justify-center">
+          <div className="flex justify-center cursor-pointer" onClick={() => openGallery(selectedImageIndex)}>
             <img 
               src={project.images[selectedImageIndex]} 
               alt={project.title} 
@@ -247,7 +251,41 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
           <div className="mt-4 text-center">
             <Button 
               variant="outline" 
-              onClick={() => setGalleryOpen(true)}
+              onClick={() => openGallery(0)}
+              className="text-sm font-body tracking-wider border-white/30 hover:border-white hover:bg-white/5"
+            >
+              Gallery View
+            </Button>
+          </div>
+        </div>
+      );
+    }
+    
+    // Handle the case where we have a single YouTube video and images (like Devir-Mulher)
+    if (project.youtubeId && project.images && project.images.length > 0) {
+      return (
+        <div className="mt-12">
+          <h3 className="font-display text-xl tracking-wider mb-6">Gallery</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {project.images.map((image, index) => (
+              <div 
+                key={index} 
+                className="overflow-hidden rounded-lg cursor-pointer"
+                onClick={() => openGallery(index)}
+              >
+                <img 
+                  src={image} 
+                  alt={`${project.title} view ${index + 1}`} 
+                  className="w-full h-auto transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-4 text-center">
+            <Button 
+              variant="outline" 
+              onClick={() => openGallery(0)}
               className="text-sm font-body tracking-wider border-white/30 hover:border-white hover:bg-white/5"
             >
               Gallery View
@@ -274,7 +312,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div className="md:col-span-2">
           {renderMedia()}
-          {!project.youtubeIds && renderThumbnails()}
+          {!project.youtubeIds && !project.youtubeId && renderThumbnails()}
           {renderImagesGrid()}
         </div>
         
