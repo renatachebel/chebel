@@ -82,7 +82,8 @@ export const videoProjects: Project[] = [
       "5n6uJ6aZ8JU",
       "5tRvMmd6cD0",
       "QyAYrmLYVfg",
-      "3AcCvHSR7dw"
+      "3AcCvHSR7dw",
+      "1h5W5hWCJtc"
     ],
     description: "A collection of music videos directed and produced for various artists.",
     date: "2024",
