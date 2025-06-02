@@ -17,6 +17,8 @@ export const projects: Project[] = [
   ...generativeArtProjects.filter(p => p.slug === 'sintography'),
   // Rainbow Road (performance)
   ...performanceProjects.filter(p => p.slug === 'rainbow-road'),
+  // Premio SIM - TV Globo (video)
+  ...videoProjects.filter(p => p.slug === 'premio-sim-tv-globo'),
   // Lotus Bloom (video)
   ...videoProjects.filter(p => p.slug === 'lotus-bloom'),
   // Music Videos (video)
