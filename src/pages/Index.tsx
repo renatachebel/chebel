@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
@@ -20,6 +19,13 @@ const Index: React.FC = () => {
     { id: 'performance', label: 'Performance' },
     { id: 'generative-art', label: 'Generative Art' },
   ];
+  
+  const scrollToProjects = () => {
+    const projectsElement = document.getElementById('featured-projects');
+    if (projectsElement) {
+      projectsElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
   useEffect(() => {
     setIsAnimating(true);
@@ -70,7 +76,7 @@ const Index: React.FC = () => {
   
   return (
     <Layout>
-      <HeroSection />
+      <HeroSection onExploreClick={scrollToProjects} />
       
       <div id="featured-projects" className="py-24 relative opacity-0" ref={projectsRef}>
         <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/50 to-black/0 opacity-50" />
