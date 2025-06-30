@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
-import HeroSection from '../components/HeroSection';
 import ProjectCard from '../components/ProjectCard';
 import { projects, Project } from '../data/projects';
 
@@ -9,7 +8,6 @@ const Index: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<string>('all');
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
   const [isAnimating, setIsAnimating] = useState(false);
-  const projectsRef = useRef<HTMLDivElement>(null);
   
   const categories = [
     { id: 'all', label: 'All Projects' },
@@ -19,13 +17,6 @@ const Index: React.FC = () => {
     { id: 'performance', label: 'Performance' },
     { id: 'generative-art', label: 'Generative Art' },
   ];
-  
-  const scrollToProjects = () => {
-    const projectsElement = document.getElementById('featured-projects');
-    if (projectsElement) {
-      projectsElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
   
   useEffect(() => {
     setIsAnimating(true);
@@ -48,37 +39,9 @@ const Index: React.FC = () => {
     setActiveFilter(categoryId);
   };
   
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-blur-in');
-            entry.target.classList.remove('opacity-0');
-            // Once the animation is triggered, unobserve the element
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -100px 0px" }
-    );
-    
-    if (projectsRef.current) {
-      observer.observe(projectsRef.current);
-    }
-    
-    return () => {
-      if (projectsRef.current) {
-        observer.unobserve(projectsRef.current);
-      }
-    };
-  }, []);
-  
   return (
     <Layout>
-      <HeroSection onExploreClick={scrollToProjects} />
-      
-      <div id="featured-projects" className="py-24 relative opacity-0" ref={projectsRef}>
+      <div className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/50 to-black/0 opacity-50" />
         
         <div className="container-custom relative z-10">
