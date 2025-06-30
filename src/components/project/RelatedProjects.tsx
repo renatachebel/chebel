@@ -9,26 +9,28 @@ interface RelatedProjectsProps {
 }
 
 const RelatedProjects: React.FC<RelatedProjectsProps> = ({ currentProject, allProjects }) => {
-  // Get projects from the same category, excluding the current project
-  const relatedProjects = allProjects.filter(project => 
-    project.id !== currentProject.id && 
-    project.category.some(cat => currentProject.category.includes(cat))
-  );
+  // Define which projects belong to each persona
+  const iluminaProjectSlugs = ['alma-da-selva-amazonia-mapping', 'nature-of-movement', 'temple-of-reflections', 'rainbow-road'];
+  
+  // Determine if current project is Ilumina or Infinita
+  const isIluminaProject = iluminaProjectSlugs.includes(currentProject.slug);
+  
+  // Get projects from the same persona, excluding the current project
+  const relatedProjects = allProjects.filter(project => {
+    if (project.id === currentProject.id) return false;
+    
+    const isProjectIlumina = iluminaProjectSlugs.includes(project.slug);
+    return isIluminaProject ? isProjectIlumina : !isProjectIlumina;
+  });
 
   if (relatedProjects.length === 0) return null;
 
-  // Format category for display
-  const formatCategory = (category: string) => {
-    return category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-  };
-
-  // Get the primary category (first in the array) for display
-  const primaryCategory = currentProject.category[0] || '';
+  const personaName = isIluminaProject ? 'Ilumina' : 'Infinita';
 
   return (
     <div className="mt-16 pt-8 border-t border-white/10">
       <h3 className="font-display text-xl tracking-wider mb-8">
-        More {formatCategory(primaryCategory)} Projects
+        More {personaName} Projects
       </h3>
       
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
