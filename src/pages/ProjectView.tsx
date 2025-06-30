@@ -1,9 +1,9 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Layout from '../components/Layout';
 import ProjectDetail from '../components/ProjectDetail';
+import RelatedProjects from '../components/project/RelatedProjects';
 import { getProjectBySlug, projects, Project } from '../data/projects';
 
 const ProjectView: React.FC = () => {
@@ -63,6 +63,8 @@ const ProjectView: React.FC = () => {
         </div>
         
         <ProjectDetail project={project} />
+        
+        <RelatedProjects currentProject={project} allProjects={projects} />
         
         <div className="mt-24 pt-8 border-t border-white/10">
           <div className="flex justify-between">
