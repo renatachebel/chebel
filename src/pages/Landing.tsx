@@ -60,13 +60,13 @@ const Landing: React.FC = () => {
         <img 
           src={personaImages[activeIndex]} 
           alt="Artist work"
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-60"
           style={{ 
             transform: 'scale(1.05)',
             transition: 'transform 6s ease-in-out'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/50"></div>
       </div>
       
       <header className="relative z-10 p-6">
@@ -79,30 +79,30 @@ const Landing: React.FC = () => {
       
       <div className="flex-1 flex items-center justify-center relative z-10">
         <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl tracking-wider mb-8 animate-fade-in">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl tracking-wider mb-6 animate-fade-in">
               CHOOSE YOUR <span className="text-gradient">JOURNEY</span>
             </h2>
-            <p className="font-body text-lg md:text-xl text-white/80 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "200ms" }}>
-              Explore two distinct artistic personas, each offering a unique perspective on multimedia art and creative expression.
+            <p className="font-body text-lg text-white/90 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "200ms" }}>
+              Two distinct artistic personas, each offering a unique perspective.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Link 
               to="/infinita" 
-              className="group glass-card p-12 text-center transition-all duration-500 hover:scale-105 hover:bg-white/10 parallax"
+              className="group glass-card p-8 text-center transition-all duration-500 hover:scale-105 hover:bg-white/10 parallax"
               data-speed="0.5"
             >
-              <div className="mb-8">
-                <h3 className="font-display text-3xl md:text-4xl tracking-wider mb-4">
+              <div className="mb-6">
+                <h3 className="font-display text-2xl md:text-3xl tracking-wider mb-3">
                   INFINITA CHEBEL
                 </h3>
-                <p className="font-body text-white/70 mb-6">
-                  Photography & Video • Visual Storytelling • Intimate Narratives
+                <p className="font-body text-white/80 mb-4 text-sm">
+                  Photography • Video • Performance
                 </p>
-                <p className="font-body text-sm text-white/60">
-                  Exploring the depths of human emotion through lens-based media, capturing moments that transcend the ordinary.
+                <p className="font-body text-xs text-white/70">
+                  Intimate visual narratives exploring human emotion through lens-based media.
                 </p>
               </div>
               <div className="flex items-center justify-center text-white/60 group-hover:text-white transition-colors">
@@ -113,18 +113,18 @@ const Landing: React.FC = () => {
             
             <Link 
               to="/ilumina" 
-              className="group glass-card p-12 text-center transition-all duration-500 hover:scale-105 hover:bg-white/10 parallax"
+              className="group glass-card p-8 text-center transition-all duration-500 hover:scale-105 hover:bg-white/10 parallax"
               data-speed="0.7"
             >
-              <div className="mb-8">
-                <h3 className="font-display text-3xl md:text-4xl tracking-wider mb-4">
+              <div className="mb-6">
+                <h3 className="font-display text-2xl md:text-3xl tracking-wider mb-3">
                   ILUMINA CHEBEL
                 </h3>
-                <p className="font-body text-white/70 mb-6">
-                  Generative Art • VJ • Installations • Digital Experiences
+                <p className="font-body text-white/80 mb-4 text-sm">
+                  Generative Art • VJ • Installations
                 </p>
-                <p className="font-body text-sm text-white/60">
-                  Illuminating new realities through technology, creating immersive experiences that blur the boundaries between digital and physical.
+                <p className="font-body text-xs text-white/70">
+                  Digital experiences illuminating new realities through technology.
                 </p>
               </div>
               <div className="flex items-center justify-center text-white/60 group-hover:text-white transition-colors">
@@ -138,7 +138,7 @@ const Landing: React.FC = () => {
       
       <footer className="relative z-10 p-6">
         <div className="text-center">
-          <p className="font-body text-xs text-white/50 tracking-widest">
+          <p className="font-body text-xs text-white/60 tracking-widest">
             MULTIMEDIA ARTIST
           </p>
         </div>
