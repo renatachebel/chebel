@@ -3,7 +3,7 @@ export interface Project {
   id: number;
   title: string;
   slug: string;
-  category: ('photography' | 'video' | 'installation' | 'performance' | 'generative-art')[];
+  category: ('photography' | 'video' | 'installation' | 'performance' | 'performance-installation' | 'generative-art')[];
   thumbnail: string;
   images?: string[];
   videos?: string[];

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AlignRight, X } from 'lucide-react';
@@ -25,11 +26,17 @@ const Navigation: React.FC = () => {
   }, [location.pathname]);
   
   const isActive = (path: string) => location.pathname === path;
+  const isLandingPage = location.pathname === '/';
   
   const handleMenuToggle = () => {
     console.log("Menu toggle clicked, current state:", isMenuOpen);
     setIsMenuOpen(!isMenuOpen);
   };
+  
+  // Don't show navigation on landing page
+  if (isLandingPage) {
+    return null;
+  }
   
   return (
     <header 
@@ -48,12 +55,32 @@ const Navigation: React.FC = () => {
           <ul className="flex gap-8">
             <li>
               <Link 
-                to="/" 
+                to="/infinita" 
                 className={`font-body text-sm transition-colors ${
-                  isActive('/') ? 'text-white' : 'text-white/60 hover:text-white'
+                  isActive('/infinita') ? 'text-white' : 'text-white/60 hover:text-white'
                 }`}
               >
-                HOME
+                INFINITA
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/ilumina" 
+                className={`font-body text-sm transition-colors ${
+                  isActive('/ilumina') ? 'text-white' : 'text-white/60 hover:text-white'
+                }`}
+              >
+                ILUMINA
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/all-projects" 
+                className={`font-body text-sm transition-colors ${
+                  isActive('/all-projects') ? 'text-white' : 'text-white/60 hover:text-white'
+                }`}
+              >
+                ALL PROJECTS
               </Link>
             </li>
             <li>
@@ -111,12 +138,32 @@ const Navigation: React.FC = () => {
             <ul className="flex flex-col gap-8">
               <li>
                 <Link 
-                  to="/" 
+                  to="/infinita" 
                   className={`font-body text-2xl transition-colors ${
-                    isActive('/') ? 'text-white' : 'text-white/60'
+                    isActive('/infinita') ? 'text-white' : 'text-white/60'
                   }`}
                 >
-                  HOME
+                  INFINITA
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/ilumina" 
+                  className={`font-body text-2xl transition-colors ${
+                    isActive('/ilumina') ? 'text-white' : 'text-white/60'
+                  }`}
+                >
+                  ILUMINA
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/all-projects" 
+                  className={`font-body text-2xl transition-colors ${
+                    isActive('/all-projects') ? 'text-white' : 'text-white/60'
+                  }`}
+                >
+                  ALL PROJECTS
                 </Link>
               </li>
               <li>
