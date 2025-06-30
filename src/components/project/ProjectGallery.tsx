@@ -20,7 +20,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({
           {project.images.map((image, index) => (
             <div 
               key={index} 
-              className="overflow-hidden rounded-lg cursor-pointer"
+              className="overflow-hidden cursor-pointer"
               onClick={() => onImageClick(index)}
             >
               <img 
@@ -53,7 +53,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({
           {project.images.map((image, index) => (
             <div 
               key={index} 
-              className="overflow-hidden rounded-lg cursor-pointer"
+              className="overflow-hidden cursor-pointer"
               onClick={() => onImageClick(index)}
             >
               <img 
