@@ -11,14 +11,10 @@ const Infinita: React.FC = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const projectsRef = useRef<HTMLDivElement>(null);
   
-  // Filter projects for Infinita persona - exclude the specific Ilumina projects
+  // Filter projects for Infinita persona - exclude only the specific Ilumina projects
   const iluminaProjectSlugs = ['alma-da-selva-amazonia-mapping', 'nature-of-movement', 'temple-of-reflections', 'rainbow-road'];
   const infinitaProjects = projects.filter(project => 
-    !iluminaProjectSlugs.includes(project.slug) && (
-      project.category.includes('photography') || 
-      project.category.includes('video') ||
-      project.category.includes('performance')
-    )
+    !iluminaProjectSlugs.includes(project.slug)
   );
   
   const categories = [
