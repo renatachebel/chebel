@@ -32,7 +32,7 @@ const MediaRenderer: React.FC<MediaRendererProps> = ({
     return (
       <div className="space-y-8">
         {project.youtubeIds.map((youtubeId, index) => (
-          <div key={index} className="relative overflow-hidden rounded-lg">
+          <div key={index} className="relative overflow-hidden">
             <AspectRatio ratio={16/9}>
               <iframe
                 src={`https://www.youtube.com/embed/${youtubeId}`}
@@ -48,7 +48,7 @@ const MediaRenderer: React.FC<MediaRendererProps> = ({
     );
   } else if (project.youtubeId) {
     return (
-      <div className="relative overflow-hidden rounded-lg">
+      <div className="relative overflow-hidden">
         <AspectRatio ratio={16/9}>
           <iframe
             src={`https://www.youtube.com/embed/${project.youtubeId}`}
@@ -62,7 +62,7 @@ const MediaRenderer: React.FC<MediaRendererProps> = ({
     );
   } else if (project.images && project.images.length > 0) {
     return (
-      <div className="relative overflow-hidden rounded-lg">
+      <div className="relative overflow-hidden">
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm">
             <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" />
@@ -110,7 +110,7 @@ const MediaRenderer: React.FC<MediaRendererProps> = ({
     );
   } else if (project.videos && project.videos.length > 0) {
     return (
-      <div className="relative overflow-hidden rounded-lg aspect-video">
+      <div className="relative overflow-hidden aspect-video">
         <video 
           src={project.videos[0]} 
           controls
@@ -124,7 +124,7 @@ const MediaRenderer: React.FC<MediaRendererProps> = ({
     );
   } else {
     return (
-      <div className="relative overflow-hidden rounded-lg">
+      <div className="relative overflow-hidden">
         <img 
           src={project.thumbnail} 
           alt={project.title} 
