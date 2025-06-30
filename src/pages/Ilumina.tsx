@@ -12,11 +12,10 @@ const Ilumina: React.FC = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const projectsRef = useRef<HTMLDivElement>(null);
   
-  // Filter projects for Ilumina persona (generative art, installations, performance-installation)
+  // Filter projects for Ilumina persona (specific projects as requested)
+  const iluminaProjectSlugs = ['alma-da-selva-amazonia-mapping', 'nature-of-movement', 'temple-of-reflections', 'rainbow-road'];
   const iluminaProjects = projects.filter(project => 
-    project.category.includes('generative-art') || 
-    project.category.includes('installation') ||
-    project.category.includes('performance-installation')
+    iluminaProjectSlugs.includes(project.slug)
   );
   
   const categories = [
@@ -24,6 +23,7 @@ const Ilumina: React.FC = () => {
     { id: 'generative-art', label: 'Generative Art' },
     { id: 'installation', label: 'Installation' },
     { id: 'performance-installation', label: 'Performance Installation' },
+    { id: 'video', label: 'Video' },
   ];
   
   useEffect(() => {

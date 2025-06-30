@@ -6,6 +6,7 @@ import { installationProjects } from './installation-projects';
 import { performanceProjects } from './performance-projects';
 import { performanceInstallationProjects } from './performance-installation-projects';
 import { generativeArtProjects } from './generative-art-projects';
+import { iluminaVideoProjects } from './ilumina-video-projects';
 
 // Combine all projects - video projects now come before photography
 export const projects: Project[] = [
@@ -14,7 +15,8 @@ export const projects: Project[] = [
   ...installationProjects,
   ...performanceProjects,
   ...performanceInstallationProjects,
-  ...generativeArtProjects
+  ...generativeArtProjects,
+  ...iluminaVideoProjects
 ];
 
 // Helper functions
