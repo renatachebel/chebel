@@ -39,7 +39,7 @@ export const photographyProjects: Project[] = [
     title: "Tea in Alishan",
     slug: "tea-in-alishan",
     category: ["photography"],
-    thumbnail: "/lovable-uploads/fc103341-3ada-482d-9c3f-88349651f8a1.png",
+    thumbnail: "/lovable-uploads/0f9f1de5-b219-4992-a345-49592e786f58.png",
     images: [
       "/lovable-uploads/fc103341-3ada-482d-9c3f-88349651f8a1.png",
       "/lovable-uploads/fcb4c332-296b-4509-81a9-5cd10e2bc227.png",
@@ -50,7 +50,12 @@ export const photographyProjects: Project[] = [
       "/lovable-uploads/9fa6eea9-5010-49af-8a62-d9adc4d63e58.png",
       "/lovable-uploads/db8abf6c-5120-4f25-8274-a87e812a0162.png",
       "/lovable-uploads/8bac6e12-2842-4ab4-aa72-c8b1b3b65d34.png",
-      "/lovable-uploads/3d600437-fb3d-47a9-8397-b81dd6cf38ae.png"
+      "/lovable-uploads/3d600437-fb3d-47a9-8397-b81dd6cf38ae.png",
+      "/lovable-uploads/23bcc1fe-6447-48be-ae58-18f55e923b30.png",
+      "/lovable-uploads/ffc6df2c-6bfd-43c5-b33d-e412c08d8684.png",
+      "/lovable-uploads/0f9f1de5-b219-4992-a345-49592e786f58.png",
+      "/lovable-uploads/8b3f262a-6749-4bdf-81e2-9b6b3a68cad6.png",
+      "/lovable-uploads/5b818785-b50f-4ae3-a214-e2d6c01d3071.png"
     ],
     description: "A photographic series documenting tea harvesters at work in the misty mountains of Alishan, Taiwan.",
     date: "2024",
