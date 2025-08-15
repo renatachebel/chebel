@@ -39,9 +39,9 @@ export const photographyProjects: Project[] = [
     title: "Tea in Alishan",
     slug: "tea-in-alishan",
     category: ["photography"],
-    thumbnail: "/lovable-uploads/0f9f1de5-b219-4992-a345-49592e786f58.png",
+    thumbnail: "/lovable-uploads/849b9bdb-8012-47d4-95ea-68ed3a0ccf88.png",
     images: [
-      "/lovable-uploads/fc103341-3ada-482d-9c3f-88349651f8a1.png",
+      "/lovable-uploads/849b9bdb-8012-47d4-95ea-68ed3a0ccf88.png",
       "/lovable-uploads/fcb4c332-296b-4509-81a9-5cd10e2bc227.png",
       "/lovable-uploads/20d09be6-8cbf-4422-9b2a-2600f34759cb.png",
       "/lovable-uploads/e7525ce0-49d7-4d49-b7e6-6382641514e2.png",
