@@ -35,7 +35,7 @@ export const iluminaVideoProjects: Project[] = [
       "/lovable-uploads/896b00de-b019-44bf-b5d7-43b17113128b.png",
       "/lovable-uploads/bc216de0-8f11-487a-97c2-fa72c440c089.png"
     ],
-    youtubeId: "144IRpObrPQ",
+    youtubeId: "BAMdjOMDc1U",
     description: "An animation meditation on impermanence and nature created with the assistance of AI.",
     date: "2024",
     location: "Studio Production",
