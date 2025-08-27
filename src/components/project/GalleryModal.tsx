@@ -39,9 +39,9 @@ const GalleryModal: React.FC<GalleryModalProps> = ({
           </DialogClose>
         </div>
         
-        <div className="p-4 bg-black/80"></div>
+        <div className="h-16 bg-black/80"></div>
         
-        <div className="relative flex items-center justify-center w-full h-full min-h-[50vh] max-h-[80vh] pt-4 pb-4 px-4">
+        <div className="relative flex items-center justify-center w-full h-full min-h-[50vh] max-h-[70vh] py-4 px-4">
           {project.images && (
             <img 
               src={project.images[galleryIndex]} 
