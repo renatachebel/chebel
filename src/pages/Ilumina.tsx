@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 import ProjectCard from '../components/ProjectCard';
 import { projects, Project } from '../data/projects';
+import { iluminaVideoProjects } from '../data/ilumina-video-projects';
 
 const Ilumina: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<string>('all');
@@ -11,11 +12,12 @@ const Ilumina: React.FC = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const projectsRef = useRef<HTMLDivElement>(null);
   
-  // Filter projects for Ilumina persona (specific projects as requested)
-  const iluminaProjectSlugs = ['alma-da-selva-amazonia-mapping', 'nature-of-movement', 'temple-of-reflections', 'rainbow-road'];
-  const iluminaProjects = projects.filter(project => 
+  // Filter projects for Ilumina persona - combine specific projects with ilumina video projects
+  const iluminaProjectSlugs = ['temple-of-reflections', 'rainbow-road'];
+  const specificIluminaProjects = projects.filter(project => 
     iluminaProjectSlugs.includes(project.slug)
   );
+  const iluminaProjects = [...iluminaVideoProjects, ...specificIluminaProjects];
   
   const categories = [
     { id: 'all', label: 'All Projects' },
