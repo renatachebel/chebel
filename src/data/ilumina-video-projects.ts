@@ -3,6 +3,19 @@ import { Project } from './types';
 
 export const iluminaVideoProjects: Project[] = [
   {
+    id: 14,
+    title: "Ancestresses",
+    slug: "ancestresses",
+    category: ["video"],
+    thumbnail: "/src/assets/ancestress-thumbnail.jpg",
+    youtubeId: "baYbZPk1k9A",
+    description: "A series of hypnotic AI-generated animations in which women gather around a fire and reveal their power as shapeshifters.",
+    date: "2024",
+    location: "Studio Production",
+    isFeatured: true,
+    details: "Ancestresses is a series of hypnotic AI-generated animations in which women gather around a fire and reveal their power as shapeshifters. They become jaguars, zebras, wolves, birds, crossing the boundary between human and more-than-human kin.\n\nThe works reimagine the witch's sabbat, once demonized as a horror to justify the persecution of women, as a sacred space of transformation and learning. In these gatherings, the women return with ancestral and ecological knowledge, carried through their bodies as fluid beings in communion with nature."
+  },
+  {
     id: 13,
     title: "Alma da Selva - Amazonia Mapping",
     slug: "alma-da-selva-amazonia-mapping",
