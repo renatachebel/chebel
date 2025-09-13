@@ -8,7 +8,7 @@ export const iluminaVideoProjects: Project[] = [
     slug: "ancestresses",
     category: ["video"],
     thumbnail: "/lovable-uploads/ancestress-thumbnail.png",
-    youtubeId: "baYbZPk1k9A",
+    youtubeIds: ["baYbZPk1k9A", "Aa5fRsJ3L48"],
     description: "A series of hypnotic AI-generated animations in which women gather around a fire and reveal their power as shapeshifters.",
     date: "2022",
     location: "Studio Production",
