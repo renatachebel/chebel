@@ -3,6 +3,28 @@ import { Project } from './types';
 
 export const iluminaVideoProjects: Project[] = [
   {
+    id: 15,
+    title: "Fanta Konaté",
+    slug: "fanta-konate",
+    category: ["video"],
+    thumbnail: "/lovable-uploads/fanta-konate-1.jpg",
+    images: [
+      "/lovable-uploads/fanta-konate-1.jpg",
+      "/lovable-uploads/fanta-konate-2.jpg",
+      "/lovable-uploads/fanta-konate-3.jpg",
+      "/lovable-uploads/fanta-konate-4.jpg",
+      "/lovable-uploads/fanta-konate-5.jpg",
+      "/lovable-uploads/fanta-konate-6.jpg",
+      "/lovable-uploads/fanta-konate-7.jpg"
+    ],
+    youtubeId: "txoONe0Vnj8",
+    description: "Visual projections created for Fanta Konaté's performance at Festival Ilumina 2023.",
+    date: "2023",
+    location: "Festival Ilumina",
+    isFeatured: true,
+    details: "Visual projections created for Fanta Konaté, an artist from Guinea, during her powerful performance at Festival Ilumina 2023. The immersive visuals featured vibrant African-inspired imagery, traditional masks, and dynamic patterns that complemented the musical journey, creating a bridge between ancestral traditions and contemporary artistic expression."
+  },
+  {
     id: 14,
     title: "Ancestresses",
     slug: "ancestresses",
