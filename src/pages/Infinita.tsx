@@ -12,7 +12,7 @@ const Infinita: React.FC = () => {
   const projectsRef = useRef<HTMLDivElement>(null);
   
   // Filter projects for Infinita persona - exclude only the specific Ilumina projects
-  const iluminaProjectSlugs = ['alma-da-selva-amazonia-mapping', 'nature-of-movement', 'temple-of-reflections', 'rainbow-road', 'ancestresses'];
+  const iluminaProjectSlugs = ['alma-da-selva-amazonia-mapping', 'nature-of-movement', 'temple-of-reflections', 'rainbow-road', 'ancestresses', 'fanta-konate'];
   const infinitaProjects = projects.filter(project => 
     !iluminaProjectSlugs.includes(project.slug)
   );
