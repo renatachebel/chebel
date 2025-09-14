@@ -17,7 +17,7 @@ export const iluminaVideoProjects: Project[] = [
       "/lovable-uploads/fanta-konate-6.jpg",
       "/lovable-uploads/fanta-konate-7.jpg"
     ],
-    youtubeId: "txoONe0Vnj8",
+    youtubeIds: ["txoONe0Vnj8", "6Y_7tOBWy3Y"],
     description: "Visual projections created for Fanta Konaté's performance at Festival Ilumina 2023.",
     date: "2023",
     location: "Festival Ilumina",
