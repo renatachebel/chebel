@@ -10,7 +10,7 @@ interface RelatedProjectsProps {
 
 const RelatedProjects: React.FC<RelatedProjectsProps> = ({ currentProject, allProjects }) => {
   // Define which projects belong to each persona
-  const iluminaProjectSlugs = ['alma-da-selva-amazonia-mapping', 'nature-of-movement', 'temple-of-reflections', 'rainbow-road'];
+  const iluminaProjectSlugs = ['alma-da-selva-amazonia-mapping', 'nature-of-movement', 'temple-of-reflections', 'rainbow-road', 'ancestresses', 'fanta-konate'];
   
   // Determine if current project is Ilumina or Infinita
   const isIluminaProject = iluminaProjectSlugs.includes(currentProject.slug);
