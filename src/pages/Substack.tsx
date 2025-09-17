@@ -22,15 +22,22 @@ const Substack: React.FC = () => {
             <h1 className="font-display text-4xl md:text-5xl tracking-wider mb-12 animate-fade-in">SUBSTACK</h1>
           </div>
           
-          <div className="w-full overflow-hidden glass-card rounded-lg">
-            <div className="relative pb-[150%] md:pb-[100%] w-full h-0">
-              <iframe 
-                src="https://chebel.substack.com" 
-                className="absolute top-0 left-0 w-full h-full border-0"
-                title="Chebel Substack"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                loading="lazy"
-              ></iframe>
+          <div className="glass-card rounded-lg p-12 text-center">
+            <div className="max-w-2xl mx-auto">
+              <p className="font-body text-lg text-white/80 mb-8">
+                Visit my Substack to read my latest thoughts on art, technology, and creative practice.
+              </p>
+              <a 
+                href="https://chebel.substack.com" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-300 font-body text-lg"
+              >
+                Visit Chebel Substack
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
