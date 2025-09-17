@@ -95,6 +95,16 @@ const Navigation: React.FC = () => {
             </li>
             <li>
               <Link 
+                to="/substack" 
+                className={`font-body text-sm transition-colors ${
+                  isActive('/substack') ? 'text-white' : 'text-white/60 hover:text-white'
+                }`}
+              >
+                SUBSTACK
+              </Link>
+            </li>
+            <li>
+              <Link 
                 to="/about" 
                 className={`font-body text-sm transition-colors ${
                   isActive('/about') ? 'text-white' : 'text-white/60 hover:text-white'
@@ -174,6 +184,16 @@ const Navigation: React.FC = () => {
                   }`}
                 >
                   SKETCHBOOK
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/substack" 
+                  className={`font-body text-2xl transition-colors ${
+                    isActive('/substack') ? 'text-white' : 'text-white/60'
+                  }`}
+                >
+                  SUBSTACK
                 </Link>
               </li>
               <li>
