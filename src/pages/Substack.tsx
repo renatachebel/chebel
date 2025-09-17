@@ -25,7 +25,7 @@ const Substack: React.FC = () => {
           <div className="glass-card rounded-lg p-12 text-center">
             <div className="max-w-2xl mx-auto">
               <p className="font-body text-lg text-white/80 mb-8">
-                Visit my Substack to read my latest thoughts on art, technology, and creative practice.
+                Visit my substack to read my travel stories and see my travel photos.
               </p>
               <a 
                 href="https://chebel.substack.com" 
