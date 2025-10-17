@@ -3,6 +3,25 @@ import { Project } from './types';
 
 export const iluminaVideoProjects: Project[] = [
   {
+    id: 16,
+    title: "O Poder da Floresta",
+    slug: "o-poder-da-floresta",
+    category: ["generative-art"],
+    thumbnail: "/lovable-uploads/o-poder-da-floresta-4.png",
+    images: [
+      "/lovable-uploads/o-poder-da-floresta-1.png",
+      "/lovable-uploads/o-poder-da-floresta-2.png",
+      "/lovable-uploads/o-poder-da-floresta-3.png",
+      "/lovable-uploads/o-poder-da-floresta-4.png",
+      "/lovable-uploads/o-poder-da-floresta-5.png"
+    ],
+    description: "An AI-generated children's book about forest animals working together to save their home from mining damage.",
+    date: "2023",
+    location: "Rio Book Biennial 2023",
+    isFeatured: true,
+    details: "In 2023, Ygor Marotta and I wrote, illustrated, and published a children's book using AI tools: ChatGPT, Midjourney, and Photoshop. O Poder da Floresta is a captivating story about the power of working together to build a better future for all living beings.\n\nThe forest is being damaged by mining, and the animals must put aside their differences and come up together with a plan for saving their home. Released by Editora Viajante do Tempo during the Rio Book Biennial 2023, the biggest literary event in Brazil, the book showcases how AI can be used as a creative tool to tell important environmental stories for young readers."
+  },
+  {
     id: 15,
     title: "Fanta Konaté",
     slug: "fanta-konate",
