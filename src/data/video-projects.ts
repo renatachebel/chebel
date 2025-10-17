@@ -73,7 +73,7 @@ export const videoProjects: Project[] = [
     date: "2025",
     location: "Studio Production",
     isFeatured: true,
-    details: "Lotus Bloom is a piece of visual poetry, a gentle ode to the feminine soul. Through the timeless symbol of the lotus flower—rising unstained from the mud—the film evokes the purity, strength, and mystery rooted in a woman's heart. It speaks of beauty that is not for display, but for belonging. A dream of harmony that women carry within, in contrast to a world shaped by conflict and conquest. In its stillness and grace, Lotus Bloom becomes a meditation on softness as power, on the sacred force of life that flows quietly, yet transforms everything."
+    details: "Lotus Bloom is a piece of visual poetry, a gentle ode to the feminine soul. Through the timeless symbol of the lotus flower—rising unstained from the mud—the film evokes the purity, strength, and mystery rooted in a woman's heart. It speaks of beauty that is not for display, but for belonging. A dream of harmony that women carry within, in contrast to a world shaped by conflict and conquest. In its stillness and grace, Lotus Bloom becomes a meditation on softness as power, on the sacred force of life that flows quietly, yet transforms everything.\n\nThe short film premiered at the Mars College AI Film Festival in 2025."
   },
   {
     id: 10,
