@@ -6,17 +6,17 @@ import { installationProjects } from './installation-projects';
 import { performanceProjects } from './performance-projects';
 import { performanceInstallationProjects } from './performance-installation-projects';
 import { generativeArtProjects } from './generative-art-projects';
-import { iluminaVideoProjects } from './ilumina-video-projects';
 
 // Combine all projects - video projects now come before photography
+// Note: iluminaVideoProjects are excluded from the main projects array
+// They are only used on the Ilumina page
 export const projects: Project[] = [
   ...videoProjects,
   ...photographyProjects,
   ...installationProjects,
   ...performanceProjects,
   ...performanceInstallationProjects,
-  ...generativeArtProjects,
-  ...iluminaVideoProjects
+  ...generativeArtProjects
 ];
 
 // Helper functions
