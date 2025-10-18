@@ -83,7 +83,7 @@ const Navigation: React.FC = () => {
                 ALL PROJECTS
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link 
                 to="/sketchbook" 
                 className={`font-body text-sm transition-colors ${
@@ -92,7 +92,7 @@ const Navigation: React.FC = () => {
               >
                 SKETCHBOOK
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link 
                 to="/substack" 
@@ -176,7 +176,7 @@ const Navigation: React.FC = () => {
                   ALL PROJECTS
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link 
                   to="/sketchbook" 
                   className={`font-body text-2xl transition-colors ${
@@ -185,7 +185,7 @@ const Navigation: React.FC = () => {
                 >
                   SKETCHBOOK
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link 
                   to="/substack" 
