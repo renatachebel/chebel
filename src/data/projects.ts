@@ -6,6 +6,7 @@ import { installationProjects } from './installation-projects';
 import { performanceProjects } from './performance-projects';
 import { performanceInstallationProjects } from './performance-installation-projects';
 import { generativeArtProjects } from './generative-art-projects';
+import { iluminaVideoProjects } from './ilumina-video-projects';
 
 // Combine all projects - video projects now come before photography
 // Note: iluminaVideoProjects are excluded from the main projects array
@@ -19,9 +20,16 @@ export const projects: Project[] = [
   ...generativeArtProjects
 ];
 
+// All projects including Ilumina-specific ones
+export const allProjectsIncludingIlumina: Project[] = [
+  ...projects,
+  ...iluminaVideoProjects
+];
+
 // Helper functions
 export const getProjectBySlug = (slug: string): Project | undefined => {
-  return projects.find(project => project.slug === slug);
+  // Search in all projects including Ilumina-specific ones
+  return allProjectsIncludingIlumina.find(project => project.slug === slug);
 };
 
 export const getFeaturedProjects = (): Project[] => {

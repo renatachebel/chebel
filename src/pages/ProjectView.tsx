@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Layout from '../components/Layout';
 import ProjectDetail from '../components/ProjectDetail';
 import RelatedProjects from '../components/project/RelatedProjects';
-import { getProjectBySlug, projects, Project } from '../data/projects';
+import { getProjectBySlug, projects, allProjectsIncludingIlumina, Project } from '../data/projects';
 
 const ProjectView: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -26,14 +26,14 @@ const ProjectView: React.FC = () => {
     if (fetchedProject) {
       setProject(fetchedProject);
       
-      // Find previous and next projects
-      const currentIndex = projects.findIndex(p => p.slug === slug);
-      setPrevProject(currentIndex > 0 ? projects[currentIndex - 1] : null);
-      setNextProject(currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null);
+      // Find previous and next projects from all projects
+      const currentIndex = allProjectsIncludingIlumina.findIndex(p => p.slug === slug);
+      setPrevProject(currentIndex > 0 ? allProjectsIncludingIlumina[currentIndex - 1] : null);
+      setNextProject(currentIndex < projects.length - 1 ? allProjectsIncludingIlumina[currentIndex + 1] : null);
       
       setIsLoading(false);
     } else {
-      navigate('/projects');
+      navigate('/all-projects');
     }
   }, [slug, navigate]);
   
@@ -54,7 +54,7 @@ const ProjectView: React.FC = () => {
       <div className="container-custom py-12 md:py-20">
         <div className="mb-12">
           <Link 
-            to="/projects" 
+            to="/all-projects" 
             className="inline-flex items-center font-body text-sm text-white/70 hover:text-white transition-colors duration-300"
           >
             <ArrowLeft size={16} className="mr-2" />
@@ -64,7 +64,7 @@ const ProjectView: React.FC = () => {
         
         <ProjectDetail project={project} />
         
-        <RelatedProjects currentProject={project} allProjects={projects} />
+        <RelatedProjects currentProject={project} allProjects={allProjectsIncludingIlumina} />
         
         <div className="mt-24 pt-8 border-t border-white/10">
           <div className="flex justify-between">
