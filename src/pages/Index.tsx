@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 import ProjectCard from '../components/ProjectCard';
-import { projects, Project } from '../data/projects';
+import { allProjectsIncludingIlumina, Project } from '../data/projects';
 
 const Index: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<string>('all');
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>(allProjectsIncludingIlumina);
   const [isAnimating, setIsAnimating] = useState(false);
   
   const categories = [
@@ -23,9 +23,9 @@ const Index: React.FC = () => {
     
     const timer = setTimeout(() => {
       if (activeFilter === 'all') {
-        setFilteredProjects(projects);
+        setFilteredProjects(allProjectsIncludingIlumina);
       } else {
-        setFilteredProjects(projects.filter(project => project.category.includes(activeFilter as any)));
+        setFilteredProjects(allProjectsIncludingIlumina.filter(project => project.category.includes(activeFilter as any)));
       }
       
       setIsAnimating(false);
