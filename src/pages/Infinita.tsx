@@ -143,20 +143,86 @@ const Infinita: React.FC = () => {
             </p>
           </div>
           
-          <div className="glass-card p-6 md:p-8 max-w-4xl mx-auto">
-            <div className="aspect-video mb-4">
-              <iframe
-                src="https://www.youtube.com/embed/pma2v5F_FGc"
-                title="Frans Hals Restoration - MASP"
-                className="w-full h-full rounded-lg"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="glass-card p-6">
+              <div className="aspect-video mb-4">
+                <iframe
+                  src="https://www.youtube.com/embed/pma2v5F_FGc"
+                  title="Frans Hals Restoration - MASP"
+                  className="w-full h-full rounded-lg"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <h3 className="font-display text-xl mb-2">Frans Hals Restoration - MASP</h3>
+              <p className="font-body text-white/70">
+                A fascinating look at the restoration of Frans Hals paintings at MASP
+              </p>
             </div>
-            <h3 className="font-display text-xl mb-2">Frans Hals Restoration - MASP</h3>
-            <p className="font-body text-white/70">
-              A fascinating look at the restoration of Frans Hals paintings at MASP
-            </p>
+
+            <div className="glass-card p-6">
+              <div className="aspect-video mb-4">
+                <iframe
+                  src="https://www.youtube.com/embed/yLDirVLkTwU"
+                  title="Ruku - Jaider Esbell"
+                  className="w-full h-full rounded-lg"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <h3 className="font-display text-xl mb-2">Ruku - Jaider Esbell</h3>
+              <p className="font-body text-white/70">
+                Exploring the late Jaider Esbell's powerful exhibition
+              </p>
+            </div>
+
+            <div className="glass-card p-6">
+              <div className="aspect-video mb-4">
+                <iframe
+                  src="https://www.youtube.com/embed/ZwpRM3NckJQ"
+                  title="Elizabeth Jobim, Paulo Pasta and Volpi"
+                  className="w-full h-full rounded-lg"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <h3 className="font-display text-xl mb-2">Elizabeth Jobim, Paulo Pasta and Volpi</h3>
+              <p className="font-body text-white/70">
+                A showcase of three remarkable Brazilian artists
+              </p>
+            </div>
+
+            <div className="glass-card p-6">
+              <div className="aspect-video mb-4">
+                <iframe
+                  src="https://www.youtube.com/embed/Wjqf2G0PnAE"
+                  title="José Damasceno - Pinacoteca"
+                  className="w-full h-full rounded-lg"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <h3 className="font-display text-xl mb-2">José Damasceno - Pinacoteca</h3>
+              <p className="font-body text-white/70">
+                Exploring José Damasceno's exhibition at Pinacoteca
+              </p>
+            </div>
+
+            <div className="glass-card p-6">
+              <div className="aspect-video mb-4">
+                <iframe
+                  src="https://www.youtube.com/embed/IEIfS9YNm3o"
+                  title="Gregório Gruber"
+                  className="w-full h-full rounded-lg"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <h3 className="font-display text-xl mb-2">Gregório Gruber</h3>
+              <p className="font-body text-white/70">
+                Discovering Gregório Gruber's artistic work
+              </p>
+            </div>
           </div>
         </div>
       </div>
