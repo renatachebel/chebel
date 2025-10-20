@@ -130,6 +130,37 @@ const Infinita: React.FC = () => {
         </div>
       </div>
       
+      <div className="py-24 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/50 to-black/0 opacity-50" />
+        
+        <div className="container-custom relative z-10">
+          <div className="mb-12">
+            <h2 className="font-display text-3xl md:text-4xl tracking-wider mb-4 animate-fade-in">
+              ARTIST VIDEOS
+            </h2>
+            <p className="font-body text-lg text-white/80 animate-fade-in" style={{ animationDelay: "100ms" }}>
+              Exploring art conservation and creative processes
+            </p>
+          </div>
+          
+          <div className="glass-card p-6 md:p-8 max-w-4xl mx-auto">
+            <div className="aspect-video mb-4">
+              <iframe
+                src="https://www.youtube.com/embed/pma2v5F_FGc"
+                title="Frans Hals Restoration - MASP"
+                className="w-full h-full rounded-lg"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <h3 className="font-display text-xl mb-2">Frans Hals Restoration - MASP</h3>
+            <p className="font-body text-white/70">
+              A fascinating look at the restoration of Frans Hals paintings at MASP
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 to-blue-900/10" />
         
