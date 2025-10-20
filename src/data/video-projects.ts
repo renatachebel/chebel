@@ -94,5 +94,25 @@ export const videoProjects: Project[] = [
     location: "Various Locations",
     isFeatured: false,
     details: "This collection showcases a series of music videos that blend visual storytelling with musical artistry. Each video represents a unique collaboration with different artists, exploring themes through innovative cinematography and creative direction."
+  },
+  {
+    id: 13,
+    title: "Artist Videos",
+    slug: "artist-videos",
+    category: ["video"],
+    thumbnail: "/lovable-uploads/artist-videos-thumbnail.png",
+    images: [],
+    youtubeIds: [
+      "pma2v5F_FGc",
+      "yLDirVLkTwU",
+      "ZwpRM3NckJQ",
+      "Wjqf2G0PnAE",
+      "IEIfS9YNm3o"
+    ],
+    description: "A collection of documentary videos exploring art conservation, exhibitions, and creative processes.",
+    date: "2024",
+    location: "Various Museums and Galleries",
+    isFeatured: false,
+    details: "This collection features documentary-style videos that delve into the world of art conservation and exhibition curation. From the meticulous restoration of Frans Hals paintings at MASP to explorations of contemporary Brazilian artists like Elizabeth Jobim, Paulo Pasta, and Volpi, these videos offer intimate glimpses into the processes and philosophies that shape the art world. The collection also includes features on Jaider Esbell's powerful exhibition 'Ruku', José Damasceno's showcase at Pinacoteca, and Gregório Gruber's artistic practice."
   }
 ];
