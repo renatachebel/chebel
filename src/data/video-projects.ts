@@ -1,11 +1,5 @@
 
 import { Project } from './types';
-import posterAsset from '../assets/sunmoon-poster.jpg.asset.json';
-import cloudAsset from '../assets/sunmoon-cloud.jpg.asset.json';
-import moonSunAsset from '../assets/sunmoon-moon-sun.jpg.asset.json';
-import saturnAsset from '../assets/sunmoon-saturn.jpg.asset.json';
-import ensembleAsset from '../assets/sunmoon-ensemble.jpg.asset.json';
-import sleepingAsset from '../assets/sunmoon-sleeping.jpg.asset.json';
 
 export const videoProjects: Project[] = [
   {
@@ -13,14 +7,14 @@ export const videoProjects: Project[] = [
     title: "The Wedding of the Sun and the Moon",
     slug: "the-wedding-of-the-sun-and-the-moon",
     category: ["video"],
-    thumbnail: posterAsset.url,
+    thumbnail: "/lovable-uploads/sunmoon-poster.jpg",
     images: [
-      posterAsset.url,
-      cloudAsset.url,
-      moonSunAsset.url,
-      saturnAsset.url,
-      ensembleAsset.url,
-      sleepingAsset.url
+      "/lovable-uploads/sunmoon-poster.jpg",
+      "/lovable-uploads/sunmoon-cloud.jpg",
+      "/lovable-uploads/sunmoon-moon-sun.jpg",
+      "/lovable-uploads/sunmoon-saturn.jpg",
+      "/lovable-uploads/sunmoon-ensemble.jpg",
+      "/lovable-uploads/sunmoon-sleeping.jpg"
     ],
     youtubeId: "E_PkHGJH0PA",
     description: "A surreal AI-generated film in which the Sun and the Moon are married at the edge of an eclipse.",
