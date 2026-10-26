@@ -70,7 +70,7 @@
   }
   
   .gradient-blur {
-    @apply relative before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br before:from-white/5 before:via-white/2 before:to-white/5 before:blur-2xl;
+    @apply relative before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br before:from-white/[0.05] before:via-white/[0.02] before:to-white/[0.05] before:blur-2xl;
   }
   
   .hover-link {
