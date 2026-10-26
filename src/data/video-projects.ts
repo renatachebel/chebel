@@ -9,7 +9,7 @@ export const videoProjects: Project[] = [
     category: ["video"],
     thumbnail: "/lovable-uploads/sunmoon-poster-square.jpg",
     images: [
-      "/lovable-uploads/sunmoon-poster.jpg",
+      "/lovable-uploads/sunmoon-poster-wide.jpg",
       "/lovable-uploads/sunmoon-cloud.jpg",
       "/lovable-uploads/sunmoon-moon-sun.jpg",
       "/lovable-uploads/sunmoon-saturn.jpg",
