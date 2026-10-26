@@ -7,7 +7,7 @@ export const videoProjects: Project[] = [
     title: "The Wedding of the Sun and the Moon",
     slug: "the-wedding-of-the-sun-and-the-moon",
     category: ["video"],
-    thumbnail: "/lovable-uploads/sunmoon-poster.jpg",
+    thumbnail: "/lovable-uploads/sunmoon-poster-square.jpg",
     images: [
       "/lovable-uploads/sunmoon-poster.jpg",
       "/lovable-uploads/sunmoon-cloud.jpg",
