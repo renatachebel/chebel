@@ -1,7 +1,34 @@
 
 import { Project } from './types';
+import posterAsset from '../assets/sunmoon-poster.jpg.asset.json';
+import cloudAsset from '../assets/sunmoon-cloud.jpg.asset.json';
+import moonSunAsset from '../assets/sunmoon-moon-sun.jpg.asset.json';
+import saturnAsset from '../assets/sunmoon-saturn.jpg.asset.json';
+import ensembleAsset from '../assets/sunmoon-ensemble.jpg.asset.json';
+import sleepingAsset from '../assets/sunmoon-sleeping.jpg.asset.json';
 
 export const videoProjects: Project[] = [
+  {
+    id: 17,
+    title: "The Wedding of the Sun and the Moon",
+    slug: "the-wedding-of-the-sun-and-the-moon",
+    category: ["video"],
+    thumbnail: posterAsset.url,
+    images: [
+      posterAsset.url,
+      cloudAsset.url,
+      moonSunAsset.url,
+      saturnAsset.url,
+      ensembleAsset.url,
+      sleepingAsset.url
+    ],
+    youtubeId: "E_PkHGJH0PA",
+    description: "A surreal AI-generated film in which the Sun and the Moon are married at the edge of an eclipse.",
+    date: "",
+    location: "International Film Festivals",
+    isFeatured: true,
+    details: "A constellation dreams as clouds gather for a surreal wedding at the edge of an eclipse. Drawing from tarot, astronomy, mythology, and 1960s Eastern European cinema, the film evokes the ritual dimension of cyclical cosmic events and their myth-making force. As celestial bodies shift genders and roles, the Sun and Moon lead a mysterious, ever-changing dance.\n\nThe film was selected for multiple festivals, including the Bombay Beach Biennale, Seoul International AI Film Festival, AI Film Fest Serbia, Randfilmfest in Kassel, and the International Festival of Monuments in Brazil."
+  },
   {
     id: 11,
     title: "Premio SIM - TV Globo",
