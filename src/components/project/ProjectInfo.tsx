@@ -26,10 +26,12 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({ project }) => {
             <h4 className="font-body text-sm text-white/60 mb-1">Category</h4>
             <p className="font-body">{formattedCategories}</p>
           </div>
-          <div>
-            <h4 className="font-body text-sm text-white/60 mb-1">Date</h4>
-            <p className="font-body">{project.date}</p>
-          </div>
+          {project.date && (
+            <div>
+              <h4 className="font-body text-sm text-white/60 mb-1">Date</h4>
+              <p className="font-body">{project.date}</p>
+            </div>
+          )}
           {project.client && (
             <div>
               <h4 className="font-body text-sm text-white/60 mb-1">Client</h4>
