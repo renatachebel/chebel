@@ -40,7 +40,7 @@ const AboutSection: React.FC = () => {
   
   return (
     <section className="py-24 relative overflow-hidden" ref={sectionRef}>
-      <div className="absolute top-0 right-0 w-1/3 h-2/3 bg-gradient-to-bl from-blue-600/5 via-purple-600/5 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-1/3 h-2/3 bg-gradient-to-bl from-white/5 via-white/3 to-transparent rounded-full blur-3xl" />
       
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">

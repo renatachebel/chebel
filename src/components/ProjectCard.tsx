@@ -19,15 +19,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   const getCategoryStyle = (category: string) => {
     switch (category) {
       case 'photography':
-        return 'bg-blue-500/20 text-blue-200';
+        return 'bg-white/10 text-white/80';
       case 'video':
-        return 'bg-purple-500/20 text-purple-200';
+        return 'bg-white/15 text-white/90';
       case 'installation':
-        return 'bg-teal-500/20 text-teal-200';
+        return 'bg-white/10 text-white/80';
       case 'performance':
-        return 'bg-orange-500/20 text-orange-200';
+        return 'bg-white/15 text-white/90';
       case 'generative-art':
-        return 'bg-pink-500/20 text-pink-200';
+        return 'bg-white/10 text-white/80';
       default:
         return 'bg-white/10 text-white';
     }

@@ -131,7 +131,7 @@ const Infinita: React.FC = () => {
       </div>
 
       <div className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 to-blue-900/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/2" />
         
         <div className="container-custom relative z-10">
           <div className="glass-card p-12 md:p-16 text-center max-w-4xl mx-auto">
