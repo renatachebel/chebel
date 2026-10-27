@@ -9,7 +9,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project })
       <img src={project.thumbnail} alt={project.title} loading="lazy" className="w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-80" />
     </div>
     <div className="flex items-start justify-between gap-4 mt-5">
-      <div><h2 className="font-display text-2xl leading-tight">{project.title}</h2><p className="text-muted-foreground text-xs mt-2 capitalize">{project.category.map(category => category.replaceAll('-', ' ')).join(' / ')}{project.date ? ` · ${project.date}` : ''}</p></div>
+      <div><h2 className="font-display text-2xl leading-tight">{project.title}</h2><p className="text-muted-foreground text-xs mt-2 capitalize">{project.category.map(category => category.replace(/-/g, ' ')).join(' / ')}{project.date ? ` · ${project.date}` : ''}</p></div>
       <ArrowUpRight size={18} className="shrink-0 mt-1 text-muted-foreground group-hover:text-foreground" aria-hidden="true" />
     </div>
   </Link>
