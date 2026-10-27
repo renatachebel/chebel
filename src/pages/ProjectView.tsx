@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Layout from '../components/Layout';
 import ProjectDetail from '../components/ProjectDetail';
 import RelatedProjects from '../components/project/RelatedProjects';
-import { getProjectBySlug, projects, allProjectsIncludingIlumina, Project } from '../data/projects';
+import { getProjectBySlug, projects, Project } from '../data/projects';
 
 const ProjectView: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -16,7 +16,7 @@ const ProjectView: React.FC = () => {
   
   useEffect(() => {
     if (!slug) {
-      navigate('/projects');
+      navigate('/');
       return;
     }
     
@@ -27,13 +27,13 @@ const ProjectView: React.FC = () => {
       setProject(fetchedProject);
       
       // Find previous and next projects from all projects
-      const currentIndex = allProjectsIncludingIlumina.findIndex(p => p.slug === slug);
-      setPrevProject(currentIndex > 0 ? allProjectsIncludingIlumina[currentIndex - 1] : null);
-      setNextProject(currentIndex < projects.length - 1 ? allProjectsIncludingIlumina[currentIndex + 1] : null);
+      const currentIndex = projects.findIndex(p => p.slug === slug);
+      setPrevProject(currentIndex > 0 ? projects[currentIndex - 1] : null);
+      setNextProject(currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null);
       
       setIsLoading(false);
     } else {
-      navigate('/all-projects');
+      navigate('/');
     }
   }, [slug, navigate]);
   
@@ -54,8 +54,8 @@ const ProjectView: React.FC = () => {
       <div className="container-custom py-12 md:py-20">
         <div className="mb-12">
           <Link 
-            to="/all-projects" 
-            className="inline-flex items-center font-body text-sm text-white/70 hover:text-white transition-colors duration-300"
+            to="/" 
+            className="inline-flex items-center font-body text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
           >
             <ArrowLeft size={16} className="mr-2" />
             Back to Projects
@@ -64,18 +64,18 @@ const ProjectView: React.FC = () => {
         
         <ProjectDetail project={project} />
         
-        <RelatedProjects currentProject={project} allProjects={allProjectsIncludingIlumina} />
+        <RelatedProjects currentProject={project} allProjects={projects} />
         
-        <div className="mt-24 pt-8 border-t border-white/10">
+        <div className="mt-24 pt-8 border-t border-border">
           <div className="flex justify-between">
             {prevProject ? (
               <Link 
                 to={`/projects/${prevProject.slug}`}
-                className="group flex items-center font-body text-white/70 hover:text-white transition-colors duration-300"
+                className="group flex items-center font-body text-muted-foreground hover:text-foreground transition-colors duration-300"
               >
                 <ArrowLeft size={16} className="mr-2 transition-transform duration-300 group-hover:-translate-x-1" />
                 <span>
-                  <span className="block text-xs text-white/50">Previous</span>
+                  <span className="block text-xs text-muted-foreground">Previous</span>
                   {prevProject.title}
                 </span>
               </Link>
@@ -86,10 +86,10 @@ const ProjectView: React.FC = () => {
             {nextProject ? (
               <Link 
                 to={`/projects/${nextProject.slug}`}
-                className="group flex items-center text-right font-body text-white/70 hover:text-white transition-colors duration-300"
+                className="group flex items-center text-right font-body text-muted-foreground hover:text-foreground transition-colors duration-300"
               >
                 <span>
-                  <span className="block text-xs text-white/50">Next</span>
+                  <span className="block text-xs text-muted-foreground">Next</span>
                   {nextProject.title}
                 </span>
                 <ArrowRight size={16} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />

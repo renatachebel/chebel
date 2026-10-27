@@ -8,23 +8,19 @@ import { performanceInstallationProjects } from './performance-installation-proj
 import { generativeArtProjects } from './generative-art-projects';
 import { iluminaVideoProjects } from './ilumina-video-projects';
 
-// Combine all projects - video projects now come before photography
-// Note: iluminaVideoProjects are excluded from the main projects array
-// They are only used on the Ilumina page
-export const projects: Project[] = [
+// One collection powers every portfolio view; deduplicate by slug.
+export const projects: Project[] = Array.from(new Map([
   ...videoProjects,
   ...photographyProjects,
   ...installationProjects,
   ...performanceProjects,
   ...performanceInstallationProjects,
-  ...generativeArtProjects
-];
+  ...generativeArtProjects,
+  ...iluminaVideoProjects,
+].map(project => [project.slug, project])).values());
 
-// All projects including Ilumina-specific ones
-export const allProjectsIncludingIlumina: Project[] = [
-  ...projects,
-  ...iluminaVideoProjects
-];
+// Compatibility alias for existing imports.
+export const allProjectsIncludingIlumina = projects;
 
 // Helper functions
 export const getProjectBySlug = (slug: string): Project | undefined => {

@@ -1,112 +1,52 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
 import Layout from '../components/Layout';
 import ProjectCard from '../components/ProjectCard';
-import { allProjectsIncludingIlumina, Project } from '../data/projects';
+import { projects } from '../data/projects';
+import { Button } from '../components/ui/button';
 
+const categories = [
+  { id: 'all', label: 'All work' }, { id: 'video', label: 'Film & Video' },
+  { id: 'photography', label: 'Photography' }, { id: 'installation', label: 'Installation' },
+  { id: 'performance', label: 'Performance' }, { id: 'generative-art', label: 'Generative Art' },
+];
 const Index: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState<string>('all');
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>(allProjectsIncludingIlumina);
-  const [isAnimating, setIsAnimating] = useState(false);
-  
-  const categories = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'photography', label: 'Photography' },
-    { id: 'video', label: 'Video' },
-    { id: 'installation', label: 'Installation' },
-    { id: 'performance', label: 'Performance' },
-    { id: 'generative-art', label: 'Generative Art' },
-  ];
-  
-  useEffect(() => {
-    setIsAnimating(true);
-    
-    const timer = setTimeout(() => {
-      if (activeFilter === 'all') {
-        setFilteredProjects(allProjectsIncludingIlumina);
-      } else {
-        setFilteredProjects(allProjectsIncludingIlumina.filter(project => project.category.includes(activeFilter as any)));
-      }
-      
-      setIsAnimating(false);
-    }, 500);
-    
-    return () => clearTimeout(timer);
-  }, [activeFilter]);
-  
-  const handleFilterChange = (categoryId: string) => {
-    if (categoryId === activeFilter) return;
-    setActiveFilter(categoryId);
-  };
-  
-  return (
-    <Layout>
-      <div className="py-24 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/50 to-black/0 opacity-50" />
-        
-        <div className="container-custom relative z-10">
-          <div className="mb-12 max-w-4xl">
-            <h2 className="font-display text-3xl md:text-4xl tracking-wider mb-6 animate-fade-in">PROJECTS</h2>
-            <p className="font-body text-lg text-white/80 animate-fade-in" style={{ animationDelay: "100ms" }}>
-              Explore my body of work across different mediums and contexts, from photographic series 
-              to immersive installations and live performances.
-            </p>
+  const [filter, setFilter] = useState('all');
+  const visible = projects.filter(project => filter === 'all' || project.category.some(category => category === filter || (filter === 'installation' || filter === 'performance') && category === 'performance-installation'));
+  const featured = projects.find(project => project.slug === 'the-wedding-of-the-sun-and-the-moon');
+  return <Layout>
+    <div className="container-custom">
+      <section className="py-12 md:py-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div><p className="text-muted-foreground text-xs uppercase tracking-widest mb-5">Multimedia artist · Brazil</p><h1 className="font-display portfolio-title">Renata Chebel</h1></div>
+        <p className="text-muted-foreground text-base max-w-xs leading-relaxed md:pb-2">Nature, memory, and the space<br className="hidden md:block" /> between the ancestral and the future.</p>
+      </section>
+      {featured && <section className="mb-16 md:mb-24" aria-label="Featured work">
+        <Link to={`/projects/${featured.slug}`} className="group block">
+          <img src="/lovable-uploads/sunmoon-ensemble.jpg" alt="A scene from The Wedding of the Sun and the Moon" className="w-full max-h-[62vh] object-contain object-left" fetchPriority="high" />
+          <div className="mt-5 flex items-start justify-between gap-4">
+            <div><p className="text-xs text-muted-foreground mb-2">Selected film</p><h2 className="font-display text-2xl md:text-3xl">{featured.title}</h2></div>
+            <ArrowUpRight className="shrink-0 mt-5 text-muted-foreground group-hover:text-foreground" size={20} />
           </div>
-          
-          <div className="mb-12 overflow-x-auto scrollbar-hidden">
-            <div className="flex space-x-6 min-w-max">
-              {categories.map(category => (
-                <button
-                  key={category.id}
-                  onClick={() => handleFilterChange(category.id)}
-                  className={`py-2 px-5 font-body text-sm transition-all duration-300 ${
-                    activeFilter === category.id 
-                      ? 'glass-card text-white' 
-                      : 'text-white/60 hover:text-white'
-                  }`}
-                >
-                  {category.label}
-                </button>
-              ))}
-            </div>
-          </div>
-          
-          <div 
-            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-opacity duration-500 ${
-              isAnimating ? 'opacity-0' : 'opacity-100'
-            }`}
-          >
-            {filteredProjects.map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index} />
-            ))}
-          </div>
-          
-          {filteredProjects.length === 0 && !isAnimating && (
-            <div className="py-12 text-center">
-              <p className="font-body text-white/70">No projects found in this category.</p>
-            </div>
-          )}
-        </div>
-      </div>
-      
-      <div className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-white/[0.05] to-white/[0.02]" />
-        
-        <div className="container-custom relative z-10">
-          <div className="glass-card p-12 md:p-16 text-center max-w-4xl mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl tracking-wider mb-8 animate-fade-in">
-              LET'S CREATE SOMETHING <span className="text-gradient">TOGETHER</span>
-            </h2>
-            
-            <p className="font-body text-lg text-white/80 mb-10 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "100ms" }}>
-              I'm always open to collaborations and new projects. 
-              Reach out at <a href="mailto:chebel@gmail.com" className="text-white hover:text-white/80 transition-colors">chebel@gmail.com</a> to discuss how we can bring your vision to life.
-            </p>
+        </Link>
+      </section>}
+      <section id="work" aria-label="All artwork">
+        <div className="border-t border-border pt-7 mb-10 flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+          <div className="flex gap-3 items-baseline"><h2 className="font-display text-3xl">Works</h2><span className="text-xs text-muted-foreground">{String(visible.length).padStart(2, '0')}</span></div>
+          <div className="flex flex-wrap gap-x-5 gap-y-1" role="group" aria-label="Filter work">
+            {categories.map(category => <Button key={category.id} variant="link" aria-pressed={filter === category.id} onClick={() => setFilter(category.id)} className={`p-0 h-9 font-normal rounded-none ${filter === category.id ? 'text-foreground underline underline-offset-8' : 'text-muted-foreground'}`}>{category.label}</Button>)}
           </div>
         </div>
-      </div>
-    </Layout>
-  );
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-14 md:gap-y-20">
+          {visible.map((project, index) => <ProjectCard project={project} index={index} key={project.slug} />)}
+        </div>
+        {visible.length === 0 && <p className="text-muted-foreground py-12">No works in this category.</p>}
+      </section>
+      <section className="border-t border-border mt-20 md:mt-28 pt-12 pb-8 flex flex-col md:flex-row justify-between gap-6">
+        <h2 className="font-display text-3xl md:text-4xl">Let’s create something together.</h2>
+        <Button variant="link" asChild className="px-0 self-start text-base"><a href="mailto:chebel@gmail.com">Get in touch <ArrowUpRight size={18} /></a></Button>
+      </section>
+    </div>
+  </Layout>;
 };
-
 export default Index;

@@ -60,8 +60,8 @@ export default {
         sm: "calc(var(--radius) - 4px)"
       },
       fontFamily: {
-        sans: ["Inter var", "sans-serif"],
-        display: ["Syncopate", "sans-serif"],
+        sans: ["Jost", "Arial", "sans-serif"],
+        display: ["Georgia", "Times New Roman", "serif"],
         body: ["Jost", "sans-serif"],
       },
       keyframes: {

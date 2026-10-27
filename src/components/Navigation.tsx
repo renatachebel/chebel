@@ -1,217 +1,33 @@
-
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { AlignRight, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
-import { useIsMobile } from '@/hooks/use-mobile';
 
+const links = [{ to: '/', label: 'Work' }, { to: '/about', label: 'About' }, { to: '/substack', label: 'Substack' }];
 const Navigation: React.FC = () => {
-  const location = useLocation();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const isMobile = useIsMobile();
-  const menuButtonRef = useRef<HTMLButtonElement>(null);
-  
+  const { pathname } = useLocation();
+  const [open, setOpen] = useState(false);
+  useEffect(() => { setOpen(false); }, [pathname]);
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const close = (event: KeyboardEvent) => { if (event.key === 'Escape') setOpen(false); };
+    window.addEventListener('keydown', close);
+    return () => window.removeEventListener('keydown', close);
   }, []);
-  
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [location.pathname]);
-  
-  const isActive = (path: string) => location.pathname === path;
-  const isLandingPage = location.pathname === '/';
-  
-  const handleMenuToggle = () => {
-    console.log("Menu toggle clicked, current state:", isMenuOpen);
-    setIsMenuOpen(!isMenuOpen);
-  };
-  
-  // Don't show navigation on landing page
-  if (isLandingPage) {
-    return null;
-  }
-  
   return (
-    <header 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? 'bg-black/80 backdrop-blur-md py-4' : 'bg-transparent py-6'
-      }`}
-    >
-      <div className="container-custom flex justify-between items-center">
-        <div>
-          <Link to="/" className="font-display text-xl tracking-wider">
-            RENATA CHEBEL
-          </Link>
-        </div>
-        
-        <nav className="hidden md:block">
-          <ul className="flex gap-8">
-            <li>
-              <Link 
-                to="/infinita" 
-                className={`font-body text-sm transition-colors ${
-                  isActive('/infinita') ? 'text-white' : 'text-white/60 hover:text-white'
-                }`}
-              >
-                INFINITA
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/ilumina" 
-                className={`font-body text-sm transition-colors ${
-                  isActive('/ilumina') ? 'text-white' : 'text-white/60 hover:text-white'
-                }`}
-              >
-                ILUMINA
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/all-projects" 
-                className={`font-body text-sm transition-colors ${
-                  isActive('/all-projects') ? 'text-white' : 'text-white/60 hover:text-white'
-                }`}
-              >
-                ALL PROJECTS
-              </Link>
-            </li>
-            {/* <li>
-              <Link 
-                to="/sketchbook" 
-                className={`font-body text-sm transition-colors ${
-                  isActive('/sketchbook') || isActive('/photodiary') ? 'text-white' : 'text-white/60 hover:text-white'
-                }`}
-              >
-                SKETCHBOOK
-              </Link>
-            </li> */}
-            <li>
-              <Link 
-                to="/substack" 
-                className={`font-body text-sm transition-colors ${
-                  isActive('/substack') ? 'text-white' : 'text-white/60 hover:text-white'
-                }`}
-              >
-                SUBSTACK
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/about" 
-                className={`font-body text-sm transition-colors ${
-                  isActive('/about') ? 'text-white' : 'text-white/60 hover:text-white'
-                }`}
-              >
-                ABOUT
-              </Link>
-            </li>
-          </ul>
+    <header className="bg-background border-b border-border relative z-50">
+      <div className="container-custom flex items-center justify-between h-24 gap-4">
+        <Link to="/" className="font-display text-2xl whitespace-nowrap">Renata Chebel<span className="text-muted-foreground">.</span></Link>
+        <nav aria-label="Main navigation" className="hidden md:flex items-center gap-7">
+          {links.map(link => <Button key={link.to} asChild variant="link" className={`px-0 font-normal ${pathname === link.to ? 'text-foreground underline underline-offset-8' : 'text-muted-foreground'}`}><Link to={link.to}>{link.label}</Link></Button>)}
+          <Button asChild variant="link" className="px-0 text-muted-foreground font-normal"><a href="mailto:chebel@gmail.com">Contact ↗</a></Button>
         </nav>
-        
-        <div className="md:hidden">
-          <Button
-            ref={menuButtonRef}
-            variant="ghost"
-            size="icon"
-            onClick={handleMenuToggle}
-            className="text-white relative z-50"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X /> : <AlignRight />}
-          </Button>
-        </div>
+        <Button variant="ghost" size="icon" className="md:hidden" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(value => !value)}>{open ? <X /> : <Menu />}</Button>
       </div>
-      
-      {isMobile && (
-        <div 
-          className={`fixed inset-0 bg-black z-40 transition-opacity duration-300 ${
-            isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-          }`}
-        >
-          <div className="fixed top-0 left-0 w-full container-custom py-6 flex justify-between items-center">
-            <div>
-              <Link to="/" className="font-display text-xl tracking-wider">
-                RENATA CHEBEL
-              </Link>
-            </div>
-          </div>
-          
-          <nav className="fixed inset-0 pt-24 container-custom">
-            <ul className="flex flex-col gap-8">
-              <li>
-                <Link 
-                  to="/infinita" 
-                  className={`font-body text-2xl transition-colors ${
-                    isActive('/infinita') ? 'text-white' : 'text-white/60'
-                  }`}
-                >
-                  INFINITA
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/ilumina" 
-                  className={`font-body text-2xl transition-colors ${
-                    isActive('/ilumina') ? 'text-white' : 'text-white/60'
-                  }`}
-                >
-                  ILUMINA
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/all-projects" 
-                  className={`font-body text-2xl transition-colors ${
-                    isActive('/all-projects') ? 'text-white' : 'text-white/60'
-                  }`}
-                >
-                  ALL PROJECTS
-                </Link>
-              </li>
-              {/* <li>
-                <Link 
-                  to="/sketchbook" 
-                  className={`font-body text-2xl transition-colors ${
-                    isActive('/sketchbook') || isActive('/photodiary') ? 'text-white' : 'text-white/60'
-                  }`}
-                >
-                  SKETCHBOOK
-                </Link>
-              </li> */}
-              <li>
-                <Link 
-                  to="/substack" 
-                  className={`font-body text-2xl transition-colors ${
-                    isActive('/substack') ? 'text-white' : 'text-white/60'
-                  }`}
-                >
-                  SUBSTACK
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/about" 
-                  className={`font-body text-2xl transition-colors ${
-                    isActive('/about') ? 'text-white' : 'text-white/60'
-                  }`}
-                >
-                  ABOUT
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      )}
+      {open && <nav id="mobile-navigation" aria-label="Mobile navigation" className="md:hidden container-custom pb-8 flex flex-col items-start gap-3">
+        {links.map(link => <Button asChild variant="link" key={link.to} className="px-0 text-lg"><Link to={link.to}>{link.label}</Link></Button>)}
+        <Button asChild variant="link" className="px-0 text-lg"><a href="mailto:chebel@gmail.com">Contact ↗</a></Button>
+      </nav>}
     </header>
   );
 };
-
 export default Navigation;
