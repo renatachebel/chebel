@@ -23,7 +23,7 @@ const Index: React.FC = () => {
       </section>
       {featured && <section className="mb-16 md:mb-24" aria-label="Featured work">
         <Link to={`/projects/${featured.slug}`} className="group block">
-          <img src="/lovable-uploads/sunmoon-ensemble.jpg" alt="A scene from The Wedding of the Sun and the Moon" className="w-full max-h-[62vh] object-contain object-left" fetchPriority="high" />
+          <img src="/lovable-uploads/sunmoon-ensemble.jpg" alt="A scene from The Wedding of the Sun and the Moon" className="w-full max-h-[62vh] object-contain object-left" />
           <div className="mt-5 flex items-start justify-between gap-4">
             <div><p className="text-xs text-muted-foreground mb-2">Selected film</p><h2 className="font-display text-2xl md:text-3xl">{featured.title}</h2></div>
             <ArrowUpRight className="shrink-0 mt-5 text-muted-foreground group-hover:text-foreground" size={20} />
