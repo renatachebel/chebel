@@ -60,9 +60,9 @@ export default {
         sm: "calc(var(--radius) - 4px)"
       },
       fontFamily: {
-        sans: ["Jost", "Arial", "sans-serif"],
-        display: ["Georgia", "Times New Roman", "serif"],
-        body: ["Jost", "sans-serif"],
+        sans: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+        display: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+        body: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
