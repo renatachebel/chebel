@@ -4,27 +4,27 @@
 
 @layer base {
   :root {
-    --background: 72 8% 6%;
-    --foreground: 48 24% 93%;
-    --card: 72 7% 9%;
-    --card-foreground: 48 24% 93%;
-    --popover: 72 7% 9%;
-    --popover-foreground: 48 24% 93%;
-    --primary: 78 100% 65%;
-    --primary-foreground: 72 8% 6%;
-    --secondary: 70 6% 13%;
-    --secondary-foreground: 48 24% 93%;
-    --muted: 70 6% 13%;
-    --muted-foreground: 52 7% 61%;
-    --accent: 78 100% 65%;
-    --accent-foreground: 72 8% 6%;
-    --destructive: 0 62% 42%;
-    --destructive-foreground: 48 24% 93%;
-    --border: 65 6% 20%;
-    --input: 65 6% 20%;
-    --ring: 78 100% 65%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 0% 95%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 13%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 13%;
+    --muted-foreground: 0 0% 61%;
+    --accent: 0 0% 95%;
+    --accent-foreground: 0 0% 4%;
+    --destructive: 0 0% 32%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 95%;
     --radius: 0;
-    --signal: #c6ff4a;
+    --signal: #f2f2f2;
   }
 
   * {
@@ -32,7 +32,7 @@
   }
 
   *::selection {
-    color: #10110f;
+    color: #0a0a0a;
     background: var(--signal);
   }
 
@@ -46,7 +46,7 @@
     min-width: 320px;
     letter-spacing: -0.012em;
     background-image:
-      radial-gradient(circle at 85% 0%, rgba(198, 255, 74, 0.06), transparent 30rem),
+      radial-gradient(circle at 85% 0%, rgba(255, 255, 255, 0.055), transparent 30rem),
       linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px);
     background-size: auto, 100% 7rem;
   }
@@ -75,7 +75,7 @@
     height: 0.55rem;
     border-radius: 999px;
     background: var(--signal);
-    box-shadow: 0 0 1.5rem rgba(198, 255, 74, 0.35);
+    box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.22);
   }
 
   .portfolio-title {
@@ -95,12 +95,12 @@
 
   .outline-text {
     color: transparent;
-    -webkit-text-stroke: 1px rgba(242, 239, 228, 0.7);
+    -webkit-text-stroke: 1px rgba(242, 242, 242, 0.7);
   }
 
   .glass-card,
   .neo-blur {
-    background: rgba(16, 17, 15, 0.82);
+    background: rgba(10, 10, 10, 0.82);
     border: 1px solid hsl(var(--border));
     backdrop-filter: blur(18px);
   }
@@ -164,7 +164,7 @@
     position: relative;
     overflow: hidden;
     aspect-ratio: 4 / 3;
-    background: #151713;
+    background: #151515;
   }
 
   .project-card[data-layout="0"] .project-card__media,
@@ -176,7 +176,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    border: 1px solid rgba(242, 239, 228, 0.08);
+    border: 1px solid rgba(242, 242, 242, 0.08);
     pointer-events: none;
   }
 
