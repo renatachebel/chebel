@@ -61,9 +61,9 @@ export default {
         sm: "calc(var(--radius) - 4px)"
       },
       fontFamily: {
-        sans: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
-        display: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
-        body: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+        sans: ["Manrope Variable", "Manrope", "Helvetica Neue", "sans-serif"],
+        display: ["Syne Variable", "Syne", "Arial", "sans-serif"],
+        body: ["Manrope Variable", "Manrope", "Helvetica Neue", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
