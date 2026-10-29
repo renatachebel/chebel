@@ -1,46 +1,28 @@
-
 import React from 'react';
-import Layout from '../components/Layout';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Layout from '../components/Layout';
 
-const Sketchbook: React.FC = () => {
-  return (
-    <Layout>
-      <div className="pt-12 pb-24">
-        <div className="container-custom">
-          <div className="mb-12">
-            <Link 
-              to="/" 
-              className="inline-flex items-center font-body text-sm text-white/70 hover:text-white transition-colors duration-300"
-            >
-              <ArrowLeft size={16} className="mr-2" />
-              Back to Home
-            </Link>
-          </div>
-          
-          <div className="mb-16 max-w-4xl">
-            <h1 className="font-display text-4xl md:text-5xl tracking-wider mb-12 animate-fade-in">SKETCHBOOK</h1>
-          </div>
-          
-          <div className="w-full overflow-hidden glass-card rounded-lg">
-            {/* Replace iframe with a direct link for mobile */}
-            <div className="relative pb-[150%] md:pb-[100%] w-full h-0">
-              <iframe 
-                src="https://chebel.tumblr.com" 
-                className="absolute top-0 left-0 w-full h-full border-0"
-                title="Chebel Tumblr"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                loading="lazy"
-              ></iframe>
-            </div>
-          </div>
-          
-          {/* Removed the duplicate Back to Home button here */}
+const Sketchbook: React.FC = () => (
+  <Layout>
+    <div className="container-custom py-10 md:py-16">
+      <Link to="/" className="eyebrow mb-12 inline-flex items-center gap-2 text-muted-foreground hover:text-primary"><ArrowLeft size={15} /> Back to archive</Link>
+      <div className="mb-12 border-y border-border py-8">
+        <p className="eyebrow mb-5 text-primary">Ongoing visual research</p>
+        <h1 className="display-heading text-6xl md:text-8xl">Photo diary</h1>
+      </div>
+      <div className="w-full overflow-hidden border border-border bg-card">
+        <div className="relative h-0 w-full pb-[150%] md:pb-[100%]">
+          <iframe
+            src="https://chebel.tumblr.com"
+            className="absolute inset-0 h-full w-full border-0"
+            title="Renata Chebel photo diary"
+            loading="lazy"
+          />
         </div>
       </div>
-    </Layout>
-  );
-};
+    </div>
+  </Layout>
+);
 
 export default Sketchbook;

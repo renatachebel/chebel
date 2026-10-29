@@ -31,7 +31,7 @@ const Infinita: React.FC = () => {
       if (activeFilter === 'all') {
         setFilteredProjects(infinitaProjects);
       } else {
-        setFilteredProjects(infinitaProjects.filter(project => project.category.includes(activeFilter as any)));
+        setFilteredProjects(infinitaProjects.filter(project => project.category.includes(activeFilter as Project['category'][number])));
       }
       
       setIsAnimating(false);
