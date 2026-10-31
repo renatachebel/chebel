@@ -13,18 +13,11 @@ const education = [
 const About: React.FC = () => (
   <Layout>
     <div className="container-custom">
-      <section className="border-x border-border/50 px-4 py-12 md:px-8 md:py-20">
-        <div className="mb-20 flex items-center justify-between border-b border-border pb-5">
-          <p className="eyebrow flex items-center gap-2 text-muted-foreground"><span className="signal-dot" /> About the artist</p>
-          <p className="eyebrow text-muted-foreground">São Paulo · Brazil</p>
-        </div>
-        <h1 className="portfolio-title animate-fade-in">
-          <span className="block">Hybrid</span>
-          <span className="outline-text ml-[10vw] block">worlds.</span>
-        </h1>
+      <section className="border-b border-border py-10 md:py-14">
+        <h1 className="display-heading text-5xl md:text-7xl">About</h1>
       </section>
 
-      <section className="grid gap-12 border-t border-border py-20 md:grid-cols-12 md:py-28">
+      <section className="grid gap-12 py-16 md:grid-cols-12 md:py-20">
         <div className="md:col-span-5">
           <div className="sticky top-28">
             <img
@@ -40,7 +33,7 @@ const About: React.FC = () => (
         </div>
 
         <div className="md:col-span-6 md:col-start-7">
-          <p className="display-heading text-3xl leading-[1.02] md:text-5xl">
+          <p className="display-heading text-3xl leading-[1.05] md:text-4xl">
             I explore the porous boundaries between nature, technology, spirituality and memory.
           </p>
           <div className="mt-12 space-y-7 border-t border-border pt-8 text-base leading-8 text-muted-foreground md:text-lg">
@@ -68,12 +61,8 @@ const About: React.FC = () => (
         </div>
       </section>
 
-      <section className="grid gap-12 border-t border-border py-20 md:grid-cols-12 md:py-28">
-        <div className="md:col-span-4">
-          <p className="eyebrow mb-5 text-primary">Field notes / 01</p>
-          <h2 className="display-heading text-4xl md:text-5xl">A practice in motion.</h2>
-        </div>
-        <div className="md:col-span-7 md:col-start-6">
+      <section className="grid border-t border-border py-16 md:grid-cols-12 md:py-20">
+        <div className="md:col-span-8 md:col-start-3">
           <img
             src="/lovable-uploads/6e9f6cab-d469-4093-b39b-ec290d5e5006.png"
             alt="Renata Chebel performing a live visual set"
@@ -87,16 +76,14 @@ const About: React.FC = () => (
         </div>
       </section>
 
-      <section className="border-t border-border py-20 md:py-28">
-        <div className="mb-14 flex items-end justify-between">
-          <h2 className="display-heading text-5xl md:text-7xl">Education</h2>
-          <span className="eyebrow text-muted-foreground">Selected training</span>
+      <section className="border-t border-border py-16 md:py-20">
+        <div className="mb-10">
+          <h2 className="display-heading text-4xl md:text-5xl">Education</h2>
         </div>
         <div>
-          {education.map(([title, place, date], index) => (
+          {education.map(([title, place, date]) => (
             <div key={title} className="grid gap-3 border-t border-border py-5 md:grid-cols-12 md:items-center">
-              <span className="eyebrow text-primary md:col-span-1">0{index + 1}</span>
-              <h3 className="display-heading text-2xl md:col-span-5">{title}</h3>
+              <h3 className="display-heading text-xl md:col-span-6 md:text-2xl">{title}</h3>
               <p className="text-sm text-muted-foreground md:col-span-4">{place}</p>
               <p className="eyebrow text-muted-foreground md:col-span-2 md:text-right">{date}</p>
             </div>

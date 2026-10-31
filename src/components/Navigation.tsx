@@ -4,7 +4,7 @@ import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 
 const links = [
-  { to: '/', label: 'Selected work' },
+  { to: '/', label: 'Work' },
   { to: '/about', label: 'About' },
   { to: '/substack', label: 'Journal' },
 ];

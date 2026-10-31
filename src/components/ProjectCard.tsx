@@ -11,13 +11,10 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
   >
     <div className="project-card__media">
       <img src={project.thumbnail} alt={project.title} loading="lazy" className="project-card__image" />
-      <span className="absolute left-3 top-3 z-10 bg-background/85 px-2 py-1 text-[0.62rem] font-semibold tracking-[0.16em] text-muted-foreground backdrop-blur md:left-4 md:top-4">
-        {String(index + 1).padStart(2, '0')}
-      </span>
     </div>
     <div className="mt-5 grid grid-cols-[1fr_auto] items-start gap-4 border-t border-border pt-4">
       <div>
-        <h3 className="display-heading text-2xl transition-colors group-hover:text-primary md:text-3xl">{project.title}</h3>
+        <h3 className="display-heading text-xl transition-colors group-hover:text-primary md:text-2xl">{project.title}</h3>
         <p className="eyebrow mt-3 text-muted-foreground">
           {project.category.map(category => category.replace(/-/g, ' ')).join(' / ')}
           {project.date ? ` · ${project.date}` : ''}

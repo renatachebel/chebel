@@ -20,7 +20,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 <span className="signal-dot" /> Available for commissions & collaborations
               </p>
               <a href="mailto:chebel@gmail.com" className="group inline-flex items-end gap-3">
-                <span className="display-heading text-[clamp(2.7rem,7vw,7rem)]">Let’s make<br />something alive.</span>
+                <span className="display-heading text-[clamp(2.25rem,5vw,5.5rem)]">Let’s make<br />something alive.</span>
                 <ArrowUpRight className="mb-2 text-primary transition-transform duration-500 group-hover:-translate-y-2 group-hover:translate-x-2 md:mb-4" size={38} />
               </a>
             </div>
@@ -41,7 +41,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           </div>
           <div className="mt-16 flex flex-col justify-between gap-2 border-t border-border pt-5 text-[0.67rem] uppercase tracking-[0.16em] text-muted-foreground sm:flex-row">
             <span>© {new Date().getFullYear()} Renata Chebel</span>
-            <span>Art · Film · Technology · Nature</span>
           </div>
         </div>
       </footer>

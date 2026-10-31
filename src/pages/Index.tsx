@@ -29,13 +29,10 @@ const Index: React.FC = () => {
   return (
     <Layout>
       <div className="container-custom">
-        <section className="relative min-h-[calc(100svh-76px)] border-x border-border/50 px-4 pb-10 pt-10 md:px-8 md:pb-14 md:pt-14">
-          <div className="mb-16 flex items-start justify-between gap-8 md:mb-20">
+        <section className="relative min-h-[72svh] border-x border-border/50 px-4 pb-10 pt-10 md:px-8 md:pb-12 md:pt-12">
+          <div className="mb-12 md:mb-16">
             <p className="eyebrow flex items-center gap-2 text-muted-foreground">
               <span className="signal-dot" /> Multimedia artist · Brazil
-            </p>
-            <p className="hidden max-w-[15rem] text-right text-xs leading-relaxed text-muted-foreground md:block">
-              Moving image, installation, photography, performance and generative systems.
             </p>
           </div>
 
@@ -44,14 +41,13 @@ const Index: React.FC = () => {
             <span className="outline-text ml-[7vw] block">Chebel</span>
           </h1>
 
-          <div className="mt-16 grid gap-8 border-t border-border pt-7 md:mt-20 md:grid-cols-12 md:items-end">
-            <p className="text-lg leading-relaxed text-foreground md:col-span-5 md:text-2xl">
+          <div className="mt-12 grid gap-8 border-t border-border pt-6 md:mt-16 md:grid-cols-12 md:items-end">
+            <p className="text-base leading-relaxed text-foreground md:col-span-5 md:text-xl">
               Nature, memory, and the charged space between the ancestral and the future.
             </p>
             <div className="flex items-end justify-between md:col-span-5 md:col-start-8">
               <div>
-                <p className="eyebrow mb-2 text-muted-foreground">Selected archive</p>
-                <p className="text-sm">2019—2026 · 18 works</p>
+                <p className="text-sm text-muted-foreground">18 works · 2019—2026</p>
               </div>
               <a href="#work" aria-label="Explore projects" className="flex h-12 w-12 items-center justify-center border border-border text-primary transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground">
                 <ArrowDown size={18} />
@@ -61,10 +57,9 @@ const Index: React.FC = () => {
         </section>
 
         {featured && (
-          <section className="py-20 md:py-32" aria-label="Featured work">
+          <section className="py-16 md:py-24" aria-label="Featured work">
             <div className="mb-6 flex items-center justify-between border-t border-border pt-5">
-              <p className="eyebrow text-muted-foreground">01 / Featured film</p>
-              <p className="eyebrow text-muted-foreground">Selected work</p>
+              <p className="eyebrow text-muted-foreground">Featured film</p>
             </div>
             <Link to={`/projects/${featured.slug}`} className="group block">
               <div className="relative overflow-hidden bg-card">
@@ -79,7 +74,7 @@ const Index: React.FC = () => {
                 </span>
               </div>
               <div className="mt-6 grid gap-3 md:grid-cols-12 md:items-end">
-                <h2 className="display-heading text-3xl md:col-span-8 md:text-5xl">{featured.title}</h2>
+                <h2 className="display-heading text-2xl md:col-span-8 md:text-4xl">{featured.title}</h2>
                 <p className="eyebrow text-muted-foreground md:col-span-4 md:text-right">Film / Myth / Performance</p>
               </div>
             </Link>
@@ -90,10 +85,9 @@ const Index: React.FC = () => {
           <div className="mb-16 border-t border-border pt-7 md:mb-24">
             <div className="mb-10 flex items-end justify-between">
               <div className="flex items-baseline gap-4">
-                <h2 className="display-heading text-5xl md:text-7xl">Archive</h2>
+                <h2 className="display-heading text-4xl md:text-6xl">Archive</h2>
                 <span className="eyebrow text-primary">{String(visible.length).padStart(2, '0')}</span>
               </div>
-              <p className="eyebrow hidden text-muted-foreground md:block">Filter by discipline</p>
             </div>
             <div className="scrollbar-hidden -mx-4 flex gap-2 overflow-x-auto px-4 pb-2 md:mx-0 md:flex-wrap md:px-0" role="group" aria-label="Filter work">
               {categories.map(category => (

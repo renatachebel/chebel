@@ -49,9 +49,9 @@ const ProjectDetail: React.FC<{ project: Project }> = ({ project }) => {
       <div className="mb-14 grid gap-8 border-y border-border py-8 md:mb-20 md:grid-cols-12 md:items-end md:py-12">
         <div className="md:col-span-8">
           <p className="eyebrow mb-5 text-primary">{project.category.map(category => category.replace(/-/g, ' ')).join(' / ')}</p>
-          <h1 className="display-heading text-[clamp(3rem,7vw,7.5rem)]">{project.title}</h1>
+          <h1 className="display-heading text-[clamp(2.5rem,5.5vw,5.5rem)]">{project.title}</h1>
         </div>
-        <p className="text-base leading-7 text-muted-foreground md:col-span-4 md:text-lg">{project.description}</p>
+        <p className="text-base leading-7 text-muted-foreground md:col-span-4">{project.description}</p>
       </div>
 
       <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
