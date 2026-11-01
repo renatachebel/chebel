@@ -1,52 +1,32 @@
-
 import React from 'react';
 import { Project } from '../../data/types';
 
-interface ProjectInfoProps {
-  project: Project;
-}
+const formatCategory = (category: string) =>
+  category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
-const ProjectInfo: React.FC<ProjectInfoProps> = ({ project }) => {
-  const formatCategory = (category: string) => {
-    return category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-  };
-  
-  const formattedCategories = project.category.map(formatCategory).join(', ');
+const ProjectInfo: React.FC<{ project: Project }> = ({ project }) => {
+  const facts = [
+    ['Discipline', project.category.map(formatCategory).join(', ')],
+    ['Year', project.date],
+    ['Client', project.client],
+    ['Location', project.location],
+  ].filter((fact): fact is [string, string] => Boolean(fact[1]));
 
   return (
-    <div className="self-start border-t border-border pt-6">
-      <div className="mb-8">
-        <h3 className="font-display text-lg tracking-wider mb-4">PROJECT DETAILS</h3>
-        <p className="font-body text-muted-foreground whitespace-pre-line">{project.details}</p>
+    <aside className="self-start border-t border-border lg:sticky lg:top-28 lg:col-span-4">
+      <div className="py-6">
+        <p className="eyebrow mb-5 text-primary">Project notes</p>
+        <p className="whitespace-pre-line text-sm leading-7 text-muted-foreground md:text-base">{project.details}</p>
       </div>
-      
-      <div className="border-t border-border pt-6">
-        <div className="grid grid-cols-2 gap-4">
-          <div>
-            <h4 className="font-body text-sm text-muted-foreground mb-1">Category</h4>
-            <p className="font-body">{formattedCategories}</p>
+      <div>
+        {facts.map(([label, value]) => (
+          <div key={label} className="grid grid-cols-2 gap-4 border-t border-border py-4">
+            <p className="eyebrow text-muted-foreground">{label}</p>
+            <p className="text-sm">{value}</p>
           </div>
-          {project.date && (
-            <div>
-              <h4 className="font-body text-sm text-muted-foreground mb-1">Date</h4>
-              <p className="font-body">{project.date}</p>
-            </div>
-          )}
-          {project.client && (
-            <div>
-              <h4 className="font-body text-sm text-muted-foreground mb-1">Client</h4>
-              <p className="font-body">{project.client}</p>
-            </div>
-          )}
-          {project.location && (
-            <div>
-              <h4 className="font-body text-sm text-muted-foreground mb-1">Location</h4>
-              <p className="font-body">{project.location}</p>
-            </div>
-          )}
-        </div>
+        ))}
       </div>
-    </div>
+    </aside>
   );
 };
 

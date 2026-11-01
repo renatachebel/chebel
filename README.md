@@ -1,69 +1,42 @@
-# Welcome to your Lovable project
+# Renata Chebel — Artist Portfolio
 
-## Project info
+Source code for [chebel.com.br](https://www.chebel.com.br), Renata Chebel's multimedia art portfolio.
 
-**URL**: https://lovable.dev/projects/d54675df-2739-420a-ae5c-c9e1fc344623
+## Stack
 
-## How can I edit this code?
+- React 18 and TypeScript
+- Vite
+- Tailwind CSS and shadcn/ui
+- Static media stored in `public/lovable-uploads/`
 
-There are several ways of editing your application.
+The media directory keeps its historical name so existing project paths remain stable; the site does not require Lovable to build or run.
 
-**Use Lovable**
+## Local development
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d54675df-2739-420a-ae5c-c9e1fc344623) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requirements: Node.js and npm.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm ci
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Vite serves the site at `http://localhost:8080`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Verification
 
-**Use GitHub Codespaces**
+```sh
+npm run lint
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The production build is written to `dist/`.
 
-## What technologies are used for this project?
+## Deployment
 
-This project is built with .
+The site can be deployed to any static host with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Build command: `npm run build`
+- Publish directory: `dist`
+- SPA fallback: all unmatched routes should serve `index.html`
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/d54675df-2739-420a-ae5c-c9e1fc344623) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+`public/_redirects` supplies that fallback on hosts that support Netlify-style redirect rules. The repository contains no required environment variables or server-side services.

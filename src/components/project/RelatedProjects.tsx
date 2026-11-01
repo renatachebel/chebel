@@ -1,18 +1,32 @@
 import React from 'react';
+import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Project } from '../../data/types';
 
 const RelatedProjects: React.FC<{ currentProject: Project; allProjects: Project[] }> = ({ currentProject, allProjects }) => {
-  const related = allProjects.filter(project => project.slug !== currentProject.slug);
+  const related = allProjects.filter(project => project.slug !== currentProject.slug).slice(0, 4);
   if (!related.length) return null;
-  return <section className="mt-16 pt-8 border-t border-border" aria-label="More work">
-    <h3 className="font-display text-3xl mb-8">More work</h3>
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-5 gap-y-8">
-      {related.map(project => <Link key={project.slug} to={`/projects/${project.slug}`} className="group block">
-        <div className="aspect-[4/3]"><img src={project.thumbnail} alt={project.title} loading="lazy" className="w-full h-full object-contain transition-opacity group-hover:opacity-80" /></div>
-        <h4 className="text-sm mt-3 text-muted-foreground group-hover:text-foreground">{project.title}</h4>
-      </Link>)}
-    </div>
-  </section>;
+
+  return (
+    <section className="mt-24 border-t border-border pt-8 md:mt-36" aria-label="More work">
+      <div className="mb-10 flex items-end justify-between">
+        <h2 className="display-heading text-3xl md:text-5xl">More work</h2>
+        <Link to="/" className="eyebrow hidden items-center gap-2 text-muted-foreground hover:text-primary sm:flex">All work <ArrowUpRight size={15} /></Link>
+      </div>
+      <div className="grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+        {related.map(project => (
+          <Link key={project.slug} to={`/projects/${project.slug}`} className="group block">
+            <div className="aspect-square overflow-hidden bg-card">
+              <img src={project.thumbnail} alt={project.title} loading="lazy" className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]" />
+            </div>
+            <div className="mt-4 border-t border-border pt-3">
+              <h3 className="display-heading text-lg group-hover:text-primary">{project.title}</h3>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
 };
+
 export default RelatedProjects;

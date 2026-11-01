@@ -28,14 +28,14 @@ const ProjectThumbnails: React.FC<ProjectThumbnailsProps> = ({
               onThumbnailClick(index);
               onGalleryOpen(index);
             }}
-            className={`relative flex-shrink-0 w-full h-32 md:h-40 overflow-hidden transition-all duration-300 cursor-pointer hover:opacity-80 ${
+            className={`relative aspect-square w-full overflow-hidden transition-all duration-300 cursor-pointer hover:opacity-80 ${
               index === selectedImageIndex ? 'ring-2 ring-white/80' : 'opacity-70'
             }`}
           >
             <img 
               src={image} 
               alt={`${project.title} thumbnail ${index + 1}`} 
-              className="w-full h-full object-cover"
+              className="h-full w-full object-cover object-center"
             />
           </button>
         ))}

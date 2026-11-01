@@ -34,7 +34,7 @@ const Ilumina: React.FC = () => {
       if (activeFilter === 'all') {
         setFilteredProjects(iluminaProjects);
       } else {
-        setFilteredProjects(iluminaProjects.filter(project => project.category.includes(activeFilter as any)));
+        setFilteredProjects(iluminaProjects.filter(project => project.category.includes(activeFilter as Project['category'][number])));
       }
       
       setIsAnimating(false);
