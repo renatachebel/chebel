@@ -36,7 +36,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({
           <Button 
             variant="outline" 
             onClick={() => onImageClick(0)}
-            className="text-sm font-body tracking-wider border-white/30 hover:border-white hover:bg-white/5"
+            className="border-border font-body text-sm tracking-wider hover:border-foreground hover:bg-muted"
           >
             Gallery View
           </Button>
@@ -69,7 +69,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({
           <Button 
             variant="outline" 
             onClick={() => onImageClick(0)}
-            className="text-sm font-body tracking-wider border-white/30 hover:border-white hover:bg-white/5"
+            className="border-border font-body text-sm tracking-wider hover:border-foreground hover:bg-muted"
           >
             Gallery View
           </Button>

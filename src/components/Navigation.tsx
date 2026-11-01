@@ -23,11 +23,8 @@ const Navigation: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/85 backdrop-blur-xl">
       <div className="container-custom flex h-[76px] items-center justify-between gap-6">
-        <Link to="/" className="group flex items-center gap-3" aria-label="Renata Chebel, home">
-          <span className="flex h-8 w-8 items-center justify-center bg-primary font-display text-[0.68rem] font-bold text-primary-foreground transition-transform duration-500 group-hover:rotate-12">
-            RC
-          </span>
-          <span className="font-display text-base font-semibold tracking-[-0.035em]">Renata Chebel</span>
+        <Link to="/" className="group" aria-label="Renata Chebel, home">
+          <span className="brand-name">Renata Chebel</span>
         </Link>
 
         <nav aria-label="Main navigation" className="hidden items-center gap-8 md:flex">

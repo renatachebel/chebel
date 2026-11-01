@@ -4,27 +4,27 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 95%;
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 0 0% 95%;
-    --primary-foreground: 0 0% 4%;
-    --secondary: 0 0% 13%;
-    --secondary-foreground: 0 0% 95%;
-    --muted: 0 0% 13%;
-    --muted-foreground: 0 0% 61%;
-    --accent: 0 0% 95%;
-    --accent-foreground: 0 0% 4%;
-    --destructive: 0 0% 32%;
-    --destructive-foreground: 0 0% 95%;
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 0% 95%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+    --card: 0 0% 96%;
+    --card-foreground: 0 0% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+    --primary: 0 0% 7%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 7%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 0 0% 7%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 0% 28%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 82%;
+    --input: 0 0% 82%;
+    --ring: 0 0% 7%;
     --radius: 0;
-    --signal: #f2f2f2;
+    --signal: #111111;
   }
 
   * {
@@ -32,7 +32,7 @@
   }
 
   *::selection {
-    color: #0a0a0a;
+    color: #ffffff;
     background: var(--signal);
   }
 
@@ -45,10 +45,6 @@
     @apply overflow-x-hidden bg-background font-body text-foreground;
     min-width: 320px;
     letter-spacing: -0.012em;
-    background-image:
-      radial-gradient(circle at 85% 0%, rgba(255, 255, 255, 0.055), transparent 30rem),
-      linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-    background-size: auto, 100% 7rem;
   }
 
   a,
@@ -75,15 +71,22 @@
     height: 0.55rem;
     border-radius: 999px;
     background: var(--signal);
-    box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.22);
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.12);
   }
 
   .portfolio-title {
-    font-family: "Syne Variable", "Syne", sans-serif;
-    font-size: clamp(2.85rem, 7.2vw, 7.25rem);
-    font-weight: 440;
-    line-height: 0.9;
-    letter-spacing: -0.065em;
+    font-family: "Bodoni 72", Didot, "Iowan Old Style", Baskerville, Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 5.2vw, 5.25rem);
+    font-weight: 400;
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+  }
+
+  .brand-name {
+    font-family: "Bodoni 72", Didot, "Iowan Old Style", Baskerville, Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
   }
 
   .display-heading {
@@ -95,12 +98,12 @@
 
   .outline-text {
     color: transparent;
-    -webkit-text-stroke: 1px rgba(242, 242, 242, 0.7);
+    -webkit-text-stroke: 1px rgba(17, 17, 17, 0.7);
   }
 
   .glass-card,
   .neo-blur {
-    background: rgba(10, 10, 10, 0.82);
+    background: rgba(255, 255, 255, 0.86);
     border: 1px solid hsl(var(--border));
     backdrop-filter: blur(18px);
   }
@@ -146,14 +149,14 @@
     position: relative;
     overflow: hidden;
     aspect-ratio: 1 / 1;
-    background: #151515;
+    background: #f2f2f2;
   }
 
   .project-card__media::after {
     content: "";
     position: absolute;
     inset: 0;
-    border: 1px solid rgba(242, 242, 242, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     pointer-events: none;
   }
 
@@ -225,13 +228,9 @@
 }
 
 @media (max-width: 767px) {
-  body {
-    background-size: auto, 100% 5.5rem;
-  }
-
   .portfolio-title {
-    font-size: clamp(2.85rem, 14vw, 4.75rem);
-    line-height: 0.92;
+    font-size: clamp(2.4rem, 12vw, 4rem);
+    line-height: 0.98;
   }
 
   .project-grid {

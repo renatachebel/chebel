@@ -67,18 +67,11 @@ const Index: React.FC = () => {
             Renata Chebel
           </h1>
 
-          <div className="mt-9 grid gap-6 border-t border-border pt-5 md:mt-12 md:grid-cols-12 md:items-end">
-            <p className="max-w-xl text-sm leading-relaxed text-foreground md:col-span-5 md:text-base">
-              Nature, memory, and the charged space between the ancestral and the future.
-            </p>
-            <div className="flex items-end justify-between md:col-span-5 md:col-start-8">
-              <div>
-                <p className="text-sm text-muted-foreground">18 works · 2019—2026</p>
-              </div>
-              <a href="#selected-work" aria-label="Explore selected projects" className="flex h-10 w-10 items-center justify-center border border-border text-primary transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground">
-                <ArrowDown size={16} />
-              </a>
-            </div>
+          <div className="mt-7 flex items-end justify-between border-t border-border pt-4 md:mt-9">
+            <p className="text-xs text-muted-foreground">18 works · 2019—2026</p>
+            <a href="#selected-work" aria-label="Explore selected projects" className="flex h-9 w-9 items-center justify-center border border-border text-primary transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground">
+              <ArrowDown size={15} />
+            </a>
           </div>
         </section>
 

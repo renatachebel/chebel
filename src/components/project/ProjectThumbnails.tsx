@@ -29,7 +29,7 @@ const ProjectThumbnails: React.FC<ProjectThumbnailsProps> = ({
               onGalleryOpen(index);
             }}
             className={`relative h-14 w-20 shrink-0 cursor-pointer overflow-hidden transition-all duration-300 hover:opacity-80 sm:h-16 sm:w-24 ${
-              index === selectedImageIndex ? 'ring-2 ring-white/80' : 'opacity-70'
+              index === selectedImageIndex ? 'ring-2 ring-foreground/70' : 'opacity-70'
             }`}
           >
             <img 
@@ -45,7 +45,7 @@ const ProjectThumbnails: React.FC<ProjectThumbnailsProps> = ({
         <Button 
           variant="outline" 
           onClick={() => onGalleryOpen(selectedImageIndex)}
-          className="text-sm font-body tracking-wider border-white/30 hover:border-white hover:bg-white/5"
+          className="border-border font-body text-sm tracking-wider hover:border-foreground hover:bg-muted"
         >
           Gallery View
         </Button>
