@@ -82,14 +82,14 @@ const GalleryModal: React.FC<GalleryModalProps> = ({
                 <button
                   key={index}
                   onClick={() => onImageSelect(index)}
-                  className={`relative flex-shrink-0 w-full h-20 overflow-hidden rounded-md transition-all duration-300 ${
+                  className={`relative aspect-square w-full overflow-hidden transition-all duration-300 ${
                     index === galleryIndex ? 'ring-2 ring-white/80' : 'opacity-50 hover:opacity-80'
                   }`}
                 >
                   <img 
                     src={image} 
                     alt={`${project.title} thumbnail ${index + 1}`} 
-                    className="w-full h-full object-cover"
+                    className="h-full w-full object-cover object-center"
                   />
                 </button>
               ))}
