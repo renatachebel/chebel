@@ -20,7 +20,7 @@ const ProjectThumbnails: React.FC<ProjectThumbnailsProps> = ({
   
   return (
     <div className="mt-6">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      <div className="flex flex-wrap gap-2">
         {project.images.map((image, index) => (
           <button
             key={index}
@@ -28,7 +28,7 @@ const ProjectThumbnails: React.FC<ProjectThumbnailsProps> = ({
               onThumbnailClick(index);
               onGalleryOpen(index);
             }}
-            className={`relative aspect-square w-full overflow-hidden transition-all duration-300 cursor-pointer hover:opacity-80 ${
+            className={`relative h-14 w-20 shrink-0 cursor-pointer overflow-hidden transition-all duration-300 hover:opacity-80 sm:h-16 sm:w-24 ${
               index === selectedImageIndex ? 'ring-2 ring-white/80' : 'opacity-70'
             }`}
           >
