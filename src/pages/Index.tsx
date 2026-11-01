@@ -15,6 +15,30 @@ const categories = [
   { id: 'generative-art', label: 'Generative Art' },
 ];
 
+// Keep the homepage edit simple: change these slugs to swap the selected work.
+const featuredSelections = [
+  {
+    slug: 'the-wedding-of-the-sun-and-the-moon',
+    image: '/lovable-uploads/sunmoon-ensemble.jpg',
+    label: 'Film / Myth / Performance',
+  },
+  {
+    slug: 'sintography',
+    image: '/lovable-uploads/b7f0775c-9f85-42e9-b7b5-a631b5cad119.png',
+    label: 'Generative Art / Photography',
+  },
+  {
+    slug: 'temple-of-reflections',
+    image: '/lovable-uploads/71805de8-4376-4aee-ae83-492aa3ec5f8b.png',
+    label: 'Installation / Artificial Intelligence',
+  },
+  {
+    slug: 'tea-in-alishan',
+    image: '/lovable-uploads/849b9bdb-8012-47d4-95ea-68ed3a0ccf88.png',
+    label: 'Photography / Taiwan',
+  },
+];
+
 const Index: React.FC = () => {
   const [filter, setFilter] = useState('all');
   const visible = projects.filter(project =>
@@ -24,68 +48,78 @@ const Index: React.FC = () => {
       ((filter === 'installation' || filter === 'performance') && category === 'performance-installation')
     )
   );
-  const featured = projects.find(project => project.slug === 'the-wedding-of-the-sun-and-the-moon');
+  const featuredProjects = featuredSelections.flatMap(selection => {
+    const project = projects.find(item => item.slug === selection.slug);
+    return project ? [{ project, ...selection }] : [];
+  });
 
   return (
     <Layout>
       <div className="container-custom">
-        <section className="relative min-h-[72svh] border-x border-border/50 px-4 pb-10 pt-10 md:px-8 md:pb-12 md:pt-12">
-          <div className="mb-12 md:mb-16">
+        <section className="relative border-x border-border/50 px-4 pb-10 pt-9 md:px-8 md:pb-12 md:pt-14">
+          <div className="mb-9 md:mb-12">
             <p className="eyebrow flex items-center gap-2 text-muted-foreground">
               <span className="signal-dot" /> Multimedia artist · Brazil
             </p>
           </div>
 
           <h1 className="portfolio-title relative z-10 animate-fade-in" aria-label="Renata Chebel">
-            <span className="block">Renata</span>
-            <span className="outline-text ml-[7vw] block">Chebel</span>
+            Renata Chebel
           </h1>
 
-          <div className="mt-12 grid gap-8 border-t border-border pt-6 md:mt-16 md:grid-cols-12 md:items-end">
-            <p className="text-base leading-relaxed text-foreground md:col-span-5 md:text-xl">
+          <div className="mt-9 grid gap-6 border-t border-border pt-5 md:mt-12 md:grid-cols-12 md:items-end">
+            <p className="max-w-xl text-sm leading-relaxed text-foreground md:col-span-5 md:text-base">
               Nature, memory, and the charged space between the ancestral and the future.
             </p>
             <div className="flex items-end justify-between md:col-span-5 md:col-start-8">
               <div>
                 <p className="text-sm text-muted-foreground">18 works · 2019—2026</p>
               </div>
-              <a href="#work" aria-label="Explore projects" className="flex h-12 w-12 items-center justify-center border border-border text-primary transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground">
-                <ArrowDown size={18} />
+              <a href="#selected-work" aria-label="Explore selected projects" className="flex h-10 w-10 items-center justify-center border border-border text-primary transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground">
+                <ArrowDown size={16} />
               </a>
             </div>
           </div>
         </section>
 
-        {featured && (
-          <section className="py-16 md:py-24" aria-label="Featured work">
-            <div className="mb-6 flex items-center justify-between border-t border-border pt-5">
-              <p className="eyebrow text-muted-foreground">Featured film</p>
+        {featuredProjects.length > 0 && (
+          <section id="selected-work" className="scroll-mt-28 pb-16 pt-8 md:pb-24 md:pt-10" aria-label="Selected work">
+            <div className="mb-8 flex items-center justify-between border-t border-border pt-4 md:mb-10">
+              <p className="eyebrow text-muted-foreground">Selected work</p>
+              <p className="eyebrow text-muted-foreground">01—{String(featuredProjects.length).padStart(2, '0')}</p>
             </div>
-            <Link to={`/projects/${featured.slug}`} className="group block">
-              <div className="relative overflow-hidden bg-card">
-                <img
-                  src="/lovable-uploads/sunmoon-ensemble.jpg"
-                  alt="A scene from The Wedding of the Sun and the Moon"
-                  className="max-h-[76vh] w-full object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-[1.015]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-70" />
-                <span className="absolute bottom-5 right-5 flex h-14 w-14 items-center justify-center bg-primary text-primary-foreground transition-transform duration-500 group-hover:-translate-y-2 group-hover:translate-x-2 md:bottom-8 md:right-8 md:h-20 md:w-20">
-                  <ArrowUpRight size={26} />
-                </span>
-              </div>
-              <div className="mt-6 grid gap-3 md:grid-cols-12 md:items-end">
-                <h2 className="display-heading text-2xl md:col-span-8 md:text-4xl">{featured.title}</h2>
-                <p className="eyebrow text-muted-foreground md:col-span-4 md:text-right">Film / Myth / Performance</p>
-              </div>
-            </Link>
+            <div className="grid gap-14 md:gap-20">
+              {featuredProjects.map(({ project, image, label }, index) => (
+                <Link to={`/projects/${project.slug}`} className="group block" key={project.slug}>
+                  <div className="relative aspect-[16/10] overflow-hidden bg-card md:aspect-[16/9]">
+                    <img
+                      src={image}
+                      alt={project.title}
+                      className="h-full w-full object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-[1.015]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-60" />
+                    <span className="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center bg-primary text-primary-foreground transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 md:bottom-6 md:right-6 md:h-14 md:w-14">
+                      <ArrowUpRight size={20} />
+                    </span>
+                  </div>
+                  <div className="mt-4 grid gap-2 border-b border-border pb-5 md:grid-cols-12 md:items-end md:pb-6">
+                    <div className="flex items-baseline gap-4 md:col-span-8">
+                      <span className="eyebrow text-muted-foreground">0{index + 1}</span>
+                      <h2 className="display-heading text-xl font-normal md:text-[1.8rem]">{project.title}</h2>
+                    </div>
+                    <p className="eyebrow text-muted-foreground md:col-span-4 md:text-right">{label}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </section>
         )}
 
         <section id="work" aria-label="All artwork" className="scroll-mt-28">
-          <div className="mb-16 border-t border-border pt-7 md:mb-24">
-            <div className="mb-10 flex items-end justify-between">
+          <div className="mb-10 border-t border-border pt-6 md:mb-14">
+            <div className="mb-7 flex items-end justify-between">
               <div className="flex items-baseline gap-4">
-                <h2 className="display-heading text-4xl md:text-6xl">Archive</h2>
+                <h2 className="display-heading text-3xl font-normal md:text-4xl">Archive</h2>
                 <span className="eyebrow text-primary">{String(visible.length).padStart(2, '0')}</span>
               </div>
             </div>
