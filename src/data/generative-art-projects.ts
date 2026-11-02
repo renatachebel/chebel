@@ -23,7 +23,15 @@ export const generativeArtProjects: Project[] = [
       "/lovable-uploads/0d514d00-6cc5-4403-820a-60ee038c4ef6.png",
       "/lovable-uploads/671f4553-32b4-499c-9437-344d9fa89c5c.png",
       "/lovable-uploads/7c01c807-50eb-4d7b-898a-2303f50dbfec.png",
-      "/lovable-uploads/c2025c25-8326-448b-8d05-4c1ae85f98c0.png"
+      "/lovable-uploads/c2025c25-8326-448b-8d05-4c1ae85f98c0.png",
+      "/lovable-uploads/Eden_creation_chebel65a61ad14c110cf4707f7326.jpg",
+      "/lovable-uploads/Eden_creation_chebel65c2b2f00335fa57d2793ea0.jpg",
+      "/lovable-uploads/Eden_creation_chebel65c32aa905ae24529751736f.jpg",
+      "/lovable-uploads/Eden_creation_chebel65c32f1205ae245297580cec.jpg",
+      "/lovable-uploads/Eden_creation_chebel65c150b70335fa57d291f958.jpg",
+      "/lovable-uploads/Eden_creation_chebel661d04d23a1b516798bff7fb.jpg",
+      "/lovable-uploads/Eden_creation_chebel6617c6ae6513250cad9078b7.jpg",
+      "/lovable-uploads/Eden_creation_gene65e54d55449fd2bade121405.jpg"
     ],
     description: "Synthesizing emotion, photography and forgotten gestures into visual memory.",
     date: "2024",
