@@ -7,7 +7,7 @@ export const installationProjects: Project[] = [
     title: "Temple of Reflections",
     slug: "temple-of-reflections",
     category: ["installation"],
-    thumbnail: "/lovable-uploads/71805de8-4376-4aee-ae83-492aa3ec5f8b.png",
+    thumbnail: "/lovable-uploads/c7e6acc7-c0e5-41f9-8825-7cdc3a0f5ec1.png",
     images: [
       "/lovable-uploads/5a223aa9-973a-4b6d-a184-b9ea9abd258c.png",
       "/lovable-uploads/38b192ad-272c-4956-83c6-c9fa8f64592c.png",
