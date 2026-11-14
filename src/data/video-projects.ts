@@ -52,8 +52,9 @@ export const videoProjects: Project[] = [
     title: "Devir-Mulher",
     slug: "devir-mulher",
     category: ["video"],
-    thumbnail: "/lovable-uploads/b96727b9-827c-4d35-ae39-decc6d0dbb74.png",
+    thumbnail: "/lovable-uploads/59bbb507-0147-4e47-82a6-a4e924c20c70.png",
     images: [
+      "/lovable-uploads/59bbb507-0147-4e47-82a6-a4e924c20c70.png",
       "/lovable-uploads/bc696970-4031-4af0-8b78-e02276f42f06.png",
       "/lovable-uploads/4a9f15c8-0420-4a43-8b3b-2e6fe298f525.png",
       "/lovable-uploads/f9481187-860e-4c19-8de7-497da30576a3.png",
@@ -61,7 +62,6 @@ export const videoProjects: Project[] = [
       "/lovable-uploads/a899e474-390e-4ebe-9fd4-13d6003fcb59.png",
       "/lovable-uploads/913b8eb2-2c9e-4b93-a63b-8bfef4716872.png",
       "/lovable-uploads/1a376ed5-eb04-43ab-b915-f512a47a9448.png",
-      "/lovable-uploads/59bbb507-0147-4e47-82a6-a4e924c20c70.png",
       "/lovable-uploads/8e2ded56-cc6e-4361-8380-f384f8210aa6.png",
       "/lovable-uploads/b96727b9-827c-4d35-ae39-decc6d0dbb74.png"
     ],
