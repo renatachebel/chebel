@@ -76,9 +76,9 @@ export const videoProjects: Project[] = [
     title: "Lotus Bloom",
     slug: "lotus-bloom",
     category: ["video"],
-    thumbnail: "/lovable-uploads/48318c35-23f6-4133-8c4a-69ba3191de23.png",
+    thumbnail: "/lovable-uploads/lotus-bloom-thumbnail-square.jpg",
     images: [
-      "/lovable-uploads/48318c35-23f6-4133-8c4a-69ba3191de23.png",
+      "/lovable-uploads/lotus-bloom-cover.jpg",
       "/lovable-uploads/846197ea-c128-4545-9df6-77947b19080c.png",
       "/lovable-uploads/53bf42c5-67aa-44df-a8f8-7fda6105553c.png",
       "/lovable-uploads/c26add69-8f87-48fd-8289-565851fdab4e.png",
