@@ -52,10 +52,9 @@ export const videoProjects: Project[] = [
     title: "Devir-Mulher",
     slug: "devir-mulher",
     category: ["video"],
-    thumbnail: "/lovable-uploads/59bbb507-0147-4e47-82a6-a4e924c20c70.png",
+    thumbnail: "/lovable-uploads/devir-mulher-thumbnail-square.jpg",
     images: [
-      "/lovable-uploads/59bbb507-0147-4e47-82a6-a4e924c20c70.png",
-      "/lovable-uploads/bc696970-4031-4af0-8b78-e02276f42f06.png",
+      "/lovable-uploads/devir-mulher-cover.jpg",
       "/lovable-uploads/4a9f15c8-0420-4a43-8b3b-2e6fe298f525.png",
       "/lovable-uploads/f9481187-860e-4c19-8de7-497da30576a3.png",
       "/lovable-uploads/e1808083-5d7c-42dd-8123-8f8fdebd9cce.png",
