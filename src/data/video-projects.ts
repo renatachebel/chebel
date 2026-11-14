@@ -28,14 +28,14 @@ export const videoProjects: Project[] = [
     title: "Premio SIM - TV Globo",
     slug: "premio-sim-tv-globo",
     category: ["video"],
-    thumbnail: "/lovable-uploads/ccfae5d7-6fba-47e7-98cc-7c6e0de82514.png",
+    thumbnail: "/lovable-uploads/0ee8a45d-7459-4b76-83a4-6bd821b11928.png",
     images: [
+      "/lovable-uploads/0ee8a45d-7459-4b76-83a4-6bd821b11928.png",
       "/lovable-uploads/ccfae5d7-6fba-47e7-98cc-7c6e0de82514.png",
       "/lovable-uploads/10d14a41-1470-4faa-8d5e-fabc65cae94c.png",
       "/lovable-uploads/2ee34d11-ddb6-4cd3-a615-e5a75296e39f.png",
       "/lovable-uploads/678e8169-79b7-4170-911c-94ade82d9cfa.png",
       "/lovable-uploads/74ae1fcc-463f-4adb-8d04-0378372c9034.png",
-      "/lovable-uploads/0ee8a45d-7459-4b76-83a4-6bd821b11928.png",
       "/lovable-uploads/8191abda-932b-438f-a5df-880c8416a07f.png",
       "/lovable-uploads/673bc75d-0027-4d1f-898f-6caf305d4f1d.png",
       "/lovable-uploads/f80316da-610c-4a0a-aa46-facea08d2b5d.png"
