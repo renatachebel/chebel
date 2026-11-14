@@ -29,7 +29,7 @@ const featuredSelections = [
   },
   {
     slug: 'temple-of-reflections',
-    image: '/lovable-uploads/c7e6acc7-c0e5-41f9-8825-7cdc3a0f5ec1.png',
+    image: '/lovable-uploads/temple-of-reflections-cover.jpg',
     label: 'Installation / Artificial Intelligence',
   },
   {
