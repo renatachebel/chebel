@@ -24,7 +24,7 @@ const featuredSelections = [
   },
   {
     slug: 'sintography',
-    image: '/lovable-uploads/b7f0775c-9f85-42e9-b7b5-a631b5cad119.png',
+    image: '/lovable-uploads/Eden_creation_chebel65c32aa905ae24529751736f.jpg',
     label: 'Generative Art / Photography',
   },
   {
