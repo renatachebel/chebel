@@ -19,7 +19,7 @@ const categories = [
 const featuredSelections = [
   {
     slug: 'the-wedding-of-the-sun-and-the-moon',
-    image: '/lovable-uploads/sunmoon-ensemble.jpg',
+    image: '/lovable-uploads/wedding-sun-moon-cover.jpg',
     label: 'Film / Myth / Performance',
   },
   {
