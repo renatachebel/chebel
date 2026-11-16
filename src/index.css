@@ -39,6 +39,7 @@
   html {
     @apply scroll-smooth antialiased;
     background: hsl(var(--background));
+    font-size: 17px;
   }
 
   body {
@@ -78,7 +79,7 @@
 
   .portfolio-title {
     font-family: "Syne Variable", "Syne", sans-serif;
-    font-size: clamp(2.4rem, 5.2vw, 5.25rem);
+    font-size: clamp(2.4rem, 5.2vw, 4.7rem);
     font-weight: 470;
     line-height: 0.96;
     letter-spacing: -0.045em;
@@ -86,7 +87,7 @@
 
   .brand-name {
     font-family: "Syne Variable", "Syne", sans-serif;
-    font-size: 1.05rem;
+    font-size: 1.25rem;
     font-weight: 470;
     letter-spacing: -0.035em;
   }
@@ -244,6 +245,12 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .project-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
   }
 }
 

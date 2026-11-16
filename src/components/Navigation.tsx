@@ -22,7 +22,7 @@ const Navigation: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/85 backdrop-blur-xl">
-      <div className="container-custom flex h-[76px] items-center justify-between gap-6">
+      <div className="container-custom flex h-[82px] items-center justify-between gap-6">
         <Link to="/" className="group" aria-label="Renata Chebel, home">
           <span className="brand-name">Renata Chebel</span>
         </Link>

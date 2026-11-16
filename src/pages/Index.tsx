@@ -56,27 +56,23 @@ const Index: React.FC = () => {
   return (
     <Layout>
       <div className="container-custom">
-        <section className="relative border-x border-border/50 px-4 pb-10 pt-9 md:px-8 md:pb-12 md:pt-14">
-          <div className="mb-9 md:mb-12">
+        <section className="border-x border-b border-border/50 px-4 py-6 md:px-8 md:py-7">
+          <h1 className="sr-only">Renata Chebel</h1>
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
             <p className="eyebrow flex items-center gap-2 text-muted-foreground">
               <span className="signal-dot" /> Multimedia artist · Brazil
             </p>
-          </div>
-
-          <h1 className="portfolio-title relative z-10 animate-fade-in" aria-label="Renata Chebel">
-            Renata Chebel
-          </h1>
-
-          <div className="mt-7 flex items-end justify-between border-t border-border pt-4 md:mt-9">
-            <p className="text-sm text-muted-foreground">18 works · 2019—2026</p>
-            <a href="#selected-work" aria-label="Explore selected projects" className="flex h-9 w-9 items-center justify-center border border-border text-primary transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground">
-              <ArrowDown size={15} />
-            </a>
+            <div className="flex items-center justify-between gap-7 sm:justify-end">
+              <p className="text-base text-muted-foreground">18 works · 2019—2026</p>
+              <a href="#selected-work" aria-label="Explore selected projects" className="flex h-10 w-10 items-center justify-center border border-border text-primary transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground">
+                <ArrowDown size={16} />
+              </a>
+            </div>
           </div>
         </section>
 
         {featuredProjects.length > 0 && (
-          <section id="selected-work" className="scroll-mt-28 pb-16 pt-8 md:pb-24 md:pt-10" aria-label="Selected work">
+          <section id="selected-work" className="scroll-mt-28 pb-16 pt-10 md:pb-24 md:pt-12" aria-label="Selected work">
             <div className="mb-8 flex items-center justify-between border-t border-border pt-4 md:mb-10">
               <p className="eyebrow text-muted-foreground">Selected work</p>
               <p className="eyebrow text-muted-foreground">01—{String(featuredProjects.length).padStart(2, '0')}</p>
