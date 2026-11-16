@@ -64,8 +64,8 @@
   }
 
   .eyebrow {
-    @apply font-body text-[0.7rem] font-medium uppercase;
-    letter-spacing: 0.18em;
+    @apply font-body text-[0.78rem] font-medium uppercase;
+    letter-spacing: 0.16em;
   }
 
   .signal-dot {

@@ -51,7 +51,7 @@ const ProjectDetail: React.FC<{ project: Project }> = ({ project }) => {
           <p className="eyebrow mb-5 text-primary">{project.category.map(category => category.replace(/-/g, ' ')).join(' / ')}</p>
           <h1 className="display-heading text-[clamp(2.5rem,5.5vw,5.5rem)]">{project.title}</h1>
         </div>
-        <p className="text-base leading-7 text-muted-foreground md:col-span-4">{project.description}</p>
+        <p className="text-[1.08rem] leading-8 text-muted-foreground md:col-span-4">{project.description}</p>
       </div>
 
       <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
