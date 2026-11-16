@@ -54,8 +54,8 @@ const ProjectDetail: React.FC<{ project: Project }> = ({ project }) => {
         <p className="text-[1.08rem] leading-8 text-muted-foreground md:col-span-4">{project.description}</p>
       </div>
 
-      <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
-        <div className="lg:col-span-8">
+      <div className="grid grid-cols-1 gap-14 xl:grid-cols-12 xl:gap-16">
+        <div className="xl:col-span-9">
           <MediaRenderer
             project={project}
             selectedImageIndex={selectedImageIndex}

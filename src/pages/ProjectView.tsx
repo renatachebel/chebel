@@ -35,7 +35,7 @@ const ProjectView: React.FC = () => {
 
   return (
     <Layout>
-      <div className="container-custom py-8 md:py-14">
+      <div className="project-container py-8 md:py-14">
         <Link to="/" className="eyebrow mb-10 inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary md:mb-16">
           <ArrowLeft size={15} /> Back to archive
         </Link>

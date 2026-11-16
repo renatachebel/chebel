@@ -13,7 +13,7 @@ const ProjectInfo: React.FC<{ project: Project }> = ({ project }) => {
   ].filter((fact): fact is [string, string] => Boolean(fact[1]));
 
   return (
-    <aside className="self-start border-t border-border lg:sticky lg:top-28 lg:col-span-4">
+    <aside className="self-start border-t border-border xl:sticky xl:top-28 xl:col-span-3">
       <div className="py-6">
         <p className="eyebrow mb-5 text-primary">Project notes</p>
         <p className="whitespace-pre-line text-base leading-8 text-muted-foreground md:text-[1.08rem]">{project.details}</p>
