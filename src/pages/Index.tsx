@@ -63,7 +63,7 @@ const Index: React.FC = () => {
               <span className="signal-dot" /> Multimedia artist · Brazil
             </p>
             <div className="flex items-center justify-between gap-7 sm:justify-end">
-              <p className="text-base text-muted-foreground">18 works · 2019—2026</p>
+              <p className="text-base text-muted-foreground">{projects.length} works · 2019—2026</p>
               <a href="#selected-work" aria-label="Explore selected projects" className="flex h-10 w-10 items-center justify-center border border-border text-primary transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground">
                 <ArrowDown size={16} />
               </a>

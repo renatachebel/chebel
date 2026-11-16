@@ -19,38 +19,41 @@ const mergedProjects: Project[] = Array.from(new Map([
   ...iluminaVideoProjects,
 ].map(project => [project.slug, project])).values());
 
-// Arrange the archive as a visual color journey: neutral and pale tones,
-// through pinks and greens, into blues, purples, and saturated neon work.
-const paletteOrder = [
-  'music-videos',
-  'artist-videos',
-  'devir-mulher',
-  'sintography',
+// Keep unpublished work in the source data so it can be restored later.
+const hiddenProjectSlugs = new Set(['o-poder-da-floresta']);
+
+// Curated portfolio order, matching the approved visual sequence.
+const portfolioOrder = [
   'lemniscata',
+  'sintography',
+  'the-wedding-of-the-sun-and-the-moon',
+  'devir-mulher',
+  'premio-sim-tv-globo',
+  'bodies-of-water',
   'lotus-bloom',
   'tea-in-alishan',
-  'o-poder-da-floresta',
+  'music-videos',
+  'artist-videos',
   'china-oddities',
+  'temple-of-reflections',
+  'rainbow-road',
   'alma-da-selva-amazonia-mapping',
-  'bodies-of-water',
-  'the-wedding-of-the-sun-and-the-moon',
-  'premio-sim-tv-globo',
-  'fanta-konate',
   'ancestresses',
   'nature-of-movement',
-  'rainbow-road',
-  'temple-of-reflections',
+  'fanta-konate',
 ] as const;
 
-const paletteRank = new Map<string, number>(
-  paletteOrder.map((slug, index) => [slug, index]),
+const portfolioRank = new Map<string, number>(
+  portfolioOrder.map((slug, index) => [slug, index]),
 );
 
-export const projects: Project[] = [...mergedProjects].sort(
-  (a, b) =>
-    (paletteRank.get(a.slug) ?? Number.MAX_SAFE_INTEGER) -
-    (paletteRank.get(b.slug) ?? Number.MAX_SAFE_INTEGER),
-);
+export const projects: Project[] = [...mergedProjects]
+  .filter(project => !hiddenProjectSlugs.has(project.slug))
+  .sort(
+    (a, b) =>
+      (portfolioRank.get(a.slug) ?? Number.MAX_SAFE_INTEGER) -
+      (portfolioRank.get(b.slug) ?? Number.MAX_SAFE_INTEGER),
+  );
 
 // Compatibility alias for existing imports.
 export const allProjectsIncludingIlumina = projects;
