@@ -32,7 +32,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               <p>Brazil · Working worldwide</p>
             </div>
           </div>
-          <div className="mt-10 flex flex-col justify-between gap-2 border-t border-border pt-4 text-[0.62rem] uppercase tracking-[0.16em] text-muted-foreground sm:flex-row">
+          <div className="mt-10 flex flex-col justify-between gap-2 border-t border-border pt-4 text-[0.7rem] uppercase tracking-[0.16em] text-muted-foreground sm:flex-row">
             <span>© {new Date().getFullYear()} Renata Chebel</span>
           </div>
         </div>

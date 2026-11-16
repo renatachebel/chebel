@@ -20,7 +20,7 @@ const featuredSelections = [
   {
     slug: 'the-wedding-of-the-sun-and-the-moon',
     image: '/lovable-uploads/wedding-sun-moon-cover.jpg',
-    label: 'Film / Myth / Performance',
+    label: 'Film / Generative Art',
   },
   {
     slug: 'sintography',
@@ -68,7 +68,7 @@ const Index: React.FC = () => {
           </h1>
 
           <div className="mt-7 flex items-end justify-between border-t border-border pt-4 md:mt-9">
-            <p className="text-xs text-muted-foreground">18 works · 2019—2026</p>
+            <p className="text-sm text-muted-foreground">18 works · 2019—2026</p>
             <a href="#selected-work" aria-label="Explore selected projects" className="flex h-9 w-9 items-center justify-center border border-border text-primary transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground">
               <ArrowDown size={15} />
             </a>
@@ -123,7 +123,7 @@ const Index: React.FC = () => {
                   variant="outline"
                   aria-pressed={filter === category.id}
                   onClick={() => setFilter(category.id)}
-                  className={`h-10 shrink-0 rounded-none border px-4 text-[0.68rem] font-semibold uppercase tracking-[0.13em] transition-colors ${filter === category.id ? 'border-primary bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground' : 'border-border bg-transparent text-muted-foreground hover:border-foreground hover:bg-transparent hover:text-foreground'}`}
+                  className={`h-10 shrink-0 rounded-none border px-4 text-[0.74rem] font-semibold uppercase tracking-[0.13em] transition-colors ${filter === category.id ? 'border-primary bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground' : 'border-border bg-transparent text-muted-foreground hover:border-foreground hover:bg-transparent hover:text-foreground'}`}
                 >
                   {category.label}
                 </Button>

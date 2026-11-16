@@ -44,7 +44,7 @@ const Navigation: React.FC = () => {
 
         <a
           href="mailto:chebel@gmail.com"
-          className="hidden items-center gap-2 border border-primary bg-primary px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.13em] text-primary-foreground transition-colors hover:bg-transparent hover:text-primary md:inline-flex"
+          className="hidden items-center gap-2 border border-primary bg-primary px-4 py-2.5 text-sm font-semibold uppercase tracking-[0.13em] text-primary-foreground transition-colors hover:bg-transparent hover:text-primary md:inline-flex"
         >
           Contact <ArrowUpRight size={15} />
         </a>
@@ -68,7 +68,7 @@ const Navigation: React.FC = () => {
             {links.map((link, index) => (
               <Link key={link.to} to={link.to} className="group flex items-center justify-between border-b border-border py-4">
                 <span className="display-heading text-3xl">{link.label}</span>
-                <span className="text-xs text-muted-foreground">0{index + 1}</span>
+                <span className="text-sm text-muted-foreground">0{index + 1}</span>
               </Link>
             ))}
             <a href="mailto:chebel@gmail.com" className="mt-7 inline-flex items-center gap-2 text-primary">

@@ -44,6 +44,8 @@
   body {
     @apply overflow-x-hidden bg-background font-body text-foreground;
     min-width: 320px;
+    font-size: 1.03rem;
+    line-height: 1.6;
     letter-spacing: -0.012em;
   }
 
@@ -62,7 +64,7 @@
   }
 
   .eyebrow {
-    @apply font-body text-[0.64rem] font-medium uppercase;
+    @apply font-body text-[0.7rem] font-medium uppercase;
     letter-spacing: 0.18em;
   }
 
@@ -75,18 +77,18 @@
   }
 
   .portfolio-title {
-    font-family: "Bodoni 72", Didot, "Iowan Old Style", Baskerville, Georgia, "Times New Roman", serif;
+    font-family: "Syne Variable", "Syne", sans-serif;
     font-size: clamp(2.4rem, 5.2vw, 5.25rem);
-    font-weight: 400;
+    font-weight: 470;
     line-height: 0.96;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.045em;
   }
 
   .brand-name {
-    font-family: "Bodoni 72", Didot, "Iowan Old Style", Baskerville, Georgia, "Times New Roman", serif;
+    font-family: "Syne Variable", "Syne", sans-serif;
     font-size: 1.05rem;
-    font-weight: 400;
-    letter-spacing: -0.02em;
+    font-weight: 470;
+    letter-spacing: -0.035em;
   }
 
   .display-heading {
