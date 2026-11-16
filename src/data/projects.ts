@@ -28,6 +28,7 @@ const portfolioOrder = [
   'sintography',
   'the-wedding-of-the-sun-and-the-moon',
   'devir-mulher',
+  'quebranto',
   'premio-sim-tv-globo',
   'bodies-of-water',
   'lotus-bloom',

@@ -72,6 +72,21 @@ export const videoProjects: Project[] = [
     details: "Devir-Mulher is a poetic exploration of feminine identity, transformation, and the multifaceted experience of womanhood. Created in partnership with Morena Cardoso and Danzamedicina, this video piece was part of the Cabiria Film Festival 2020.\n\nThe work delves into the intimate and universal aspects of being a woman, capturing moments of vulnerability, strength, connection, and self-discovery. Through a series of carefully composed visual narratives, the piece explores themes of bodily autonomy, sisterhood, sensuality, and the cyclical nature of feminine experience.\n\nThe collaboration brings together different artistic perspectives to create a visual poem that celebrates the complexity and beauty of feminine existence. The imagery flows between moments of solitude and communion, nature and intimacy, creating a meditative space for reflection on what it means to embody and express femininity in contemporary society."
   },
   {
+    id: 18,
+    title: "Quebranto",
+    slug: "quebranto",
+    category: ["video"],
+    thumbnail: "/lovable-uploads/quebranto-thumbnail-square.jpg",
+    images: [
+      "/lovable-uploads/quebranto-cover.jpg"
+    ],
+    youtubeId: "YvaUv4noK_I",
+    description: "A video-performance conceived as an act of psychomagic, created in collaboration with Morena Cardoso of Danzamedicina.",
+    date: "2026",
+    isFeatured: false,
+    details: "Quebranto is a video-performance conceived as an act of psychomagic, created in collaboration with Morena Cardoso of Danzamedicina.\n\nFilm and soundscape by Renata Chebel. Performance by Morena Cardoso."
+  },
+  {
     id: 6,
     title: "Lotus Bloom",
     slug: "lotus-bloom",
