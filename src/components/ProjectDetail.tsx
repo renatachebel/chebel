@@ -46,12 +46,12 @@ const ProjectDetail: React.FC<{ project: Project }> = ({ project }) => {
 
   return (
     <div className="animate-fade-in">
-      <div className="mb-14 grid gap-8 border-y border-border py-8 md:mb-20 md:grid-cols-12 md:items-end md:py-12">
-        <div className="md:col-span-8">
+      <div className="mb-14 grid gap-8 border-y border-border py-8 md:mb-20 md:py-12 xl:grid-cols-12 xl:items-end xl:gap-16">
+        <div className="xl:col-span-9">
           <p className="eyebrow mb-5 text-primary">{project.category.map(category => category.replace(/-/g, ' ')).join(' / ')}</p>
           <h1 className="display-heading text-[clamp(2.5rem,5.5vw,5.5rem)]">{project.title}</h1>
         </div>
-        <p className="text-[1.08rem] leading-8 text-muted-foreground md:col-span-4">{project.description}</p>
+        <p className="text-[1.08rem] leading-8 text-muted-foreground xl:col-span-3">{project.description}</p>
       </div>
 
       <div className="grid grid-cols-1 gap-14 xl:grid-cols-12 xl:gap-16">
