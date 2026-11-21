@@ -37,6 +37,7 @@ const portfolioOrder = [
   'artist-videos',
   'china-oddities',
   'temple-of-reflections',
+  'fluvial',
   'rainbow-road',
   'alma-da-selva-amazonia-mapping',
   'ancestresses',
