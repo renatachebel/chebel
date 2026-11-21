@@ -20,11 +20,10 @@ const mergedProjects: Project[] = Array.from(new Map([
 ].map(project => [project.slug, project])).values());
 
 // Keep unpublished work in the source data so it can be restored later.
-const hiddenProjectSlugs = new Set(['o-poder-da-floresta']);
+const hiddenProjectSlugs = new Set(['o-poder-da-floresta', 'lotus-bloom']);
 
 // Curated portfolio order, matching the approved visual sequence.
 const portfolioOrder = [
-  'lemniscata',
   'sintography',
   'the-wedding-of-the-sun-and-the-moon',
   'devir-mulher',

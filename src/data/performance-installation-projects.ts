@@ -43,30 +43,6 @@ export const performanceInstallationProjects: Project[] = [
     details: "Fluvial is an immersive live audiovisual performance developed at the Amazonia Imersiva Art Residency in Belém, Brazil, by Renata Chebel and Glasgow-based musician and composer Sonia Killmann. Inside a 360° projection environment spanning the walls and floor, audiences move freely around a boat-like central platform and enter a submerged Amazonian ecosystem populated by piranhas, manatees, jaguars, and Yaras - Amazonian river spirits.\n\nGrounded in Donna Haraway's concept of \"making kin\" and Indigenous Amazonian philosophy, the work positions the human as one temporary participant in a dense network of coexistence, vulnerability, and transformation.\n\nAI-generated imagery, animation, expanded cinema, voice, saxophone, modular synthesis, live looping, and local instruments are manipulated in real time. Each 30-40 minute performance becomes a singular, unstable ecosystem, much like the rivers that inspired it.\n\nConcept & Visuals: Renata Chebel\nSound & Music: Sonia Killmann\nPhotography: Bruno Carachesti / Lorena Fadul / Amazonia Imersiva"
   },
   {
-    id: 8,
-    title: "Lemniscata",
-    slug: "lemniscata",
-    category: ["installation", "performance"],
-    thumbnail: "/lovable-uploads/lemniscata/lemniscata-thumbnail-square.jpg",
-    images: [
-      "/lovable-uploads/lemniscata/lemniscata-01.jpg",
-      "/lovable-uploads/lemniscata/lemniscata-02.jpg",
-      "/lovable-uploads/lemniscata/lemniscata-03.jpg",
-      "/lovable-uploads/lemniscata/lemniscata-04.jpg",
-      "/lovable-uploads/lemniscata/lemniscata-05.jpg",
-      "/lovable-uploads/lemniscata/lemniscata-06.jpg",
-      "/lovable-uploads/lemniscata/lemniscata-07.jpg",
-      "/lovable-uploads/lemniscata/lemniscata-08.jpg",
-      "/lovable-uploads/lemniscata/lemniscata-09.jpg",
-      "/lovable-uploads/lemniscata/lemniscata-10.jpg"
-    ],
-    description: "A generative art project that explores emotion, memory, and the feminine through the intersection of photography and AI.",
-    date: "2024",
-    location: "Bombay Beach Biennale, USA",
-    isFeatured: true,
-    details: "Lemniscata (from Latin \"decorated with ribbons\", also the mathematic symbol for infinite) is a generative art project that explores emotion, memory, and the feminine through the intersection of photography and AI. I trained a LoRA model on the abstract expressionist works of overlooked women painters—such as Lee Krasner, Elaine de Kooning, and Helen Frankenthaler—and applied it to photographs of women engaged in dance therapy (Danzamedicina, by Morena Cardoso). The result is a series of \"sintographs\": images that blend photographic presence with painterly, emotional abstraction.\n\nPrinted on fabric and embroidered by hand, these pieces reconnect the digital with the tactile. The project was presented at the Poetry House during the Bombay Beach Biennale 2024, where it featured a live embroidery performance as part of the installation."
-  },
-  {
     id: 2,
     title: "Rainbow Road",
     slug: "rainbow-road",

@@ -25,7 +25,7 @@ const featuredSelections = [
   {
     slug: 'sintography',
     image: '/lovable-uploads/Eden_creation_chebel65c32aa905ae24529751736f.jpg',
-    label: 'Generative Art / Photography',
+    label: 'Generative Art / Installation',
   },
   {
     slug: 'temple-of-reflections',

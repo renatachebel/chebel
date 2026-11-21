@@ -5,6 +5,7 @@ import ProjectThumbnails from './project/ProjectThumbnails';
 import ProjectGallery from './project/ProjectGallery';
 import ProjectInfo from './project/ProjectInfo';
 import GalleryModal from './project/GalleryModal';
+import EditorialProjectDetail from './project/EditorialProjectDetail';
 
 const ProjectDetail: React.FC<{ project: Project }> = ({ project }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -18,6 +19,10 @@ const ProjectDetail: React.FC<{ project: Project }> = ({ project }) => {
     setIsLoading(true);
     setGalleryOpen(false);
   }, [project.id]);
+
+  if (project.editorialSections) {
+    return <EditorialProjectDetail project={project} />;
+  }
 
   const handleImageLoad = (event: React.SyntheticEvent<HTMLImageElement>) => {
     const image = event.currentTarget;

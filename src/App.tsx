@@ -26,6 +26,7 @@ const App = () => (
           <Route path="/ilumina" element={<Navigate to="/" replace />} />
           <Route path="/all-projects" element={<Navigate to="/" replace />} />
           <Route path="/projects" element={<Navigate to="/" replace />} />
+          <Route path="/projects/lemniscata" element={<Navigate to="/projects/sintography#lemniscata" replace />} />
           <Route path="/projects/:slug" element={<ProjectView />} />
           <Route path="/about" element={<About />} />
           <Route path="/photodiary" element={<Sketchbook />} />

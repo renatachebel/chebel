@@ -29,6 +29,23 @@ const ProjectView: React.FC = () => {
     setNextProject(index < projects.length - 1 ? projects[index + 1] : null);
   }, [slug, navigate]);
 
+  useEffect(() => {
+    if (!project || !window.location.hash) return;
+
+    const sectionId = window.location.hash.slice(1);
+    const scrollToSection = () => document.getElementById(sectionId)?.scrollIntoView({ block: 'start' });
+    const frame = window.requestAnimationFrame(scrollToSection);
+    const observer = new ResizeObserver(scrollToSection);
+    observer.observe(document.documentElement);
+    const stopObserving = window.setTimeout(() => observer.disconnect(), 5000);
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.clearTimeout(stopObserving);
+      observer.disconnect();
+    };
+  }, [project]);
+
   if (!project) {
     return <Layout><div className="container-custom flex min-h-[50vh] items-center justify-center"><span className="signal-dot animate-pulse" /></div></Layout>;
   }
