@@ -1,12 +1,9 @@
 import React from 'react';
-import { ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 
 const Sketchbook: React.FC = () => (
   <Layout>
     <div className="container-custom py-10 md:py-16">
-      <Link to="/" className="eyebrow mb-12 inline-flex items-center gap-2 text-muted-foreground hover:text-primary"><ArrowLeft size={15} /> Back to archive</Link>
       <div className="mb-12 border-y border-border py-8">
         <p className="eyebrow mb-5 text-primary">Ongoing visual research</p>
         <h1 className="display-heading text-4xl md:text-6xl">Photo diary</h1>

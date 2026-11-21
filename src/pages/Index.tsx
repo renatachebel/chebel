@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import Layout from '../components/Layout';
 import ProjectCard from '../components/ProjectCard';
 import { projects } from '../data/projects';
@@ -56,20 +56,7 @@ const Index: React.FC = () => {
   return (
     <Layout>
       <div className="container-custom">
-        <section className="border-x border-b border-border/50 px-4 py-6 md:px-8 md:py-7">
-          <h1 className="sr-only">Renata Chebel</h1>
-          <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <p className="eyebrow flex items-center gap-2 text-muted-foreground">
-              <span className="signal-dot" /> Multimedia artist · Brazil
-            </p>
-            <div className="flex items-center justify-between gap-7 sm:justify-end">
-              <p className="text-base text-muted-foreground">{projects.length} works · 2019—2026</p>
-              <a href="#selected-work" aria-label="Explore selected projects" className="flex h-10 w-10 items-center justify-center border border-border text-primary transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground">
-                <ArrowDown size={16} />
-              </a>
-            </div>
-          </div>
-        </section>
+        <h1 className="sr-only">Renata Chebel</h1>
 
         {featuredProjects.length > 0 && (
           <section id="selected-work" className="scroll-mt-28 pb-16 pt-10 md:pb-24 md:pt-12" aria-label="Selected work">
