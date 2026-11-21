@@ -9,7 +9,7 @@ export const performanceInstallationProjects: Project[] = [
     category: ["installation", "performance"],
     thumbnail: "/lovable-uploads/fluvial/fluvial-thumbnail-square.jpg",
     images: [
-      "/lovable-uploads/fluvial/fluvial-03.jpg",
+      "/lovable-uploads/fluvial/fluvial-cover.jpg",
       "/lovable-uploads/fluvial/fluvial-01.jpg",
       "/lovable-uploads/fluvial/fluvial-02.jpg",
       "/lovable-uploads/fluvial/fluvial-04.jpg",
