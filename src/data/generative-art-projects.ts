@@ -185,7 +185,6 @@ export const generativeArtProjects: Project[] = [
         body: "The physical installation brings Sintography into space: images become surfaces, threads become drawings, and the act of making remains visible as part of the work.",
         images: [
           "/lovable-uploads/lemniscata/lemniscata-01.jpg",
-          "/lovable-uploads/lemniscata/lemniscata-02.jpg",
           "/lovable-uploads/lemniscata/lemniscata-03.jpg",
           "/lovable-uploads/lemniscata/lemniscata-04.jpg",
           "/lovable-uploads/lemniscata/lemniscata-05.jpg",

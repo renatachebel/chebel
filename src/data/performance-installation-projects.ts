@@ -67,7 +67,7 @@ export const performanceInstallationProjects: Project[] = [
       "/lovable-uploads/b98b3cb5-2871-4738-afad-318075d504fa.png"
     ],
     description: "An innovative performance project blending urban exploration with digital art through a mobile projection setup.",
-    date: "2023",
+    date: "2023-2024",
     location: "Various Urban Locations",
     isFeatured: true,
     details: "Rainbow Road is an innovative performance project by the creative duo Chebel and Microdosys, blending urban exploration with digital art through a mobile setup. Using a modified golf cart equipped with a projector, computer, and speakers, they navigate cityscapes, transforming ordinary surfaces into ephemeral canvases of AI-generated animations. This spontaneous, site-specific approach allows them to engage with the architectural and cultural textures of urban spaces, creating vivid, luminous interventions that challenge conventional notions of street art and digital media. Rainbow Road is a celebration of color, movement, and the transformative power of technology in reimagining public spaces, offering a fresh perspective on the intersections of art, architecture, and community engagement."

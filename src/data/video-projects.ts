@@ -18,7 +18,7 @@ export const videoProjects: Project[] = [
     ],
     youtubeId: "E_PkHGJH0PA",
     description: "A surreal AI-generated film in which the Sun and the Moon are married at the edge of an eclipse.",
-    date: "",
+    date: "2026",
     location: "International Film Festivals",
     isFeatured: true,
     details: "A constellation dreams as clouds gather for a surreal wedding at the edge of an eclipse. Drawing from tarot, astronomy, mythology, and 1960s Eastern European cinema, the film evokes the ritual dimension of cyclical cosmic events and their myth-making force. As celestial bodies shift genders and roles, the Sun and Moon lead a mysterious, ever-changing dance.\n\nThe film was selected for multiple festivals, including the Bombay Beach Biennale, Seoul International AI Film Festival, AI Film Fest Serbia, Randfilmfest in Kassel, and the International Festival of Monuments in Brazil."
@@ -66,7 +66,7 @@ export const videoProjects: Project[] = [
     ],
     youtubeId: "r02RDeHWYBQ",
     description: "A poetic video about being and becoming a woman, a partnership with Morena Cardoso and Danzamedicina.",
-    date: "2020",
+    date: "2019",
     location: "Cabiria Film Festival 2020",
     isFeatured: true,
     details: "Devir-Mulher is a poetic exploration of feminine identity, transformation, and the multifaceted experience of womanhood. Created in partnership with Morena Cardoso and Danzamedicina, this video piece was part of the Cabiria Film Festival 2020.\n\nThe work delves into the intimate and universal aspects of being a woman, capturing moments of vulnerability, strength, connection, and self-discovery. Through a series of carefully composed visual narratives, the piece explores themes of bodily autonomy, sisterhood, sensuality, and the cyclical nature of feminine experience.\n\nThe collaboration brings together different artistic perspectives to create a visual poem that celebrates the complexity and beauty of feminine existence. The imagery flows between moments of solitude and communion, nature and intimacy, creating a meditative space for reflection on what it means to embody and express femininity in contemporary society."
