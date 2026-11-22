@@ -11,7 +11,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
     <div className="project-card__media">
       <img src={project.thumbnail} alt={project.title} loading="lazy" className="project-card__image" />
     </div>
-    <div className="mt-3 border-t border-border pt-3">
+    <div className="mt-3">
       <div>
         <h3 className="display-heading text-[1.02rem] font-normal leading-tight transition-colors group-hover:text-primary md:text-[1.15rem]">{project.title}</h3>
         <p className="eyebrow mt-2 text-muted-foreground">

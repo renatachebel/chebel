@@ -11,7 +11,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Navigation />
       <main className="flex-grow">{children}</main>
-      <footer className="mt-20 border-t border-border">
+      <footer className="mt-16">
         <div className="container-custom py-10 md:py-12">
           <div className="grid gap-9 sm:grid-cols-2 lg:grid-cols-3">
             <div>
@@ -32,7 +32,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               <p>Brazil · Working worldwide</p>
             </div>
           </div>
-          <div className="mt-10 flex flex-col justify-between gap-2 border-t border-border pt-4 text-[0.7rem] uppercase tracking-[0.16em] text-muted-foreground sm:flex-row">
+          <div className="mt-10 flex flex-col justify-between gap-2 text-[0.7rem] uppercase tracking-[0.16em] text-muted-foreground sm:flex-row">
             <span>© {new Date().getFullYear()} Renata Chebel</span>
           </div>
         </div>

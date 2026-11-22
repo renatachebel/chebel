@@ -55,15 +55,15 @@ const ProjectView: React.FC = () => {
       <div className="container-custom py-8 md:py-14">
         <ProjectDetail project={project} />
         <RelatedProjects currentProject={project} allProjects={projects} />
-        <div className="mt-24 grid border-t border-border md:grid-cols-2">
+        <div className="mt-20 grid gap-10 md:mt-28 md:grid-cols-2 md:gap-16">
           {prevProject ? (
-            <Link to={`/projects/${prevProject.slug}`} className="group flex items-center gap-4 border-b border-border py-8 md:border-b-0 md:border-r md:pr-8">
+            <Link to={`/projects/${prevProject.slug}`} className="group flex items-center gap-4 py-4">
               <ArrowLeft size={20} className="text-primary transition-transform group-hover:-translate-x-2" />
               <span><span className="eyebrow block text-muted-foreground">Previous</span><span className="display-heading mt-2 block text-2xl">{prevProject.title}</span></span>
             </Link>
           ) : <div />}
           {nextProject ? (
-            <Link to={`/projects/${nextProject.slug}`} className="group flex items-center justify-end gap-4 py-8 text-right md:pl-8">
+            <Link to={`/projects/${nextProject.slug}`} className="group flex items-center justify-end gap-4 py-4 text-right">
               <span><span className="eyebrow block text-muted-foreground">Next</span><span className="display-heading mt-2 block text-2xl">{nextProject.title}</span></span>
               <ArrowRight size={20} className="text-primary transition-transform group-hover:translate-x-2" />
             </Link>

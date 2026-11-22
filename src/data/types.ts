@@ -18,6 +18,7 @@ export type EditorialSection =
       title: string;
       body?: string;
       images: string[];
+      layout?: 'mosaic' | 'pairs';
       imageAlts?: string[];
       imageCaptions?: string[];
       caption?: string;

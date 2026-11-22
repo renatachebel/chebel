@@ -120,7 +120,7 @@ const HomepageTest: React.FC = () => {
 
         <section className="flex flex-1 items-center px-5 py-14 md:px-8 md:py-24" aria-label="Project index">
           <div className="w-full">
-            <div className="mb-3 hidden grid-cols-12 gap-4 border-b border-white/30 pb-3 text-[0.66rem] uppercase tracking-[0.16em] text-white/55 md:grid">
+            <div className="mb-3 hidden grid-cols-12 gap-4 pb-3 text-[0.66rem] uppercase tracking-[0.16em] text-white/55 md:grid">
               <span className="col-span-5">Project</span>
               <span className="col-span-5">Discipline</span>
               <span className="col-span-2 text-right">Year</span>
@@ -139,7 +139,7 @@ const HomepageTest: React.FC = () => {
                     onMouseLeave={() => setHoveredIndex(null)}
                     onFocus={() => setHoveredIndex(index)}
                     onBlur={() => setHoveredIndex(null)}
-                    className={`group grid min-h-[46svh] grid-cols-[1fr_auto] content-center items-baseline gap-5 border-b border-white/25 py-8 transition-all duration-300 md:min-h-0 md:grid-cols-12 md:gap-4 md:py-2 ${isActive ? 'text-white' : 'text-white/65 hover:text-white focus-visible:text-white'}`}
+                    className={`group grid min-h-[46svh] grid-cols-[1fr_auto] content-center items-baseline gap-5 py-8 transition-all duration-300 md:min-h-0 md:grid-cols-12 md:gap-4 md:py-2 ${isActive ? 'text-white' : 'text-white/65 hover:text-white focus-visible:text-white'}`}
                     aria-label={`${project.title}, ${project.tags}, ${project.year}`}
                   >
                     <span className="md:col-span-5">
@@ -163,7 +163,7 @@ const HomepageTest: React.FC = () => {
           </div>
         </section>
 
-        <div className="flex items-end justify-between border-t border-white/30 px-5 py-4 text-[0.66rem] uppercase tracking-[0.16em] text-white/70 md:px-8">
+        <div className="flex items-end justify-between px-5 py-4 text-[0.66rem] uppercase tracking-[0.16em] text-white/70 md:px-8">
           <span>{String(projectRows.length).padStart(2, '0')} works · Brazil / Worldwide</span>
           <span className="max-w-[45%] truncate text-right">{activeProject.title}</span>
         </div>

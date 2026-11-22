@@ -60,7 +60,7 @@ const Index: React.FC = () => {
 
         {featuredProjects.length > 0 && (
           <section id="selected-work" className="scroll-mt-28 pb-16 pt-10 md:pb-24 md:pt-12" aria-label="Selected work">
-            <div className="mb-8 flex items-center justify-between border-t border-border pt-4 md:mb-10">
+            <div className="mb-8 flex items-center justify-between md:mb-10">
               <p className="eyebrow text-muted-foreground">Selected work</p>
               <p className="eyebrow text-muted-foreground">01—{String(featuredProjects.length).padStart(2, '0')}</p>
             </div>
@@ -78,7 +78,7 @@ const Index: React.FC = () => {
                       <ArrowUpRight size={20} />
                     </span>
                   </div>
-                  <div className="mt-4 grid gap-2 border-b border-border pb-5 md:grid-cols-12 md:items-end md:pb-6">
+                  <div className="mt-4 grid gap-2 pb-5 md:grid-cols-12 md:items-end md:pb-6">
                     <div className="flex items-baseline gap-4 md:col-span-8">
                       <span className="eyebrow text-muted-foreground">0{index + 1}</span>
                       <h2 className="display-heading text-xl font-normal md:text-[1.8rem]">{project.title}</h2>
@@ -92,7 +92,7 @@ const Index: React.FC = () => {
         )}
 
         <section id="work" aria-label="All artwork" className="scroll-mt-28">
-          <div className="mb-10 border-t border-border pt-6 md:mb-14">
+          <div className="mb-10 md:mb-14">
             <div className="mb-7 flex items-end justify-between">
               <div className="flex items-baseline gap-4">
                 <h2 className="display-heading text-3xl font-normal md:text-4xl">Archive</h2>

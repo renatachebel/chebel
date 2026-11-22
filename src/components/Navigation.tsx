@@ -21,7 +21,7 @@ const Navigation: React.FC = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/80 bg-background/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 bg-background/85 backdrop-blur-xl">
       <div className="container-custom flex h-[82px] items-center justify-between gap-6">
         <Link to="/" className="group" aria-label="Renata Chebel, home">
           <span className="brand-name">Renata Chebel</span>
@@ -63,10 +63,10 @@ const Navigation: React.FC = () => {
       </div>
 
       {open && (
-        <nav id="mobile-navigation" aria-label="Mobile navigation" className="container-custom border-t border-border bg-background py-8 md:hidden">
+        <nav id="mobile-navigation" aria-label="Mobile navigation" className="container-custom bg-background py-8 md:hidden">
           <div className="flex flex-col gap-1">
             {links.map((link, index) => (
-              <Link key={link.to} to={link.to} className="group flex items-center justify-between border-b border-border py-4">
+              <Link key={link.to} to={link.to} className="group flex items-center justify-between py-4">
                 <span className="display-heading text-3xl">{link.label}</span>
                 <span className="text-sm text-muted-foreground">0{index + 1}</span>
               </Link>

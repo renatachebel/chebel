@@ -36,7 +36,7 @@ const EditorialProjectDetail: React.FC<{ project: Project }> = ({ project }) => 
     if (section.type === 'text') {
       const imageLeft = section.imagePosition === 'left';
       return (
-        <section id={section.id} key={`${section.type}-${sectionIndex}`} className="scroll-mt-28 border-t border-border py-14 md:py-20">
+        <section id={section.id} key={`${section.type}-${sectionIndex}`} className="scroll-mt-28 py-12 md:py-16">
           <div className="grid items-start gap-9 lg:grid-cols-12 lg:gap-12">
             {section.image && imageLeft && (
               <button type="button" onClick={() => openImage(section.image!)} className="group text-left lg:col-span-7">
@@ -63,8 +63,20 @@ const EditorialProjectDetail: React.FC<{ project: Project }> = ({ project }) => 
     }
 
     if (section.type === 'gallery') {
+      const galleryImage = (image: string, index: number) => (
+        <button type="button" key={`${image}-${index}`} onClick={() => openImage(image)} className="group block w-full text-left">
+          <img
+            src={image}
+            alt={section.imageAlts?.[index] ?? `${section.title} ${index + 1}`}
+            loading="lazy"
+            className="mx-auto h-auto max-h-[76svh] w-auto max-w-full transition-transform duration-700 ease-out group-hover:scale-[1.012]"
+          />
+          {section.imageCaptions?.[index] && <span className="eyebrow mt-3 block text-muted-foreground">{section.imageCaptions[index]}</span>}
+        </button>
+      );
+
       return (
-        <section id={section.id} key={`${section.type}-${sectionIndex}`} className="scroll-mt-28 border-t border-border py-14 md:py-20">
+        <section id={section.id} key={`${section.type}-${sectionIndex}`} className="scroll-mt-28 py-12 md:py-16">
           <div className="mb-10 grid gap-7 lg:grid-cols-12 lg:gap-12 md:mb-14">
             <div className="lg:col-span-5">
               {section.eyebrow && <p className="eyebrow mb-5 text-primary">{section.eyebrow}</p>}
@@ -76,17 +88,23 @@ const EditorialProjectDetail: React.FC<{ project: Project }> = ({ project }) => 
               </div>
             )}
           </div>
-          <div className="grid items-start gap-5 md:grid-cols-12 md:gap-6">
-            {section.images.map((image, index) => {
-              const span = index % 6 === 0 || index % 6 === 5 ? 'md:col-span-12' : index % 6 === 1 || index % 6 === 4 ? 'md:col-span-7' : 'md:col-span-5';
-              return (
-                <button type="button" key={`${image}-${index}`} onClick={() => openImage(image)} className={`group overflow-hidden text-left ${span}`}>
-                  <img src={image} alt={section.imageAlts?.[index] ?? `${section.title} ${index + 1}`} loading="lazy" className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.012]" />
-                  {section.imageCaptions?.[index] && <span className="eyebrow mt-3 block text-muted-foreground">{section.imageCaptions[index]}</span>}
-                </button>
-              );
-            })}
-          </div>
+          {section.layout === 'pairs' ? (
+            <div className="space-y-10 md:space-y-14">
+              {Array.from({ length: Math.ceil(section.images.length / 2) }, (_, pairIndex) => (
+                <div key={pairIndex} className="grid grid-cols-2 items-start gap-3 md:gap-6">
+                  {section.images.slice(pairIndex * 2, pairIndex * 2 + 2).map((image, offset) => galleryImage(image, pairIndex * 2 + offset))}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="columns-1 gap-5 sm:columns-2 lg:columns-3 lg:gap-6">
+              {section.images.map((image, index) => (
+                <div key={`${image}-${index}`} className="mb-5 break-inside-avoid lg:mb-6">
+                  {galleryImage(image, index)}
+                </div>
+              ))}
+            </div>
+          )}
           {section.caption && <p className="eyebrow mt-5 text-muted-foreground">{section.caption}</p>}
         </section>
       );
@@ -94,7 +112,7 @@ const EditorialProjectDetail: React.FC<{ project: Project }> = ({ project }) => 
 
     if (section.type === 'image') {
       return (
-        <figure id={section.id} key={`${section.type}-${sectionIndex}`} className="scroll-mt-28 border-t border-border py-14 md:py-20">
+        <figure id={section.id} key={`${section.type}-${sectionIndex}`} className="scroll-mt-28 py-12 md:py-16">
           <button type="button" onClick={() => openImage(section.image)} className="group block w-full text-left">
             <img src={section.image} alt={section.imageAlt ?? project.title} loading="lazy" className="h-auto w-full transition-opacity group-hover:opacity-90" />
           </button>
@@ -105,7 +123,7 @@ const EditorialProjectDetail: React.FC<{ project: Project }> = ({ project }) => 
 
     if (section.type === 'video') {
       return (
-        <section id={section.id} key={`${section.type}-${sectionIndex}`} className="scroll-mt-28 border-t border-border py-14 md:py-20">
+        <section id={section.id} key={`${section.type}-${sectionIndex}`} className="scroll-mt-28 py-12 md:py-16">
           {(section.eyebrow || section.title || section.body) && (
             <div className="mb-10 grid gap-7 lg:grid-cols-12 lg:gap-12">
               <div className="lg:col-span-5">
@@ -124,7 +142,7 @@ const EditorialProjectDetail: React.FC<{ project: Project }> = ({ project }) => 
     }
 
     return (
-      <blockquote id={section.id} key={`${section.type}-${sectionIndex}`} className="scroll-mt-28 border-y border-border py-16 md:py-24">
+      <blockquote id={section.id} key={`${section.type}-${sectionIndex}`} className="scroll-mt-28 py-14 md:py-20">
         <p className="display-heading mx-auto max-w-5xl text-center text-3xl leading-tight md:text-6xl md:leading-tight">“{section.text}”</p>
         {section.attribution && <footer className="eyebrow mt-7 text-center text-muted-foreground">{section.attribution}</footer>}
       </blockquote>
@@ -139,7 +157,7 @@ const EditorialProjectDetail: React.FC<{ project: Project }> = ({ project }) => 
 
   return (
     <div className="animate-fade-in">
-      <header className="grid gap-8 border-y border-border py-8 md:py-12 xl:grid-cols-12 xl:items-end xl:gap-16">
+      <header className="grid gap-8 pb-6 md:pb-8 xl:grid-cols-12 xl:items-end xl:gap-16">
         <div className="xl:col-span-8">
           <p className="eyebrow mb-5 text-primary">{project.category.map(category => category.replace(/-/g, ' ')).join(' / ')}</p>
           <h1 className="display-heading text-[clamp(2.5rem,5.5vw,5.5rem)]">{project.title}</h1>
@@ -153,10 +171,10 @@ const EditorialProjectDetail: React.FC<{ project: Project }> = ({ project }) => 
 
       {sections.map(renderSection)}
 
-      <section className="border-t border-border py-10 md:py-14" aria-label="Project information">
-        <div className="grid md:grid-cols-3">
+      <section className="py-8 md:py-10" aria-label="Project information">
+        <div className="grid gap-7 md:grid-cols-3 md:gap-10">
           {facts.map(([label, value]) => (
-            <div key={label} className="border-b border-border py-5 md:border-b-0 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0">
+            <div key={label}>
               <p className="eyebrow text-muted-foreground">{label}</p>
               <p className="mt-3 text-base md:text-lg">{value}</p>
             </div>

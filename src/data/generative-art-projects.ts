@@ -104,17 +104,36 @@ export const generativeArtProjects: Project[] = [
         eyebrow: "06 — Translation",
         title: "From photograph to Sintograph",
         body: "The trained model becomes a collaborator. It passes the photographic archive through a composite memory of painterly gestures, producing images that remain connected to lived experience while refusing straightforward documentation.",
+        layout: "pairs",
         images: [
+          "/lovable-uploads/sintography-story/source-danzamedicina-01.jpg",
           "/lovable-uploads/sintography-story/transformation-01.jpg",
+          "/lovable-uploads/sintography-story/source-danzamedicina-02.jpg",
           "/lovable-uploads/sintography-story/transformation-02.jpg",
+          "/lovable-uploads/sintography-story/source-danzamedicina-03.jpg",
           "/lovable-uploads/sintography-story/transformation-03.jpg",
+          "/lovable-uploads/sintography-story/source-danzamedicina-04.jpg",
           "/lovable-uploads/sintography-story/transformation-04.jpg"
         ],
         imageAlts: [
+          "Source photograph of a Danzamedicina participant moving",
           "Sintograph of two figures connected with red thread",
+          "Source photograph of a Danzamedicina participant holding red thread",
           "Sintograph of a group moving through a pink space",
+          "Source photograph of Danzamedicina participants moving together",
           "Sintograph of a reclining figure in pale colors",
+          "Source photograph of Danzamedicina participants connected by red thread",
           "Sintograph of intertwined figures and red thread"
+        ],
+        imageCaptions: [
+          "Source photograph",
+          "Sintograph",
+          "Source photograph",
+          "Sintograph",
+          "Source photograph",
+          "Sintograph",
+          "Source photograph",
+          "Sintograph"
         ]
       },
       {

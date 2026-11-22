@@ -8,7 +8,7 @@ const RelatedProjects: React.FC<{ currentProject: Project; allProjects: Project[
   if (!related.length) return null;
 
   return (
-    <section className="mt-24 border-t border-border pt-8 md:mt-36" aria-label="More work">
+    <section className="mt-20 md:mt-28" aria-label="More work">
       <div className="mb-10 flex items-end justify-between">
         <h2 className="display-heading text-3xl md:text-5xl">More work</h2>
         <Link to="/" className="eyebrow hidden items-center gap-2 text-muted-foreground hover:text-primary sm:flex">All work <ArrowUpRight size={15} /></Link>
@@ -19,7 +19,7 @@ const RelatedProjects: React.FC<{ currentProject: Project; allProjects: Project[
             <div className="aspect-square overflow-hidden bg-card">
               <img src={project.thumbnail} alt={project.title} loading="lazy" className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]" />
             </div>
-            <div className="mt-4 border-t border-border pt-3">
+            <div className="mt-4">
               <h3 className="display-heading text-lg group-hover:text-primary">{project.title}</h3>
             </div>
           </Link>
