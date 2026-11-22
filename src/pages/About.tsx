@@ -10,6 +10,21 @@ const education = [
   ['Spatial Poetry', 'Bauhaus-Universität Weimar', '2017'],
 ];
 
+const selectedExhibitions = [
+  ['Amazonia Imersiva Art Residency', 'Belém, Brazil', '2026'],
+  ['Sonica Festival', 'Glasgow, United Kingdom', '2026'],
+  ['Festival de Arte — Nature of Movement', 'São Paulo, Brazil', '2026'],
+  ['Festa da Luz', 'Belo Horizonte, Brazil', '2026'],
+  ['ARTelligent — Caixa Cultural', 'Salvador, Brazil', '2025'],
+  ['Taiwan Technology and Culture Expo', 'Kaohsiung, Taiwan', '2024'],
+  ['Bombay Beach Biennale', 'California, USA', '2024'],
+  ['Amazônia Mapping', 'Belém, Brazil', '2023'],
+  ['MAPP Montreal', 'Montreal, Canada', '2022'],
+  ['Cabíria Film Festival', 'Brazil', '2020'],
+  ['Subject to Matter — group exhibition', 'New York, USA', '2015'],
+  ['Fauna', 'São Paulo, Brazil', '2015'],
+];
+
 const About: React.FC = () => (
   <Layout>
     <div className="container-custom">
@@ -85,6 +100,22 @@ const About: React.FC = () => (
               <h3 className="display-heading text-xl md:col-span-6 md:text-2xl">{title}</h3>
               <p className="text-sm text-muted-foreground md:col-span-4">{place}</p>
               <p className="eyebrow text-muted-foreground md:col-span-2 md:text-right">{date}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="selected-exhibitions" className="border-t border-border py-16 md:py-20">
+        <div className="mb-10 max-w-3xl">
+          <p className="eyebrow mb-4 text-muted-foreground">Selected appearances</p>
+          <h2 className="display-heading text-4xl md:text-5xl">Exhibitions, shows & festivals</h2>
+        </div>
+        <div>
+          {selectedExhibitions.map(([title, place, date]) => (
+            <div key={`${title}-${date}`} className="grid gap-2 border-t border-border py-5 md:grid-cols-12 md:items-baseline md:gap-5">
+              <p className="eyebrow text-muted-foreground md:col-span-2">{date}</p>
+              <h3 className="display-heading text-xl md:col-span-6 md:text-2xl">{title}</h3>
+              <p className="text-sm text-muted-foreground md:col-span-4 md:text-right">{place}</p>
             </div>
           ))}
         </div>

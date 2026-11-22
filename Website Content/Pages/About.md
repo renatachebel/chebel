@@ -22,6 +22,21 @@ I am especially drawn to collaborative, site-specific projects that bring ancien
 - Production Design — School of Visual Arts, New York — 2013
 - Spatial Poetry — Bauhaus-Universität Weimar — 2017
 
+## Selected exhibitions, shows & festivals
+
+- 2026 — Amazonia Imersiva Art Residency — Belém, Brazil
+- 2026 — Sonica Festival — Glasgow, United Kingdom
+- 2026 — Festival de Arte — *Nature of Movement* — São Paulo, Brazil
+- 2026 — Festa da Luz — Belo Horizonte, Brazil
+- 2025 — ARTelligent — Caixa Cultural, Salvador, Brazil
+- 2024 — Taiwan Technology and Culture Expo — Kaohsiung, Taiwan
+- 2024 — Bombay Beach Biennale — California, USA
+- 2023 — Amazônia Mapping — Belém, Brazil
+- 2022 — MAPP Montreal — Montreal, Canada
+- 2020 — Cabíria Film Festival — Brazil
+- 2015 — Subject to Matter, group exhibition — New York, USA
+- 2015 — Fauna — São Paulo, Brazil
+
 ## Profile details
 
 - Based in: Brazil
