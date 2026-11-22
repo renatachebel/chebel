@@ -81,7 +81,8 @@ const EditorialProjectDetail: React.FC<{ project: Project }> = ({ project }) => 
               const span = index % 6 === 0 || index % 6 === 5 ? 'md:col-span-12' : index % 6 === 1 || index % 6 === 4 ? 'md:col-span-7' : 'md:col-span-5';
               return (
                 <button type="button" key={`${image}-${index}`} onClick={() => openImage(image)} className={`group overflow-hidden text-left ${span}`}>
-                  <img src={image} alt={`${section.title} ${index + 1}`} loading="lazy" className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.012]" />
+                  <img src={image} alt={section.imageAlts?.[index] ?? `${section.title} ${index + 1}`} loading="lazy" className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.012]" />
+                  {section.imageCaptions?.[index] && <span className="eyebrow mt-3 block text-muted-foreground">{section.imageCaptions[index]}</span>}
                 </button>
               );
             })}

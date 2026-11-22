@@ -18,6 +18,8 @@ export type EditorialSection =
       title: string;
       body?: string;
       images: string[];
+      imageAlts?: string[];
+      imageCaptions?: string[];
       caption?: string;
     }
   | {
