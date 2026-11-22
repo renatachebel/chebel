@@ -160,11 +160,11 @@ status: "live"
 
 I explore the porous boundaries between nature, technology, spirituality and memory.
 
-I am Renata Chebel, a Brazilian multimedia artist working with generative art, video, photography, projection mapping and physical installations. With a background in journalism, storytelling remains at the heart of everything I create.
+I am Renata Chebel, a Brazilian multidisciplinary artist working across image-making, video, photography, generative art, projection mapping and physical installations. With a background in journalism, storytelling remains at the heart of everything I create.
 
-My experimental practice also includes performance, soundscapes and embroidery, often dissolving the line between digital and handmade, ancestral and futuristic.
+My experimental practice also includes performance, soundscapes and embroidery. My research explores how to dissolve the boundaries between digital and handmade, ancestral and futuristic, bringing different media together within each work.
 
-My work has been presented at the Bombay Beach Biennale, Taiwan Technology and Culture Expo, MAPP in Canada and Amazonia Mapping in Brazil. I am especially drawn to collaborative, site-specific projects that bring ancient wisdom into dialogue with emerging technologies.
+I am especially drawn to collaborative, site-specific projects that bring ancient stories into dialogue with emerging technologies.
 
 ## Education
 
@@ -178,7 +178,6 @@ My work has been presented at the Bombay Beach Biennale, Taiwan Technology and C
 
 - Based in: Brazil
 - Experience: 15+ years
-- Mode: Collaborative
 - Availability: Available worldwide
 `);
 

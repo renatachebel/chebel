@@ -27,7 +27,7 @@ const About: React.FC = () => (
             />
             <div className="mt-4 flex justify-between border-t border-border pt-3">
               <p className="eyebrow text-muted-foreground">Renata Chebel</p>
-              <p className="eyebrow text-muted-foreground">Multimedia artist</p>
+              <p className="eyebrow text-muted-foreground">Multidisciplinary artist</p>
             </div>
           </div>
         </div>
@@ -38,13 +38,13 @@ const About: React.FC = () => (
           </p>
           <div className="mt-12 space-y-7 border-t border-border pt-8 text-base leading-8 text-muted-foreground md:text-lg">
             <p>
-              I am Renata Chebel, a Brazilian multimedia artist working with generative art, video, photography, projection mapping and physical installations. With a background in journalism, storytelling remains at the heart of everything I create.
+              I am Renata Chebel, a Brazilian multidisciplinary artist working across image-making, video, photography, generative art, projection mapping and physical installations. With a background in journalism, storytelling remains at the heart of everything I create.
             </p>
             <p>
-              My experimental practice also includes performance, soundscapes and embroidery, often dissolving the line between digital and handmade, ancestral and futuristic.
+              My experimental practice also includes performance, soundscapes and embroidery. My research explores how to dissolve the boundaries between digital and handmade, ancestral and futuristic, bringing different media together within each work.
             </p>
             <p>
-              My work has been presented at the Bombay Beach Biennale, Taiwan Technology and Culture Expo, MAPP in Canada and Amazonia Mapping in Brazil. I am especially drawn to collaborative, site-specific projects that bring ancient wisdom into dialogue with emerging technologies.
+              I am especially drawn to collaborative, site-specific projects that bring ancient stories into dialogue with emerging technologies.
             </p>
           </div>
 
@@ -68,10 +68,9 @@ const About: React.FC = () => (
             alt="Renata Chebel performing a live visual set"
             className="aspect-video w-full object-cover"
           />
-          <div className="mt-5 grid gap-6 sm:grid-cols-3">
+          <div className="mt-5 grid gap-6 sm:grid-cols-2">
             <div><p className="eyebrow mb-2 text-muted-foreground">Based in</p><p>Brazil</p></div>
             <div><p className="eyebrow mb-2 text-muted-foreground">Experience</p><p>15+ years</p></div>
-            <div><p className="eyebrow mb-2 text-muted-foreground">Mode</p><p>Collaborative</p></div>
           </div>
         </div>
       </section>
