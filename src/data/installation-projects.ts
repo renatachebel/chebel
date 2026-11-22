@@ -6,7 +6,7 @@ export const installationProjects: Project[] = [
     id: 3,
     title: "Temple of Reflections",
     slug: "temple-of-reflections",
-    category: ["installation"],
+    category: ["installation", "generative-art"],
     thumbnail: "/lovable-uploads/temple-of-reflections-thumbnail-square.jpg",
     images: [
       "/lovable-uploads/temple-of-reflections-cover.jpg",

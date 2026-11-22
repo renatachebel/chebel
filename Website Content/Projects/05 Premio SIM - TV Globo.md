@@ -1,12 +1,14 @@
 ---
-title: "Premio SIM - TV Globo"
-slug: "premio-sim-tv-globo"
-route: "/projects/premio-sim-tv-globo"
-source_file: "src/data/video-projects.ts"
+title: Premio SIM - TV Globo
+slug: premio-sim-tv-globo
+route: /projects/premio-sim-tv-globo
+source_file: src/data/video-projects.ts
 year: "2025"
-location: "Brazil - TV Globo"
-disciplines: ["video"]
-status: "live"
+location: Brazil - TV Globo
+disciplines:
+  - video
+  - generative-art
+status: live
 ---
 
 # Premio SIM - TV Globo

@@ -1,12 +1,14 @@
 ---
-title: "Alma da Selva - Amazonia Mapping"
-slug: "alma-da-selva-amazonia-mapping"
-route: "/projects/alma-da-selva-amazonia-mapping"
-source_file: "src/data/ilumina-video-projects.ts"
+title: Alma da Selva - Amazonia Mapping
+slug: alma-da-selva-amazonia-mapping
+route: /projects/alma-da-selva-amazonia-mapping
+source_file: src/data/ilumina-video-projects.ts
 year: "2023"
-location: "Amazônia Mapping"
-disciplines: ["video"]
-status: "live"
+location: Amazônia Mapping
+disciplines:
+  - video
+  - projection mapping
+status: live
 ---
 
 # Alma da Selva - Amazonia Mapping

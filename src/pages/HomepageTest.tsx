@@ -4,11 +4,13 @@ import { projects } from '../data/projects';
 
 const categoryLabels: Record<string, string> = {
   photography: 'Photography',
-  video: 'Film / Video',
+  video: 'Video',
   installation: 'Installation',
   performance: 'Performance',
   'performance-installation': 'Performance / Installation',
   'generative-art': 'Generative Art',
+  'projection-mapping': 'Projection Mapping',
+  poetry: 'Poetry',
 };
 
 const projectRows = projects.map(project => ({
@@ -20,43 +22,62 @@ const projectRows = projects.map(project => ({
 const HomepageTest: React.FC = () => {
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [mobileIsControlling, setMobileIsControlling] = useState(false);
+  const [mobileScrollActive, setMobileScrollActive] = useState(false);
   const projectLinks = useRef<Array<HTMLAnchorElement | null>>([]);
   const activeIndex = hoveredIndex ?? carouselIndex;
   const activeProject = projects[activeIndex] ?? projects[0];
 
   useEffect(() => {
-    if (hoveredIndex !== null || mobileIsControlling || projects.length < 2) return;
+    if (hoveredIndex !== null || mobileScrollActive || projects.length < 2) return;
     const timer = window.setInterval(() => {
       setCarouselIndex(current => (current + 1) % projects.length);
     }, 4500);
     return () => window.clearInterval(timer);
-  }, [hoveredIndex, mobileIsControlling]);
+  }, [hoveredIndex, mobileScrollActive]);
 
   useEffect(() => {
-    if (!mobileIsControlling) return;
     const mobileViewport = window.matchMedia('(max-width: 767px)');
-    if (!mobileViewport.matches) return;
+    const syncViewport = () => setMobileScrollActive(mobileViewport.matches);
+    syncViewport();
+    mobileViewport.addEventListener('change', syncViewport);
+    return () => mobileViewport.removeEventListener('change', syncViewport);
+  }, []);
 
-    const observer = new IntersectionObserver(
-      entries => {
-        const centeredProject = entries
-          .filter(entry => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (!centeredProject) return;
-        const index = Number((centeredProject.target as HTMLElement).dataset.projectIndex);
-        if (Number.isFinite(index)) setCarouselIndex(index);
-      },
-      {
-        root: null,
-        rootMargin: '-44% 0px -44% 0px',
-        threshold: [0, 0.5, 1],
-      },
-    );
+  useEffect(() => {
+    if (!mobileScrollActive) return;
 
-    projectLinks.current.forEach(link => { if (link) observer.observe(link); });
-    return () => observer.disconnect();
-  }, [mobileIsControlling]);
+    let animationFrame: number | null = null;
+    const updateProjectFromScroll = () => {
+      if (animationFrame !== null) window.cancelAnimationFrame(animationFrame);
+      animationFrame = window.requestAnimationFrame(() => {
+        const viewportCenter = window.innerHeight / 2;
+        let nearestIndex = 0;
+        let nearestDistance = Number.POSITIVE_INFINITY;
+
+        projectLinks.current.forEach((link, index) => {
+          if (!link) return;
+          const bounds = link.getBoundingClientRect();
+          const distance = Math.abs(bounds.top + bounds.height / 2 - viewportCenter);
+          if (distance < nearestDistance) {
+            nearestDistance = distance;
+            nearestIndex = index;
+          }
+        });
+
+        setCarouselIndex(nearestIndex);
+        animationFrame = null;
+      });
+    };
+
+    updateProjectFromScroll();
+    window.addEventListener('scroll', updateProjectFromScroll, { passive: true });
+    window.addEventListener('resize', updateProjectFromScroll);
+    return () => {
+      window.removeEventListener('scroll', updateProjectFromScroll);
+      window.removeEventListener('resize', updateProjectFromScroll);
+      if (animationFrame !== null) window.cancelAnimationFrame(animationFrame);
+    };
+  }, [mobileScrollActive]);
 
   useEffect(() => {
     const nextProject = projects[(activeIndex + 1) % projects.length];
@@ -118,11 +139,7 @@ const HomepageTest: React.FC = () => {
                     onMouseLeave={() => setHoveredIndex(null)}
                     onFocus={() => setHoveredIndex(index)}
                     onBlur={() => setHoveredIndex(null)}
-                    onTouchStart={() => {
-                      setMobileIsControlling(true);
-                      setCarouselIndex(index);
-                    }}
-                    className={`group grid grid-cols-[1fr_auto] items-baseline gap-5 border-b border-white/25 py-2.5 transition-all duration-300 md:grid-cols-12 md:gap-4 md:py-2 ${isActive ? 'text-white' : 'text-white/65 hover:text-white focus-visible:text-white'}`}
+                    className={`group grid min-h-[46svh] grid-cols-[1fr_auto] content-center items-baseline gap-5 border-b border-white/25 py-8 transition-all duration-300 md:min-h-0 md:grid-cols-12 md:gap-4 md:py-2 ${isActive ? 'text-white' : 'text-white/65 hover:text-white focus-visible:text-white'}`}
                     aria-label={`${project.title}, ${project.tags}, ${project.year}`}
                   >
                     <span className="md:col-span-5">

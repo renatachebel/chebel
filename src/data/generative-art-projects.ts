@@ -5,7 +5,7 @@ export const generativeArtProjects: Project[] = [
     id: 1,
     title: "Sintography",
     slug: "sintography",
-    category: ["generative-art", "installation", "performance"],
+    category: ["generative-art", "installation", "performance", "photography"],
     thumbnail: "/lovable-uploads/Eden_creation_chebel65c32aa905ae24529751736f.jpg",
     description: "An evolving, multi-part body of work where photography, artificial intelligence, movement and ritual become a language of feeling.",
     date: "2024—ongoing",

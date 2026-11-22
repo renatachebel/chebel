@@ -25,7 +25,7 @@ export const iluminaVideoProjects: Project[] = [
     id: 15,
     title: "Fanta Konaté",
     slug: "fanta-konate",
-    category: ["video"],
+    category: ["video", "performance", "generative-art"],
     thumbnail: "/lovable-uploads/fanta-konate-1.jpg",
     images: [
       "/lovable-uploads/fanta-konate-1.jpg",
@@ -47,7 +47,7 @@ export const iluminaVideoProjects: Project[] = [
     id: 14,
     title: "Ancestresses",
     slug: "ancestresses",
-    category: ["video"],
+    category: ["video", "generative-art", "projection-mapping"],
     thumbnail: "/lovable-uploads/ancestress-thumbnail.png",
     youtubeIds: ["cHQ5orWUd14", "9drMRgd9ETs", "zSwgtP2wPYM", "UCwdbNNWrPE"],
     description: "A series of hypnotic AI-generated animations in which women gather around a fire and reveal their power as shapeshifters.",
@@ -60,7 +60,7 @@ export const iluminaVideoProjects: Project[] = [
     id: 13,
     title: "Alma da Selva - Amazonia Mapping",
     slug: "alma-da-selva-amazonia-mapping",
-    category: ["video"],
+    category: ["video", "projection-mapping"],
     thumbnail: "/lovable-uploads/135bd60c-e82f-4d4b-8920-d0a756c4e1e2.png",
     images: [
       "/lovable-uploads/135bd60c-e82f-4d4b-8920-d0a756c4e1e2.png",
@@ -78,7 +78,7 @@ export const iluminaVideoProjects: Project[] = [
     id: 9,
     title: "Nature of Movement",
     slug: "nature-of-movement",
-    category: ["video"],
+    category: ["video", "generative-art", "poetry"],
     thumbnail: "/lovable-uploads/dcdb30d0-886d-4f6a-af0b-6d3302d70fbf.png",
     images: [
       "/lovable-uploads/dcdb30d0-886d-4f6a-af0b-6d3302d70fbf.png",

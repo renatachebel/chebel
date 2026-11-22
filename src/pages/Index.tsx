@@ -8,7 +8,7 @@ import { Button } from '../components/ui/button';
 
 const categories = [
   { id: 'all', label: 'All work' },
-  { id: 'video', label: 'Film & Video' },
+  { id: 'video', label: 'Video' },
   { id: 'photography', label: 'Photography' },
   { id: 'installation', label: 'Installation' },
   { id: 'performance', label: 'Performance' },
@@ -20,7 +20,7 @@ const featuredSelections = [
   {
     slug: 'the-wedding-of-the-sun-and-the-moon',
     image: '/lovable-uploads/wedding-sun-moon-cover.jpg',
-    label: 'Film / Generative Art',
+    label: 'Video / Generative Art',
   },
   {
     slug: 'sintography',

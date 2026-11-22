@@ -1,12 +1,14 @@
 ---
-title: "Temple of Reflections"
-slug: "temple-of-reflections"
-route: "/projects/temple-of-reflections"
-source_file: "src/data/installation-projects.ts"
+title: Temple of Reflections
+slug: temple-of-reflections
+route: /projects/temple-of-reflections
+source_file: src/data/installation-projects.ts
 year: "2024"
-location: "Taiwan"
-disciplines: ["installation"]
-status: "live"
+location: Taiwan
+disciplines:
+  - installation
+  - generative-art
+status: live
 ---
 
 # Temple of Reflections

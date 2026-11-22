@@ -6,7 +6,7 @@ export const performanceInstallationProjects: Project[] = [
     id: 19,
     title: "Fluvial",
     slug: "fluvial",
-    category: ["installation", "performance"],
+    category: ["installation", "performance", "generative-art", "projection-mapping"],
     thumbnail: "/lovable-uploads/fluvial/fluvial-thumbnail-square.jpg",
     images: [
       "/lovable-uploads/fluvial/fluvial-cover.jpg",
@@ -46,7 +46,7 @@ export const performanceInstallationProjects: Project[] = [
     id: 2,
     title: "Rainbow Road",
     slug: "rainbow-road",
-    category: ["performance-installation"],
+    category: ["performance-installation", "generative-art", "projection-mapping"],
     thumbnail: "/lovable-uploads/14923c1f-ea33-41b7-a173-0256f7ded085.png",
     youtubeId: "Os6m6tE6aBE",
     images: [

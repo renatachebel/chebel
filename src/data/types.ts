@@ -49,7 +49,16 @@ export interface Project {
   id: number;
   title: string;
   slug: string;
-  category: ('photography' | 'video' | 'installation' | 'performance' | 'performance-installation' | 'generative-art')[];
+  category: (
+    | 'photography'
+    | 'video'
+    | 'installation'
+    | 'performance'
+    | 'performance-installation'
+    | 'generative-art'
+    | 'projection-mapping'
+    | 'poetry'
+  )[];
   thumbnail: string;
   images?: string[];
   videos?: string[];

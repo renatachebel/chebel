@@ -1,12 +1,15 @@
 ---
-title: "Rainbow Road"
-slug: "rainbow-road"
-route: "/projects/rainbow-road"
-source_file: "src/data/performance-installation-projects.ts"
+title: Rainbow Road
+slug: rainbow-road
+route: /projects/rainbow-road
+source_file: src/data/performance-installation-projects.ts
 year: "2023"
-location: "Various Urban Locations"
-disciplines: ["performance-installation"]
-status: "live"
+location: Various Urban Locations
+disciplines:
+  - performance-installation
+  - generative-art
+  - projection mapping
+status: live
 ---
 
 # Rainbow Road

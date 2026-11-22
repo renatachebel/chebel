@@ -5,7 +5,7 @@ route: "/projects/sintography"
 source_file: "src/data/generative-art-projects.ts"
 year: "2024—ongoing"
 location: "Bombay Beach Biennale, USA"
-disciplines: ["generative-art","installation","performance"]
+disciplines: ["generative-art","installation","performance","photography"]
 status: "live"
 ---
 

@@ -1,12 +1,15 @@
 ---
-title: "Fanta Konaté"
-slug: "fanta-konate"
-route: "/projects/fanta-konate"
-source_file: "src/data/ilumina-video-projects.ts"
+title: Fanta Konaté
+slug: fanta-konate
+route: /projects/fanta-konate
+source_file: src/data/ilumina-video-projects.ts
 year: "2023"
-location: "Festival Ilumina"
-disciplines: ["video"]
-status: "live"
+location: Festival Ilumina
+disciplines:
+  - video
+  - performance
+  - generative-art
+status: live
 ---
 
 # Fanta Konaté

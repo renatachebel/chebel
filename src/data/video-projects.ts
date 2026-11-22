@@ -27,7 +27,7 @@ export const videoProjects: Project[] = [
     id: 11,
     title: "Premio SIM - TV Globo",
     slug: "premio-sim-tv-globo",
-    category: ["video"],
+    category: ["video", "generative-art"],
     thumbnail: "/lovable-uploads/0ee8a45d-7459-4b76-83a4-6bd821b11928.png",
     images: [
       "/lovable-uploads/0ee8a45d-7459-4b76-83a4-6bd821b11928.png",
@@ -122,7 +122,8 @@ export const videoProjects: Project[] = [
       "5tRvMmd6cD0",
       "QyAYrmLYVfg",
       "3AcCvHSR7dw",
-      "1h5W5hWCJtc"
+      "1h5W5hWCJtc",
+      "pXBIWw185oY"
     ],
     description: "A collection of music videos directed and produced for various artists.",
     date: "2024",

@@ -1,12 +1,16 @@
 ---
-title: "Fluvial"
-slug: "fluvial"
-route: "/projects/fluvial"
-source_file: "src/data/performance-installation-projects.ts"
+title: Fluvial
+slug: fluvial
+route: /projects/fluvial
+source_file: src/data/performance-installation-projects.ts
 year: "2026"
-location: "Amazonia Imersiva Art Residency, Belém, Brazil"
-disciplines: ["installation","performance"]
-status: "live"
+location: Amazonia Imersiva Art Residency, Belém, Brazil
+disciplines:
+  - installation
+  - performance
+  - generative-art
+  - projection mapping
+status: live
 ---
 
 # Fluvial

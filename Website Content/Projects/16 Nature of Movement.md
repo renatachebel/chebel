@@ -1,12 +1,15 @@
 ---
-title: "Nature of Movement"
-slug: "nature-of-movement"
-route: "/projects/nature-of-movement"
-source_file: "src/data/ilumina-video-projects.ts"
+title: Nature of Movement
+slug: nature-of-movement
+route: /projects/nature-of-movement
+source_file: src/data/ilumina-video-projects.ts
 year: "2024"
-location: "Studio Production"
-disciplines: ["video"]
-status: "live"
+location: Studio Production
+disciplines:
+  - video
+  - generative-art
+  - poetry
+status: live
 ---
 
 # Nature of Movement

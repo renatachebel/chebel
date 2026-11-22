@@ -1,12 +1,15 @@
 ---
-title: "Ancestresses"
-slug: "ancestresses"
-route: "/projects/ancestresses"
-source_file: "src/data/ilumina-video-projects.ts"
-year: "2022-2023"
-location: "Studio Production"
-disciplines: ["video"]
-status: "live"
+title: Ancestresses
+slug: ancestresses
+route: /projects/ancestresses
+source_file: src/data/ilumina-video-projects.ts
+year: 2022-2023
+location: Studio Production
+disciplines:
+  - video
+  - generative-art
+  - projection mapping
+status: live
 ---
 
 # Ancestresses
