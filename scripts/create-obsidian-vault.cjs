@@ -92,7 +92,7 @@ Edits do not publish automatically. Codex reviews the changes, transfers them in
 ## Index
 
 - [[Pages/Homepage]]
-- [[Pages/Homepage Test]]
+- [[Pages/Archive]]
 - [[Pages/About]]
 - [[Pages/Shared Site Text]]
 - [[Projects/01 Sintography]]
@@ -101,37 +101,11 @@ Edits do not publish automatically. Codex reviews the changes, transfers them in
 writeNew('Pages/Homepage.md', `
 ---
 route: "/"
-source_file: "src/pages/Index.tsx"
+source_file: "src/pages/HomepageTest.tsx"
 status: "live"
 ---
 
 # Homepage
-
-## Section labels
-
-- Selected work
-- Archive
-
-## Filters
-
-- All work
-- Film & Video
-- Photography
-- Installation
-- Performance
-- Generative Art
-
-The current homepage layout remains live while the new image-led test page is evaluated.
-`);
-
-writeNew('Pages/Homepage Test.md', `
----
-route: "/homepage-test"
-source_file: "src/pages/HomepageTest.tsx"
-status: "test"
----
-
-# Homepage Test
 
 ## Interface text
 
@@ -144,7 +118,35 @@ status: "test"
 - Year
 - Brazil / Worldwide
 
-The background automatically cycles through project covers. Hovering or focusing a project title shows that project's cover.
+## Behavior
+
+The background automatically cycles through project covers while the page is idle. Hovering or keyboard-focusing a project title shows that project's cover.
+
+On mobile, the background follows whichever project reaches the center of the screen after the visitor begins touching or scrolling the list. Tapping a project opens its page.
+`);
+
+writeNew('Pages/Homepage Test.md', `
+---
+route: "/homepage-test"
+source_file: "src/App.tsx"
+status: "redirect"
+---
+
+# Previous Homepage Test Route
+
+The image-led homepage is now the live homepage at \`/\`. This route redirects there.
+`);
+
+writeNew('Pages/Archive.md', `
+---
+route: "/archive"
+source_file: "src/pages/Index.tsx"
+status: "preserved"
+---
+
+# Previous Homepage Archive
+
+The former selected-work and project-grid homepage is preserved at \`/archive\`. It is not linked from the public navigation.
 `);
 
 writeNew('Pages/About.md', `

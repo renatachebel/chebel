@@ -14,7 +14,7 @@ Edits do not publish automatically. Codex reviews the changes, transfers them in
 ## Index
 
 - [[Pages/Homepage]]
-- [[Pages/Homepage Test]]
+- [[Pages/Archive]]
 - [[Pages/About]]
 - [[Pages/Shared Site Text]]
 - [[Projects/01 Sintography]]

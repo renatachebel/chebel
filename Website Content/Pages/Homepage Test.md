@@ -1,20 +1,9 @@
 ---
 route: "/homepage-test"
-source_file: "src/pages/HomepageTest.tsx"
-status: "test"
+source_file: "src/App.tsx"
+status: "redirect"
 ---
 
-# Homepage Test
+# Previous Homepage Test Route
 
-## Interface text
-
-- Work
-- About
-- Journal
-- Contact
-- Project
-- Discipline
-- Year
-- Brazil / Worldwide
-
-The background automatically cycles through project covers. Hovering or focusing a project title shows that project's cover.
+The image-led homepage is now the live homepage at `/`. This route redirects there.

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 
@@ -20,16 +20,43 @@ const projectRows = projects.map(project => ({
 const HomepageTest: React.FC = () => {
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [mobileIsControlling, setMobileIsControlling] = useState(false);
+  const projectLinks = useRef<Array<HTMLAnchorElement | null>>([]);
   const activeIndex = hoveredIndex ?? carouselIndex;
   const activeProject = projects[activeIndex] ?? projects[0];
 
   useEffect(() => {
-    if (hoveredIndex !== null || projects.length < 2) return;
+    if (hoveredIndex !== null || mobileIsControlling || projects.length < 2) return;
     const timer = window.setInterval(() => {
       setCarouselIndex(current => (current + 1) % projects.length);
     }, 4500);
     return () => window.clearInterval(timer);
-  }, [hoveredIndex]);
+  }, [hoveredIndex, mobileIsControlling]);
+
+  useEffect(() => {
+    if (!mobileIsControlling) return;
+    const mobileViewport = window.matchMedia('(max-width: 767px)');
+    if (!mobileViewport.matches) return;
+
+    const observer = new IntersectionObserver(
+      entries => {
+        const centeredProject = entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!centeredProject) return;
+        const index = Number((centeredProject.target as HTMLElement).dataset.projectIndex);
+        if (Number.isFinite(index)) setCarouselIndex(index);
+      },
+      {
+        root: null,
+        rootMargin: '-44% 0px -44% 0px',
+        threshold: [0, 0.5, 1],
+      },
+    );
+
+    projectLinks.current.forEach(link => { if (link) observer.observe(link); });
+    return () => observer.disconnect();
+  }, [mobileIsControlling]);
 
   useEffect(() => {
     const nextProject = projects[(activeIndex + 1) % projects.length];
@@ -58,11 +85,11 @@ const HomepageTest: React.FC = () => {
       </div>
 
       <div className="relative z-10 flex min-h-svh flex-col">
-        <header className="flex items-center justify-between border-b border-white/35 px-5 py-5 text-[0.78rem] uppercase tracking-[0.16em] md:px-8">
+        <header className="flex items-center justify-between px-5 py-5 text-[0.78rem] uppercase tracking-[0.16em] md:px-8">
           <Link to="/" className="font-display text-base normal-case tracking-[-0.04em] md:text-lg">
             Renata Chebel
           </Link>
-          <nav aria-label="Test homepage navigation" className="flex items-center gap-5 md:gap-8">
+          <nav aria-label="Main navigation" className="flex items-center gap-5 md:gap-8">
             <span className="text-white">Work</span>
             <Link to="/about" className="text-white/70 transition-colors hover:text-white">About</Link>
             <Link to="/substack" className="hidden text-white/70 transition-colors hover:text-white sm:inline">Journal</Link>
@@ -85,15 +112,26 @@ const HomepageTest: React.FC = () => {
                   <Link
                     key={project.slug}
                     to={`/projects/${project.slug}`}
+                    ref={element => { projectLinks.current[index] = element; }}
+                    data-project-index={index}
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
                     onFocus={() => setHoveredIndex(index)}
                     onBlur={() => setHoveredIndex(null)}
+                    onTouchStart={() => {
+                      setMobileIsControlling(true);
+                      setCarouselIndex(index);
+                    }}
                     className={`group grid grid-cols-[1fr_auto] items-baseline gap-5 border-b border-white/25 py-2.5 transition-all duration-300 md:grid-cols-12 md:gap-4 md:py-2 ${isActive ? 'text-white' : 'text-white/65 hover:text-white focus-visible:text-white'}`}
                     aria-label={`${project.title}, ${project.tags}, ${project.year}`}
                   >
-                    <span className="font-display text-[clamp(1.15rem,2vw,1.7rem)] leading-none tracking-[-0.045em] md:col-span-5">
-                      {project.title}
+                    <span className="md:col-span-5">
+                      <span className="block font-display text-[clamp(1.15rem,2vw,1.7rem)] leading-none tracking-[-0.045em]">
+                        {project.title}
+                      </span>
+                      <span className="mt-1.5 block text-[0.66rem] uppercase tracking-[0.12em] opacity-75 md:hidden">
+                        {project.tags}
+                      </span>
                     </span>
                     <span className="hidden text-[0.72rem] uppercase tracking-[0.12em] md:col-span-5 md:block">
                       {project.tags}

@@ -22,8 +22,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/homepage-test" element={<HomepageTest />} />
+          <Route path="/" element={<HomepageTest />} />
+          <Route path="/archive" element={<Index />} />
+          <Route path="/homepage-test" element={<Navigate to="/" replace />} />
           <Route path="/infinita" element={<Navigate to="/" replace />} />
           <Route path="/ilumina" element={<Navigate to="/" replace />} />
           <Route path="/all-projects" element={<Navigate to="/" replace />} />
