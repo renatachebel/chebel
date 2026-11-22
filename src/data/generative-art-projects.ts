@@ -85,16 +85,26 @@ export const generativeArtProjects: Project[] = [
         title: "Danzamedicina",
         body: "The second archive came from my photographs of women taking part in Danzamedicina, Morena Cardoso's dance-therapy practice. The sessions use movement, touch and emotional release to challenge the ways women are conditioned to inhabit and control their bodies. These photographs hold the gestures, relationships and moments of intensity that the model later translates.",
         images: [
+          "/lovable-uploads/sintography-story/source-danzamedicina-07.jpg",
+          "/lovable-uploads/sintography-story/source-danzamedicina-06.jpg",
+          "/lovable-uploads/sintography-story/source-danzamedicina-05.jpg",
           "/lovable-uploads/sintography-story/source-danzamedicina-01.jpg",
-          "/lovable-uploads/sintography-story/source-danzamedicina-02.jpg",
           "/lovable-uploads/sintography-story/source-danzamedicina-03.jpg",
-          "/lovable-uploads/sintography-story/source-danzamedicina-04.jpg"
+          "/lovable-uploads/sintography-story/source-danzamedicina-04.jpg",
+          "/lovable-uploads/sintography-story/source-danzamedicina-09.jpg",
+          "/lovable-uploads/sintography-story/source-danzamedicina-08.jpg",
+          "/lovable-uploads/sintography-story/source-danzamedicina-02.jpg"
         ],
         imageAlts: [
+          "Danzamedicina participants moving together with raised arms and red thread",
+          "Danzamedicina participant in white holding her hands to her chest",
+          "Close portrait of a Danzamedicina participant moving",
           "Danzamedicina participant moving during a session",
-          "Danzamedicina participant holding red thread",
           "A group of Danzamedicina participants moving together",
-          "Danzamedicina participants connected by red thread"
+          "Danzamedicina participants connected by red thread",
+          "Danzamedicina participant reclining against a dark floor",
+          "Danzamedicina participant laughing during a session",
+          "Danzamedicina participant holding red thread"
         ],
         caption: "Photography by Renata Chebel · Danzamedicina by Morena Cardoso"
       },
@@ -106,28 +116,22 @@ export const generativeArtProjects: Project[] = [
         body: "The trained model becomes a collaborator. It passes the photographic archive through a composite memory of painterly gestures, producing images that remain connected to lived experience while refusing straightforward documentation.",
         layout: "pairs",
         images: [
-          "/lovable-uploads/sintography-story/source-danzamedicina-01.jpg",
-          "/lovable-uploads/sintography-story/transformation-01.jpg",
-          "/lovable-uploads/sintography-story/source-danzamedicina-02.jpg",
-          "/lovable-uploads/sintography-story/transformation-02.jpg",
+          "/lovable-uploads/sintography-story/source-danzamedicina-09.jpg",
+          "/lovable-uploads/sintography-story/transformation-04.jpg",
           "/lovable-uploads/sintography-story/source-danzamedicina-03.jpg",
-          "/lovable-uploads/sintography-story/transformation-03.jpg",
-          "/lovable-uploads/sintography-story/source-danzamedicina-04.jpg",
-          "/lovable-uploads/sintography-story/transformation-04.jpg"
+          "/lovable-uploads/Eden_creation_chebel65c32aa905ae24529751736f.jpg",
+          "/lovable-uploads/sintography-story/source-danzamedicina-07.jpg",
+          "/lovable-uploads/Eden_creation_chebel65c150b70335fa57d291f958.jpg"
         ],
         imageAlts: [
-          "Source photograph of a Danzamedicina participant moving",
-          "Sintograph of two figures connected with red thread",
-          "Source photograph of a Danzamedicina participant holding red thread",
-          "Sintograph of a group moving through a pink space",
-          "Source photograph of Danzamedicina participants moving together",
-          "Sintograph of a reclining figure in pale colors",
-          "Source photograph of Danzamedicina participants connected by red thread",
-          "Sintograph of intertwined figures and red thread"
+          "Source photograph of a reclining Danzamedicina participant wrapped in red thread",
+          "Sintograph generated from the reclining participant photograph",
+          "Source photograph of Danzamedicina participants supporting one another",
+          "Sintograph generated from the group support photograph",
+          "Source photograph of Danzamedicina participants moving with raised arms and red thread",
+          "Sintograph generated from the raised arms photograph"
         ],
         imageCaptions: [
-          "Source photograph",
-          "Sintograph",
           "Source photograph",
           "Sintograph",
           "Source photograph",
