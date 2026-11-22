@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Sketchbook from "./pages/Sketchbook";
 import Substack from "./pages/Substack";
 import NotFound from "./pages/NotFound";
+import HomepageTest from "./pages/HomepageTest";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/homepage-test" element={<HomepageTest />} />
           <Route path="/infinita" element={<Navigate to="/" replace />} />
           <Route path="/ilumina" element={<Navigate to="/" replace />} />
           <Route path="/all-projects" element={<Navigate to="/" replace />} />

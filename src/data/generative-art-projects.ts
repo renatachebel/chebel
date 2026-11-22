@@ -148,10 +148,6 @@ export const generativeArtProjects: Project[] = [
         ]
       },
       {
-        type: "quote",
-        text: "It is not documentation — it is transmutation."
-      },
-      {
         type: "text",
         id: "lemniscata",
         eyebrow: "08 — A chapter of Sintography",
