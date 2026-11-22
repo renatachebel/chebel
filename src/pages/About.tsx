@@ -13,16 +13,18 @@ const education = [
 const selectedExhibitions = [
   ['Amazonia Imersiva Art Residency', 'Belém, Brazil', '2026'],
   ['Sonica Festival', 'Glasgow, United Kingdom', '2026'],
-  ['Festival de Arte — Nature of Movement', 'São Paulo, Brazil', '2026'],
+  ['Vivacidade', 'São Paulo, Brazil', '2026'],
   ['Festa da Luz', 'Belo Horizonte, Brazil', '2026'],
   ['ARTelligent — Caixa Cultural', 'Salvador, Brazil', '2025'],
   ['Taiwan Technology and Culture Expo', 'Kaohsiung, Taiwan', '2024'],
+  ['Mola Oddity Tour', 'China', '2024'],
   ['Bombay Beach Biennale', 'California, USA', '2024'],
   ['Amazônia Mapping', 'Belém, Brazil', '2023'],
+  ['Pupila Dilatada × Hacktudo', 'MAM · Rio de Janeiro, Brazil', '2022'],
   ['MAPP Montreal', 'Montreal, Canada', '2022'],
   ['Cabíria Film Festival', 'Brazil', '2020'],
-  ['Subject to Matter — group exhibition', 'New York, USA', '2015'],
-  ['Fauna', 'São Paulo, Brazil', '2015'],
+  ['Subject Matter', 'New York, USA', '2015'],
+  ['Territórios Imanentes — Fauna Galeria', 'São Paulo, Brazil', '2015'],
 ];
 
 const About: React.FC = () => (

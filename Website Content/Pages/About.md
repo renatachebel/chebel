@@ -26,16 +26,18 @@ I am especially drawn to collaborative, site-specific projects that bring ancien
 
 - 2026 — Amazonia Imersiva Art Residency — Belém, Brazil
 - 2026 — Sonica Festival — Glasgow, United Kingdom
-- 2026 — Festival de Arte — *Nature of Movement* — São Paulo, Brazil
+- 2026 — Vivacidade — São Paulo, Brazil
 - 2026 — Festa da Luz — Belo Horizonte, Brazil
 - 2025 — ARTelligent — Caixa Cultural, Salvador, Brazil
 - 2024 — Taiwan Technology and Culture Expo — Kaohsiung, Taiwan
+- 2024 — Mola Oddity Tour — China
 - 2024 — Bombay Beach Biennale — California, USA
 - 2023 — Amazônia Mapping — Belém, Brazil
+- 2022 — Pupila Dilatada × Hacktudo — MAM, Rio de Janeiro, Brazil
 - 2022 — MAPP Montreal — Montreal, Canada
 - 2020 — Cabíria Film Festival — Brazil
-- 2015 — Subject to Matter, group exhibition — New York, USA
-- 2015 — Fauna — São Paulo, Brazil
+- 2015 — Subject Matter — New York, USA
+- 2015 — Territórios Imanentes — Fauna Galeria, São Paulo, Brazil
 
 ## Profile details
 
