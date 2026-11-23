@@ -125,6 +125,37 @@ const EditorialProjectDetail: React.FC<{ project: Project }> = ({ project }) => 
 
     if (section.type === 'video') {
       const isLocalVideo = Boolean(section.videoSrc);
+
+      if (isLocalVideo) {
+        return (
+          <section id={section.id} key={`${section.type}-${sectionIndex}`} className="scroll-mt-28 py-12 md:py-16">
+            <div className="grid items-start gap-9 lg:grid-cols-12 lg:gap-12">
+              <div className="lg:col-span-5 lg:pt-4">
+                {section.eyebrow && <p className="eyebrow mb-5 text-primary">{section.eyebrow}</p>}
+                {section.title && <h2 className="display-heading text-3xl font-normal leading-tight md:text-5xl">{section.title}</h2>}
+                {section.body && (
+                  <div className="mt-7 space-y-6 text-[1.08rem] leading-8 text-muted-foreground md:text-xl md:leading-9">
+                    {splitParagraphs(section.body).map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+                  </div>
+                )}
+              </div>
+              <div className="lg:col-span-6 lg:col-start-7">
+                <video
+                  src={section.videoSrc}
+                  poster={section.videoPoster}
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="mx-auto block h-auto max-h-[82svh] w-auto max-w-full"
+                  aria-label={section.title ?? project.title}
+                />
+                {section.caption && <p className="eyebrow mt-4 text-muted-foreground">{section.caption}</p>}
+              </div>
+            </div>
+          </section>
+        );
+      }
+
       return (
         <section id={section.id} key={`${section.type}-${sectionIndex}`} className="scroll-mt-28 py-12 md:py-16">
           {(section.eyebrow || section.title || section.body) && (
@@ -136,23 +167,9 @@ const EditorialProjectDetail: React.FC<{ project: Project }> = ({ project }) => 
               {section.body && <p className="text-[1.08rem] leading-8 text-muted-foreground md:text-xl md:leading-9 lg:col-span-6 lg:col-start-7">{section.body}</p>}
             </div>
           )}
-          {isLocalVideo ? (
-            <div className="flex justify-center bg-black">
-              <video
-                src={section.videoSrc}
-                poster={section.videoPoster}
-                controls
-                playsInline
-                preload="metadata"
-                className="h-auto max-h-[82svh] w-auto max-w-full"
-                aria-label={section.title ?? project.title}
-              />
-            </div>
-          ) : (
-            <div className="aspect-video overflow-hidden">
-              <iframe src={`https://www.youtube.com/embed/${section.youtubeId}`} title={section.title ?? project.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="h-full w-full border-0" />
-            </div>
-          )}
+          <div className="aspect-video overflow-hidden">
+            <iframe src={`https://www.youtube.com/embed/${section.youtubeId}`} title={section.title ?? project.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="h-full w-full border-0" />
+          </div>
           {section.caption && <p className="eyebrow mt-4 text-muted-foreground">{section.caption}</p>}
         </section>
       );
