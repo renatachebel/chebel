@@ -95,24 +95,26 @@ export const photographyProjects: Project[] = [
         title: "A visual world for eighteen songs",
         body: "The tour's hand-drawn characters, animals, rainbows and changing environments formed a modular image archive for the performances. The animations were created by Paulo Stoker and Ygor Marotta, with assistance from Lucas Fiacadori. I developed the color treatments used across the songs and transformed this material further in the live mix.",
         images: [
-          "/lovable-uploads/mola-oddity-tour/animation-popup-life.gif",
           "/lovable-uploads/mola-oddity-tour/animation-butterfly.gif",
-          "/lovable-uploads/mola-oddity-tour/animation-rabbit.gif",
           "/lovable-uploads/mola-oddity-tour/animation-fox.gif"
         ],
         imageAlts: [
-          "Pop-up Life animation made for Mola Oddity's tour",
           "Colorful butterfly animation made for Mola Oddity's tour",
-          "Dancing rabbit animation made for Mola Oddity's tour",
           "Fox in Eden animation made for Mola Oddity's tour"
         ],
         imageCaptions: [
-          "Pop-up Life",
           "Colorful butterfly",
-          "Dancing rabbit",
           "Fox in Eden"
         ],
         caption: "Animation source material by VJ Suave / Paulo Stoker and Ygor Marotta. Color treatments and live processing by Renata Chebel."
+      },
+      {
+        type: "video",
+        id: "live-look-process",
+        title: "Building the live look",
+        body: "This process recording shows how I remixed the animation archive into a live visual system: changing color relationships, layering effects, generating feedback loops and routing the image through a virtual modular video synthesizer.",
+        videoSrc: "/lovable-uploads/mola-oddity-tour/mola-oddity-tour-visuals-process-reel.mp4",
+        caption: "Visual remix and live-system process by Renata Chebel"
       },
       {
         type: "text",

@@ -36,7 +36,9 @@ export type EditorialSection =
       eyebrow?: string;
       title?: string;
       body?: string;
-      youtubeId: string;
+      youtubeId?: string;
+      videoSrc?: string;
+      videoPoster?: string;
       caption?: string;
     }
   | {

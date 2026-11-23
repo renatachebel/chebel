@@ -35,6 +35,12 @@ The main tour opened on 29 March 2024 at Bandai Namco Shanghai Dream Hall and co
 
 The tour's hand-drawn characters, animals, rainbows and changing environments formed a modular image archive for the performances. The animations were created by Paulo Stoker and Ygor Marotta, with assistance from Lucas Fiacadori. I developed the color treatments used across the songs and transformed this material further in the live mix.
 
+### Building the live look
+
+This process recording shows how I remixed the animation archive into a live visual system: changing color relationships, layering effects, generating feedback loops and routing the image through a virtual modular video synthesizer.
+
+Video file: `public/lovable-uploads/mola-oddity-tour/mola-oddity-tour-visuals-process-reel.mp4`
+
 ## Club circuit — LOFi MOSH: 9 Days of Dreamcore Aquarium
 
 Running parallel to the concerts and festivals was a second route through China's electronic club scene: ALL Club in Shanghai, LOOPY in Hangzhou, OIL in Shenzhen, Pillbox in Beijing and AXIS in Chengdu.

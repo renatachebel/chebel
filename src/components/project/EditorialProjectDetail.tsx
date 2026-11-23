@@ -124,6 +124,7 @@ const EditorialProjectDetail: React.FC<{ project: Project }> = ({ project }) => 
     }
 
     if (section.type === 'video') {
+      const isLocalVideo = Boolean(section.videoSrc);
       return (
         <section id={section.id} key={`${section.type}-${sectionIndex}`} className="scroll-mt-28 py-12 md:py-16">
           {(section.eyebrow || section.title || section.body) && (
@@ -135,9 +136,23 @@ const EditorialProjectDetail: React.FC<{ project: Project }> = ({ project }) => 
               {section.body && <p className="text-[1.08rem] leading-8 text-muted-foreground md:text-xl md:leading-9 lg:col-span-6 lg:col-start-7">{section.body}</p>}
             </div>
           )}
-          <div className="aspect-video overflow-hidden">
-            <iframe src={`https://www.youtube.com/embed/${section.youtubeId}`} title={section.title ?? project.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="h-full w-full border-0" />
-          </div>
+          {isLocalVideo ? (
+            <div className="flex justify-center bg-black">
+              <video
+                src={section.videoSrc}
+                poster={section.videoPoster}
+                controls
+                playsInline
+                preload="metadata"
+                className="h-auto max-h-[82svh] w-auto max-w-full"
+                aria-label={section.title ?? project.title}
+              />
+            </div>
+          ) : (
+            <div className="aspect-video overflow-hidden">
+              <iframe src={`https://www.youtube.com/embed/${section.youtubeId}`} title={section.title ?? project.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="h-full w-full border-0" />
+            </div>
+          )}
           {section.caption && <p className="eyebrow mt-4 text-muted-foreground">{section.caption}</p>}
         </section>
       );
