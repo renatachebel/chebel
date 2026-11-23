@@ -58,6 +58,7 @@ export interface Project {
     | 'performance-installation'
     | 'generative-art'
     | 'projection-mapping'
+    | 'vj'
     | 'poetry'
   )[];
   thumbnail: string;

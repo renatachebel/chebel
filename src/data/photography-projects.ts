@@ -1,38 +1,147 @@
 
 import { Project } from './types';
 
+const chinaOdditiesImages = [
+  "/lovable-uploads/6600ae80-974a-4a12-aa00-87ac40c0fc4b.png",
+  "/lovable-uploads/89c07318-45e4-45b3-88a6-6b11ba3a5a19.png",
+  "/lovable-uploads/d988d105-1a4f-4db3-a98e-1ea98ce80772.png",
+  "/lovable-uploads/5e30d7f7-1f4b-42ae-b2e8-dba48dae497d.png",
+  "/lovable-uploads/1969cdaf-32b4-4250-b9d2-79899ba1dd30.png",
+  "/lovable-uploads/d6158253-4e99-4086-afb5-360cea161d9d.png",
+  "/lovable-uploads/7205d517-277d-4f7e-937d-8033ecaec3e2.png",
+  "/lovable-uploads/4406dddd-ef17-45fd-97b7-6632d4bf307c.png",
+  "/lovable-uploads/dd43ff7b-e75d-4497-aab5-c566558b34ca.png",
+  "/lovable-uploads/dd7c65a0-5adf-4c77-a6a5-5a89ca33298e.png",
+  "/lovable-uploads/a8313227-9228-44a6-a000-23f7feed13bc.png",
+  "/lovable-uploads/d88712a9-34ee-4c82-b9d4-8aaf804fa410.png",
+  "/lovable-uploads/58a40465-1766-4959-9ac8-c7253bae2ddf.png",
+  "/lovable-uploads/d98e8c80-479f-4d51-b1b0-69682f5c0208.png",
+  "/lovable-uploads/ab8b15b6-434d-49cf-9876-bf483f84674d.png",
+  "/lovable-uploads/681a1b08-f44b-4256-a95b-29587a7c0aa7.png",
+  "/lovable-uploads/b5b20264-b522-45dc-ac05-cce919543d69.png",
+  "/lovable-uploads/dbdbfbd4-93da-487a-974f-4ac6df752c82.png",
+];
+
 export const photographyProjects: Project[] = [
   {
     id: 5,
-    title: "China Oddities",
-    slug: "china-oddities",
-    category: ["photography"],
-    thumbnail: "/lovable-uploads/adc801b2-ec43-43f3-923d-51ffd89f78dc.png",
-    images: [
-      "/lovable-uploads/6600ae80-974a-4a12-aa00-87ac40c0fc4b.png", // New image added as the first item
-      "/lovable-uploads/89c07318-45e4-45b3-88a6-6b11ba3a5a19.png",
-      "/lovable-uploads/d988d105-1a4f-4db3-a98e-1ea98ce80772.png",
-      "/lovable-uploads/5e30d7f7-1f4b-42ae-b2e8-dba48dae497d.png",
-      "/lovable-uploads/1969cdaf-32b4-4250-b9d2-79899ba1dd30.png",
-      "/lovable-uploads/d6158253-4e99-4086-afb5-360cea161d9d.png",
-      "/lovable-uploads/7205d517-277d-4f7e-937d-8033ecaec3e2.png",
-      "/lovable-uploads/4406dddd-ef17-45fd-97b7-6632d4bf307c.png",
-      "/lovable-uploads/dd43ff7b-e75d-4497-aab5-c566558b34ca.png",
-      "/lovable-uploads/dd7c65a0-5adf-4c77-a6a5-5a89ca33298e.png",
-      "/lovable-uploads/a8313227-9228-44a6-a000-23f7feed13bc.png",
-      "/lovable-uploads/d88712a9-34ee-4c82-b9d4-8aaf804fa410.png",
-      "/lovable-uploads/58a40465-1766-4959-9ac8-c7253bae2ddf.png",
-      "/lovable-uploads/d98e8c80-479f-4d51-b1b0-69682f5c0208.png",
-      "/lovable-uploads/ab8b15b6-434d-49cf-9876-bf483f84674d.png",
-      "/lovable-uploads/681a1b08-f44b-4256-a95b-29587a7c0aa7.png",
-      "/lovable-uploads/b5b20264-b522-45dc-ac05-cce919543d69.png",
-      "/lovable-uploads/dbdbfbd4-93da-487a-974f-4ac6df752c82.png"
-    ],
-    description: "Candid film photos of touring China with an indie band, Mola Oddity",
+    title: "The Other Side of Hope Tour — Mola Oddity",
+    slug: "the-other-side-of-hope-tour-mola-oddity",
+    category: ["video", "vj", "projection-mapping", "generative-art"],
+    thumbnail: "/lovable-uploads/mola-oddity-tour/cover.jpg",
+    images: chinaOdditiesImages,
+    description: "Live visual performance, color remixing and documentary work across Mola Oddity's 2024 China tour.",
     date: "2024",
-    location: "Various cities, China",
+    location: "China — Shanghai to Chengdu",
     isFeatured: true,
-    details: "China Oddities is a film photography series documenting the Spring 2024 tour of Mola Oddity, an innovative indie Chinese band. Captured while working as a projection artist for the band's performances, these intimate backstage and performance photographs reveal the creative energy and personal moments of the tour.\n\nInvited by VJ Suave, who created the visuals for the shows, I had unique access to document both the public performances and private moments of the artists. The series captures the distinctive aesthetic of China's underground music scene through film photography, emphasizing the raw emotion and authentic experiences of touring life.\n\nFrom backstage preparations and birthday celebrations to quiet moments between shows and the intensity of performances, these images provide a multi-faceted portrait of the band and their creative process. The distinctive hairstyles, makeup, and fashion choices reflect the band's unique artistic identity, while the candid interactions reveal the personal bonds formed during the intense experience of touring.\n\nChina Oddities serves as both an artistic documentation and a personal memento of this cultural exchange, showcasing the universal language of music and visual art across cultural boundaries."
+    details: "Live VJ performance, visual remixing, tour documentation and a short documentary created during Mola Oddity's 2024 China tour.",
+    editorialSections: [
+      {
+        type: "video",
+        id: "tour-documentary",
+        eyebrow: "01 — Short documentary",
+        title: "The tour from the inside",
+        body: "Alongside the live visual work, I documented the journey and the life around the performances. I directed and edited this short documentary as an intimate record of the band, the people travelling with it and the shifting atmosphere of the tour.",
+        youtubeId: "Q9CwRnuPFeM",
+        caption: "Documentation, direction and editing by Renata Chebel"
+      },
+      {
+        type: "text",
+        id: "my-role",
+        eyebrow: "02 — Visual direction and performance",
+        title: "Color as a live instrument",
+        body: "I joined Mola Oddity's The Other Side of Hope tour across China to extend VJ Suave's animation system into the specific emotional world of each song. For the main concerts, I remixed the colors of the animations song by song, reshaping their palettes while preserving the hand-drawn visual language.\n\nDuring the club circuit I performed the visuals live. I layered multiple effects, built feedback loops and routed the animation material through a virtual modular video synthesizer. The image was never a fixed playback: it was mixed in real time with the same responsiveness as an instrument.",
+        image: "/lovable-uploads/mola-oddity-tour/poster.jpg",
+        imageAlt: "Poster for Mola Oddity's The Other Side of Hope China tour",
+        imagePosition: "right",
+        caption: "The Other Side of Hope tour poster"
+      },
+      {
+        type: "gallery",
+        id: "main-tour",
+        eyebrow: "03 — Concert and festival circuit",
+        title: "From Shanghai to Chengdu",
+        body: "The main tour opened on 29 March 2024 at Bandai Namco Shanghai Dream Hall and continued through Shenzhen, Guangzhou, Nanjing, Hangzhou, Beijing and Chengdu. Festival appearances included Strawberry Music Festival in Fuzhou and Hangzhou, and Chun You Music Festival in Chengdu.",
+        images: [
+          "/lovable-uploads/mola-oddity-tour/shanghai-01.jpg",
+          "/lovable-uploads/mola-oddity-tour/shanghai-02.jpg",
+          "/lovable-uploads/mola-oddity-tour/fuzhou-01.jpg",
+          "/lovable-uploads/mola-oddity-tour/fuzhou-02.jpg",
+          "/lovable-uploads/mola-oddity-tour/chengdu-soundcheck.jpg",
+          "/lovable-uploads/mola-oddity-tour/chengdu-live.jpg"
+        ],
+        imageAlts: [
+          "Mola Oddity performing with projected animation in Shanghai",
+          "The Other Side of Hope opening concert in Shanghai",
+          "Mola Oddity performing at Strawberry Music Festival in Fuzhou",
+          "Backstage at Strawberry Music Festival in Fuzhou",
+          "Chun You Music Festival soundcheck in Chengdu",
+          "Mola Oddity performing at Chun You Music Festival in Chengdu"
+        ],
+        imageCaptions: [
+          "Bandai Namco Shanghai Dream Hall — photo: BeiBei",
+          "Opening concert, Shanghai — photo: BeiBei",
+          "Strawberry Music Festival, Fuzhou",
+          "Backstage at Strawberry Music Festival, Fuzhou",
+          "Chun You soundcheck, Chengdu — photo: Renata Chebel",
+          "Chun You Music Festival, Chengdu — photo: Renata Chebel"
+        ],
+        caption: "Tour archive supplied by Ygor Marotta / VJ Suave; individual credits shown where available."
+      },
+      {
+        type: "gallery",
+        id: "animation-system",
+        eyebrow: "04 — Source animation",
+        title: "A visual world for eighteen songs",
+        body: "The tour's hand-drawn characters, animals, rainbows and changing environments formed a modular image archive for the performances. The animations were created by Paulo Stoker and Ygor Marotta, with assistance from Lucas Fiacadori. I developed the color treatments used across the songs and transformed this material further in the live mix.",
+        images: [
+          "/lovable-uploads/mola-oddity-tour/animation-popup-life.gif",
+          "/lovable-uploads/mola-oddity-tour/animation-butterfly.gif",
+          "/lovable-uploads/mola-oddity-tour/animation-rabbit.gif",
+          "/lovable-uploads/mola-oddity-tour/animation-fox.gif"
+        ],
+        imageAlts: [
+          "Pop-up Life animation made for Mola Oddity's tour",
+          "Colorful butterfly animation made for Mola Oddity's tour",
+          "Dancing rabbit animation made for Mola Oddity's tour",
+          "Fox in Eden animation made for Mola Oddity's tour"
+        ],
+        imageCaptions: [
+          "Pop-up Life",
+          "Colorful butterfly",
+          "Dancing rabbit",
+          "Fox in Eden"
+        ],
+        caption: "Animation source material by VJ Suave / Paulo Stoker and Ygor Marotta. Color treatments and live processing by Renata Chebel."
+      },
+      {
+        type: "text",
+        id: "lofi-mosh",
+        eyebrow: "05 — Club circuit",
+        title: "LOFi MOSH — 9 Days of Dreamcore Aquarium",
+        body: "Running parallel to the concerts and festivals was a second route through China's electronic club scene: ALL Club in Shanghai, LOOPY in Hangzhou, OIL in Shenzhen, Pillbox in Beijing and AXIS in Chengdu.\n\nThe more electronic sets called for another visual language. Instead of following a predetermined concert sequence, I improvised with VJ Suave's animation archive, live effects, feedback and modular video synthesis. Each night produced a different, unstable composition.",
+        image: "/lovable-uploads/adc801b2-ec43-43f3-923d-51ffd89f78dc.png",
+        imageAlt: "A candid film photograph made during the Mola Oddity tour in China",
+        imagePosition: "left",
+        caption: "From the China Oddities film photography series"
+      },
+      {
+        type: "gallery",
+        id: "china-oddities",
+        eyebrow: "06 — Photographic chapter",
+        title: "China Oddities",
+        body: "China Oddities is the photographic diary inside the larger tour project. Shot on film while travelling and working with the band, the series moves away from the scale of the stage and toward backstage preparation, birthdays, quiet moments between cities and the personal textures of touring life.",
+        images: chinaOdditiesImages,
+        caption: "Film photography by Renata Chebel"
+      },
+      {
+        type: "text",
+        id: "credits",
+        eyebrow: "07 — Credits",
+        title: "A travelling collaboration",
+        body: "Color remixing, live VJ performance, tour documentation, documentary direction and editing: Renata Chebel.\n\nOriginal visual world and animation archive: VJ Suave. Animations by Paulo Stoker and Ygor Marotta, with assistance from Lucas Fiacadori.\n\nTour: The Other Side of Hope by Mola Oddity, with Amber Kuo (Kuo Tsai-chieh)."
+      }
+    ]
   },
   {
     id: 7,

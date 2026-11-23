@@ -34,7 +34,7 @@ const portfolioOrder = [
   'tea-in-alishan',
   'music-videos',
   'artist-videos',
-  'china-oddities',
+  'the-other-side-of-hope-tour-mola-oddity',
   'temple-of-reflections',
   'fluvial',
   'rainbow-road',

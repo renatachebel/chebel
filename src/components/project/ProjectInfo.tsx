@@ -2,7 +2,9 @@ import React from 'react';
 import { Project } from '../../data/types';
 
 const formatCategory = (category: string) =>
-  category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  category === 'vj'
+    ? 'VJ'
+    : category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
 const ProjectInfo: React.FC<{ project: Project }> = ({ project }) => {
   const facts = [

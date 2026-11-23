@@ -15,7 +15,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
       <div>
         <h3 className="display-heading text-[1.02rem] font-normal leading-tight transition-colors group-hover:text-primary md:text-[1.15rem]">{project.title}</h3>
         <p className="eyebrow mt-2 text-muted-foreground">
-          {project.category.map(category => category.replace(/-/g, ' ')).join(' / ')}
+          {project.category.map(category => category === 'vj' ? 'VJ' : category.replace(/-/g, ' ')).join(' / ')}
           {project.date ? ` · ${project.date}` : ''}
         </p>
       </div>

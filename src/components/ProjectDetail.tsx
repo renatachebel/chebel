@@ -53,7 +53,7 @@ const ProjectDetail: React.FC<{ project: Project }> = ({ project }) => {
     <div className="animate-fade-in">
       <div className="mb-12 grid gap-8 pb-6 md:mb-16 md:pb-8 xl:grid-cols-12 xl:items-end xl:gap-16">
         <div className="xl:col-span-9">
-          <p className="eyebrow mb-5 text-primary">{project.category.map(category => category.replace(/-/g, ' ')).join(' / ')}</p>
+          <p className="eyebrow mb-5 text-primary">{project.category.map(category => category === 'vj' ? 'VJ' : category.replace(/-/g, ' ')).join(' / ')}</p>
           <h1 className="display-heading text-[clamp(2.5rem,5.5vw,5.5rem)]">{project.title}</h1>
         </div>
         <p className="text-[1.08rem] leading-8 text-muted-foreground xl:col-span-3">{project.description}</p>

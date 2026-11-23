@@ -112,9 +112,9 @@ const About: React.FC = () => (
           <p className="eyebrow mb-4 text-muted-foreground">Selected appearances</p>
           <h2 className="display-heading text-4xl md:text-5xl">Exhibitions, shows & festivals</h2>
         </div>
-        <div className="space-y-2">
+        <div>
           {selectedExhibitions.map(([title, place, date]) => (
-            <div key={`${title}-${date}`} className="grid gap-2 py-4 md:grid-cols-12 md:items-baseline md:gap-5">
+            <div key={`${title}-${date}`} className="grid gap-2 py-2.5 md:grid-cols-12 md:items-baseline md:gap-5 md:py-3">
               <p className="eyebrow text-muted-foreground md:col-span-2">{date}</p>
               <h3 className="display-heading text-xl md:col-span-6 md:text-2xl">{title}</h3>
               <p className="text-sm text-muted-foreground md:col-span-4 md:text-right">{place}</p>

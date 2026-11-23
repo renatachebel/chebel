@@ -3,7 +3,9 @@ import { Project, EditorialSection } from '../../data/types';
 import GalleryModal from './GalleryModal';
 
 const formatCategory = (category: string) =>
-  category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  category === 'vj'
+    ? 'VJ'
+    : category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
 const splitParagraphs = (text: string) => text.split('\n\n').filter(Boolean);
 
@@ -159,7 +161,7 @@ const EditorialProjectDetail: React.FC<{ project: Project }> = ({ project }) => 
     <div className="animate-fade-in">
       <header className="grid gap-8 pb-6 md:pb-8 xl:grid-cols-12 xl:items-end xl:gap-16">
         <div className="xl:col-span-8">
-          <p className="eyebrow mb-5 text-primary">{project.category.map(category => category.replace(/-/g, ' ')).join(' / ')}</p>
+          <p className="eyebrow mb-5 text-primary">{project.category.map(formatCategory).join(' / ')}</p>
           <h1 className="display-heading text-[clamp(2.5rem,5.5vw,5.5rem)]">{project.title}</h1>
         </div>
         <p className="text-[1.08rem] leading-8 text-muted-foreground md:text-xl md:leading-9 xl:col-span-4">{project.description}</p>

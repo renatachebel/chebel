@@ -10,6 +10,7 @@ const categoryLabels: Record<string, string> = {
   'performance-installation': 'Performance / Installation',
   'generative-art': 'Generative Art',
   'projection-mapping': 'Projection Mapping',
+  vj: 'VJ',
   poetry: 'Poetry',
 };
 
