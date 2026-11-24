@@ -61,6 +61,9 @@ const ProjectDetail: React.FC<{ project: Project }> = ({ project }) => {
 
       <div className="grid grid-cols-1 gap-14 xl:grid-cols-12 xl:gap-16">
         <div className="xl:col-span-9">
+          {project.showCover && (
+            <img src={project.thumbnail} alt={project.title} className="mb-8 block h-auto w-full" />
+          )}
           <MediaRenderer
             project={project}
             selectedImageIndex={selectedImageIndex}

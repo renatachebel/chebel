@@ -61,7 +61,8 @@ export const iluminaVideoProjects: Project[] = [
     title: "Alma da Selva - Amazonia Mapping",
     slug: "alma-da-selva-amazonia-mapping",
     category: ["video", "projection-mapping"],
-    thumbnail: "/lovable-uploads/135bd60c-e82f-4d4b-8920-d0a756c4e1e2.png",
+    thumbnail: "/lovable-uploads/amazonia-mapping-cover-upscaled.webp",
+    showCover: true,
     images: [
       "/lovable-uploads/135bd60c-e82f-4d4b-8920-d0a756c4e1e2.png",
       "/lovable-uploads/e8771aac-26e3-4c05-87d2-a38d62e3eaa6.png",

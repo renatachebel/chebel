@@ -115,7 +115,8 @@ export const videoProjects: Project[] = [
     title: "Music Videos",
     slug: "music-videos",
     category: ["video"],
-    thumbnail: "/lovable-uploads/70394a61-a8c0-463e-95a6-f85144967fcd.png",
+    thumbnail: "/lovable-uploads/music-videos-cover-upscaled.webp",
+    showCover: true,
     images: [],
     youtubeIds: [
       "5n6uJ6aZ8JU",

@@ -64,6 +64,7 @@ export interface Project {
     | 'poetry'
   )[];
   thumbnail: string;
+  showCover?: boolean;
   images?: string[];
   videos?: string[];
   description: string;
