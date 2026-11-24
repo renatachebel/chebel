@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
+import ContactCard from './ContactCard';
 
 const links = [
   { to: '/', label: 'Work' },
@@ -15,7 +16,7 @@ const Navigation: React.FC = () => {
 
   useEffect(() => { setOpen(false); }, [pathname]);
   useEffect(() => {
-    const close = (event: KeyboardEvent) => { if (event.key === 'Escape') setOpen(false); };
+    const close = (event: KeyboardEvent) => { if (event.key === 'Escape' && !event.defaultPrevented) setOpen(false); };
     window.addEventListener('keydown', close);
     return () => window.removeEventListener('keydown', close);
   }, []);
@@ -42,12 +43,7 @@ const Navigation: React.FC = () => {
           })}
         </nav>
 
-        <a
-          href="mailto:chebel@gmail.com"
-          className="hidden items-center gap-2 border border-primary bg-primary px-4 py-2.5 text-sm font-semibold uppercase tracking-[0.13em] text-primary-foreground transition-colors hover:bg-transparent hover:text-primary md:inline-flex"
-        >
-          Contact <ArrowUpRight size={15} />
-        </a>
+        <ContactCard className="hidden items-center border border-primary bg-primary px-4 py-2.5 text-sm font-semibold uppercase tracking-[0.13em] text-primary-foreground transition-colors hover:bg-transparent hover:text-primary md:inline-flex" />
 
         <Button
           variant="ghost"
@@ -71,9 +67,7 @@ const Navigation: React.FC = () => {
                 <span className="text-sm text-muted-foreground">0{index + 1}</span>
               </Link>
             ))}
-            <a href="mailto:chebel@gmail.com" className="mt-7 inline-flex items-center gap-2 text-primary">
-              Start a conversation <ArrowUpRight size={17} />
-            </a>
+            <ContactCard align="start" className="mt-7 self-start text-primary" />
           </div>
         </nav>
       )}

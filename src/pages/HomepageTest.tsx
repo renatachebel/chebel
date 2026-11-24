@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
+import ContactCard from '../components/ContactCard';
 
 const categoryLabels: Record<string, string> = {
   photography: 'Photography',
@@ -115,7 +116,7 @@ const HomepageTest: React.FC = () => {
             <span className="text-white">Work</span>
             <Link to="/about" className="text-white/70 transition-colors hover:text-white">About</Link>
             <Link to="/substack" className="hidden text-white/70 transition-colors hover:text-white sm:inline">Journal</Link>
-            <a href="mailto:chebel@gmail.com" className="text-white/70 transition-colors hover:text-white">Contact</a>
+            <ContactCard className="uppercase tracking-[inherit] text-white/70 transition-colors hover:text-white" />
           </nav>
         </header>
 
