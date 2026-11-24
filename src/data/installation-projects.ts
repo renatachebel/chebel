@@ -7,9 +7,9 @@ export const installationProjects: Project[] = [
     title: "Temple of Reflections",
     slug: "temple-of-reflections",
     category: ["installation", "generative-art"],
-    thumbnail: "/lovable-uploads/temple-of-reflections-thumbnail-square.jpg",
+    thumbnail: "/lovable-uploads/temple-of-reflections-cover-upscaled.webp",
     images: [
-      "/lovable-uploads/temple-of-reflections-cover.jpg",
+      "/lovable-uploads/temple-of-reflections-cover-upscaled.webp",
       "/lovable-uploads/38b192ad-272c-4956-83c6-c9fa8f64592c.png",
       "/lovable-uploads/71805de8-4376-4aee-ae83-492aa3ec5f8b.png",
       "/lovable-uploads/c7e6acc7-c0e5-41f9-8825-7cdc3a0f5ec1.png",

@@ -107,11 +107,11 @@ const HomepageTest: React.FC = () => {
       </div>
 
       <div className="relative z-10 flex min-h-svh flex-col">
-        <header className="flex items-center justify-between px-5 py-5 text-[0.78rem] uppercase tracking-[0.16em] md:px-8">
-          <Link to="/" className="font-display text-base normal-case tracking-[-0.04em] md:text-lg">
+        <header className="flex items-center justify-between gap-4 px-5 py-5 text-[0.7rem] uppercase tracking-[0.14em] sm:text-[0.78rem] sm:tracking-[0.16em] md:px-8">
+          <Link to="/" className="shrink-0 whitespace-nowrap font-display text-lg normal-case tracking-[-0.04em] md:text-xl">
             Renata Chebel
           </Link>
-          <nav aria-label="Main navigation" className="flex items-center gap-5 md:gap-8">
+          <nav aria-label="Main navigation" className="flex items-center gap-3 sm:gap-5 md:gap-8">
             <span className="text-white">Work</span>
             <Link to="/about" className="text-white/70 transition-colors hover:text-white">About</Link>
             <Link to="/substack" className="hidden text-white/70 transition-colors hover:text-white sm:inline">Journal</Link>
@@ -119,7 +119,7 @@ const HomepageTest: React.FC = () => {
           </nav>
         </header>
 
-        <section className="flex flex-1 items-center px-5 py-14 md:px-8 md:py-24" aria-label="Project index">
+        <section className="flex flex-1 items-start px-5 pb-14 pt-[clamp(2rem,6vh,4.5rem)] md:px-8 md:pb-20" aria-label="Project index">
           <div className="w-full">
             <div className="mb-3 hidden grid-cols-12 gap-4 pb-3 text-[0.66rem] uppercase tracking-[0.16em] text-white/55 md:grid">
               <span className="col-span-5">Project</span>

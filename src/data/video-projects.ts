@@ -136,7 +136,7 @@ export const videoProjects: Project[] = [
     title: "Artist Videos",
     slug: "artist-videos",
     category: ["video"],
-    thumbnail: "/lovable-uploads/artist-videos-thumbnail.png",
+    thumbnail: "/lovable-uploads/artist-videos-cover-upscaled.webp",
     images: [],
     youtubeIds: [
       "pma2v5F_FGc",
